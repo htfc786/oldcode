@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传文件</title>
+</head>
+<body>
+    <form class="navbar-form navbar-right"  enctype="multipart/form-data" action="/file-sharing/upload/" method="post">
+        <div class="form-group">
+            {% csrf_token %}
+            <input type="text" class="form-control" name="name" placeholder="文件名">
+            <input type="file" class="form-control" name="file">
+        </div>
+        <button type="submit" class="btn btn-default">上传</button>
+    </form>
+</body>
+</html>

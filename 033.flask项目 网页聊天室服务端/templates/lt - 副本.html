@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content=width=device-width, initial-scale=1">
+</head>
+<body>
+<button id="create_ws" onclick="go_to()">创建ws连接</button>
+
+</body>
+<script type="application/javascript">
+    var ws_url = "wss://video-cs05.wenzaizhibo.com/chat";
+    var ws = null;
+	
+	ws = new WebSocket(ws_url);
+	while (1){
+		try {
+			ws.send('{"message_type":"message_send","content":"ok","to":"-1","extension":{"user":{"successiveHitTimes":0,"title":"","titleUrl":""}},"from":{"id":"653079179","number":"20005829993110","type":0,"name":"html","avatar":"https://img.gsxservice.com/96689680_0pp4aa21.png","end_type":0,"group":15467658,"status":0}}');
+			
+		}
+	}
+	
+    function go_to() {
+        
+        
+    }
+
+    function create_chat(self, content) {
+		ws.onmessage = function (serv_msg) {
+            msg = JSON.parse(serv_msg.data);
+            create_chat("y",msg);
+        };
+        if (self == "w") {
+            self = "left";
+            var spantag = document.createElement("span");
+            spantag.innerText = "我:";
+            var spantag1 = document.createElement("span");
+            spantag1.innerText = content.send_msg;
+        } else {
+            self = "left";
+            var spantag = document.createElement("span");
+            spantag.innerText = content.send_user + ":";
+            var spantag1 = document.createElement("span");
+            spantag1.innerText = content.send_msg;
+        }
+
+        var divtag = document.createElement("div");
+        divtag.style = "text-align:" + self;
+
+        divtag.appendChild(spantag);
+        divtag.appendChild(spantag1);
+        var chat_window = document.getElementById("chat_window");
+        chat_window.appendChild(divtag);
+    }
+
+    function create_chatpppo() {
+        var send_msg = document.getElementById("send_msg");
+        ws.send('{"message_type":"message_send","content":"ok","to":"-1","extension":{"user":{"successiveHitTimes":0,"title":"","titleUrl":""}},"from":{"id":"653079179","number":"20005829993110","type":0,"name":"曹博潇","avatar":"https://img.gsxservice.com/96689680_0pp4aa21.png","end_type":0,"group":15467658,"status":0}}');
+        var s_msg = {send_msg:send_msg.value};
+        create_chat("w", s_msg);
+        send_msg.value = "";
+    }
+</script>
+</html>

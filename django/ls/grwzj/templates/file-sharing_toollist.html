@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {%for t in tools %}
+        <li class="list-group-item"><a href="{% url 'index' %}down-{{t.id}}.html"  title="{{t.name}}">{{t.name}}</a>
+            <a href="{% url 'index' %}{{t.url}}"  title="{{t.name}}">HTTP</a>
+        </li>
+    {%endfor%}
+</body>
+</html>

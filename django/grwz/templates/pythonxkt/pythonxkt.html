@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>python小课堂</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+       integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+       crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+       integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+       crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+       integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+       crossorigin="anonymous"></script>
+    <style type="text/css">
+         .big-border {
+        background: #fff;
+        margin: 0 auto;
+        padding: 10px;
+        }
+ 
+        body {
+            background: #f3f3f3;
+        }
+ 
+        .page-title {
+            text-align: center;
+        }  
+    </style>
+</head>
+<body>
+  <div class="big-border">
+    <h3 class="page-title">python小课堂</h3>
+    <a href="https://www.python.org/" target="_blank">python官网</a>
+    <hr>
+    <table width="100%">
+      <thead>
+        <tr>
+          <th>文件</th>
+          <th>修改时间</th>
+          <th>大小</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in contents %}
+        <tr>
+          <td><a href="/pythonxkt/video/?video={{ i.filename }}" target="_blank">{{ i.filename }}</a></td>
+          <td>{{ i.mtime }}</td>
+          <td>{{ i.size }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <hr>
+  </div>
+</body>
+</html>

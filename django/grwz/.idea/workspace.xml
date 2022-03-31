@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0cd00f04-9d04-4ff8-8334-b1fa3c082a5b" name="默认更改列表" comment="" />
+    <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db.sqlite3" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db.sqlite3" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db.sqlite3" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db.sqlite3" type="feb32156:DbDataSourceImpl" />
+        <item name="collations" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="grwz" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/lt/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/lt/lt_lts.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3402">
+              <caret line="162" column="25" selection-start-line="162" selection-start-column="25" selection-end-line="162" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Setup Script" />
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>myhome</find>
+      <find>static</find>
+      <find>.write(</find>
+      <find>print</find>
+      <find>write(</find>
+      <find>fp.write(</find>
+      <find>self.fp =</find>
+      <find>handlers.py</find>
+      <find>myid</find>
+      <find>myname</find>
+      <find>footer&quot;</find>
+      <find>like_div&quot;</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/manage.py" />
+        <option value="$PROJECT_DIR$/templates/homepage.html" />
+        <option value="$PROJECT_DIR$/apps/pythonxkt/urls.py" />
+        <option value="$PROJECT_DIR$/apps/homepage/urls.py" />
+        <option value="$PROJECT_DIR$/apps/pythonxkt/__init__.py" />
+        <option value="$PROJECT_DIR$/templates/filegx.html" />
+        <option value="$PROJECT_DIR$/apps/filegx/forms.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/templates/filegx_wjgx.html" />
+        <option value="$PROJECT_DIR$/templates/filegx_wjgx_upload.html" />
+        <option value="$PROJECT_DIR$/apps/filegx/models.py" />
+        <option value="$PROJECT_DIR$/apps/filegx/admin.py" />
+        <option value="$PROJECT_DIR$/templates/lt.html" />
+        <option value="$PROJECT_DIR$/templates/pythonxkt.html" />
+        <option value="$PROJECT_DIR$/templates/lt_login.html" />
+        <option value="$PROJECT_DIR$/apps/homepage/views.py" />
+        <option value="$PROJECT_DIR$/apps/pythonxkt/views.py" />
+        <option value="$PROJECT_DIR$/templates/game/博客园.html" />
+        <option value="$PROJECT_DIR$/apps/tjbus/urls.py" />
+        <option value="$PROJECT_DIR$/app_settings/urls.py" />
+        <option value="$PROJECT_DIR$/apps/tjbus/views.py" />
+        <option value="$PROJECT_DIR$/templates/pythonxkt/pythonxkt.html" />
+        <option value="$PROJECT_DIR$/templates/filegx/filegx_wjgx_ls.html" />
+        <option value="$PROJECT_DIR$/templates/filegx/filegx_wjgx_upload.html" />
+        <option value="$PROJECT_DIR$/static/filegx/css/634.css" />
+        <option value="$PROJECT_DIR$/templates/filegx/filegx_wjgx_browse.html" />
+        <option value="$PROJECT_DIR$/apps/filegx/zipfile.py" />
+        <option value="$PROJECT_DIR$/templates/filegx/filegx_wjgx.html" />
+        <option value="$PROJECT_DIR$/templates/lt/lt_gg.html" />
+        <option value="$PROJECT_DIR$/apps/__init__.py" />
+        <option value="$PROJECT_DIR$/lt_lts_ltnr.txt" />
+        <option value="$PROJECT_DIR$/runserver.py" />
+        <option value="C:/Program Files (x86)/Python36-32bit/Lib/wsgiref/handlers.py" />
+        <option value="$PROJECT_DIR$/utils/sy.py" />
+        <option value="$PROJECT_DIR$/apps/lt/urls.py" />
+        <option value="$PROJECT_DIR$/apps/lt/models.py" />
+        <option value="$PROJECT_DIR$/templates/tjbus/tjbus.html" />
+        <option value="$PROJECT_DIR$/templates/lt/lt_login.html" />
+        <option value="$PROJECT_DIR$/apps/filegx/urls.py" />
+        <option value="$PROJECT_DIR$/templates/filegx/filegx_index.html" />
+        <option value="$PROJECT_DIR$/templates/filegx/filegx_upload.html" />
+        <option value="$PROJECT_DIR$/apps/filegx/views.py" />
+        <option value="$PROJECT_DIR$/templates/tjbus/tjqgw/index.html" />
+        <option value="$PROJECT_DIR$/static/jssgw/index.css" />
+        <option value="$PROJECT_DIR$/templates/jssgw/index.html" />
+        <option value="$PROJECT_DIR$/app_settings/settings.py" />
+        <option value="$PROJECT_DIR$/utils/about_phone.py" />
+        <option value="$PROJECT_DIR$/apps/lt/views.py" />
+        <option value="$PROJECT_DIR$/templates/lt/lt_lts.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="58" />
+    <option name="y" value="98" />
+    <option name="width" value="1166" />
+    <option name="height" value="812" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="grwz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grwz" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="grwz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grwz" type="462c0819:PsiDirectoryNode" />
+              <item name="app_settings" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="grwz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grwz" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="grwz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grwz" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="lt" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="grwz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grwz" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="grwz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grwz" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="lt" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="grwz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grwz" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/apps/filegx" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\python\.django\grwz\static\jssgw\img" />
+      <recent name="D:\python\.django\grwz\templates" />
+      <recent name="D:\python\.django\grwz\templates\tjbus" />
+      <recent name="D:\python\.django\grwz\templates\tjbus\qg" />
+      <recent name="D:\python\.django\grwz\templates\lt" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\python\.django\grwz\apps\filegx" />
+      <recent name="D:\python\.django\grwz\templates\filegx" />
+      <recent name="D:\python\.django\grwz\apps\tjbus" />
+      <recent name="D:\python\.django\grwz\apps\lt" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/grwz/templates/jssgw/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="lt_lts.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/grwz/templates/lt/lt_lts.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="ks" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="grwz" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/static" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/static/ks.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="runserver" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="grwz" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runserver.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sy" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="grwz" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/sy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="grwz" type="Python.DjangoServer" factoryName="Django server">
+      <module name="grwz" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.lt_lts.html" />
+        <item itemvalue="Python.sy" />
+        <item itemvalue="Python.runserver" />
+        <item itemvalue="Python.ks" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0cd00f04-9d04-4ff8-8334-b1fa3c082a5b" name="默认更改列表" comment="" />
+      <created>1602407887701</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602407887701</updated>
+      <workItem from="1602407889127" duration="3340000" />
+      <workItem from="1602417392711" duration="2278000" />
+      <workItem from="1602507043887" duration="1980000" />
+      <workItem from="1602595362600" duration="1279000" />
+      <workItem from="1602678255643" duration="4584000" />
+      <workItem from="1602764496008" duration="4110000" />
+      <workItem from="1602850225988" duration="618000" />
+      <workItem from="1602911366420" duration="1991000" />
+      <workItem from="1604749657865" duration="5106000" />
+      <workItem from="1604795264688" duration="24836000" />
+      <workItem from="1604928046495" duration="2383000" />
+      <workItem from="1605011627084" duration="4317000" />
+      <workItem from="1605099906549" duration="2816000" />
+      <workItem from="1605185485144" duration="1897000" />
+      <workItem from="1605274373090" duration="602000" />
+      <workItem from="1605400674385" duration="1275000" />
+      <workItem from="1605423525256" duration="7745000" />
+      <workItem from="1605615888629" duration="2203000" />
+      <workItem from="1605788858741" duration="255000" />
+      <workItem from="1605939532395" duration="4003000" />
+      <workItem from="1606531621395" duration="50000" />
+      <workItem from="1607779146841" duration="2002000" />
+      <workItem from="1607836008097" duration="349000" />
+      <workItem from="1608347002703" duration="7157000" />
+      <workItem from="1608378984602" duration="2170000" />
+      <workItem from="1608426414229" duration="3327000" />
+      <workItem from="1608906057087" duration="1263000" />
+      <workItem from="1608962225040" duration="10549000" />
+      <workItem from="1609032679564" duration="11742000" />
+      <workItem from="1609386084589" duration="646000" />
+      <workItem from="1609550872023" duration="6861000" />
+      <workItem from="1609645446434" duration="4226000" />
+      <workItem from="1609673563015" duration="6015000" />
+      <workItem from="1610111596019" duration="2614000" />
+      <workItem from="1610199849064" duration="2376000" />
+      <workItem from="1610258028502" duration="6733000" />
+      <workItem from="1610507922621" duration="11912000" />
+      <workItem from="1610588923910" duration="4118000" />
+      <workItem from="1610613703184" duration="783000" />
+      <workItem from="1610680754687" duration="2821000" />
+      <workItem from="1610885820535" duration="3981000" />
+      <workItem from="1610933942311" duration="3380000" />
+      <workItem from="1611021647761" duration="17294000" />
+      <workItem from="1611111035668" duration="6278000" />
+      <workItem from="1611131903106" duration="8481000" />
+      <workItem from="1611197489414" duration="7587000" />
+      <workItem from="1611236424669" duration="857000" />
+      <workItem from="1611291170863" duration="3242000" />
+      <workItem from="1611306859837" duration="4630000" />
+      <workItem from="1611360524628" duration="2166000" />
+      <workItem from="1611382535350" duration="6667000" />
+      <workItem from="1611461269156" duration="15271000" />
+      <workItem from="1611560556718" duration="2595000" />
+      <workItem from="1611620736344" duration="7548000" />
+      <workItem from="1611707833301" duration="4375000" />
+      <workItem from="1611797128283" duration="2235000" />
+      <workItem from="1611821773271" duration="2204000" />
+      <workItem from="1611925468744" duration="4246000" />
+      <workItem from="1611971565740" duration="758000" />
+      <workItem from="1611983879241" duration="47000" />
+      <workItem from="1612061820618" duration="634000" />
+      <workItem from="1612086071721" duration="3025000" />
+      <workItem from="1612171750418" duration="1242000" />
+      <workItem from="1612403100931" duration="8621000" />
+      <workItem from="1612484197473" duration="6512000" />
+      <workItem from="1612519198307" duration="647000" />
+      <workItem from="1612619736653" duration="593000" />
+      <workItem from="1612655105096" duration="17300000" />
+      <workItem from="1612745431600" duration="5105000" />
+      <workItem from="1612768141341" duration="890000" />
+      <workItem from="1612791473467" duration="1430000" />
+      <workItem from="1612829580582" duration="4730000" />
+      <workItem from="1612862262092" duration="3743000" />
+      <workItem from="1612917307243" duration="4247000" />
+      <workItem from="1613698733460" duration="5990000" />
+      <workItem from="1614172016821" duration="22000" />
+      <workItem from="1615376326763" duration="246000" />
+      <workItem from="1615376898775" duration="70000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="334221000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="58" y="98" width="1166" height="812" extended-state="0" />
+    <layout>
+      <window_info active="true" id="Favorites" order="0" side_tool="true" visible="true" weight="0.32820976" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Database Console" order="0" weight="0.32949308" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="2" />
+      <window_info anchor="bottom" id="Python Console" order="3" sideWeight="0.49911818" weight="0.32822084" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.4959547" visible="true" weight="0.94264704" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5040453" side_tool="true" weight="0.33525345" />
+      <window_info anchor="bottom" id="调试" order="6" weight="0.32949308" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.32786885" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.6105991" />
+      <window_info anchor="bottom" id="Debug" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="bottom" id="manage.py@grwz" order="13" weight="0.171659" />
+      <window_info anchor="bottom" id="TODO" order="14" weight="0.32854864" />
+      <window_info anchor="bottom" id="REST Client" order="15" weight="0.3421659" />
+      <window_info anchor="right" content_ui="combo" id="Project" order="0" visible="true" weight="0.25316456" />
+      <window_info anchor="right" id="SciView" order="1" weight="0.3276699" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+      <window_info anchor="right" id="Database" order="5" weight="0.21278317" />
+      <window_info anchor="right" id="Database Changes" order="6" weight="0.32944608" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Favorites" order="0" side_tool="true" weight="0.32925764" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Database Console" order="0" weight="0.32949308" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="2" />
+      <window_info anchor="bottom" id="Python Console" order="3" weight="0.32854864" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49838188" visible="true" weight="0.30645162" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50161815" side_tool="true" weight="0.15552996" />
+      <window_info anchor="bottom" id="调试" order="6" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.32854864" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.2169059" />
+      <window_info anchor="bottom" id="Debug" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="bottom" id="manage.py@grwz" order="13" weight="0.171659" />
+      <window_info anchor="bottom" id="TODO" order="14" weight="0.32854864" />
+      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="0" visible="true" weight="0.1788026" />
+      <window_info anchor="right" id="SciView" order="1" weight="0.32838428" />
+      <window_info anchor="right" id="Database" order="2" weight="0.2139738" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="3" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
+      <window_info anchor="right" id="Database Changes" order="6" weight="0.32944608" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/grwz$ks.coverage" NAME="ks Coverage Results" MODIFIED="1611386949916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/static" />
+    <SUITE FILE_PATH="coverage/grwz$sy.coverage" NAME="sy Coverage Results" MODIFIED="1611472232152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/grwz$views__1_.coverage" NAME="views (1) Coverage Results" MODIFIED="1611054527097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/lt" />
+    <SUITE FILE_PATH="coverage/grwz$views.coverage" NAME="views Coverage Results" MODIFIED="1604841410402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/filegx" />
+    <SUITE FILE_PATH="coverage/grwz$runserver.coverage" NAME="runserver Coverage Results" MODIFIED="1611388003124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/grwz$manage.coverage" NAME="manage Coverage Results" MODIFIED="1602408286902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../django_python/Lib/site-packages/django/test/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="112" column="7" lean-forward="true" selection-start-line="112" selection-start-column="7" selection-end-line="112" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://C:/Program Files (x86)/Python36-32bit/Lib/uuid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="572" column="4" selection-start-line="572" selection-start-column="4" selection-end-line="572" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lt_lts_ltnr.txt" />
+    <entry file="file://$PROJECT_DIR$/../django_python/Lib/site-packages/dwebsocket/decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files (x86)/Python36-32bit/Lib/wsgiref/handlers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="891">
+          <caret line="133" column="9" lean-forward="true" selection-start-line="133" selection-start-column="9" selection-end-line="133" selection-end-column="9" />
+          <folding>
+            <element signature="e#55#113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1236882890/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-729">
+          <caret line="4065" column="8" selection-start-line="4065" selection-start-column="8" selection-end-line="4065" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runserver.py" />
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/homepage/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/homepage/models.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/homepage/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/ks.py" />
+    <entry file="file://$PROJECT_DIR$/static/9.jpg" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/ide/ide-scripting.groovy">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://C:/Program Files (x86)/Python36-32bit/Lib/json/decoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="338" selection-start-line="338" selection-end-line="338" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/lt/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../django_python/Lib/site-packages/django/db/models/fields/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-689">
+          <caret line="982" column="8" selection-start-line="982" selection-start-column="8" selection-end-line="982" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2ee99550-d3e7-40d3-a7b3-702f1cbe8310/schema/main/table/django_session">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="254f2fa9-89c2-4be0-9f09-a3a6b497f353">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2ee99550-d3e7-40d3-a7b3-702f1cbe8310/schema/main/table/lt_lts_jl" />
+    <entry file="das://2ee99550-d3e7-40d3-a7b3-702f1cbe8310/schema/main/table/django_migrations">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="254f2fa9-89c2-4be0-9f09-a3a6b497f353">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/lt/migrations/0001_initial.py" />
+    <entry file="file://$PROJECT_DIR$/templates/lt/ltll.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1176">
+          <caret line="56" column="79" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/lt/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../django_python/Lib/site-packages/django/views/decorators/csrf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/tjbus/tjbus.html" />
+    <entry file="file://$PROJECT_DIR$/templates/lt/lt_login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/filegx/filegx_wjgx.html" />
+    <entry file="file://$PROJECT_DIR$/templates/filegx/filegx_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="777">
+          <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/filegx/filegx_upload.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/filegx/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="125" column="23" lean-forward="true" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/filegx/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/tjbus/tjqgw/__init__.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/d5dcb2d0bbc32aa58ad4e7066d307a56b7155f05.png@518w.png" />
+    <entry file="file://$PROJECT_DIR$/templates/jssgw/index.html" />
+    <entry file="file://$PROJECT_DIR$/static/jssgw/index.css" />
+    <entry file="file://$PROJECT_DIR$/app_settings/urls.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../django_python/Lib/site-packages/django/middleware/csrf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="210" column="30" lean-forward="true" selection-start-line="210" selection-start-column="30" selection-end-line="210" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../django_python/Lib/site-packages/django/shortcuts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../django_python/Lib/site-packages/django/http/response.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="554" selection-start-line="554" selection-end-line="554" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_settings/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="49" column="40" lean-forward="true" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/sy.py" />
+    <entry file="file://$PROJECT_DIR$/templates/lt/lt.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-252" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/about_phone.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../django_python/Lib/site-packages/django/core/handlers/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="63" column="25" lean-forward="true" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../django_python/Lib/site-packages/django/http/request.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1991">
+          <caret line="39" column="6" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="9457" column="13" selection-start-line="9457" selection-start-column="13" selection-end-line="9457" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/lt/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/lt/lt_lts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3402">
+          <caret line="162" column="25" selection-start-line="162" selection-start-column="25" selection-end-line="162" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

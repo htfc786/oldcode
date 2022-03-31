@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>bmi计算器</title>
+</head>
+<body>
+    <h1>bmi 计算器</h1>
+    <form action="." method="post">
+        {% csrf_token %}
+        <p>
+            体重（kg）：<input type="text" name="weight" id="weight">
+            身高（m）：<input type="text" name="height" id="height">
+            <input type="submit" value="计算">
+        </p>
+    </form>
+    <h2>{{ bmi }}</h2>
+    <h3>{{ tips }}</h3>
+	<div><a>我是htfc786，欢迎您访问</a><a href="https://space.bilibili.com/626519554" target="_blank">我的bilibili主页</a></div>
+</body>
+</html>
