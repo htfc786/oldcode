@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>提交健康码</title>
+</head>
+<body>
+    <h1>欢迎使用健康码提交程序</h1>
+    <form action="/update" method="POST">
+        请选择或输入你的组名：</br><input id="group" name="group" type="text" list="grouplist" placeholder="请选择或输入你的组名"></br>
+        请选择或输入你的姓名：</br><input id="name" name="name" type="text" list="namelist" placeholder="请选择或输入你的姓名"></br>
+        健康码图片：<input id="jkm_image" name="jkm_image" type="file"></br>
+        行程码图片：<input id="xcm_image" name="xcm_image" type="file"></br>
+        
+        <input type="submit" value="提交！">
+    </form>
+    <datalist id="grouplist">
+        <option>七年6班</option>
+        <option>年级组</option>
+    </datalist>
+    <datalist id="namelist">
+        <option>曹博潇</option>
+        <option>赤泽枫</option>
+    </datalist>
+</body>
+</html>
