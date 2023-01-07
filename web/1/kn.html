@@ -1,0 +1,150 @@
+<!--请你完成今天的随堂练习作品，完整的网页等你来挑战-->
+<!--完成13行生成行内块状元素的代码-->
+<!--完成24行右浮动的代码-->
+<!--发挥创造力，赶快创造属于你自己的网站吧！-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>名侦探柯南主页--by:htfc786</title>
+    <style>
+        body {
+            width: 95%;
+            background: url(static/images/bg1.png) no-repeat;
+            background-size: 100%;
+            margin: 4% auto;
+        }
+        
+        .bj{
+            background-color: rgba(255,255,255,0.8);
+            padding: 13px;
+            margin-bottom: 10px;
+            border-radius:5px ;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);            
+
+        }
+        
+        /* 创建两列 */
+        /* Left column */
+        .left {
+            float: left;
+            width: 23%;
+            margin-right: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* 右侧栏 */
+        .right {
+            float: right;
+            width: 75%;
+            margin-right: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .k {
+            display: inline-block;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 18px;
+            text-decoration: none;
+        }
+        
+        img{
+            width: 32.5%;
+        }
+        .work  img{
+            width: 100%;
+        }
+        .work{
+            width: 32.5%;
+            display: inline-block;
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    
+ <!--=====================导航区域(上布局)======================================-->
+    <div class="bj">
+            <a class="k" href="#introduce">简介</a>
+            <a class="k" href="#music">柯南音乐</a>
+			<a class="k" href="#photo">柯南图片</a>
+            <a class="k" href="#program">作品介绍</a>
+            <a class="k" href="#share">B站上的柯南</a>
+            
+    </div>
+    
+<!--=====================内容区域（下布局）======================================-->
+    <div class="main">
+        
+        
+        <!--=====================内容区域（左布局）=============================-->
+        <div class="left">
+            <!--个人简介-->   
+            <div id="introduce" class="bj">
+                <img src="static/images/1.png" style="width:100%">
+                <h3 class="card-title"></h3>
+                <p class="card-text">中文名：名侦探柯南</p>
+                <p class="card-text">原版名：称名探偵コナン</p>
+                <p class="card-text">原作者：青山刚昌</p>
+                <p class="card-text">类型：推理</p>
+                <p class="card-text">首播时间：1996年1月8日</p>
+                <p class="card-text">出品公司：读卖电视台、TMS Entertainment</p>
+				<p>想看？？<a href="https://www.bilibili.com/bangumi/media/md28228813/" target="_blank">戳我</a>（片源：b站）</p>
+            </div>
+            <!--音乐播放器-->
+            <div id="music" class="bj">
+                <h5 class="card-title">音乐播放器（来自<a href="https://music.163.com/#/playlist?id=10512183" target="_blank">这里</a>）</h5>
+                <audio controls="controls" style="width:100%">
+                    <source src="static/music/1.mp3">
+                </audio>
+                <audio controls="controls" style="width:100%">
+                    <source src="static/music/2.mp3">
+                </audio>
+                <audio controls="controls" style="width:100%">
+                    <source src="static/music/3.mp3">
+                </audio>
+            </div>
+        
+        </div>
+        
+        
+        <!--=====================内容区域（右布局）=============================-->
+        <div class="right">
+			
+            <!--个人相册-->
+            <div id ="photo" class="bj">
+				<h3>本网站大部分东西取自bilibili（<a href="http://www.bilibili.com/" target="_blank">戳我</a>进入）</h3>
+                <h3><span><img src="static/images/相册.png" style="width:50px"></span>柯南图片</h3>
+                <img src="static/images/1.jpg">
+                <img src="static/images/2.jpg" >
+                <img src="static/images/3.jpg">
+                <img src="static/images/4.jpg">
+                <img src="static/images/5.jpg">
+                <img src="static/images/6.jpg">
+            </div>
+            
+            <!--编程作品-->
+            <div id="program" class="bj">
+                <h3>作品介绍</h3>
+                <p>主角工藤新一原本是一位颇具名声的高中生侦探，在目击黑暗组织的地下交易后，正准备追踪时却被突袭击昏，并被灌下代号为“APTX4869”的不明药物。后来虽然幸免于死，但身体就此缩小为小学时期的模样。之后他化名为江户川柯南，在邻居阿笠博士的建议下，寄住在女友毛利兰的父亲—侦探毛利小五郎家中，继续秘密从事追查黑暗组织的工作，并私下探寻获得解药的管道，希望能够恢复原来新一的样貌。与此同时，柯南凭着自己的推理天份，配合阿笠博士为他发明的道具，帮助毛利小五郎成为出名的大侦探。故事内容当中穿插许多爱情、友情、犯罪、背叛、复仇等情节。</p>
+            </div>
+            
+            <!--编程知识分享-->
+            <div id="share" class="bj">
+                <h3>B站上的柯南（更多可以去b站看！！！）</h3>
+                <iframe src="http://player.bilibili.com/player.html?aid=78440351&bvid=BV1SJ411e7Es&cid=134211427&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+				<iframe src="http://player.bilibili.com/player.html?aid=77224508&bvid=BV12J411X7cD&cid=132084205&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+				<iframe src="http://player.bilibili.com/player.html?aid=627936751&bvid=BV1Kt4y1Y7kw&cid=260304442&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+			</div>
+        </div>
+		
+    </div>
+    
+</body>
+
+</html>

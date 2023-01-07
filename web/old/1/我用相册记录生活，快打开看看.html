@@ -1,0 +1,1604 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>我用相册记录生活，快打开看看</title>
+
+	<meta name="viewport" content="width=500, height=750, initial-scale=0.64"> 
+
+	<script>
+	var slider_images_url = ['http://127.0.0.1:100/templates/cover/15.png','http://127.0.0.1:100/src/image/index-onimage.png'];var slider_images_urlmin = [] 
+
+	var e_desc = {"de":"\u6211\u7528\u76f8\u518c\u8bb0\u5f55\u751f\u6d3b\uff0c\u5feb\u6253\u5f00\u770b\u770b"}["de"];
+	
+	var words = {};
+	
+
+	var e_music_url = 'https://music.kagirl.cn/sound/jucilangdexiatian.mp4';
+
+    </script>
+
+	<style type="text/css">
+	body{
+		background-color: #ffffff;
+	}
+	@-webkit-keyframes zhuan
+	{
+		0%
+		{
+			-webkit-transform:rotate(0deg);
+		}
+		100%
+		{
+			-webkit-transform:rotate(360deg);
+		}
+	}
+	.showwords 
+	{
+		font-size: 35px;
+		color: black;
+		letter-spacing: 4px;
+		position: absolute;
+		font-weight: bold;
+		z-index: 1;
+		top: 93%;
+		margin: -90px;
+		left: 90px;
+		width: 100%;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		text-shadow: 2px 2px 10px white, -2px -2px 10px white, -2px 2px 10px white, 2px -2px 10px white;
+		/*background-color: rgba(255, 255, 255, 0.69);*/
+	}
+
+	*
+	{
+		padding: 0px;
+		margin: 0px;
+		-webkit-box-sizing: border-box;
+	}
+
+
+	#container
+	{
+		width: 500px;
+		height: 100%;
+		position: absolute;
+		overflow: hidden;
+	}
+		*
+		{
+			padding: 0px;
+			margin: 0px;
+			-webkit-box-sizing: border-box;
+		}
+
+		#bg
+		{
+			padding: 0px;
+			margin: 0px;
+			-webkit-box-sizing: border-box;
+		}
+
+		#container
+		{
+			width: 500px;
+			height: 815px;
+			position: absolute;
+			overflow: hidden;
+		}
+
+		#container > img ,#container > div
+		{
+			position: absolute;
+		}
+		#shangbei
+	{
+		width:500px;
+		height:100px;
+		position: absolute;
+		left: 0px;
+		top: 0px; 
+		background-color: black;
+	}
+
+
+	#qinjian
+	{
+			top: 38px;
+			left: 3px;
+			position: absolute;
+			border: 0px hidden; 
+	}
+
+
+
+	#anjian1
+	{
+		overflow: hidden;
+		position: absolute;
+		top: 29px;
+		left:42px;
+		-webkit-transform:scale(1.3,1);
+		-webkit-animation:anjian1 2s linear infinite;
+	}
+	@-webkit-keyframes anjian1
+		{
+			0%{opacity :0;}
+			30%{opacity: 0}
+			33%{opacity: 1}
+			38%{opacity: 1}
+			43%{opacity: 0}
+			100% {;opacity :0;}
+		} 
+		
+		#anjian12
+	{
+		
+		overflow: hidden;
+		position: absolute;
+		top: 28px;
+		left:419px;
+		-webkit-transform:scale(1.3,1);
+		-webkit-animation:anjian12 2s linear infinite;
+	}
+	@-webkit-keyframes anjian12
+		{
+			0%{opacity :0;}
+			30%{opacity: 0}
+			33%{opacity: 1}
+			38%{opacity: 1}
+			43%{opacity: 0}
+			100% {;opacity :0;}
+		} 
+
+	#anjian2
+	{
+		
+		overflow: hidden;
+		position: absolute;
+		top: 30px;
+		left:128px;
+		-webkit-transform:scale(1.3,1);
+		-webkit-animation:anjian2 2s linear infinite;
+	}
+	@-webkit-keyframes anjian2
+		{
+			0%{opacity :0;}
+			3%{opacity: 1}
+			8%{opacity: 1}
+			13%{opacity: 0}
+			100% {opacity :0;}
+		} 
+		
+	#anjian3
+	{
+		
+		overflow: hidden;
+		position: absolute;
+		top: 30px;
+		left:-14px;
+		-webkit-transform:scale(1.3,1);
+		-webkit-animation:anjian3 2s linear infinite;
+	}
+	@-webkit-keyframes anjian3
+		{
+			0%{opacity :0;}
+			3%{opacity: 1}
+			8%{opacity: 1}
+			13%{opacity: 0}
+			60%{opacity: 0}
+			63%{opacity: 1}
+			68%{opacity: 1}   
+			73%{opacity: 0}     
+			100% {;opacity :0;}
+		} 
+		
+		#anjian32
+	{
+		
+		overflow: hidden;
+		position: absolute;
+		top: 30px;
+		left:368px;
+		-webkit-transform:scale(1.3,1);
+		-webkit-animation:anjian32 2s linear infinite;
+	}
+	@-webkit-keyframes anjian32
+		{
+			0%{opacity :0;}
+			20%{opacity: 0}
+			23%{opacity: 1}
+			28%{opacity: 1}   
+			33%{opacity: 0}     
+			100% {;opacity :0;}
+		}
+
+		#anjian4
+	{
+		
+		overflow: hidden;
+		position: absolute;
+		top: 30px;
+		left:206px;
+		-webkit-transform:scale(1.3,1);
+		-webkit-animation:anjian4 2s linear infinite;
+	}
+	@-webkit-keyframes anjian4
+		{
+			0%{opacity :0;}
+			60%{opacity: 0}
+			63%{opacity: 1}
+			68%{opacity: 1}   
+			73%{opacity: 0}     
+			100% {opacity :0;}
+		} 
+		
+		#anjian42
+	{
+		
+		overflow: hidden;
+		position: absolute;
+		top: 30px;
+		left:266px;
+		-webkit-transform:scale(1.3,1);
+		-webkit-animation:anjian42 2s linear infinite;
+	}
+	@-webkit-keyframes anjian42
+		{
+			0%{opacity :0;}
+			60%{opacity: 0}
+			63%{opacity: 1}
+			68%{opacity: 1}   
+			73%{opacity: 0}           
+			100% {;opacity :0;}
+		} 
+		#anjian43
+	{
+		
+		overflow: hidden;
+		position: absolute;
+		top: 30px;
+		left:28px;
+		-webkit-transform:scale(1.3,1);
+		-webkit-animatio:anjian43 2s linear infinite;
+	}
+	@-webkit-keyframes anjian43
+		{
+			0%{opacity :0;}
+			60%{opacity: 0}
+			63%{opacity: 1}
+			68%{opacity: 1}   
+			73%{opacity: 0}           
+			100% {;opacity :0;}
+		}     
+
+	#anjian5
+	{
+		
+		overflow: hidden;
+		position: absolute;
+		top: 30px;
+		left:186px;
+		-webkit-transform:scale(1.3,1);
+		-webkit-animation:anjian5 2s linear infinite;
+	}
+	@-webkit-keyframes anjian5
+		{
+			0%{opacity :0;}
+			90%{opacity: 0}
+			93%{opacity: 1}
+			98%{opacity: 1}   
+			100% {opacity :0;}
+		} 
+		
+		#anjian52
+	{
+		
+		overflow: hidden;
+		position: absolute;
+		top: 29px;
+		left:450px;
+		-webkit-transform:scale(1.3,1);
+		-webkit-animation:anjian52 2s linear infinite;
+	}
+	@-webkit-keyframes anjian52
+		{
+			0%{opacity :0;}
+			90%{opacity: 0}
+			93%{opacity: 1}
+			98%{opacity: 1}   
+			100% {;opacity :0;}
+		} 
+
+
+	#wuxian
+	{
+		position: absolute;
+		top: 135px;
+		left: -80px;
+		-webkit-animation:wuxian 2s linear infinite alternate;
+	}
+	@-webkit-keyframes wuxian
+	{
+		from{-webkit-transform:translate(0px,0px);}
+		to{-webkit-transform:translate(80px,0px);}
+	}
+
+	#wuxian1
+	{
+		position: absolute;
+		top: 635px;
+		left: -40px;
+		-webkit-animation:wuxian1 2s linear infinite alternate;
+	}
+	@-webkit-keyframes wuxian1
+	{
+		from{-webkit-transform:translate(0px,0px);}
+		to{-webkit-transform:translate(-80px,0px);}
+	}
+
+	#yinfu0
+	{
+		position: absolute;
+		top: 160px;
+		left: 340px;
+	}
+
+	#yinfu1
+	{
+		position: absolute;
+		top: 676px;
+		left: 30px;
+	}
+
+	#yinfu2
+	{
+		position: absolute;
+		top: 656px;
+		left: 30px;
+	}
+
+	#yinfu3
+	{
+		position: absolute;
+		top: 120px;
+		left: 280px;
+	}
+	#yinfu33
+	{
+		position: absolute;
+		top: 100px;
+		left: 44px;
+	}
+
+	#yinfu4
+	{
+		position: absolute;
+		top: 125px;
+		left: 80px;
+	}
+
+	#yinfu5
+	{
+		position: absolute;
+		top: 111px;
+		left: 110px;
+	}
+
+	#yinfu31
+	{
+		position: absolute;
+		top: 600px;
+		left: 300px;
+	}
+
+	#yinfu41
+	{
+		position: absolute;
+		top: 597px;
+		left: 305px;
+	}
+
+	#yinfu51
+	{
+		position: absolute;
+		top: 610px;
+		left: 305px;
+	}
+
+	#wuxian_kawa
+	{
+		position: absolute;
+		left: 0px;
+		top: -20px;
+		width: 500px;
+		height: 50px;
+	}
+
+	#gangqin
+	{
+		position: absolute;
+		top: 620px;
+		left: 180px;
+		-webkit-animation:gangqin 0.8s linear alternate infinite;
+
+	}
+	@-webkit-keyframes gangqin
+	{
+		0%{-webkit-transform:scale(1,1);}
+		50%{-webkit-transform:scale(0.95,1.05);}
+		100%{-webkit-transform:scale(1,1);}    
+	}
+
+	#kawa_mao
+	{
+		position: absolute;
+		top: 610px;
+		left: 144px;    
+		-webkit-transform-origin:30% 90%;
+		-webkit-animation:kawa_mao 0.4s linear alternate infinite;    
+	}
+	@-webkit-keyframes kawa_mao
+	{
+
+		0%{-webkit-transform:rotate(10deg);}
+		100%{-webkit-transform:rotate(0deg);}
+	}
+
+	#heimao1shou
+	{
+		position: absolute;
+		top: 630px;
+		left: 110px; 
+		-webkit-animation:heimao1shou 0.4s linear alternate infinite;  
+	}
+
+	@-webkit-keyframes heimao1shou
+	{
+
+		0%{-webkit-transform:rotate(10deg);}
+		100%{-webkit-transform:rotate(0deg);}
+	}
+
+	#heimao1wei
+	{
+		position: absolute;
+		top: 618px;
+		left: 80px;
+		-webkit-transform-origin:90% 80%;    
+		-webkit-animation:heimao1wei 0.4s linear alternate infinite;  
+	}
+	@-webkit-keyframes heimao1wei
+	{
+
+		0%{-webkit-transform:rotate(-15deg);}
+		100%{-webkit-transform:rotate(-5deg);}
+	}
+
+	#yinfu_kawa
+	{
+		position: absolute;
+		top: 520px;
+		left: 210px; 
+		-webkit-transform-origin:40% 70%;          
+		-webkit-animation:yinfu_kawa 2s linear infinite;  
+	}
+	@-webkit-keyframes yinfu_kawa
+	{
+
+		0%{-webkit-transform:translate(0px,40px) rotate(0deg) scale(0.5,0.5);opacity: 0.6;}
+		50%{-webkit-transform:translate(50px,40px) rotate(100deg) scale(0.8,0.8);opacity: 1;}
+		100%{-webkit-transform:translate(50px,60px) rotate(180deg) scale(1,1);opacity: 0.4;}
+	}
+
+	#heimao2tou
+	{
+		position: absolute;
+		top: 578px;
+		left: 400px;
+		-webkit-transform-origin:23% 80%;    
+		-webkit-animation:heimao2tou 0.4s linear alternate infinite;  
+	}
+
+	@-webkit-keyframes heimao2tou
+	{
+
+		0%{-webkit-transform:rotate(-15deg);}
+		100%{-webkit-transform:rotate(10deg);}
+	}
+
+	#heimao2pigu
+	{
+		position: absolute;
+		top: 640px;
+		left: 405px;
+	}
+
+	#heimao2wei
+	{
+		position: absolute;
+		top: 655px;
+		left: 355px;
+		-webkit-transform-origin:71% 30%;    
+		-webkit-animation:heimao2wei 0.4s linear alternate infinite;  
+	}
+
+	@-webkit-keyframes heimao2wei
+	{
+
+		0%{-webkit-transform:rotateY(0deg);}
+		50%{-webkit-transform:rotateY(0deg);}
+		51%{-webkit-transform:rotateY(180deg);}
+		100%{-webkit-transform:rotateY(180deg);}
+	}
+
+
+	#div1
+	{
+		position: absolute;
+		top: 175px;
+		left: 0px;
+		width: 480px;
+		height: 480px;
+		border-radius:240px; 
+		overflow: hidden; 
+
+	}
+
+	#div2
+	{
+		position: absolute;
+		top: 175px;
+		left: 0px;
+		width: 480px;
+		height: 480px;
+		border-radius:240px;    
+		overflow: hidden; 
+
+	}
+
+	#div3
+	{
+		position: absolute;
+		top: 175px;
+		left: 0px;
+		width: 480px;
+		height: 480px;
+		border-radius:240px;   
+		overflow: hidden; 
+	}
+
+	#div4
+	{
+		position: absolute;
+		top: 175px;
+		left: 0px;
+		width: 480px;
+		height: 480px;
+		border-radius:240px;   
+		overflow: hidden; 
+	}
+
+	.imgbox
+	{
+		position: absolute;
+		top: 38px;
+		left: 37px;
+		width: 420px;
+		height: 420px;
+		border-radius:210px;   
+		overflow: hidden;
+	}
+	@-webkit-keyframes showtitle
+	{
+		from  {-webkit-transform: translate(0px,0px);opacity: 0}
+		to    {-webkit-transform: translate(0px,50px);opacity: 1}
+	}
+
+	@-webkit-keyframes liangziyun_begin
+	{
+		from  {-webkit-transform: translate(0px,50px);opacity: 1}
+		to    {-webkit-transform: translate(-130px,-190px) scale(0.6);}
+	}
+
+
+	@-webkit-keyframes ditu1
+	{
+		0%{-webkit-transform:translate(-500px,0px) rotate(-50deg);}
+		25%{-webkit-transform:translate(0px,0px) rotate(-10deg);}
+		50%{-webkit-transform:translate(0px,0px) rotate(16.7deg);}
+		75%{-webkit-transform:translate(0px,0px) rotate(-10deg);}  
+		100%{-webkit-transform:translate(-500px,0px) rotate(-50deg);}
+	}
+
+	@-webkit-keyframes ditu2
+	{   
+		0%{-webkit-transform:translate(500px,0px) rotate(50deg);}
+		25%{-webkit-transform:translate(0px,0px) rotate(10deg);}
+		50%{-webkit-transform:translate(0px,0px) rotate(-16.7deg);}
+		75%{-webkit-transform:translate(0px,0px) rotate(10deg);}  
+		100%{-webkit-transform:translate(500px,0px) rotate(50deg);}
+	}
+
+	@-webkit-keyframes ditu3
+	{    
+		0%{-webkit-transform:translate(-500px,0px) rotate(-50deg);}
+		25%{-webkit-transform:translate(0px,0px) rotate(-10deg);}
+		50%{-webkit-transform:translate(0px,0px) rotate(16.7deg);}
+		75%{-webkit-transform:translate(0px,0px) rotate(-10deg);}  
+		100%{-webkit-transform:translate(-500px,0px) rotate(-50deg);}
+	}
+
+	@-webkit-keyframes ditu4
+	{   
+		0%{-webkit-transform:translate(500px,0px) rotate(50deg);}
+		25%{-webkit-transform:translate(0px,0px) rotate(10deg);}
+		50%{-webkit-transform:translate(0px,0px) rotate(-16.7deg);}
+		75%{-webkit-transform:translate(0px,0px) rotate(10deg);} 
+		100%{-webkit-transform:translate(500px,0px) rotate(50deg);}
+
+	}
+
+	@-webkit-keyframes disimg1
+	{
+		from  {-webkit-transform: translate(0px,0px) rotate(-8deg);opacity: 0}
+		to    {-webkit-transform: translate(0px,0px) rotate(-8deg);opacity: 0}
+	}
+	@-webkit-keyframes disimg2
+	{
+		from  {-webkit-transform: translate(0px,0px) rotate(-1deg);opacity: 0}
+		to    {-webkit-transform: translate(0px,0px) rotate(-1deg);opacity: 0}
+	}
+	@-webkit-keyframes disimg3
+	{
+		from  {-webkit-transform: translate(0px,0px) rotate(10deg);opacity: 0}
+		to    {-webkit-transform: translate(0px,0px) rotate(10deg);opacity: 0}
+	}
+	@-webkit-keyframes disimg4
+	{
+		from  {-webkit-transform: translate(0px,0px) rotate(-2deg);opacity: 0}
+		to    {-webkit-transform: translate(0px,0px) rotate(-2deg);opacity: 0}
+	}
+	#cardsound{
+			font-size: 16px;
+			position: fixed;
+			right: 0px;
+			top: 30px;
+			z-index: 10000;
+			width: 110px;
+			/* height: 44px; */
+			text-align: center;
+			display: none;
+		}
+
+		#sound_image_div, #sound_image{
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			z-index: 1000;
+		}
+
+		.sound_tips_block{
+			position: relative;
+		}
+
+		.sound_tips{
+			position: absolute;
+			top:0;
+			left:0;
+		}
+
+		#music_txt{
+			width: 100%;
+			color:white;
+			text-shadow: 1px 1px 1px black;
+			opacity: 0;
+		}
+
+		.cardsound_720 #sound_image_div,.cardsound_720 #sound_image{
+			width:63px;
+			height:63px;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<img src="./我用相册记录生活，快打开看看_files/bg.jpg" width="500" height="815">
+		<div id="div1" style="display:none">
+			<img id="img11" src="./我用相册记录生活，快打开看看_files/ditu1.png" style="position:absolute">
+			<div class="imgbox">
+				<img id="img1" style="position:absolute">
+				<span id="word1" class="showwords"></span>
+			</div>
+		</div> 
+
+		<div id="div2" style="display:none">   
+			<img id="img22" src="./我用相册记录生活，快打开看看_files/ditu2.png" style="position:absolute">
+			<div class="imgbox">
+				<img id="img2" style="position:absolute">
+				<span id="word2" class="showwords"></span>
+			</div>
+		</div>
+
+		<div id="div3" style="display:none">
+			<img id="img33" src="./我用相册记录生活，快打开看看_files/ditu3.png" style="position:absolute"> 
+			<div class="imgbox">
+				<img id="img3" style="position:absolute">
+				<span id="word3" class="showwords"></span>            
+			</div>  
+		</div>
+
+		<div id="div4" style="display:none">
+			<img id="img44" src="./我用相册记录生活，快打开看看_files/ditu4.png" style="position:absolute">    
+			<div class="imgbox">    
+				<img id="img4" style="position:absolute">
+				<span id="word4" class="showwords"></span>
+			</div>   
+		</div>
+
+		<div id="shangbei">
+			<img id="qinjian" src="./我用相册记录生活，快打开看看_files/qinjian.png"> 
+			<img id="anjian3" src="./我用相册记录生活，快打开看看_files/anjian.png">
+			<img id="anjian1" src="./我用相册记录生活，快打开看看_files/anjian.png"> 
+			<img id="anjian2" src="./我用相册记录生活，快打开看看_files/anjian.png"> 
+			<img id="anjian5" src="./我用相册记录生活，快打开看看_files/anjian.png"> 
+			<img id="anjian4" src="./我用相册记录生活，快打开看看_files/anjian.png">
+			<img id="anjian42" src="./我用相册记录生活，快打开看看_files/anjian.png"> 
+			<img id="anjian32" src="./我用相册记录生活，快打开看看_files/anjian.png">
+			<img id="anjian12" src="./我用相册记录生活，快打开看看_files/anjian.png">  
+			<img id="anjian52" src="./我用相册记录生活，快打开看看_files/anjian.png">
+		</div>
+
+	<div id="wuxian_kawa">
+		<img id="wuxian" src="./我用相册记录生活，快打开看看_files/wuxian.png">    
+		<img id="yinfu0" src="./我用相册记录生活，快打开看看_files/yinfu0.png">
+		<img id="yinfu3" src="./我用相册记录生活，快打开看看_files/yinfu3.png">
+		<img id="yinfu4" src="./我用相册记录生活，快打开看看_files/yinfu4.png">
+		<img id="yinfu5" src="./我用相册记录生活，快打开看看_files/yinfu5.png">
+	</div>
+
+		<div style="position:absolute;top:50px;">
+			<img id="wuxian1" src="./我用相册记录生活，快打开看看_files/wuxian.png">  
+			<img id="yinfu1" src="./我用相册记录生活，快打开看看_files/yinfu1.png">
+			<img id="yinfu2" src="./我用相册记录生活，快打开看看_files/yinfu2.png">
+			<img id="yinfu31" src="./我用相册记录生活，快打开看看_files/yinfu3.png">
+			<img id="yinfu41" src="./我用相册记录生活，快打开看看_files/yinfu4.png">
+			<img id="yinfu51" src="./我用相册记录生活，快打开看看_files/yinfu5.png">
+			<img id="gangqin" src="./我用相册记录生活，快打开看看_files/gangqin.png">
+			<img id="kawa_mao" src="./我用相册记录生活，快打开看看_files/heimao1shen.png">
+			<img id="heimao1shou" src="./我用相册记录生活，快打开看看_files/heimao1shou.png">
+			<img id="heimao1wei" src="./我用相册记录生活，快打开看看_files/heimao1wei.png">
+			<img id="yinfu_kawa" src="./我用相册记录生活，快打开看看_files/yinfu4.png">
+			<img id="heimao2tou" src="./我用相册记录生活，快打开看看_files/heimao2tou.png">
+			<img id="heimao2pigu" src="./我用相册记录生活，快打开看看_files/heimao2pigu.png">
+			<img id="heimao2wei" src="./我用相册记录生活，快打开看看_files/heimao2wei.png">
+		</div>
+
+		<div id="pagetitle" style="position:absolute;width:370px;height:227px;top:247px;left:65px;font-size:40px;color:#555;overflow:hidden;text-shadow:1px 5px 4px rgba(0, 0, 0, 0.2);font-weight:bold;">
+			<div style="position:absolute;width:370px;height:227px;top:0px;left:0px;overflow:hidden;">
+				<div style="position:absolute;width:370px;height:227px;display:table;overflow:hidden;">
+					<div id="liangziyun_title" style="width:370px;height:227px;vertical-align:middle;color:#FFFFFF;display:table-cell;text-align:center;"></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div id="cardsound">
+		<div id="sound_image_div" onclick="switchsound()">
+			<img id="sound_image">
+		</div>
+		<div id="music_txt"></div>
+	</div>
+
+	<script>
+	var e_scene = 'maode';
+	var photostart = 1;
+	var module_inits = [];
+	var image_size_width=[];
+	var image_size_height=[];
+	var image_url_index=0;
+	var have_num = 0;
+	var error_num = 0;
+	var canshow = true;
+	var reshow = false;
+	var delaytime=3000;
+	var timeout0=0;
+	var timeout2=0;
+	var timeout3=0;
+	var timeout4=0;
+	var timeout5=0;
+
+	var load_flag = true;
+
+    function load_init_modules(){
+        if(!load_flag) return;
+
+        for(var i=0;i<module_inits.length; i++){
+            module_inits[i]();
+        }
+        load_flag = false;
+    }
+
+    function call_me(fun)
+    {
+        module_inits.push(fun);
+    }
+	var get_pid = function(url){
+		if (url != undefined) {
+			var index1 = url.indexOf("?");
+			if(index1 != -1)
+			{
+				url = url.substr(0, index1);
+			}
+			return url.toString().substr(url.lastIndexOf("/") + 1);
+		}else {
+			return '';
+		}
+	}
+
+	function load_images()
+	{
+		div1=id('div1');
+		div2=id('div2');
+		div3=id('div3');
+		div4=id('div4');
+
+		reshow = false;
+		image_size_width=[];
+		image_size_height=[];
+		Onload_imgs_url=[];
+		image_url_index=0;
+		have_num = 0;
+		error_num = 0;
+		begin_titletime = new Date();
+		begin_titletime = begin_titletime.getTime();
+		photo_start_init('showtitle',0);
+		canshow = true;
+
+		bl_keepload = 'first';
+		step_load();
+			
+	}
+	//每次执行加载后5张图片
+	var bl_keepload = 'first';
+	var step_loadnum = 5;
+	function step_load()
+	{
+		var load_num = 0
+		//初步加载X张
+		if(image_url_index  == 0 && bl_keepload == 'first')
+		{
+			console.log('loading continue');
+			if(slider_images_url.length > step_loadnum)
+			{
+				load_num = step_loadnum;
+				bl_keepload = 'next';
+			}
+			else
+			{
+				load_num = slider_images_url.length;
+				bl_keepload = 'end';
+			}
+			for(var i = 0; i< load_num; i++)
+			{
+				var img=new Image();
+				img.index=i;
+				img.src=slider_images_url[i];
+				img.onload=image_onload;
+				img.onerror= image_onerror;
+				Onload_imgs_url[i] = 'loading';
+			}
+		}
+		else if(bl_keepload == 'end')
+		{
+			return;
+		}
+		else
+		{
+			console.log('loading continue');
+			if(slider_images_url.length - image_url_index >step_loadnum*2)
+			{ 
+				load_num = step_loadnum;
+			}
+			else
+			{
+				load_num = slider_images_url.length - image_url_index - step_loadnum;
+				bl_keepload = 'end';
+			}
+			for(var i = image_url_index +step_loadnum; i< image_url_index + step_loadnum + load_num; i++)
+			{
+				var img=new Image();
+				img.index=i;
+				img.src=slider_images_url[i];
+				img.onload=image_onload;
+				img.onerror= image_onerror;
+				Onload_imgs_url[i] = 'loading';
+			}
+		}
+
+	}
+	
+
+	function image_onerror(event)
+	{
+		var img = event.target;
+		var index = img.index;
+		if(index<step_loadnum)
+			error_num ++;
+		Onload_imgs_url[index] = 'not find';
+		// console.log(Onload_imgs_url[index]);
+		// console.log(have_num + '-' + error_num);
+		if((have_num+error_num >= step_loadnum || slider_images_url.length == (have_num+error_num)) && canshow == true)
+		{   
+			reshow = false;
+			canshow =false;
+			if(have_num == 0)
+				return;
+			var end_titletime = new Date();
+			end_titletime = end_titletime.getTime();
+			var dis_titletime = Math.abs(end_titletime-begin_titletime);
+			if(dis_titletime>delaytime)
+			{
+				photo_start_init('liangziyun_kawa',delaytime);
+			}
+			else
+			{
+				dis_titletime = delaytime- dis_titletime;
+				timeout0 = setTimeout(function()
+					{
+						photo_start_init('liangziyun_kawa',delaytime);
+					},dis_titletime);
+			}
+		}
+	}
+
+	function image_onload(event)
+	{
+		if(reshow == true)
+			return;
+
+		var img = event.target;
+		var index = img.index;
+
+		if(index<step_loadnum)
+		{
+			have_num++;
+		}
+		Onload_imgs_url[index] = img.src;
+		image_size_height[index] = img.height;
+		image_size_width[index] = img.width;
+
+		console.log(Onload_imgs_url[index]);
+
+		if((have_num + error_num >= step_loadnum||slider_images_url.length == (have_num+error_num)) && canshow == true)
+		{   
+			reshow = false;
+			canshow =false;
+			if(have_num == 0)
+				return;
+			var end_titletime = new Date();
+			end_titletime = end_titletime.getTime();
+			var dis_titletime = Math.abs(end_titletime-begin_titletime);
+			if(dis_titletime>delaytime)
+			{
+				photo_start_init('liangziyun_kawa',delaytime);
+			}
+			else
+			{
+				dis_titletime = delaytime- dis_titletime;
+				timeout0 = setTimeout(function()
+					{
+						photo_start_init('liangziyun_kawa',delaytime);
+					},dis_titletime);
+			}
+
+		}
+	}
+
+	function id(name)
+	{
+		return document.getElementById(name);
+	}
+	function showtitle() {
+		id('liangziyun_title').innerHTML = e_desc;
+
+		id('pagetitle').style.webkitAnimation = 'showtitle 0.7s linear both';
+	}
+	function liangziyun_kawa() {
+		id('pagetitle').style.webkitAnimation = 'liangziyun_begin 1.3s cubic-bezier(.31,.05,.69,1) both';
+		show1();
+	}
+
+
+	function show1()
+	{
+		kawa_setImage('1');
+		div2.style.webkitAnimation = 'disimg2 1s linear both';
+		div1.style.display = 'block';
+		id("div1").style.webkitAnimation = "ditu1 8s linear both";
+		timeout2 = setTimeout(show2,6900);
+	}
+
+	function show2()
+	{
+		kawa_setImage('2');
+		div3.style.webkitAnimation = 'disimg3 1s linear both';
+		div2.style.display = 'block';
+		id("div2").style.webkitAnimation = "ditu2 8s linear both";
+		timeout3 = setTimeout(show3,6900);
+
+	}
+
+	function show3()
+	{
+		kawa_setImage('3');
+		div4.style.webkitAnimation = 'disimg4 1s linear both';
+		div3.style.display = 'block';
+		id("div3").style.webkitAnimation = "ditu3 8s linear both";
+		timeout4 = setTimeout(show4,6900);
+	}
+
+	function show4()
+	{
+		kawa_setImage('4');
+		div1.style.webkitAnimation = 'disimg1 1s linear both';
+		div4.style.display = 'block';
+		id("div4").style.webkitAnimation = "ditu4 8s linear both";
+		timeout5 = setTimeout(show1,6900);
+	}
+
+	function insertEnter(str,n){
+		var len = str.length;
+		var strTemp = '';
+		if(len > n){
+		strTemp = str.substring(0,n);
+		str = str.substring(n,len);
+		return strTemp+'\n'+str;
+		}else{
+		return str;
+		}
+	}
+
+	function kawa_setImage(idname)
+	{
+		if(reshow == true)
+			return;
+
+		while(Onload_imgs_url[image_url_index] == 'not find' || Onload_imgs_url[image_url_index] == 'loading' || Onload_imgs_url[image_url_index] == undefined)
+		{
+			if(image_url_index % step_loadnum == 0)
+			{
+				step_load();
+			}
+			
+				if(end_pic_status == 1 && image_url_index == 0){
+					callend(1);
+				}
+				image_url_index++;
+				if (image_url_index >= Onload_imgs_url.length){
+						end_pic_status = 1;
+						image_url_index = 0;
+				}
+		
+		}
+
+	
+		if(image_url_index % step_loadnum == 0)
+		{
+			step_load();
+		}
+		console.log('setimg:' + Onload_imgs_url[image_url_index]);
+
+		var img_bili = image_size_width[image_url_index]/image_size_height[image_url_index];
+
+		var div = id('div'+idname)
+		var img = id('img'+idname);
+		img.src = Onload_imgs_url[image_url_index];
+
+		var word = id('word'+idname);
+		var word_string = words[get_pid(Onload_imgs_url[image_url_index])];
+		if(word_string != undefined)
+		{   
+			word_string = word_string.replace(/[\n]/ig,'');
+			
+			var word_length = word_string.length;
+			if(word_length > 8)
+			{
+				word.style.fontSize = "25px";
+				if(word_length > 10)
+					word_string = insertEnter(word_string, 11);
+			}else {
+				word.style.fontSize = "30px";
+			}
+			word.innerText = word_string;
+		}
+		else
+		{
+			word.innerText = "";
+		}
+
+		if(img_bili > 1)
+		{
+			img.style.top = '0px';
+			img.style.height = 420 + 'px';
+			img.style.width = 420*img_bili + 'px';
+			img.style.left = -((420*img_bili-420)/2)+'px';
+		}
+		else
+		{
+			img.style.left = '0px';
+			img.style.width = 420+'px';
+			img.style.height = 420/img_bili + 'px';
+			img.style.top = -((420/img_bili-420)/2) + 'px';
+		}
+
+		
+				if(end_pic_status == 1 && image_url_index == 0){
+					callend(1);
+				}
+				image_url_index++;
+				if (image_url_index >= Onload_imgs_url.length){
+						end_pic_status = 1;
+						image_url_index = 0;
+				}
+		
+
+	}
+
+	function reload_scene()
+	{
+		clearnode();
+		reshow = true;
+		setTimeout(load_images,100);
+	}
+	function clearnode()
+	{    
+
+		id('div1').style.webkitAnimation = '';
+		id('div2').style.webkitAnimation = '';
+		id('div3').style.webkitAnimation = '';
+		id('div4').style.webkitAnimation = '';
+		id('div1').style.display = 'none';
+		id('div2').style.display = 'none';
+		id('div3').style.display = 'none';
+		id('div4').style.display = 'none';
+		id('liangziyun_title').innerHTML = '';
+		id('pagetitle').style.webkitAnimation = '';
+
+		clearTimeout(timeout0);
+		clearTimeout(timeout2);
+		clearTimeout(timeout3);
+		clearTimeout(timeout4);
+		clearTimeout(timeout5);
+
+	}
+
+
+	call_me(load_images);
+
+	
+				if(typeof(objid) === "undefined")
+		{
+			var objid = function(id)
+			{
+				return document.getElementById(id);
+			}
+		}
+
+		
+		function on_wx_music_init()
+		{
+
+			if(e_desc != "")
+			{
+				document.title = e_desc.replace("<br>", "\n").replace("<br/>", "\n");;
+			}
+			else
+			{
+				document.title = "音乐相册";
+			}
+
+			create_music();
+			handleHeadimg(like_user_list);
+			if(notbtn == 1 || locationurl.indexOf("notbtnmusic=1") !== -1){
+				objid("jubao-click").style.display = "none"
+				objid("backtomake").style.display = "none"
+				objid("like_div").style.display = "none"
+				objid("cardsound").style.display = "none"
+				objid("guanzhu_container").style.display = "none"
+				objid("notice").style.display = "none"
+//				objid("footer").style.display = "none"
+				if(objid("kgCD") && locationurl.indexOf("notbtnmusic=1") === -1){
+					objid("kgCD").style.display = "none"
+				}
+			}
+		}
+
+		call_me(on_wx_music_init);
+
+		//音乐播放
+		var e_music_player = new Audio();
+		function play_music()
+		{
+			if(e_music_url == ''){
+				return ;
+			}
+
+			//音乐转圈图标，初始化
+			sound_image_init();
+
+			if(e_music_url.indexOf('qqmusic') != -1)
+			{
+				mymusic = 'https://s2.kagirl.cn/template/music/688042.m4a';
+			}
+			else
+			{
+				mymusic = e_music_url;
+			}
+			if(typeof e_music_player == 'undefined' && typeof onerror_tips != 'undefined'){
+				onerror_tips = 'typof Audio: '+(typeof Audio);
+			}
+			e_music_player.src  = mymusic;
+			e_music_player.loop = 'loop';
+
+			console.log(e_music_player.src);
+			e_music_player.onerror = function(){
+				mymusic = mymusic.replace(".mp4", ".mp3")
+
+				e_music_player.src = mymusic;
+				e_music_player.play();
+				e_music_player.onerror = null;
+			}
+			e_music_player.play();
+			if(window.location.href.indexOf('debug=1') === -1){
+				checkMusicBufferTimer = window.setInterval("checkMusicBuffer()",1000);
+			}
+
+			//音乐转圈图标，初始化
+			sound_image_init();
+			 bplay = 1;
+
+			// TODO 特殊处理：模板 dongganmtv12020lyric、hetangyuese2020 luwei2021 需要开启歌词 且禁止切换音乐
+			if(e_scene == "dongganmtv12020lyric" || e_scene == "hetangyuese2020" || e_scene == "luwei2021" || e_scene == "kuailemeiyitian2021"){
+				open_lyric();
+			}
+		}
+
+		var checkMusicBufferTimer = '';
+		function checkMusicBuffer()
+		{
+			// var timeRanges = e_music_player.buffered;
+			// var timeBuffered = timeRanges.end(timeRanges.length - 1);
+			// var bufferPercent = timeBuffered /e_music_player.duration;
+			var bufferPercent = 1;
+			var notStart = bplay == 1 && bufferPercent==1 && e_music_player.paused;
+			console.log('music:'+bufferPercent);
+			//尚未播放
+			if(isNaN(bufferPercent) || bufferPercent == 0 || notStart)
+			{
+				var ai = objid('sound_image');
+				ai.style.webkitAnimation     = "";
+				e_music_player.play();
+				show_shouzhi();
+				// console.log('尚未播放');
+			}
+			//已经在播放
+			if(bplay == 1 && !e_music_player.paused){
+				var ai = objid('sound_image');
+				ai.style.webkitAnimation     = "zhuan 3s linear infinite";
+				// console.log('已经在播放');
+				window.clearInterval(checkMusicBufferTimer);
+			}
+		}
+
+		var bplay = 0;//播放状态：0未开始，1播放中
+		function create_music()
+		{
+			if(e_music_url == '')
+			{
+				return ;
+			}
+			//音乐转圈图标，初始化
+			sound_image_init();
+			//音乐播放  视频延迟播放音乐
+			 play_music();
+		}
+
+		function stop_music(){
+			if(kugou_music.isActive){
+				kugou_stop_music();
+			}
+			console.log(e_music_player)
+			if(e_music_player != null){
+				e_music_player.pause();
+			}
+			if(e_try_player != null){
+				e_try_player.pause();
+			}
+			if(objid('sound_image'))
+			{
+				objid('sound_image').style.webkitAnimation = "";
+			}
+		}
+		
+		function switchsound(){
+
+			var ai = objid('sound_image');
+			var au = e_music_player;
+			var text = objid("music_txt");
+
+			if(au.paused){
+				bplay = 1;
+				au.play();
+			}else{
+				bplay = 0;
+				au.pause();
+			}
+
+			if(bplay == 1){
+				ai.style.webkitAnimation     = "zhuan 3s linear infinite";
+				text.innerHTML = "打开";
+			}else{
+				ai.style.webkitAnimation     = "";
+				text.innerHTML = "关闭";
+			}
+			text.style.webkitAnimation = "fadeout 2.5s steps(1)";
+			setTimeout(function(){text.style.webkitAnimation=""}, 2500);
+		}
+		//展示音乐图标
+		function showCardsound(){
+			var cardsound = objid('cardsound');
+			var sound_image = objid('sound_image');
+			var tips = document.querySelectorAll('.sound_tips');
+
+			if(kugou_music.isActive ){
+				cardsound.style.display = 'none';
+				if(typeof lzyStatistics != 'undefined'){
+					new lzyStatistics().once(wxid, 'lzyKugou', 'show');
+				}
+				return false;
+			}
+
+			[].forEach.call(tips,function(tip){
+				tip.style = '';
+			});
+
+			sound_image.style.webkitAnimation = "zhuan 3s linear infinite";
+			cardsound.style.display = 'block';
+			sound_image.src = 'https://tu.kagirl.cn/pic/music_note_big.png?v=1';
+
+		}
+
+		function sound_image_init(){
+			var cardsound = objid('cardsound');
+
+			if(window.innerWidth === 720){
+				cardsound.className = 'cardsound_720';
+			}
+			showCardsound();
+
+		}
+	
+	
+
+		
+		var showShouzhi = false
+		function show_shouzhi()
+		{
+
+			if (typeof anMusicSt != 'undefined' && anMusicSt==1 && !showShouzhi && notbtn!=1) {
+				showShouzhi = true
+				objid('sound_shouzhi').style.display = 'block';
+				objid('sound_shouzhi').style.webkitAnimation='shangshuo 5s 2s linear both';
+				if(!editmode && videostatus!=1){
+					objid('music_play_mask_container').style.display = 'block';
+					objid('music_play_mask_container').style.webkitAnimation = 'widgets_fadeIn 0.1s 0.5s linear forwards';
+					objid('music_play_select_container').style.display='block';
+					objid('music_play_select_container').style.webkitAnimation = 'widgets_fadeIn 0.1s 0.5s linear forwards';
+				}
+			}
+		
+
+		}
+		
+
+		//页面初始化
+		(function(window,document){
+			document.addEventListener("DOMContentLoaded",init);
+			//修改图标大小
+			function init(){
+				resizeIcon();
+			}
+
+			function resizeIcon(){
+				if(window.innerWidth == '720'){
+					document.getElementById('like_div').className = "like_div_720";
+					document.getElementById('footer').className = "footer-720";
+				}
+			}
+		})(window,document);
+
+
+		function backtobooks()
+		{
+//			var url_books = document.referrer;
+
+			if( typeof lzyStatistics != 'undefined'){
+				new lzyStatistics().call(wxid, 'photouser', 'backtobooks');
+			}
+
+			gomanage();
+			return false;
+
+			// window.history.back(-1);
+//			window.location.href = url_books;
+		}
+
+		function setCookie(name,value,days)
+		{
+			var exp = new Date();
+			exp.setTime(exp.getTime() + days*24*60*60*1000);
+			document.cookie = name + "="+ escape(value) + ";expires=" + exp.toGMTString();
+		}
+		function getCookie(name)
+		{
+			var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+			if(arr=document.cookie.match(reg))
+				return unescape(arr[2]);
+			else
+				return null;
+		}
+
+		function gomanage()
+		{
+			if( location.href.indexOf("fm=woam") != -1 || location.href.indexOf('onmake=true')!=-1){
+				window.location = "makebook.php?&wxid="+wxid+"&olwxid="+olwxid;
+			}else if(e_openid){
+				window.location = "mybooks.php?openid="+e_openid+'&wxid='+wxid+"&olwxid="+olwxid;
+			}else{
+				var url_books = document.referrer;
+				window.location.href = url_books;
+			}
+
+		}
+
+		function handleHeadimg(urllist)
+		{
+			var start = 10
+			htm = ''
+			var listlen =urllist.length
+			for(var i=listlen-1;i>=0;i--){
+				var lefts = start+(listlen-1-i)*22
+				htm +=  "<img class='headimg'  style='left: "+lefts+"px;z-index: "+(listlen-i)+";' src='"+urllist[i]+"'>"
+			}
+			var blockw = lefts+30
+			if(htm != ''){
+				objid("headimg-block").style.width=blockw+'px'
+				objid("headimg-block").innerHTML = 	htm
+			}
+		}
+
+		function close_lick_user(){
+			objid("like-user-block").style.display = "none"
+			objid("like-mask").style.display = 'none'
+		}
+
+		var share_photo_tips = [];
+		var share_photo_is_play = false;
+		function get_share_photo_tips()
+		{
+			if(share_photo_is_play){
+				return false;
+			}
+			share_photo_is_play = true;
+			var url = "share_photo_tips.php?wxid="+wxid+"&bookid="+e_bookid;
+			XMLHttp.sendReq('GET', url , '', function(res){
+				 var resp = JSON.parse(res.responseText);
+				if(resp.status == 1){
+					var data = resp.data.user_list;
+					var bookkey =  resp.data.bookkey;
+					var cookieInfo = getCookie(bookkey);
+					if(location.href.indexOf("inviteshare=1") !== -1) cookieInfo = null
+					var isshow = {};
+					if(cookieInfo != null){
+						var cookieList = cookieInfo.split('|');
+						cookieList.forEach(function(item,index){
+							var binfo =item.split(',');
+							if(binfo.length > 1){
+								isshow[binfo[0]] = binfo[1];
+							}
+						})
+					}
+					var  cookieStr = ''
+					data.forEach(function(item2,index2){
+						cookieStr += item2['key']+','+item2['num']+'|'
+						if(!isshow.hasOwnProperty(item2['key'])){
+							share_photo_tips.push(item2);
+						}else if(item2['num'] > isshow[item2['key']]){
+							item2['num'] = item2['num']-isshow[item2['key']];
+							share_photo_tips.push(item2);
+						}
+					})
+//					console.log(share_photo_tips)
+					setCookie(bookkey,cookieStr,30)
+					var initerTime = 0;
+					if(share_photo_tips.length > 0){
+						objid('share-photo-tips-block').style.display = 'block';
+						share_photo_tips.forEach(function(item3,index){
+							var tips_item = document.createElement('div');
+							var annum = 'share-photo-tips-an'+index%2+' 1.5s '+initerTime+'ms linear both'
+							tips_item.className = 'share-photo-item';
+							tips_item.style.webkitAnimation = annum
+							tips_item.innerHTML = '<div class="share-photo-headimg" style="background: url('+item3['headimgurl']+');background-size: 100% 100%;"></div><div class="share-photo-text"><div class="share-photo-text1">'+item3['nickname']+'</div><div class="share-photo-text2">新上传'+item3['num']+'张照片</div></div>';
+							initerTime += 750;
+							objid('share-photo-tips-block').appendChild(tips_item)
+						})
+						setTimeout(function(){
+							objid('share-photo-tips-block').style.display = 'none';
+						},initerTime+750)
+					}
+				}
+			})
+		}
+		function photo_start_init(func,delay)
+		{
+			var fun=func+"()";
+			if(photostart == 1){
+				console.log('执行：'+func)
+				eval(fun);
+				return ;
+			}
+
+			var isinsert = false;
+			for(var index in startFunc){
+				var item = startFunc[index]
+				if (item['method'] == func){
+					isinsert = true;
+					break;
+				}
+			}
+
+			if(!isinsert){
+				delay = parseInt(delay)
+				startFunc.push({'method':func,'delay':delay})
+			}
+			if(startInter) return;
+			startInter = setInterval(function(){
+				if(photostart == 1){
+					clearInterval(startInter)
+					for(var i=0;i<startFunc.length; i++){
+						var items  = startFunc[i]
+						fun = items['method']+"()"
+						if(items['delay'] == 0) {
+							eval(fun);
+							console.log('执行：'+items['method'])
+						}else{
+							setTimeout(function(){
+								eval(fun);
+								console.log('执行：'+fun)
+							},items['delay'])
+						}
+
+					}
+				}
+			},500);
+		}
+		var startInter = ""
+		var startFunc = []
+		
+
+		var end_pic_status = 0;
+		var photoend = 0;
+		var end_delay_times = 7;
+		
+          
+        function e(){
+            const time = 2000;
+            const timer = setTimeout(load_init_modules,time);
+        }
+        window.addEventListener('load', e, false);
+	</script>
+</body>
+</html>

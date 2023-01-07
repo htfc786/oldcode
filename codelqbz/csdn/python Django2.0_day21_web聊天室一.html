@@ -1,0 +1,485 @@
+<div id="topics">
+        <div class="post">
+            <h1 class="postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/zhming26/p/5920642.html">
+    <span>python2.0_day21_web聊天室一</span>
+    
+
+
+</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body">
+    <pre>bbs系统项目中我们用到的ajax不多,但是在聊天室里用到的全是ajax,所以本项目的主要内容就是:<br>前端使用ajax传输json格式的数据是本节的重点以及 前端函数的的使用.<br>http协议的特点是:短链接 ,服务器无法主动向客户端发送消息.都是客户端请求服务器返回消息.<br>那么问题来了,WEB聊天账户如何从后台获取消息,还要求实时的.<br>有三种方法:<br>    1.从上述内容可知,无法实现后端把消息主动推送到前端.所以前端就要写一个定时任务.为了实现实时的获取消息,轮询的时间间隔越小越好.<br>    2.当时间间隔很小时,就会造成,当页面打开后,客户端在不停的向服务器发送请求,这样会造成服务器的请求压力和带宽占用,这时候在轮询的方式上我们重新加工了下,把轮询的时间调整为你指定的间隔,并且保证前端可以实时接收信息.<br>    如何实现呢:后端使用消息队列接收信息,当消息队列queue.get()活得不到消息时,阻塞状态,阻塞时间超时则返回前端空信息,当获得到消息就立马返回.前端实现当获得到消息时(无论是获得空还是真实消息),都立马之行下一次.<br>    3.除了上面两种靠http协议中服务器被动返回消息的模式外,H5中新添加了websocket技术,实现了前端和后台建立socket通道的功能,这样服务端就可以主动推送消息给客户端了.但是应用这种新技术的前提是前端浏览器要支持和后台服务框架要支持.<br>    但是Django框架不支持,并且浏览器有好多不支持.但是此中技术在以后肯定会普及.为什么呢?因为有人做过对比,使用长轮询和websocket传送一样的消息内容几千次,长轮询使用的流量7~8M而websocket 几十K,这效率是万的倍率.所以以后肯定会普及.<br>    但是现在我们先用长轮询来实现web聊天的即时通讯.<br><br>下面我们就做一个长轮询的聊天室.<br>  我们想把web聊天室和bbs系统结合.就不需要在创建一个独立的项目,在bbs这个项目下创建一个app</pre>
+<div class="cnblogs_code">
+<pre> python3.<span style="color: rgba(128, 0, 128, 1)">5</span> manage.py startapp webchat</pre>
+</div>
+<pre>  然后在settings.py加上这个app<br>  我们知道在Django框架中同一个项目中的不同app是共用同一个数据库实例的,不同的app里创建的表的前缀不一样.如bbs里的表就如下图:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929172146313-1150488450.png" alt="" width="411" height="341"></p>
+<pre>  这里我们想web聊天室的用户部分就用这个了.下面就开始设计这个web聊天室需要用到的表和表中字段.<br>  设计表结构当然要从功能入手:<br>  1.每一个用户有一个好友列表.  (多对多关系)<br>  2.有一个组列表.         (多对多关系)<br>  所以,我们只要在bbs的用户表中添加一个朋友字段,多对多关系关联到自己.实现好友列表的功能.<br>  然后创建一个组表,然后多对多建立和用户表进行关联.<br>  于是关于webchat程序的modles.py更改如下:<br> </pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929172203422-1666920593.png" alt="" width="771" height="272"></p>
+<pre>和</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929172219985-1822279307.png" alt="" width="579" height="229"></p>
+<pre><br>  鉴于上图中显示的问题,我们应该给这种在一张表中多个字段外键关联同一张表的外键关联属性上加上related_name='名称属性'<br>  于是组的models.py内容改成如下:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929172231250-919014581.png" alt="" width="745" height="360"></p>
+<pre>  如果你不改成如上图的样子,那么你在执行python3.5 manage.py makemigrations会报错.<br>  接下来我们使用命令创建数据库</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929172243110-1101891606.png" alt="" width="537" height="446"></p>
+<pre>  然后我们再在admin中加上这个组表,那么哪一个admin加呢?当然是webchat目录下的admin里了,用户表还是之前的bbs目录那个.而组表是webchat下的这个:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929172253578-863928423.png" alt="" width="579" height="171"></p>
+<pre>  我们看看后台访问效果:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929172303719-95515938.png" alt="" width="619" height="396"></p>
+<pre>  web聊天室的需要的表就是那么简单.接下来我们就开始做前端页面的内容了.<br>    首先大框架不需要在选了,就直接用bbs的页面.<br>    其次就是页面里的正文我们要设计下,用到div的布局知识.<br>  我们上节课总结了,使用Django框架写一个功能的顺序如下:<br>  请求源-&gt;urls.py-&gt;views.py-&gt;html或者json数据 -&gt; html<br>  请求源应该在标题栏上如图:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929172315188-30404529.png" alt="" width="825" height="343"></p>
+<pre>  所以我们应该先在base.html中加上这个标签.我们知道bbs系统里的标签是动态获得的,而此标签在标签表中不存在,我们可以加一个也可以写成固定的.<br>  因为这个标签和bbs的标签不是一个业务上的,所以就直接写成固定的就可以了.于是base.html中添加如下:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929172331813-505520237.png" alt="" width="584" height="324"></p>
+<pre>  接下来我们来写上图中跳转的urls.py,首先把webchat相关的在总的urls.py文件中做一个include如下图:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929172343485-411621179.png" alt="" width="786" height="222"></p>
+<pre>  然后创建webchat/urls.py文件如下:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929172358094-1325451779.png" alt="" width="820" height="248"></p>
+<pre>  接下来就是views.py文件:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929172410078-857847552.png" alt="" width="1531" height="244"></p>
+<pre>  这里我们返回的是字符串"OK",所以先做下测试:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929191258735-1031058300.png" alt="" width="763" height="231"></p>
+<pre>  这时还有一个问题,就是如何让这个"WEB聊天"按钮高亮显示.<br>  思路:其他的标签高亮是用模版语言实现的,判断标签ID是否等于后台传过来的id一致.而现在我们这个标签是固定的,所以我们这里想让此标签高亮,就只能用js判断<br>  然后我们在写一个templates/webchat/dashboard.html页面,如下</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929191311938-1642849236.png" alt="" width="741" height="275"></p>
+<pre>  我们在看下视图</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929191321578-256832273.png" alt="" width="688" height="194"></p>
+<pre><br>  接下来我们来描述下web聊天的页面应该张成什么样子,然后根据我们设计的样子,把页面排版下:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929191332297-2127480705.png" alt="" width="724" height="442"></p>
+<pre>这里我们直接看dashboard.html代码</pre>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="//common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></span></div>
+<pre>    {% extends <span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">base.html</span><span style="color: rgba(128, 0, 0, 1)">'</span> %<span style="color: rgba(0, 0, 0, 1)">}
+
+    {</span>% block page-container%<span style="color: rgba(0, 0, 0, 1)">}
+    </span>&lt;div <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">chat-container</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;
+        &lt;div <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">left-contact-panel</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;<span style="color: rgba(0, 0, 0, 1)">
+            contacts
+        </span>&lt;/div&gt;
+        &lt;div <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">right-chat-panel</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;
+            &lt;div <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">chat-box-title</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;<span style="color: rgba(0, 0, 0, 1)">
+                title
+            </span>&lt;/div&gt;
+            &lt;div <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">chat-box-window</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;<span style="color: rgba(0, 0, 0, 1)">
+                window
+            </span>&lt;/div&gt;
+            &lt;div <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">chat-box-emoj</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;<span style="color: rgba(0, 0, 0, 1)">
+                emoj
+            </span>&lt;/div&gt;
+            &lt;div <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">chat-box-msg-box</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;
+                &lt;textarea name=<span style="color: rgba(128, 0, 0, 1)">""</span> id=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">msg</span><span style="color: rgba(128, 0, 0, 1)">"</span> &gt;&lt;/textarea&gt;
+                &lt;button <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">btn btn-success</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;发送消息&lt;/button&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">clear-both</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;&lt;/div&gt;
+    &lt;/div&gt;<span style="color: rgba(0, 0, 0, 1)">
+    {</span>% endblock %<span style="color: rgba(0, 0, 0, 1)">}
+
+    {</span>% block bottom-js %<span style="color: rgba(0, 0, 0, 1)">}
+    </span>&lt;script&gt;<span style="color: rgba(0, 0, 0, 1)">
+        $(document).ready(function(){
+            $(</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">#navbar a[href='{{ request.path }}']</span><span style="color: rgba(128, 0, 0, 1)">"</span>).parent().addClass(<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">active</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">);
+        })
+    </span>&lt;/script&gt;<span style="color: rgba(0, 0, 0, 1)">
+    {</span>% endblock%<span style="color: rgba(0, 0, 0, 1)">}
+  </span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="//common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>custom.cs的代码如下:</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="//common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: rgba(0, 128, 0, 1)">/*</span><span style="color: rgba(0, 128, 0, 1)">for webchat</span><span style="color: rgba(0, 128, 0, 1)">*/</span><span style="color: rgba(0, 0, 0, 1)">
+.chat</span>-<span style="color: rgba(0, 0, 0, 1)">container{
+width: </span><span style="color: rgba(128, 0, 128, 1)">100</span>%<span style="color: rgba(0, 0, 0, 1)">;
+height: </span><span style="color: rgba(128, 0, 128, 1)">100</span>%<span style="color: rgba(0, 0, 0, 1)">;
+border: 1px dashed darkgray;
+}
+.left</span>-contact-<span style="color: rgba(0, 0, 0, 1)">panel{
+width: 200px;
+height: 604px;
+border:2px solid darkblue;
+</span><span style="color: rgba(0, 0, 255, 1)">float</span><span style="color: rgba(0, 0, 0, 1)">: left;
+}
+
+.right</span>-chat-<span style="color: rgba(0, 0, 0, 1)">panel{
+width: 750px;
+height: </span><span style="color: rgba(128, 0, 128, 1)">100</span>%<span style="color: rgba(0, 0, 0, 1)">;
+border:2px solid darkblue;
+</span><span style="color: rgba(0, 0, 255, 1)">float</span><span style="color: rgba(0, 0, 0, 1)">: left;
+}
+
+.chat</span>-box-<span style="color: rgba(0, 0, 0, 1)">title{
+height: 50px;
+border: 1px solid darkgray;
+}
+
+.chat</span>-box-<span style="color: rgba(0, 0, 0, 1)">window{
+height: 400px;
+border: 1px solid brown;
+}
+
+.chat</span>-box-<span style="color: rgba(0, 0, 0, 1)">emoj{
+height: 30px;
+border: 1px solid bisque;
+}
+
+.chat</span>-box-msg-<span style="color: rgba(0, 0, 0, 1)">box{
+height: 120px;
+border: 1px solid brown;
+}</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="//common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></span></div></div>
+<pre>  最终实现访问结果如下:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929191436172-1073291271.png" alt="" width="481" height="301"></p>
+<pre>  框架结构就这个样子了.接下来就是使用ajax实现将后台数据填充到这个框架中.<br>  首先我们先把左边的用户列表和分组列表实现.首先我们先从bootstrap中找tab页是如何实现的.<br>  这一点就直接访问bootscss.com网站点击script插件里的标签页,查找.如图</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929191448750-931569238.png" alt="" width="528" height="172"></p>
+<pre>  参照bootcss.com网站上的用法,很容易就实现了.接下来就是把好友列表和群组列表展示出来.<br>  有两种方法可以获取,一种是跳转到页面的时候通过后台通过模版返回,但是这种方式不好,不好在如果你添加了新用户,不能即时更新.<br>  另外一种方式使用ajax方式获取.这里我们通过模版返回,因为简单些.但是通过这种方式的前提是用户已经登录了,需要在request.user获取到用户信息<br>  所以我们要在views.py文件里使用验证装饰器.</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929191457203-1979924106.png" alt="" width="672" height="308"></p>
+<pre>  我们接下来要做什么.是不是要在视图中把用户列表查出来.把分组列表页查出来?<br>  答:不是. 首先我们在模版语言中用户已经登录了,能获得用户对象了,在前端模版语言就直接可以反向查找好友列表和用户组列表了.<br>  于是视图函数不需要更改.而前端tab页内容更改如下:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929191506625-1360208333.png" alt="" width="692" height="320"></p>
+<pre><br>  访问页面查看下效果如图:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929191515578-2135821989.png" alt="" width="675" height="143"></p>
+<pre>  首先我们的这个列表已经展示了,但是效果不怎么好看.我们也不用自己写了,去bootstrap中找找看,我们应该在以后的开发中多多看看bootstrap中的样式.</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929191524922-244819438.png" alt="" width="698" height="394"></p>
+<pre>  我们把这段代码应用到我们的好友列表和群组列表.还有消息个数提醒真好.</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929191535469-77887248.png" alt="" width="657" height="343"></p>
+<pre>  查看效果如图</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929191544000-288517453.png" alt="" width="456" height="195"></p>
+<pre><br>  接下来我们要实现的就是鼠标点哪个人或者组,关于这个人的聊天内容和title就出现在右边的窗口中.<br>  怎么实现点击后改变右边的窗台布局中的内容呢?<br>  这是前端的内容<br>  还有一个问题,当对方不在线,你给对方留言,对方怎么能收到这个消息,是不是需要在后端服务器中保存.?当然需要,如果你发了两个"hello",哪个先哪个后,要求后端在保存的时候加上时间戳.<br>  那么问题来了,用什么保存呢?答案:用消息队列进行保存.我们学过的Queue有rebitmq和python自带的 Queue,如果是生产环境建议使用rabitMQ我们测试开发用queue<br>  首先服务器上要为每一个用户创建一个queue.<br>  几本的环境我们清楚了,那么现在我们就定义下前端发送消息的格式.<br>  首先是一个json格式,</pre>
+<div class="cnblogs_code">
+<pre><span style="color: rgba(0, 0, 0, 1)">  {
+    </span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">from</span><span style="color: rgba(128, 0, 0, 1)">'</span>:<span style="color: rgba(128, 0, 128, 1)">1</span><span style="color: rgba(0, 0, 0, 1)">,
+    </span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">to</span><span style="color: rgba(128, 0, 0, 1)">'</span>:<span style="color: rgba(128, 0, 128, 1)">3</span><span style="color: rgba(0, 0, 0, 1)">,
+    </span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">msg</span><span style="color: rgba(128, 0, 0, 1)">'</span>:<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">hello</span><span style="color: rgba(128, 0, 0, 1)">'</span>
+    <span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">时间戳</span><span style="color: rgba(128, 0, 0, 1)">'</span>:<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">2016</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">, #时间戳不能在前端加,因为服务器可以加,并且服务器不相信客户端时间
+  }</span></pre>
+</div>
+<pre>  如果发给一个人,上面的格式就行了,但是这里有一个问题,如果给群组发消息怎么纪录.有人会说给群建一个queue.<br>  这个是不行的,因为如果是给群建queue,一个人收到了,其他人就不能接收到.那该怎么解决呢?当然是给每一个人的queue发送一个消息.<br>  前端发送的时候就要在发送的格式中加一个type,用来表示是给个人还是给群组发消息,如果给个人,后台处理简单些.如果给群组,后台就会首先找到这个群组里的所有人,并且循环这些人的queue把这个消息分别塞进去.<br>  所以前端发送消息的Jason格式如下:</pre>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="//common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: rgba(0, 0, 0, 1)">   {
+    </span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">from</span><span style="color: rgba(128, 0, 0, 1)">'</span>:<span style="color: rgba(128, 0, 128, 1)">1</span><span style="color: rgba(0, 0, 0, 1)">,
+    </span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">to</span><span style="color: rgba(128, 0, 0, 1)">'</span>:<span style="color: rgba(128, 0, 128, 1)">3</span><span style="color: rgba(0, 0, 0, 1)">,
+    </span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">msg</span><span style="color: rgba(128, 0, 0, 1)">'</span>:<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">hello</span><span style="color: rgba(128, 0, 0, 1)">'</span>
+    <span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">时间戳</span><span style="color: rgba(128, 0, 0, 1)">'</span>:<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">2016</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">, #时间戳不能在前端加,因为服务器可以加,并且服务器不相信客户端时间
+    </span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">type</span><span style="color: rgba(128, 0, 0, 1)">'</span>:<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">single</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">
+    #group
+  }</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="//common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></span></div></div>
+<pre><br>  我们前端要准备的数据元素清楚了,下面就是怎么把这些元素找出来.<br>  纵观老师带着我们做的几个实例,我做下总结:<br>    无论从整个系统的开发,还是从某一个功能的开发.起源都是从数据开始的.<br>    所以对于开发工作的流程我们更新下:<br>    具体数据格式(数据库字段,ajax数据格式)-&gt; 请求源 -&gt; urls.py -&gt; views.py -&gt; *.html 或者ajax<br><br>  接着我们在前端html中找到需要传输的元素数据,以及前端页面的js.<br>  我们拿用户列表举例,要实现,点击列表中的某一个人时,右边窗口的title显示选中这个人的姓名.<br>  而我们要传给后台的json数据中国年from可以通过request.user获得,to可以通过friend.id获得 msg就是输入框里的内容.那么type是暂时无法取到的.<br>  所以我们可以在"好友列表"以及group列表中加一个 属性如图</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929191628985-120478588.png" alt="" width="854" height="432"></p>
+<pre>  关于这个函数,是有一个知识点需要说明的.<br>  我们点击标签时,需要把标签里的contact-id的属性传到右边的title里的.所以函数之行时其实是要把本标签作为参数传进去的.变成如图</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929191641766-1108789497.png" alt="" width="924" height="298"></p>
+<pre>  但是有的同学说,不需要传入,只需要在写OpenChatWindow(){}函数时直接调用$(this)就可以获得.如下图,首先说明这种理解是错误的.</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929191649781-1391062585.png" alt="" width="637" height="145"></p>
+<pre>  我们访问前端验证下:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929191659438-2018920952.png" alt="" width="574" height="260"></p>
+<pre>  我们看到了$(this)这个用法其实还要注意的.正确的做法应该是js函数中还是要给参数的,标签调用的时候this是把自己给传进去了,函数中的参数名还不能是this不然又是内部变量window了</pre>
+<div class="cnblogs_code">
+<pre><span style="color: rgba(0, 0, 0, 1)">    function OpenChatWindow(ele){
+        console.log($(ele))
+    }</span></pre>
+</div>
+<pre>  调用的时候标签可以使用this作为参数,如:</pre>
+<div class="cnblogs_code">
+<pre>    &lt;li contact-type=<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">single</span><span style="color: rgba(128, 0, 0, 1)">'</span> contact-id=<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">{{friend.id}}</span><span style="color: rgba(128, 0, 0, 1)">'</span> onclick=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">OpenChatWindow(this)</span><span style="color: rgba(128, 0, 0, 1)">"</span> <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">list-group-item</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;
+      &lt;span <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">badge</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;<span style="color: rgba(128, 0, 128, 1)">14</span>&lt;/span&gt;<span style="color: rgba(0, 0, 0, 1)">
+      {{friend.name}}
+    </span>&lt;/li&gt;</pre>
+</div>
+<pre>  这个知识点还是记住的好.<br>  我们先实现点击选中和右边title显示的功能,js改成如下</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929191731078-585112102.png" alt="" width="604" height="203"></p>
+<pre>  我们看看访问结果:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929191739156-359291186.png" alt="" width="638" height="386"></p>
+<pre>  接着我们来实现,在输入框中输入内容后,点击"发送消息"按钮或者 按回车键,输入框里的内容显示到上面的窗口,<br>  如图:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929191748141-287607566.png" alt="" width="637" height="398"></p>
+<pre>  如何实现呢.我们先实现下回车键.思路:给这个页面的所有回车键绑定一个事件.回车键数字13.<br>  具体页面代码如下:主要是js那段</pre>
+<div class="cnblogs_code"><img id="code_img_closed_9d80c469-466c-48a5-bcd3-6565947468f5" class="code_img_closed" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt=""><img id="code_img_opened_9d80c469-466c-48a5-bcd3-6565947468f5" class="code_img_opened" style="display: none" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="">
+<div id="cnblogs_code_open_9d80c469-466c-48a5-bcd3-6565947468f5" class="cnblogs_code_hide">
+<pre>{% extends <span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">base.html</span><span style="color: rgba(128, 0, 0, 1)">'</span> %<span style="color: rgba(0, 0, 0, 1)">}
+
+{</span>% block page-container%<span style="color: rgba(0, 0, 0, 1)">}
+</span>&lt;div <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">chat-container</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;
+    &lt;div <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">left-contact-panel</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;
+        &lt;!-- Nav tabs --&gt;
+        &lt;ul <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">nav nav-tabs</span><span style="color: rgba(128, 0, 0, 1)">"</span> role=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">tablist</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;
+          &lt;li role=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">presentation</span><span style="color: rgba(128, 0, 0, 1)">"</span> <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">active</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;&lt;a href=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">#contact-tab</span><span style="color: rgba(128, 0, 0, 1)">"</span> role=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">tab</span><span style="color: rgba(128, 0, 0, 1)">"</span> data-toggle=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">tab</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;好友列表&lt;/a&gt;&lt;/li&gt;
+          &lt;li role=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">presentation</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;&lt;a href=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">#group-tab</span><span style="color: rgba(128, 0, 0, 1)">"</span> role=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">tab</span><span style="color: rgba(128, 0, 0, 1)">"</span> data-toggle=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">tab</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;分组列表&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;!-- Tab panes --&gt;
+        &lt;div <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">tab-content</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;
+          &lt;div role=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">tabpanel</span><span style="color: rgba(128, 0, 0, 1)">"</span> <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">tab-pane active</span><span style="color: rgba(128, 0, 0, 1)">"</span> id=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">contact-tab</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;
+              &lt;ul <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">list-group</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;<span style="color: rgba(0, 0, 0, 1)">
+                {</span>% <span style="color: rgba(0, 0, 255, 1)">for</span> friend <span style="color: rgba(0, 0, 255, 1)">in</span> request.user.userprofile.friends.select_related %<span style="color: rgba(0, 0, 0, 1)">}
+                  </span>&lt;li contact-type=<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">single</span><span style="color: rgba(128, 0, 0, 1)">'</span> contact-id=<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">{{friend.id}}</span><span style="color: rgba(128, 0, 0, 1)">'</span> onclick=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">OpenChatWindow(this)</span><span style="color: rgba(128, 0, 0, 1)">"</span> <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">list-group-item</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;
+                      &lt;span <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">badge</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;<span style="color: rgba(128, 0, 128, 1)">14</span>&lt;/span&gt;
+                      &lt;span <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">contact-name</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;{{friend.name}}&lt;/span&gt;
+                  &lt;/li&gt;<span style="color: rgba(0, 0, 0, 1)">
+                {</span>% endfor%<span style="color: rgba(0, 0, 0, 1)">}
+              </span>&lt;/ul&gt;
+          &lt;/div&gt;
+          &lt;div role=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">tabpanel</span><span style="color: rgba(128, 0, 0, 1)">"</span> <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">tab-pane</span><span style="color: rgba(128, 0, 0, 1)">"</span> id=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">group-tab</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;
+            &lt;ul <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">list-group</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;<span style="color: rgba(0, 0, 0, 1)">
+                {</span>% <span style="color: rgba(0, 0, 255, 1)">for</span> group <span style="color: rgba(0, 0, 255, 1)">in</span> request.user.userprofile.group_members.select_related%<span style="color: rgba(0, 0, 0, 1)">}
+                    </span>&lt;li contact-type=<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">group</span><span style="color: rgba(128, 0, 0, 1)">'</span> contact-id=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">{{group.id}}</span><span style="color: rgba(128, 0, 0, 1)">"</span> onclick=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">OpenChatWindow(this)</span><span style="color: rgba(128, 0, 0, 1)">"</span> <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">list-group-item</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;
+                        &lt;span <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">badge</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;<span style="color: rgba(128, 0, 128, 1)">14</span>&lt;/span&gt;<span style="color: rgba(0, 0, 0, 1)">
+                        {{ group.name }}
+                    </span>&lt;/li&gt;<span style="color: rgba(0, 0, 0, 1)">
+
+                {</span>% endfor%<span style="color: rgba(0, 0, 0, 1)">}
+            </span>&lt;/ul&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">right-chat-panel</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;
+        &lt;div <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">chat-box-title</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;<span style="color: rgba(0, 0, 0, 1)">
+            title
+        </span>&lt;/div&gt;
+        &lt;div <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">chat-box-window</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;<span style="color: rgba(0, 0, 0, 1)">
+            window
+        </span>&lt;/div&gt;
+        &lt;div <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">chat-box-emoj</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;<span style="color: rgba(0, 0, 0, 1)">
+            emoj
+        </span>&lt;/div&gt;
+        &lt;div <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">chat-box-msg-box</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;
+            &lt;textarea name=<span style="color: rgba(128, 0, 0, 1)">""</span> id=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">msg</span><span style="color: rgba(128, 0, 0, 1)">"</span> &gt;&lt;/textarea&gt;
+            &lt;button <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">btn btn-success</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;发送消息&lt;/button&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div <span style="color: rgba(0, 0, 255, 1)">class</span>=<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">clear-both</span><span style="color: rgba(128, 0, 0, 1)">"</span>&gt;&lt;/div&gt;
+&lt;/div&gt;<span style="color: rgba(0, 0, 0, 1)">
+{</span>% endblock %<span style="color: rgba(0, 0, 0, 1)">}
+
+{</span>% block bottom-js %<span style="color: rgba(0, 0, 0, 1)">}
+</span>&lt;script&gt;<span style="color: rgba(0, 0, 0, 1)">
+    $(document).ready(function(){
+        $(</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">#navbar a[href='{{ request.path }}']</span><span style="color: rgba(128, 0, 0, 1)">"</span>).parent().addClass(<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">active</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">);
+        </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">send msg</span>
+        $(<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">body</span><span style="color: rgba(128, 0, 0, 1)">"</span>).<span style="color: rgba(0, 0, 255, 1)">delegate</span>(<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">textarea</span><span style="color: rgba(128, 0, 0, 1)">"</span>,<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">keydown</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)">,function(e){
+            </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">send msg button clicked</span>
+            <span style="color: rgba(0, 0, 255, 1)">if</span> (e.which == <span style="color: rgba(128, 0, 128, 1)">13</span><span style="color: rgba(0, 0, 0, 1)"> ){
+                </span><span style="color: rgba(0, 0, 255, 1)">var</span> msg_text=$(<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">textarea</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)">).val();
+                </span><span style="color: rgba(0, 0, 255, 1)">if</span> ($.trim(msg_text).length &gt;<span style="color: rgba(128, 0, 128, 1)">0</span><span style="color: rgba(0, 0, 0, 1)">){
+                    console.log(msg_text);
+                    </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">SendMsg(msg_text);</span>
+<span style="color: rgba(0, 0, 0, 1)">                }
+                </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">no wait the send_msg's call confirm msg</span>
+<span style="color: rgba(0, 0, 0, 1)">
+                AddSentMsgIntoBox(msg_text);
+
+                $(</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">textarea</span><span style="color: rgba(128, 0, 0, 1)">"</span>).val(<span style="color: rgba(128, 0, 0, 1)">''</span><span style="color: rgba(0, 0, 0, 1)">);
+            }
+
+        });
+    });
+    function AddSentMsgIntoBox(msg_tex){
+        </span><span style="color: rgba(0, 0, 255, 1)">var</span> new_msg_ele = <span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">&lt;div class='msg-item'&gt;</span><span style="color: rgba(128, 0, 0, 1)">"</span> +
+                            <span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">&lt;span&gt;</span><span style="color: rgba(128, 0, 0, 1)">"</span>+ <span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">{{ request.user.userprofile.name }}</span><span style="color: rgba(128, 0, 0, 1)">"</span>+<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">&lt;/span&gt;</span><span style="color: rgba(128, 0, 0, 1)">"</span> +
+                            <span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">&lt;span&gt;</span><span style="color: rgba(128, 0, 0, 1)">"</span>+ <span style="color: rgba(0, 0, 255, 1)">new</span> Date().toLocaleTimeString()+<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">&lt;/span&gt;</span><span style="color: rgba(128, 0, 0, 1)">"</span> +
+                            <span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">&lt;div class='msg-text&gt;'</span><span style="color: rgba(128, 0, 0, 1)">"</span> + msg_tex + <span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">&lt;/div&gt;</span><span style="color: rgba(128, 0, 0, 1)">"</span> +
+                          <span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">&lt;/div&gt;</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)">
+        $(</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">.chat-box-window</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)">).append(new_msg_ele)
+
+     }
+    function OpenChatWindow(ele){
+        console.log($(ele));
+        $(ele).addClass(</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">active</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)">);
+        $(ele).siblings().removeClass(</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">active</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)">);
+        </span><span style="color: rgba(0, 0, 255, 1)">var</span> contact_id = $(ele).attr(<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">contact-id</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)">);
+        </span><span style="color: rgba(0, 0, 255, 1)">var</span> contact_name = $(ele).find(<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">.contact-name</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)">).text();
+        </span><span style="color: rgba(0, 0, 255, 1)">var</span> contact_type = $(ele).attr(<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">contact-type</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)">);
+</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">        然后把右边的title内容改掉</span>
+        <span style="color: rgba(0, 0, 255, 1)">var</span> chat_box_title_content = <span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">正在跟 </span><span style="color: rgba(128, 0, 0, 1)">"</span> + contact_name + <span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)"> 聊天</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)">;
+        $(</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">.chat-box-title</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)">).html(chat_box_title_content)
+    }
+
+</span>&lt;/script&gt;<span style="color: rgba(0, 0, 0, 1)">
+{</span>% endblock%}</pre>
+</div>
+<span class="cnblogs_code_collapse">dashboard.html</span></div>
+<pre>  然后我们访问测试查看结果,如下:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929191830281-2009420733.png" alt="" width="605" height="343"></p>
+<pre>  上图显示虽然消息已经移动到window窗口,但是这个样式实在不行,按照webqq的样子,应该有滚动条才对.并且滚动条要自动移动到最下面.<br>  我们先实现有滚动条.<br>  给chat-box-window加一个css样式</pre>
+<div class="cnblogs_code">
+<pre>    .chat-box-<span style="color: rgba(0, 0, 0, 1)">window{
+        height: 400px;
+        border: 1px solid brown;
+        overflow: auto;</span><span style="color: rgba(0, 128, 0, 1)">/*</span><span style="color: rgba(0, 128, 0, 1)">给div做内容多了就自动添加滚动条
+    }</span></pre>
+</div>
+<pre>  这样多出来的内容就会有滚动条,但是还不能自动滑动到底部.那么如何实现自动滚动呢?要在js里做.<br>  我们这里就添加到AddSentMsgIntoBox函数中<br>  把AddSentMsgIntoBox函数中添加如下部分</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929191900000-603763488.png" alt="" width="709" height="220"></p>
+<pre>  另外scrollTop是个属性,<br>  这里看上面的内容理解成,动画效果设置 某一个标签的 scrollTop属性,两种方式的不同之处是怎么获取窗体的高度.<br>  我们看上图中的说明.大概意思是获取窗体高度的两种方法,1种是js方式获取,另一种是jquery方式获取.<br>  有多年前端经验的人员提示,尽量不要混合使用js和jquery,所以建议使用方式二.<br>  我们可能对docment对象 和 具体对标签元素不太清楚,不知道有啥区别.没关系.我们在前端页面上打印看看结果</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929191917266-1470624962.png" alt="" width="715" height="293"></p>
+<pre><br>  完成代码后我们来做下测试,结果如图</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929191936188-1821091733.png" alt="" width="605" height="376"></p>
+<pre>  接下来,我们就要把消息提交到后台了,提交的格式就是上面我们设计好的数据格式,记得要食json格式.<br>  还有我们这个提交动作,应该是在消息输入框点击回车键后往后台发送的.如图:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201609/893950-20160929192038594-912715255.png" alt="" width="598" height="295"></p>
+<pre>  我们写这个函数,把数据组合成之前设计好的格式如:</pre>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="//common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: rgba(0, 0, 0, 1)">    {
+        </span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">from</span><span style="color: rgba(128, 0, 0, 1)">'</span>:<span style="color: rgba(128, 0, 128, 1)">1</span><span style="color: rgba(0, 0, 0, 1)">,
+        </span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">to</span><span style="color: rgba(128, 0, 0, 1)">'</span>:<span style="color: rgba(128, 0, 128, 1)">3</span><span style="color: rgba(0, 0, 0, 1)">,
+        </span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">msg</span><span style="color: rgba(128, 0, 0, 1)">'</span>:<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">hello</span><span style="color: rgba(128, 0, 0, 1)">'</span>
+        <span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">时间戳</span><span style="color: rgba(128, 0, 0, 1)">'</span>:<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">2016</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">, #时间戳不能在前端加,因为服务器可以加,并且服务器不相信客户端时间
+        </span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">type</span><span style="color: rgba(128, 0, 0, 1)">'</span>:<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">single</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">
+        #group
+    }</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="//common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></span></div></div>
+<pre>    我们看,'from'这个很好获得<br>    to和type不怎么好获得把?为什么不好获得?首先to应该是你要发消息的对象,这个你可能说用"好友列表"中找"active"类的标签.如果能找到那么type也就能找到了.<br>    想法很好,但是有一个问题,还有一个"群组列表",假设一个场景你在"好友列表"选择了好友"大神",这时又切换到"群组列表",群组列表万一你在点一下,这时候就会有两个"active"<br>    所以鉴于上述的内容.你就要考虑在点击好友或者某一个组时,这两个列表最多只有一个"active"类,至少现在的代码还没有实现.这是一种解决方法.还有一种解决方法,就是我们无论在点击"好友列表"中的"好友"还是点击"群组列表"中的某一个"组"<br>    右边聊天的title都会显示这个群组或者好友的名称.那么我们干脆在onclick时重写title标签的时候把 id和type都传过去,然后在发送消息时,直接从这个title中取就行了.<br>    具体思路如图:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201610/893950-20161009160826774-938925968.png" alt="" width="601" height="407"></p>
+<pre>    那么我们就要更改之前点击时触发的OpenChatWindow函数,以及更改哪个title的div标签让它默认就存在两个标签contact-type=""和contact-id=""<br>    于是前端代码更改如下:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201610/893950-20161009160838853-1820013101.png" alt="" width="585" height="368"></p>
+<pre>    数据获取的源准备好了,接下来我们开始写发送数据到后台的函数SendMsg了</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201610/893950-20161009160854619-275406243.png" alt="" width="466" height="170"></p>
+<pre>    根据上图中所说明的,我们来学习下如何在js中添加一段官方https://docs.djangoproject.com/en/1.8/ref/csrf/ 给的代码,就可以一劳永逸的使用ajax方式提交post请求了.从官网上直接拷贝,不需要改什么东西.<br>    一般情况下,下图中的代码会写到base.html中,这里我们就不写在base.html中了,以后在写新项目时,首先把下面的代码写到base.html的js代码段中.<br>    从官网上直接拷贝,不需要改什么东西.</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201610/893950-20161009160909870-1712812428.png" alt="" width="564" height="338"></p>
+<pre>    内容就是上图这些,在提醒下,这段最好写在base.html里面.<br>    然后我们继续SendMsg函数的编辑.如图<br><br>0041图</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201610/893950-20161009160919918-995829801.png" alt="" width="518" height="177"></p>
+<pre>    这种方式传到后端处理,肯定是不对的.我们在后台的视图函数中最终是要得到字典的形式.<br>    我们先试试这种原始的方式.<br>    首先我们写URL:</pre>
+<div class="cnblogs_code">
+<pre>    urlpatterns =<span style="color: rgba(0, 0, 0, 1)"> [
+        # url(r</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">^$/</span><span style="color: rgba(128, 0, 0, 1)">'</span>, views.acc_login,name=<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">login</span><span style="color: rgba(128, 0, 0, 1)">'</span> ), 这种写法错误,r<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">^$/</span><span style="color: rgba(128, 0, 0, 1)">'</span>要改成r<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">^$</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">
+        url(r</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">^$</span><span style="color: rgba(128, 0, 0, 1)">'</span>, views.dashboard,name=<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">chat_dashboard</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)"> ),
+        url(r</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">^$msg_send/$</span><span style="color: rgba(128, 0, 0, 1)">'</span>, views.send_msg,name=<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">send_msg</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)"> ),
+    ]</span></pre>
+</div>
+<pre>    这里又一个点需要注意:url一般都是以名词出现. 而视图是动词. 别名可以和视图一样.<br>    然后在写后台视图函数views.py,先把接收到的post打印出来,看看能不能从接收到的post内容提取我们要的字典.</pre>
+<div class="cnblogs_code">
+<pre><span style="color: rgba(0, 0, 0, 1)">        @login_required
+        def send_msg(request):
+            print(request.POST)
+            </span><span style="color: rgba(0, 0, 255, 1)">return</span> HttpResponse(<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">---msg recevied---</span><span style="color: rgba(128, 0, 0, 1)">"</span>)</pre>
+</div>
+<pre><br>    我们先按照0041图的前端代码,提交信息.看下后台打印截图</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201610/893950-20161009161122302-630668382.png" alt="" width="548" height="196"></p>
+<pre><br>    上图0041的前端代码传到后台的数据,不能直接在后台中获取字典.那么我们想把前端传过去的时候,用json格式,后台获取直接反json不就行了.<br>    于是前端代码改成</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201610/893950-20161009161135584-1506221340.png" alt="" width="594" height="176"></p>
+<pre>    首先声明这种方式后台视图函数还是无法轻松的获得 字典格式的数据.<br>    我们先看下后台打印request.POST的结果如下:<br>  </pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201610/893950-20161009161145944-969281977.png" alt="" width="623" height="279"></p>
+<pre><br>    我们看到上图中后台获得的request.Dict对象,并且我们要取的数据放在key,我们更不能取到字典了.<br>    那么怎么办?是不是把它变成value就能取到了,前端序列化后在给一个key就行了.<br>    于是最终前端如果想传给后台序列化的字典 代码就改成如下:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201610/893950-20161009161156148-547892222.png" alt="" width="726" height="260"></p>
+<pre>    后台的views.py文件里的代码改成如下:</pre>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="//common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: rgba(0, 0, 0, 1)">        @login_required
+        def send_msg(request):
+            print(request.POST)
+            msg_data </span>= request.POST.<span style="color: rgba(0, 0, 255, 1)">get</span>(<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">data</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">)
+            </span><span style="color: rgba(0, 0, 255, 1)">if</span><span style="color: rgba(0, 0, 0, 1)"> msg_data:
+                msg_data </span>=<span style="color: rgba(0, 0, 0, 1)"> json.loads(msg_data)
+                print(msg_data)
+            </span><span style="color: rgba(0, 0, 255, 1)">return</span> HttpResponse(<span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">---msg recevied---</span><span style="color: rgba(128, 0, 0, 1)">"</span>)</pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="//common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></span></div></div>
+<pre>    我们在前端发一个消息,看看后台输出内容:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201610/893950-20161009161215415-955567835.png" alt="" width="673" height="319"></p>
+<pre>    数据我们传过去了,紧接着我们就可以来写后台如何根据业务来处理取到的数据了.<br>    首先从字典中取发给谁的 取key为'to'的值.记住上图中我们看到的是字符串'3',这里要弄成数字.<br>    然后我们用queue存消息.假如有多个用户和大神聊天.每一个人发过来的消息,都会产生一个新进程.那么问题来了,这些进程都会判断大神的queue存不存在.<br>    所以我们应该让这些子进程判断的是同一个queue,所以要创建一个全局的字典.存放这个queue,每一个子进程都是判断这个全局字典的queue,这样问题就解决了.<br>    所以最终后台处理发送消息的视图send_msg函数如下:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201610/893950-20161009161225118-1967088874.png" alt="" width="574" height="375"></p>
+<pre>    接下来我们发送消息测试下:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201610/893950-20161009161234291-1460806706.png" alt="" width="637" height="396"></p>
+<pre>    我们看后台为用户id为2的用户创建了queue<br>    这里我们说明消息发送到后台的功能实现了.<br>    接下来是如何获取消息.获取消息肯定要写一个js通过ajax获取.并且还要一个劲的获取.这就说到我们之前讲的后台如何把消息传递给前端的三种方式.<br>    1.轮询 2.长轮询 3.新的H5中的websocket ,其中方式3是Django不支持的. 而1就是写一个获取函数,然后计划任务开启.这个实现简单但是浪费资源,并且及时性不好.<br>    那么我们主要就是学习2长轮询,并且如何通过长轮询实现即时获取消息的.<br>    这里我们把整个长轮询函数书写的过程纪录下来,这样方便我们整理思路:<br>    1.首先我们先写出一个从后台去消息的函数,函数内部使用ajax获取消息</pre>
+<div class="cnblogs_code">
+<pre><span style="color: rgba(0, 0, 0, 1)">        function GetNewMsgs(){
+            $.getJSON(</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">{% url 'get_new_msgs' %}</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)">,function(callback){
+                console.log(callback);
+            });
+        }</span></pre>
+</div>
+<pre>    2.在webchat/urls.py文件里添加url条目</pre>
+<div class="cnblogs_code">
+<pre>        urlpatterns =<span style="color: rgba(0, 0, 0, 1)"> [
+            # url(r</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">^$/</span><span style="color: rgba(128, 0, 0, 1)">'</span>, views.acc_login,name=<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">login</span><span style="color: rgba(128, 0, 0, 1)">'</span> ), 这种写法错误,r<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">^$/</span><span style="color: rgba(128, 0, 0, 1)">'</span>要改成r<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">^$</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">
+            url(r</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">^$</span><span style="color: rgba(128, 0, 0, 1)">'</span>, views.dashboard,name=<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">chat_dashboard</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)"> ),
+            url(r</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">^msg_send/$</span><span style="color: rgba(128, 0, 0, 1)">'</span>,views.send_msg,name=<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">send_msg</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)"> ),
+            url(r</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">^new_msgs/$</span><span style="color: rgba(128, 0, 0, 1)">'</span>,views.get_new_msgs,name=<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">get_new_msgs</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)"> ), #新添加的纪录
+        ]</span></pre>
+</div>
+<pre>    3.边界webchat/views.py文件添加视图函数如下:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201610/893950-20161009161259871-1423467719.png" alt="" width="571" height="288"></p>
+<pre><br>    4.紧接着就是处理前端,前面我们已经写了回调函数,先打印出来瞧瞧.<br>    这里要调用这个函数,才能触发请求,所以我们先写一个定时任务.如图:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201610/893950-20161009161309590-1602730641.png" alt="" width="534" height="184"></p>
+<pre>    5.我们测试下结果.<br>    先用一个账户给 "小雨"发消息</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201610/893950-20161009161318622-832872291.png" alt="" width="631" height="294"></p>
+<pre>    然后我们换一个浏览器登录小雨这个账户 ,因为一个浏览器的对于一个url的session和cokie是一样的,没有办法在一个浏览器登录不同账户到同一个系统<br>    换火狐浏览器登录"小雨账户",查看结果如下:<br>    按照我上面的写的前端发送消息的js,不会有错,而老师的有问题,结果如下图,这不是老师不会,而是他故意留的坑<br>    结果如下图</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201610/893950-20161009161327232-2105404401.png" alt="" width="560" height="258"></p>
+<pre>    原因是:老师写发送消息的视图函数中,这里没有用int,即没有把去过来的字符串转换成int类型,<br>    而在接收消息时,获取到的是int类型,导致获取时循环的queue不是发送的那一个.<br>    具体代码差别如下</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201610/893950-20161009161336092-953456779.png" alt="" width="662" height="314"></p>
+<pre>    在看下后台打印的队列如下:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201610/893950-20161009161347015-1095905096.png" alt="" width="462" height="158"></p>
+<pre>    错误看到了,要注意的就是前端json传到后台后,数据会变成字符串.<br>    运行我们的代码,我们看下小雨的接收有什么结果,如图:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201610/893950-20161009161358719-379874073.png" alt="" width="467" height="314"></p>
+<pre>    我们看,接收消息的功能也能实现了.先不说接受后怎么样处理消息.先来解决下接收消息不够实时的问题.<br>    现在用的是轮询,时间间隔3秒.接下来我们就要实现之前说的长轮询.<br>    首先我们先说明下,长轮询不能在用计划任务了.从字面上理解以为它和轮询应该用的是一样的知识.<br>    长轮询的实现思路是:<br>    后台如果有新消息,就把新消息立刻返回.如果没有就用q_obj.get(100),挂起一段时间.100秒时间一旦到了,就立马返回给前端空列表.<br>    前端接收到空列表后,在此调用此函数.<br>    这里的后端实现很好理解.前端实现不好理解。<br>    首先,使用$.getJSON()方式获取消息.其中$.getJSON 里的回调函数本身就可以实现挂起,后台不返回,这函数就不算执行完成.<br>    但怎么实现后台返回空时,前端就在此发送请求呢.<br>    我的第一个想法是,还是计划任务. 但是仔细想想,还是使用计划任务,你触发请求的次数和时间还是受你计划任务设置的时间间隔的限制.<br>    那怎么办呢?我们想套用递归函数的方式.在前端get_new_msg函数里的.getJSON 里的回调函数一旦有返回,那就在此调用get_new_msg函数.<br>    这不就可以了.这里就不存在递归return的问题了,因为不需要返回.callback回调函数处理就行了,没啥返回值.<br>    具体代码实现如下:<br><br>    这些都是alex大神的精华,网上可找不到.<br>    视图函数修改成如下:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201610/893950-20161009161408032-1640254664.png" alt="" width="649" height="246"></p>
+<pre>    前端代码修改成如下:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201610/893950-20161009161416470-723012373.png" alt="" width="826" height="492"></p>
+<pre>    至此,长轮询去消息的最快最好的方法就实现了.<br>    测试结果如下:</pre>
+<p><img src="https://images2015.cnblogs.com/blog/893950/201610/893950-20161009161425002-1081871441.png" alt="" width="621" height="326"></p>
+<pre>    这样就实现了,这种方式没几个人做过,网上的方式都不能实现即时.alex大神牛.<br>    ps: js中递归是没有层数限制,在python中的递归是有层数限制的999层.<br><br><br><br><br><br><br><br>  </pre>
+</div>
+<div id="MySignature" style="display: block;">码农小明</div>
+<div class="clear"></div>
+<div id="blog_post_info_block"><div id="BlogPostCategory">
+    分类: 
+            <a href="https://www.cnblogs.com/zhming26/category/787988.html" target="_blank">python</a></div>
+
+
+    <div id="blog_post_info">
+<div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(5920642,cb_blogId,1);green_channel_success(this,'谢谢推荐！');">好文要顶</a>
+        <a id="green_channel_follow" onclick="follow('e98ba8ce-b9d4-e511-9fc1-ac853d9f53cc');" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="https://common.cnblogs.com/images/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="https://common.cnblogs.com/images/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/zhming26/" target="_blank"><img src="https://pic.cnblogs.com/face/sample_face.gif" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/zhming26/">zhming</a><br>
+            <a href="https://home.cnblogs.com/u/zhming26/followees/">关注 - 3</a><br>
+            <a href="https://home.cnblogs.com/u/zhming26/followers/">粉丝 - 51</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow('e98ba8ce-b9d4-e511-9fc1-ac853d9f53cc');return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(5920642,'Digg')">
+        <span class="diggnum" id="digg_count">1</span>
+    </div>
+    <div class="buryit" onclick="votePost(5920642,'Bury')">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+
+<script type="text/javascript">
+    currentDiggType = 0;
+</script></div>
+    <div class="clear"></div>
+    <div id="post_next_prev">
+
+    <a href="https://www.cnblogs.com/zhming26/p/5908647.html" class="p_n_p_prefix">« </a> 上一篇：    <a href="https://www.cnblogs.com/zhming26/p/5908647.html" title="发布于 2016-09-26 11:56">python2.0_s12_day21_web聊天室一</a>
+    <br>
+    <a href="https://www.cnblogs.com/zhming26/p/5923996.html" class="p_n_p_prefix">» </a> 下一篇：    <a href="https://www.cnblogs.com/zhming26/p/5923996.html" title="发布于 2016-09-30 15:48">mysql中根据一个字段相同记录写递增序号，如序号结果，如何实现？</a>
+
+</div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2016-09-29 17:25</span>&nbsp;
+<a href="https://www.cnblogs.com/zhming26/">zhming</a>&nbsp;
+阅读(<span id="post_view_count">6091</span>)&nbsp;
+评论(<span id="post_comment_count">8</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=5920642" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(5920642);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div>

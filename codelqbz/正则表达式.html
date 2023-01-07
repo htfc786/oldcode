@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <meta name="referrer" content="always" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>正则表达式 - 匹配换行符 -  \ n或\ r \ n？ - ITranslater</title>
+    <link href="/favicon.ico" rel="shortcut icon" />
+    <script type="text/javascript" src="/javascripts/jquery.js"></script>
+    
+    <link rel="stylesheet" href="/stylesheets/solar.css" type="text/css" />
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-1941177855680772",
+          enable_page_level_ads: true
+     });
+</script>
+
+<script>
+          (function(){
+              var bp = document.createElement('script');
+              var curProtocol = window.location.protocol.split(':')[0];
+              if (curProtocol === 'https') {
+                  bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+              }
+              else {
+                  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+              }
+              var s = document.getElementsByTagName("script")[0];
+              s.parentNode.insertBefore(bp, s);
+          })();
+          </script>
+
+<script>
+     var _hmt = _hmt || [];
+     (function() {
+       var hm = document.createElement("script");
+       hm.src = "https://hm.baidu.com/hm.js?fd814096cb044d20d05cbfc4dc8fc366";
+       var s = document.getElementsByTagName("script")[0]; 
+       s.parentNode.insertBefore(hm, s);
+     })();
+     </script>     
+    
+  </head>      
+  <!-- RTD Extra Head -->
+  <body>
+    <!--Header Section Start-->
+		<header id="header">
+			<div class="related" role="navigation" aria-label="related navigation">
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="#">登录</a></li>
+        <li class="nav-item nav-item-0"><a href="/">ITranslater</a> &#187;</li> 
+      </ul>
+    </div>
+
+
+				<div class="header-bottom">
+
+							<img class="logo" src="/images/logo.svg" alt="ITranslater" />				
+
+
+					<div  class="menu">
+								<ul>
+ <li><a href="/">首页</a></li>
+
+ 
+	
+	<li><a href="/tag/2096365091510813696">javascript</a></li>
+	
+	
+	<li><a href="/tag/2096359160127423488">java</a></li>
+	
+	
+	<li><a href="/tag/2096369992437597184">python</a></li>
+	
+	
+	<li><a href="/tag/2096370494780998656">c#</a></li>
+	
+	
+	<li><a href="/tag/2105006174901896192">android</a></li>
+	
+	
+	<li><a href="/tag/2096359160244864000">c++</a></li>
+	
+	
+	<li><a href="/tag/2096416758038004736">node.js</a></li>
+	
+	
+	<li><a href="/tag/2096454668590253056">php</a></li>
+	
+
+</ul>
+						</div>
+							<div class="search">
+
+ <input id="search" placeholder="输入关键词" style="width:100px;border:1px solid #008eb7; height:22px; line-height:22px;" type="text" value=""><input style="width:40px; background:#008eb7; border:0; height:24px; color:#fff; line-height:25px;" type="button" id="btn_search" value="搜索">
+</div>
+							
+						</div>
+
+
+			</header>
+			<!--Header Section End-->
+
+      <div class="sphinxsidebar">
+
+        
+  
+          <div class="sphinxsidebarwrapper">
+              <h3><a href="/tag/2096365091510813696">javascript</a></h3>
+            
+              <ul>
+                
+                <li><a href="/qa/details/2583907416131765248">使用JavaScript替换字符串的最后一个字符</a></li>
+                
+                <li><a href="/qa/details/2583907401451701248">javascript-Chart.js 2.0甜甜圈工具提示百分比</a></li>
+                
+                <li><a href="/qa/details/2583906943551144960">javascript-如何在Chrome中设置DOM断点</a></li>
+                
+                <li><a href="/qa/details/2583906346601022464">Javascript查找json值</a></li>
+                
+                <li><a href="/qa/details/2583906275096527872">javascript-如何修复Uncaught InvalidValueError：setPosition：不是LatLng或LatLngLiteral：在属性lat：不是数字中？</a></li>
+                
+                <li><a href="/qa/details/2583906098667324416">javascript-在Socket.i中创建房间</a></li>
+                
+                <li><a href="/qa/details/2583905803153441792">将属性添加到javascript数组</a></li>
+                
+                <li><a href="/qa/details/2583904809539601408">javascript-如何在firebase上执行sql“ LIKE”操作？</a></li>
+                
+                <li><a href="/qa/details/2583904083170034688">javascript-创建一个&lt;ul&gt;并根据传递的数组填充它</a></li>
+                
+                <li><a href="/qa/details/2583904022218408960">何时在JavaScript中使用Float32Array而不是Array</a></li>
+                
+              </ul>
+                    </div>
+
+          
+  
+          <div class="sphinxsidebarwrapper">
+              <h3><a href="/tag/2096359160127423488">java</a></h3>
+            
+              <ul>
+                
+                <li><a href="/qa/details/2583907719782597632">是否可以在运行时通过Java设置环境变量？</a></li>
+                
+                <li><a href="/qa/details/2583907348452475904">http状态码403-403禁止使用Java，但不能使用网络浏览器？</a></li>
+                
+                <li><a href="/qa/details/2583907026648695808">java-如何在Android Studio IDE中找到项目的所有未使用方法？</a></li>
+                
+                <li><a href="/qa/details/2583906900282704896">如何使用Java执行Windows命令-更改网络设置</a></li>
+                
+                <li><a href="/qa/details/2583906228774634496">空安全集合作为Java 8中的流</a></li>
+                
+                <li><a href="/qa/details/2583905675797595136">为什么Java的Date.getYear（）返回111而不是2011？</a></li>
+                
+                <li><a href="/qa/details/2583904843245028352">C ++命名空间，与Java包的比较</a></li>
+                
+                <li><a href="/qa/details/2583904774173230080">java-在Android中发出异步HTTP请求是否存在公认的最佳实践？</a></li>
+                
+                <li><a href="/qa/details/2583904709446730752">java-级联示例无法编译？</a></li>
+                
+                <li><a href="/qa/details/2583904680187266048">java-什么是抽象类和抽象方法？</a></li>
+                
+              </ul>
+                    </div>
+
+          
+  
+          <div class="sphinxsidebarwrapper">
+              <h3><a href="/tag/2096369992437597184">python</a></h3>
+            
+              <ul>
+                
+                <li><a href="/qa/details/2583907513137628160">网络-使用Python请求衡量网站加载时间</a></li>
+                
+                <li><a href="/qa/details/2583907456665519104">python-如何向熊猫数据框添加额外的行</a></li>
+                
+                <li><a href="/qa/details/2583907254684615680">python-Matplotlib：指定刻度标签的浮点格式</a></li>
+                
+                <li><a href="/qa/details/2583907240440759296">删除字符串中的最后一个路径组件</a></li>
+                
+                <li><a href="/qa/details/2583906768111797248">使用Python进行字符转换（如tr命令）</a></li>
+                
+                <li><a href="/qa/details/2583906720967820288">python-非阻塞子进程。</a></li>
+                
+                <li><a href="/qa/details/2583906498652931072">python-在__main__.py中使用模块自己的对象</a></li>
+                
+                <li><a href="/qa/details/2583906185388753920">网络-在Python中打开套接字的最佳方法</a></li>
+                
+                <li><a href="/qa/details/2583906017885029376">python-为什么type（myField）返回的是&lt;type&#39;instance&#39;&gt;&gt;而不返回&lt;type&#39;Field&#39;&gt;&gt;？</a></li>
+                
+                <li><a href="/qa/details/2583905943981392896">如何关闭mongodb python连接？</a></li>
+                
+              </ul>
+                    </div>
+
+          
+  
+          <div class="sphinxsidebarwrapper">
+              <h3><a href="/tag/2096370494780998656">c#</a></h3>
+            
+              <ul>
+                
+                <li><a href="/qa/details/2583906746922173440">在WCF中缓存？</a></li>
+                
+                <li><a href="/qa/details/2583906705381786624">C＃开关大小写字符串以</a></li>
+                
+                <li><a href="/qa/details/2583906422601810944">CodeGo.net&gt;如何写在中等信任的Web.Config？</a></li>
+                
+                <li><a href="/qa/details/2583906382957249536">C＃|| 运算符不使用可为空的布尔值</a></li>
+                
+                <li><a href="/qa/details/2583906114303689728">衡量代码执行所需时间的最佳方法是什么？</a></li>
+                
+                <li><a href="/qa/details/2583905747771851776">我可以检查变量是否可以强制转换为指定的类型吗？</a></li>
+                
+                <li><a href="/qa/details/2583905722941572096">为什么接口不能指定静态方法？</a></li>
+                
+                <li><a href="/qa/details/2583904758486533120">基于单元测试的类中的ClassInitialize属性未调用</a></li>
+                
+                <li><a href="/qa/details/2583904618145121280">在同一个catch块中捕获两个异常？</a></li>
+                
+                <li><a href="/qa/details/2583904396383880192">LINQ内联接vs左联接</a></li>
+                
+              </ul>
+                    </div>
+
+          
+  
+          <div class="sphinxsidebarwrapper">
+              <h3><a href="/tag/2105006174901896192">android</a></h3>
+            
+              <ul>
+                
+                <li><a href="/qa/details/2583907642322191360">音频-Android-ICS 4.0中的MediaPlayer缓冲区大小</a></li>
+                
+                <li><a href="/qa/details/2583907310888289280">android-如何自行停止服务？</a></li>
+                
+                <li><a href="/qa/details/2583907295604245504">如何使用Shell命令启动Genymotion设备？</a></li>
+                
+                <li><a href="/qa/details/2583907165647930368">android-取消有关从多任务平移中删除应用程序的通知</a></li>
+                
+                <li><a href="/qa/details/2583907026648695808">java-如何在Android Studio IDE中找到项目的所有未使用方法？</a></li>
+                
+                <li><a href="/qa/details/2583906437197988864">android-有关Google Play应用程序资产加密的问题</a></li>
+                
+                <li><a href="/qa/details/2583906057009497088">在Android中模拟电池电量不足和内存不足</a></li>
+                
+                <li><a href="/qa/details/2583905998071137280">android-改装-@Body参数不能与表单或多部分编码一起使用</a></li>
+                
+                <li><a href="/qa/details/2583905092990665728">无法合并Dex-Android Studio 3.0</a></li>
+                
+                <li><a href="/qa/details/2583904774173230080">java-在Android中发出异步HTTP请求是否存在公认的最佳实践？</a></li>
+                
+              </ul>
+                    </div>
+
+          
+  
+          <div class="sphinxsidebarwrapper">
+              <h3><a href="/tag/2096359160244864000">c++</a></h3>
+            
+              <ul>
+                
+                <li><a href="/qa/details/2583906782590534656">Haskell Thrift库在性能方面比C ++慢300倍</a></li>
+                
+                <li><a href="/qa/details/2583906554068075520">c ++-标准对如何在向量上调用clear改变容量有何看法？</a></li>
+                
+                <li><a href="/qa/details/2583905735725810688">从int到float和b时符号更改</a></li>
+                
+                <li><a href="/qa/details/2583905689504580608">为什么派生的模板类不能访问基本模板类的标识符？</a></li>
+                
+                <li><a href="/qa/details/2583905627697316864">具有模板的C ++共享库：未定义符号</a></li>
+                
+                <li><a href="/qa/details/2583905433417155584">构造函数-如何用C ++写一个简单的类？</a></li>
+                
+                <li><a href="/qa/details/2583904843245028352">C ++命名空间，与Java包的比较</a></li>
+                
+                <li><a href="/qa/details/2583903527206650880">如何在Visual Studio 2015中使用Clang为Windows编译C ++</a></li>
+                
+                <li><a href="/qa/details/2583903512996348928">C ++异常类设计</a></li>
+                
+                <li><a href="/qa/details/2583902710290449408">流-更改cin的分隔符（C ++）</a></li>
+                
+              </ul>
+                    </div>
+
+          
+  
+          <div class="sphinxsidebarwrapper">
+              <h3><a href="/tag/2096416758038004736">node.js</a></h3>
+            
+              <ul>
+                
+                <li><a href="/qa/details/2583906098667324416">javascript-在Socket.i中创建房间</a></li>
+                
+                <li><a href="/qa/details/2583900425502065664">不使用Jad的Node.js + Express</a></li>
+                
+                <li><a href="/qa/details/2583894758192055296">node.js-使用npm list时“无效”是什么意思？</a></li>
+                
+                <li><a href="/qa/details/2583887435390256128">node.js-如何从Redis保存和检索会话</a></li>
+                
+                <li><a href="/qa/details/2583883119820538880">node.js-MongoError：尝试删除集合时找不到ns</a></li>
+                
+                <li><a href="/qa/details/2583877383321289728">node.js-如何使用UglifyJS缩小文件夹中的多个Javascript文件？</a></li>
+                
+                <li><a href="/qa/details/2583876925873718272">json-将对象传递给节点+ express +玉中的客户端？</a></li>
+                
+                <li><a href="/qa/details/2583870839569515520">javascript-MissingSchemaError：尚未为模型“ User”注册架构</a></li>
+                
+                <li><a href="/qa/details/2583870615962780672">Node.js Express。 适用于bodyPars的大身材</a></li>
+                
+                <li><a href="/qa/details/2583870087514031104">javascript-Node.js请求CERT_HAS_EXPIRED</a></li>
+                
+              </ul>
+                    </div>
+
+          
+  
+          <div class="sphinxsidebarwrapper">
+              <h3><a href="/tag/2096454668590253056">php</a></h3>
+            
+              <ul>
+                
+                <li><a href="/qa/details/2583906072729748480">php-在L中手动注册用户</a></li>
+                
+                <li><a href="/qa/details/2583905647947416576">PHP-日志捕获到的异常</a></li>
+                
+                <li><a href="/qa/details/2583904998769820672">有什么办法可以在PHP中将json转换为xml？</a></li>
+                
+                <li><a href="/qa/details/2583904603783824384">php-Laravel邮件：传递字符串而不是vi</a></li>
+                
+                <li><a href="/qa/details/2583903842400207872">linux-在PHP CLI中设置max_execution_time</a></li>
+                
+                <li><a href="/qa/details/2583903352002184192">PHP-与所有主要提供商实施单点登录的最佳方法？</a></li>
+                
+                <li><a href="/qa/details/2583903249560503296">php-贝宝访问-SSL证书：无法获取本地发行者证书</a></li>
+                
+                <li><a href="/qa/details/2583899912354137088">什么因素使PHP Unicode不兼容？</a></li>
+                
+                <li><a href="/qa/details/2583899791558181888">时区-在PHP中将时间和日期从一个时区转换为另一个时区</a></li>
+                
+                <li><a href="/qa/details/2583899156943209472">php-正则表达式的变长lookbehind-assertion替代方法</a></li>
+                
+              </ul>
+                    </div>
+
+          
+  
+          <div class="sphinxsidebarwrapper">
+              <h3><a href="/tag/2096385163134501888">html</a></h3>
+            
+              <ul>
+                
+                <li><a href="/qa/details/2583906139452736512">html-如何使用图像作为提交按钮？</a></li>
+                
+                <li><a href="/qa/details/2583904427958600704">html-针对iframe的Firefox表单正在打开新标签</a></li>
+                
+                <li><a href="/qa/details/2583903337389229056">html-将CSS样式应用于DIV中的所有元素</a></li>
+                
+                <li><a href="/qa/details/2583903203892921344">pdf-如何在HTML中插入分页符，以便wkhtmltopdf对其进行解析？</a></li>
+                
+                <li><a href="/qa/details/2583902405951751168">javascript-如何检测div元素中的溢出？</a></li>
+                
+                <li><a href="/qa/details/2583902313391850496">html-可以使用&lt;span /&gt;关闭跨度吗？</a></li>
+                
+                <li><a href="/qa/details/2583900439494263808">CSS-单个元素htm上的多个类</a></li>
+                
+                <li><a href="/qa/details/2583898689546748928">javascript-在[[[http：//“]]之前添加一个尚未包含“ http：//”的URL</a></li>
+                
+                <li><a href="/qa/details/2583898624652477440">html-是否可以使用CSS创建此形状（将两个局部圆连接在一起）？</a></li>
+                
+                <li><a href="/qa/details/2583898098518983680">html-是否可以在GitHub markdown中向图像添加边框？</a></li>
+                
+              </ul>
+                    </div>
+
+          
+  
+          <div class="sphinxsidebarwrapper">
+              <h3><a href="/tag/2096391146292380672">jquery</a></h3>
+            
+              <ul>
+                
+                <li><a href="/qa/details/2583906597990827008">Chrome和Safari中jQuery UI对话框的滚动条问题</a></li>
+                
+                <li><a href="/qa/details/2583906331920958464">jQuery无法与IE 11一起使用</a></li>
+                
+                <li><a href="/qa/details/2583904215810704384">jQuery-仅从di删除文本内容</a></li>
+                
+                <li><a href="/qa/details/2583901574590366720">javascript-无法加载资源：net :: ERR_CONTENT_LENGTH_MISMATCH</a></li>
+                
+                <li><a href="/qa/details/2583901488875570176">ajax-如何使用jquery $ .get（）发送参数</a></li>
+                
+                <li><a href="/qa/details/2583900475363951616">使用jQuery .animate从右到左为div设置动画？</a></li>
+                
+                <li><a href="/qa/details/2583898879733269504">Javascript-如何使用XHR onProgress函数使用压缩/压缩的内容？</a></li>
+                
+                <li><a href="/qa/details/2583898337493648384">jQuery，找到父项</a></li>
+                
+                <li><a href="/qa/details/2583897987588031488">如何使用jquery或ajax为MVC项目在c＃/ asp.net中更新razor部分视图</a></li>
+                
+                <li><a href="/qa/details/2583897787788166144">javascript-Bootstrap 3 datetimepicker事件未触发</a></li>
+                
+              </ul>
+                    </div>
+
+          
+  
+          <div class="sphinxsidebarwrapper">
+              <h3><a href="/tag/2096496891356775424">ios</a></h3>
+            
+              <ul>
+                
+                <li><a href="/qa/details/2583906674595595264">目标c-iOS 11大标题导航栏不折叠</a></li>
+                
+                <li><a href="/qa/details/2583904491795907584">目标c-强制iOS应用崩溃的最快方法是什么？</a></li>
+                
+                <li><a href="/qa/details/2583903658857464832">iOS Push Notification Banner一次显示两次</a></li>
+                
+                <li><a href="/qa/details/2583903366464144384">iOS /来自驱动程序的rssi事件过于频繁。</a></li>
+                
+                <li><a href="/qa/details/2583903270884344832">ios-如何在没有Apple Developer帐户的情况下在xcode 6中创建ipa？</a></li>
+                
+                <li><a href="/qa/details/2583902761007973376">ios-如何在Xcode 9上构建Swift 3项目？</a></li>
+                
+                <li><a href="/qa/details/2583902034504188928">ios-如何滚动到UITableView的确切末端？</a></li>
+                
+                <li><a href="/qa/details/2583900019157894144">ios-轻按一下即可打开和关闭UITableViewCell复选标记</a></li>
+                
+                <li><a href="/qa/details/2583899942284690432">ios-警告：尝试在已显示的*上显示*（空）</a></li>
+                
+                <li><a href="/qa/details/2583898609586537472">ios-在UIAlertController外部点击时如何关闭UIAlertController？</a></li>
+                
+              </ul>
+                    </div>
+
+          
+  
+          <div class="sphinxsidebarwrapper">
+              <h3><a href="/tag/2096377132552291328">reactjs</a></h3>
+            
+              <ul>
+                
+                <li><a href="/qa/details/2583898324524860416">reactjs-来自的Redux-Form初始值</a></li>
+                
+                <li><a href="/qa/details/2583894650029343744">javascript-如何动态更改ReactJS样式？</a></li>
+                
+                <li><a href="/qa/details/2583891238416024576">javascript-在同构React组件中导入CSS文件</a></li>
+                
+                <li><a href="/qa/details/2583884968602633216">javascript-如何使用Redux刷新JWT令牌？</a></li>
+                
+                <li><a href="/qa/details/2583882215461487616">javascript-尝试使用React.DOM设置主体样式</a></li>
+                
+                <li><a href="/qa/details/2583874759331152896">reactjs-React 16.7-现在不推荐使用React.SFC</a></li>
+                
+                <li><a href="/qa/details/2583872036036674560">javascript-未捕获的错误：始终违反：findComponentRoot（...，... $ 110）：无法找到元素。 这可能意味着DOM被意外地突变了</a></li>
+                
+                <li><a href="/qa/details/2583869297525261312">javascript-React Nati中需要图像模块出现问题</a></li>
+                
+                <li><a href="/qa/details/2583864933989483520">javascript-如何在React中循环对象？</a></li>
+                
+                <li><a href="/qa/details/2583861432030856192">reactjs-React Router 4不会更新链接上的视图，但是会刷新</a></li>
+                
+              </ul>
+                    </div>
+
+          
+  
+          <div class="sphinxsidebarwrapper">
+              <h3><a href="/tag/2096385163218387968">css</a></h3>
+            
+              <ul>
+                
+                <li><a href="/qa/details/2583903337389229056">html-将CSS样式应用于DIV中的所有元素</a></li>
+                
+                <li><a href="/qa/details/2583902440814806016">CSS-display：none vs visible：hidden vs text-indent：9999屏幕阅读器的行为如何？</a></li>
+                
+                <li><a href="/qa/details/2583902405951751168">javascript-如何检测div元素中的溢出？</a></li>
+                
+                <li><a href="/qa/details/2583902313391850496">html-可以使用&lt;span /&gt;关闭跨度吗？</a></li>
+                
+                <li><a href="/qa/details/2583901689916949504">css-响应式si上媒体查询的常见断点</a></li>
+                
+                <li><a href="/qa/details/2583900439494263808">CSS-单个元素htm上的多个类</a></li>
+                
+                <li><a href="/qa/details/2583899621839864832">CSS-如何删除按钮上的蓝色“选定”轮廓？</a></li>
+                
+                <li><a href="/qa/details/2583898624652477440">html-是否可以使用CSS创建此形状（将两个局部圆连接在一起）？</a></li>
+                
+                <li><a href="/qa/details/2583897667411641344">CSS-如何选择多个给定元素的子元素？</a></li>
+                
+                <li><a href="/qa/details/2583897634561852416">xss-CSS样式表中的跨站点脚本</a></li>
+                
+              </ul>
+                    </div>
+
+          
+  
+          <div class="sphinxsidebarwrapper">
+              <h3><a href="/tag/2096370494915216384">.net</a></h3>
+            
+              <ul>
+                
+                <li><a href="/qa/details/2583907136724009984">asp.net-无法使用前导../退出顶层目录</a></li>
+                
+                <li><a href="/qa/details/2583906746922173440">在WCF中缓存？</a></li>
+                
+                <li><a href="/qa/details/2583906537475408896">您可以在解决方案中混合使用.NET Framework版本吗？</a></li>
+                
+                <li><a href="/qa/details/2583906510883521536">.net-TransactionScope和多线程</a></li>
+                
+                <li><a href="/qa/details/2583904618145121280">在同一个catch块中捕获两个异常？</a></li>
+                
+                <li><a href="/qa/details/2583904396383880192">LINQ内联接vs左联接</a></li>
+                
+                <li><a href="/qa/details/2583903960075600896">c＃-最小起订量-如何验证是否通过s设置了属性值</a></li>
+                
+                <li><a href="/qa/details/2583903396730242048">VS2010-如何在第一个compi上自动停止编译</a></li>
+                
+                <li><a href="/qa/details/2583902950892504064">.net-MVC中UIHint属性的用途是什么</a></li>
+                
+                <li><a href="/qa/details/2583900530879759360">.net-使用任务并行库时如何处理所有未处理的异常？</a></li>
+                
+              </ul>
+                    </div>
+
+          
+  
+          <div class="sphinxsidebarwrapper">
+              <h3><a href="/tag/2096359651464971264">git</a></h3>
+            
+              <ul>
+                
+                <li><a href="/qa/details/2583907626887152640">ssh-Git获取/拉/克隆挂在接收对象上</a></li>
+                
+                <li><a href="/qa/details/2583907492870751232">大文件Git</a></li>
+                
+                <li><a href="/qa/details/2583906581163279360">gerrit-git（pull vs checkout vs cherrypick）这是做什么用的？</a></li>
+                
+                <li><a href="/qa/details/2583906303366136832">版本控制-git是否忽略空文件夹？</a></li>
+                
+                <li><a href="/qa/details/2583903902311646208">版本控制-Git并在多个分支上工作</a></li>
+                
+                <li><a href="/qa/details/2583898990513226752">我如何将git拉到特定分支？</a></li>
+                
+                <li><a href="/qa/details/2583898068168999936">取消跟踪并停止跟踪gi中的文件</a></li>
+                
+                <li><a href="/qa/details/2583897563493565440">我将如何在Git中编写一个合并前的钩子？</a></li>
+                
+                <li><a href="/qa/details/2583896083810223104">如何获取匹配正则表达式的最后一个Git标签</a></li>
+                
+                <li><a href="/qa/details/2583895074274804736">如何在Android Studio中更改git分支</a></li>
+                
+              </ul>
+                    </div>
+
+          
+  
+          <div class="sphinxsidebarwrapper">
+              <h3><a href="/tag/2096369992890582016">ruby-on-rails</a></h3>
+            
+              <ul>
+                
+                <li><a href="/qa/details/2583907478543008768">ruby on rails-设计：在注册期间禁用密码确认</a></li>
+                
+                <li><a href="/qa/details/2583904507834926080">Ruby on Rails：比较两个日期的最佳方法？</a></li>
+                
+                <li><a href="/qa/details/2583904129659700224">ruby on rails-非持久ActiveRecord模型属性</a></li>
+                
+                <li><a href="/qa/details/2583903108497671168">Ruby on Rails-rmagick和OS X Lion</a></li>
+                
+                <li><a href="/qa/details/2583902850078213120">红宝石-您将Rack中间件文件和需求放在哪里？</a></li>
+                
+                <li><a href="/qa/details/2583901903608349696">ruby on rails-如何覆盖form_for帮助器中的类名？</a></li>
+                
+                <li><a href="/qa/details/2583898894178452480">红宝石-Rails 3.0中的f.error_messages</a></li>
+                
+                <li><a href="/qa/details/2583898272263832576">如何为Rails迁移定义布尔字段</a></li>
+                
+                <li><a href="/qa/details/2583895425002505216">红宝石-Capistrano和环境变量</a></li>
+                
+                <li><a href="/qa/details/2583895027684475904">ruby on rails-使Flash哈希通过重定向保持不变</a></li>
+                
+              </ul>
+                    </div>
+
+          
+  
+          <div class="sphinxsidebarwrapper">
+              <h3><a href="/tag/2096562026448421888">sql</a></h3>
+            
+              <ul>
+                
+                <li><a href="/qa/details/2583906962677171200">sql-引用表中没有与外键中的引用列列表匹配的主键或候选键</a></li>
+                
+                <li><a href="/qa/details/2583904723522814976">SQL Server如何处理存储过程中有关事务的语句？</a></li>
+                
+                <li><a href="/qa/details/2583904114845418496">sql-在多列上联接</a></li>
+                
+                <li><a href="/qa/details/2583903947912119296">sql-Excel中是否有类似合并的函数？</a></li>
+                
+                <li><a href="/qa/details/2583903754017833984">sql-使用什么？ 查看或临时标签</a></li>
+                
+                <li><a href="/qa/details/2583903690549625856">sql-使用数据库表作为队列</a></li>
+                
+                <li><a href="/qa/details/2583899561911649280">sql-Postgresql左联接json_agg（）忽略/删除NULL</a></li>
+                
+                <li><a href="/qa/details/2583898369152254976">多个INNER JOIN SQL ACCE</a></li>
+                
+                <li><a href="/qa/details/2583897620284441600">sql-带WHERE子句的UNION</a></li>
+                
+                <li><a href="/qa/details/2583891179863540736">oracle-如何在SQL SELECT语句中使用包常量？</a></li>
+                
+              </ul>
+                    </div>
+
+          
+  
+          <div class="sphinxsidebarwrapper">
+              <h3><a href="/tag/2096436208267166720">c</a></h3>
+            
+              <ul>
+                
+                <li><a href="/qa/details/2583907678074438656">c-* nix select和exceptfds / errorfds语义</a></li>
+                
+                <li><a href="/qa/details/2583904047602336768">c-为什么访问数组中的元素需要固定的时间？</a></li>
+                
+                <li><a href="/qa/details/2583902523828470784">首页&gt; C＃&gt;如何使用不带-l或不遵循libNAME.so命名约定的库的硬编码路径的GCC进行链接？</a></li>
+                
+                <li><a href="/qa/details/2583900003487974400">在C中找到最高位</a></li>
+                
+                <li><a href="/qa/details/2583899976359216128">c-枚举中的元素数</a></li>
+                
+                <li><a href="/qa/details/2583899743407571968">c-结构打包是确定的吗？</a></li>
+                
+                <li><a href="/qa/details/2583898973702456320">c-实施VM的教程/资源</a></li>
+                
+                <li><a href="/qa/details/2583895108634543104">编译器降低程序的时间复杂度合法吗？ 是否认为这是可观察到的行为？</a></li>
+                
+                <li><a href="/qa/details/2583891222762882048">c-在.so fi中链接到较旧的符号版本</a></li>
+                
+                <li><a href="/qa/details/2583887647521375232">一次了解C和C ++中f（）和f（void）之间的区别，然后</a></li>
+                
+              </ul>
+                    </div>
+
+          
+  
+          <div class="sphinxsidebarwrapper">
+              <h3><a href="/tag/2096797069171229696">ruby</a></h3>
+            
+              <ul>
+                
+                <li><a href="/qa/details/2583907218798150656">ruby-添加和删除参考的Rails迁移</a></li>
+                
+                <li><a href="/qa/details/2583907122446599168">红宝石-在Rsp中测试STDOUT输出</a></li>
+                
+                <li><a href="/qa/details/2583905982350885888">Ruby：模块，要求并包含</a></li>
+                
+                <li><a href="/qa/details/2583903152604972032">如何判断我是从JRuby还是Ruby运行？</a></li>
+                
+                <li><a href="/qa/details/2583898894178452480">红宝石-Rails 3.0中的f.error_messages</a></li>
+                
+                <li><a href="/qa/details/2583890303857984512">Ruby：继承与类变量一起使用的代码</a></li>
+                
+                <li><a href="/qa/details/2583888263077430272">regex-如何获取字符串中所有出现的Ruby正则表达式的匹配数据？</a></li>
+                
+                <li><a href="/qa/details/2583886943163515904">dynamic-动态设置Ruby Obj的属性</a></li>
+                
+                <li><a href="/qa/details/2583886874393707520">Ruby / Rails CSV解析，UTF-8中无效的字节序列</a></li>
+                
+                <li><a href="/qa/details/2583883287542367232">Ruby on Rails-警告：引用了顶级常量</a></li>
+                
+              </ul>
+                    </div>
+
+          
+  
+          <div class="sphinxsidebarwrapper">
+              <h3><a href="/tag/2096539930267747328">string</a></h3>
+            
+              <ul>
+                
+                <li><a href="/qa/details/2583907416131765248">使用JavaScript替换字符串的最后一个字符</a></li>
+                
+                <li><a href="/qa/details/2583907240440759296">删除字符串中的最后一个路径组件</a></li>
+                
+                <li><a href="/qa/details/2583906705381786624">C＃开关大小写字符串以</a></li>
+                
+                <li><a href="/qa/details/2583904270856750080">sql server-将动态sql的结果分配给variab</a></li>
+                
+                <li><a href="/qa/details/2583900080461841408">算法-计算给定长度字符串可能的最大运行次数</a></li>
+                
+                <li><a href="/qa/details/2583894154396828672">字符串-任何等效于PadLeft / PadRight的方法？</a></li>
+                
+                <li><a href="/qa/details/2583889529673352192">在JavaScript中比较字符串时，为什么一个字符串比另一个字符串大？</a></li>
+                
+                <li><a href="/qa/details/2583885493343618048">检查字符串是否在C中包含另一个字符串的简单方法？</a></li>
+                
+                <li><a href="/qa/details/2583884598933455872">带新行的JavaScript字符串-但不使用\ n</a></li>
+                
+                <li><a href="/qa/details/2583881376265143296">.net-Regex.IsMatch与string。包含</a></li>
+                
+              </ul>
+                    </div>
+
+          
+
+
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section">
+<h1>正则表达式 - 匹配换行符 -  \ n或\ r \ n？</h1>
+
+<div class="excerpt"><p>在写这个答案的时候，我不得不在换行符上进行匹配，而不是使用<code>\n</code>-flag（<code>\r\n</code>  -  dot match linebreaks）。</p>
+
+<p>在尝试匹配<code>\n</code>或<code>\r\n</code>时，通常用于测试正则表达式的站点的行为会有所不同。</p>
+
+<p>我注意到</p>
+
+<ul>
+<li><p>Regex101仅在<code>\n</code>上匹配换行符<br/>（示例 - 删除<code>\r\n</code>并且匹配）</p></li>
+<li><p>RegExr在<code>\n</code>和<code>\r\n</code>上都不匹配换行符<br/>除了<code>$</code>-flag和<code>\s</code>之外，我找不到能使它与换行符匹配的东西<br/>（例）</p></li>
+<li><p>Debuggex表现得更加不同：<br/>在此示例中，它仅匹配<code>\n</code>，而<br/>这里只匹配<code>\r\n</code>，指定了相同的标志和引擎</p></li>
+</ul>
+
+<p>我完全了解<code>\n</code>-flag（多行 - 使<code>\r\n</code>与开头匹配，<code>$</code>与行尾相比），但有时这不是一个选项。 与<code>\s</code>相同，因为它也匹配制表符和空格。</p>
+
+<p>我想使用unicode换行符（<code>\n</code>）并不成功，所以：</p>
+
+<ol>
+<li>是否有一种故障保护方法将匹配线路（最好不管使用的语言）整合到正则表达式中？</li>
+<li>为什么上面提到的网站表现不同（特别是Debuggex，仅在<code>\n</code>上匹配一次，在<code>\r\n</code>上只匹配一次）？</li>
+</ol>
+    </div>
+           
+          <div style="width:100%;">
+          <div class="tags t-windows t-cmd t-file-rename">
+            
+<a href="/tag/2096359917434176512" class="post-tag" title="" rel="tag">regex</a> 
+           
+<a href="/tag/2096533189769561088" class="post-tag" title="" rel="tag">language-agnostic</a> 
+           
+<a href="/tag/2097914386726781952" class="post-tag" title="" rel="tag">line-breaks</a> 
+           
+            </div>
+        
+        <div class="started fr">
+         <a href="https://stackoverflow.com/users/1807643/basti-m"> Basti M</a> asked <span class="relativetime">2019-07-18T03:36:07Z</span>
+            </div>
+        
+           </div>
+           
+           
+           </div>
+
+          <!-- answers-header start -->
+          <div id="answers-header" class="answers-header">
+            5个解决方案
+        </div>
+
+         <!-- answers-header end -->
+
+
+
+<div class="answers">
+<div class="votes">144 votes</div>
+
+<div style="width:100%;">
+<p>要朝相反的方向回答;）</p>
+
+<p>2）关于\ r和\ n的完整解释我必须参考这个问题，这比我在这里发布的要完整得多：\ n和\ r \ n之间的区别？</p>
+
+<p>简而言之，Linux使用\ n表示新行，Windows \ r \ n和旧版Mac \ r。 因此，有多种方法可以编写换行符。 您的第二个工具（RegExr）例如匹配单个\ r \ n。</p>
+
+<p>1）<code>[\r\n]+</code>，因为Ilya建议会工作，但也将匹配多个连续的新线。 <code>(\r\n|\r|\n)</code>更正确。</p>
+    
+</div>
+
+</div>
+
+<div style="width:100%;clear: left;border-bottom: 1px solid #d8d8d8; overflow: hidden; padding-bottom: 12px ">
+  <div class="started fr">
+   <a href="https://stackoverflow.com/users/2903251/peter-van-der-wal"> Peter van der Wal</a> answered <span class="relativetime">2019-07-18T03:36:43Z</span>
+      </div>
+  
+     </div>
+
+
+
+<div class="answers">
+<div class="votes">7 votes</div>
+
+<div style="width:100%;">
+<p>Debuggex中的示例文本中有不同的行结尾。 特别有趣的是，Debuggex似乎已经确定了您首先使用的行结尾样式，并且它将所有输入的行结尾转换为该样式。</p>
+
+<p>我使用Notepad ++将Unix和Windows格式的示例文本粘贴到Debuggex中，无论我先粘贴的是Debuggex会话所坚持的内容。</p>
+
+<p>因此，在将文本粘贴到Debuggex之前，应该通过文本编辑器清洗文本。 确保您粘贴所需的样式。 Debuggex默认为Unix风格（\ n）。</p>
+
+<p>此外，NEL（\ u0085）完全不同：[https://en.wikipedia.org/wiki/Newline#Unicode]</p>
+
+<p><code>(\r?\n)</code>将涵盖Unix和Windows。 你需要更复杂的东西，如<code>(\r\n|\r|\n)</code>，如果你想匹配旧的Mac。</p>
+    
+</div>
+
+</div>
+
+<div style="width:100%;clear: left;border-bottom: 1px solid #d8d8d8; overflow: hidden; padding-bottom: 12px ">
+  <div class="started fr">
+   <a href="https://stackoverflow.com/users/895323/dane"> Dane</a> answered <span class="relativetime">2019-07-18T03:37:36Z</span>
+      </div>
+  
+     </div>
+
+
+
+<div class="answers">
+<div class="votes">1 votes</div>
+
+<div style="width:100%;">
+<p>这仅适用于问题1。</p>
+
+<p>我有一个在Windows上运行并使用多行MFC编辑器框的应用程序。<br/>编辑器框期望CRLF换行符，但我需要解析输入的文本<br/>有一些非常大/讨厌的正则表达式&#39;。</p>
+
+<p>在编写正则表达式时，我不想强调这一点，所以<br/>我最终在解析器和编辑器之间来回正常化，以便<br/>正则表达式只是使用<code>\n</code>.我还捕获粘贴操作并将它们转换为框。</p>
+
+<p>这不需要太多时间。<br/>这就是我使用的。</p>
+
+<pre><code> boost::regex  CRLFCRtoLF (
+     &#34; \\r\\n | \\r(?!\\n) &#34;
+     , MODx);
+
+ boost::regex  CRLFCRtoCRLF (
+     &#34; \\r\\n?+ | \\n &#34;
+     , MODx);
+
+
+ // Convert (All style) linebreaks to linefeeds 
+ // ---------------------------------------
+ void ReplaceCRLFCRtoLF( string&amp; strSrc, string&amp; strDest )
+ {
+    strDest  = boost::regex_replace ( strSrc, CRLFCRtoLF, &#34;\\n&#34; );
+ }
+
+ // Convert linefeeds to linebreaks (Windows) 
+ // ---------------------------------------
+ void ReplaceCRLFCRtoCRLF( string&amp; strSrc, string&amp; strDest )
+ {
+    strDest  = boost::regex_replace ( strSrc, CRLFCRtoCRLF, &#34;\\r\\n&#34; );
+ }
+</code></pre>
+    
+</div>
+
+</div>
+
+<div style="width:100%;clear: left;border-bottom: 1px solid #d8d8d8; overflow: hidden; padding-bottom: 12px ">
+  <div class="started fr">
+   <a href="https://stackoverflow.com/users/557597/sln"> sln</a> answered <span class="relativetime">2019-07-18T03:38:56Z</span>
+      </div>
+  
+     </div>
+
+
+
+<div class="answers">
+<div class="votes">0 votes</div>
+
+<div style="width:100%;">
+<p>在Python中：</p>
+
+<pre><code># as Peter van der Wal&#39;s answer
+re.split(r&#39;\r\n|\r|\n&#39;, text, flags=re.M) 
+</code></pre>
+
+<p>或更严格：</p>
+
+<pre><code># https://docs.python.org/3/library/stdtypes.html#str.splitlines
+str.splitlines()
+</code></pre>
+    
+</div>
+
+</div>
+
+<div style="width:100%;clear: left;border-bottom: 1px solid #d8d8d8; overflow: hidden; padding-bottom: 12px ">
+  <div class="started fr">
+   <a href="https://stackoverflow.com/users/6145240/keelung"> Keelung</a> answered <span class="relativetime">2019-07-18T03:39:23Z</span>
+      </div>
+  
+     </div>
+
+
+
+<div class="answers">
+<div class="votes">-1 votes</div>
+
+<div style="width:100%;">
+<p>在记事本中，++ \ R匹配\ n和\ r \ n。</p>
+    
+</div>
+
+</div>
+
+<div style="width:100%;clear: left;border-bottom: 1px solid #d8d8d8; overflow: hidden; padding-bottom: 12px ">
+  <div class="started fr">
+   <a href="https://stackoverflow.com/users/5324157/cwazy-paving"> Cwazy Paving</a> answered <span class="relativetime">2019-07-18T03:39:48Z</span>
+      </div>
+  
+     </div>
+
+
+
+
+<div>translate from <a href="https://stackoverflow.com:/questions/20056306/match-linebreaks-n-or-r-n">https://stackoverflow.com:/questions/20056306/match-linebreaks-n-or-r-n</a></div>
+
+          </div>
+        </div>
+      </div>
+</div>
+   
+    
+
+<div class="related" role="navigation" aria-label="related navigation">
+  <h3>Navigation</h3>
+  <ul>
+    <li class="right" style="margin-right: 10px">
+      友情链接：<a href="http://jp.itasr.com/"
+         >IT技術知識クイズ</a> &#187;</li>
+    <li class="nav-item nav-item-0"><a href="javascript:scrollTo(0,0);">返回顶部</a> &#187;</li> 
+  </ul>
+</div>
+<div class="footer">
+  浙ICP备18053459号-1 &copy; Copyright 2018, ITranslater. 
+</div>
+
+
+    <script>
+      $(function(){
+        $("#btn_search").click(function(){
+          if($("#search").val()){
+            window.location.href = "https://itranslater.com/search/" + encodeURIComponent($("#search").val());
+          }
+        });
+        $("#search").keypress(function(e){
+          if(e.keyCode == 13 && $("#search").val())
+          {
+            window.location.href = "https://itranslater.com/search/" + encodeURIComponent($("#search").val());
+          }
+        })
+      });
+    </script>
+  </body>
+</html>

@@ -32,8 +32,8 @@ class AppWin(threading.Thread):
         # 设置界面
         win = tkinter.Tk()
         win.title('聊天室')
-        win.resizable(width=False, height=False)
-        win.geometry("600x300")
+        #win.resizable(width=False, height=False)
+        win.geometry("800x500")
 
         # 头部菜单
         menu = tkinter.Menu(win)
@@ -68,7 +68,7 @@ class AppWin(threading.Thread):
         # 聊天信息显示组件 win_zj创建lt_text
         win_lt_text_gdt = tkinter.Scrollbar(win, orient=tkinter.VERTICAL)
         win_lt_text_gdt.grid(row=1, column=6, sticky=tkinter.N + tkinter.S)
-        win_lt_text = tkinter.Text(win, borderwidth=2, relief='groove', width=63, height=18, bg='seashell',
+        win_lt_text = tkinter.Text(win, borderwidth=2, relief='groove', width=100, height=40, bg='seashell',
                                    yscrollcommand=win_lt_text_gdt.set)
         win_lt_text.grid(row=1, column=0, columnspan=5)
         win_lt_text_gdt.config(command=win_lt_text.yview)
@@ -78,7 +78,7 @@ class AppWin(threading.Thread):
         # 在线的人显示组件 win_zj创建rs_text
         win_rs_text_gdt = tkinter.Scrollbar(win, orient=tkinter.VERTICAL)
         win_rs_text_gdt.grid(row=1, column=8, sticky=tkinter.N + tkinter.S)
-        win_rs_text = tkinter.Text(win, borderwidth=2, relief='groove', width=16, height=18, bg='seashell',
+        win_rs_text = tkinter.Text(win, borderwidth=2, relief='groove', width=32, height=40, bg='seashell',
                                    yscrollcommand=win_rs_text_gdt.set)
         win_rs_text.grid(row=1, column=7)
         win_rs_text_gdt.config(command=win_rs_text.yview)
@@ -173,8 +173,8 @@ class Msg:
             tkinter.messagebox.showinfo('提示', '昵称设置成功')
 
     def close_app(self):
-        time.sleep(0.5)
-        self.client.shutdown()
+        #time.sleep(0.5)
+        #self.client.shutdown()
         #self.client.send(bytes('', encoding='utf-8'))
         print('000')
         sys.exit(1)

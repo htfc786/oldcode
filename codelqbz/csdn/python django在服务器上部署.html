@@ -1,0 +1,214 @@
+<div class="blog-content-box">
+    <div class="article-header-box">
+        <div class="article-header">
+            <div class="article-title-box">
+                <h1 class="title-article" id="articleContentId">django在服务器上部署</h1>
+            </div>
+            <div class="article-info-box">
+                <div class="article-bar-top">
+                    <img class="article-type-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/original.png" alt="">
+                    <div class="bar-content">
+                    <a class="follow-nickName " href="https://blog.csdn.net/weixin_44251004" target="_blank" rel="noopener">李嘉豪554</a>
+                    <span class="time">2019-04-17 00:01:16</span>
+                    <img class="article-read-img article-heard-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/articleReadEyes.png" alt="">
+                    <span class="read-count">5527</span>
+                    <a id="blog_detail_zk_collection" class="un-collection" data-report-click="{&quot;mod&quot;:&quot;popu_823&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4232&quot;,&quot;ab&quot;:&quot;new&quot;}">
+                        <img class="article-collect-img article-heard-img un-collect-status isdefault" style="display:inline-block" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollect.png" alt="">
+                        <img class="article-collect-img article-heard-img collect-status isactive" style="display:none" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollectionActive.png" alt="">
+                        <span class="name">收藏</span>
+                        <span class="get-collection">
+                            19
+                        </span>
+                    </a>
+                    </div>
+                </div>
+                <div class="blog-tags-box">
+                    <div class="tags-box artic-tag-box">
+                    </div>
+                </div>
+                <div class="up-time"><span>最后发布:2019-04-17 00:01:16</span><span>首次发布:2019-04-17 00:01:16</span></div>
+                <div class="slide-content-box">
+                    <div class="article-copyright">
+                        <div class="creativecommons">
+                            版权声明：本文为博主原创文章，遵循<a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener"> CC 4.0 BY-SA </a>版权协议，转载请附上原文出处链接和本声明。
+                        </div>
+                        <div class="article-source-link">
+                            本文链接：<a href="https://blog.csdn.net/weixin_44251004/article/details/89344462" target="_blank">https://blog.csdn.net/weixin_44251004/article/details/89344462</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="operating">
+                    <a class="href-article-edit slide-toggle">版权</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <article class="baidu_pl">
+        <div id="article_content" class="article_content clearfix">
+        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/ck_htmledit_views-b5506197d8.css">
+                <div id="content_views" class="htmledit_views">
+                    <p id="main-toc">&nbsp;</p> 
+<p><strong>目录</strong></p> 
+<p id="" style="margin-left:0px;"><a href="#t0" target="_self">一、安装python</a></p> 
+<p id="" style="margin-left:40px;"><a href="#t1" target="_self">1、下载依赖包</a></p> 
+<p id="" style="margin-left:40px;"><a href="#t2" target="_self">2、下载python包</a></p> 
+<p id="" style="margin-left:40px;"><a href="#t3" target="_self">3、解压python包</a></p> 
+<p id="" style="margin-left:40px;"><a href="#t4" target="_self">4、切换到python包路径</a></p> 
+<p id="" style="margin-left:40px;"><a href="#t5" target="_self">5、编译安装</a></p> 
+<p id="" style="margin-left:40px;"><a href="#t6" target="_self">6、创建软链接</a></p> 
+<p id="" style="margin-left:0px;"><a href="#t7" target="_self">二、安装django</a></p> 
+<p id="" style="margin-left:0px;"><a href="#t8" target="_self">三、安装uwsgi</a></p> 
+<p id="" style="margin-left:40px;"><a href="#t9" target="_self">1、安装uwsgi</a></p> 
+<p id="" style="margin-left:40px;"><a href="#t10" target="_self">2、创建软链接</a></p> 
+<p id="" style="margin-left:40px;"><a href="#t11" target="_self">3、测试uwsgi和django的契合</a></p> 
+<p id="" style="margin-left:40px;"><a href="#t12" target="_self">4、关闭防火墙和selinux</a></p> 
+<p id="" style="margin-left:40px;"><a href="#t13" target="_self">5、使用uwsgi的命令启动django</a></p> 
+<p id="" style="margin-left:40px;"><a href="#t14" target="_self">6、使用uwsgi脚本启动django</a></p> 
+<p id="" style="margin-left:0px;"><a href="#t15" target="_self">四、安装nginx</a></p> 
+<p id="" style="margin-left:40px;"><a href="#t16" target="_self">1、下载nginx包</a></p> 
+<p id="" style="margin-left:40px;"><a href="#t17" target="_self">2、解压包</a></p> 
+<p id="" style="margin-left:40px;"><a href="#t18" target="_self">3、切入解压目录</a></p> 
+<p id="" style="margin-left:40px;"><a href="#t19" target="_self">4、编译安装</a></p> 
+<p id="" style="margin-left:40px;"><a href="#t20" target="_self">5、创建软链接</a></p> 
+<p id="" style="margin-left:40px;"><a href="#t21" target="_self">6、启动nginx测试</a></p> 
+<p id="" style="margin-left:40px;"><a href="#t22" target="_self">7、配置nginx访问uwsgi参照(nginx/conf/nginx.conf)</a></p> 
+<p id="" style="margin-left:40px;"><a href="#t23" target="_self">8、关闭nginx和uwsgi</a></p> 
+<p id="" style="margin-left:40px;"><a href="#t24" target="_self">9、先启动uwsgi然后启动nginx</a></p> 
+<hr id="hr-toc">
+<p>&nbsp;</p> 
+<p>&nbsp;</p> 
+<h1 id="%E4%B8%80%E3%80%81%E5%AE%89%E8%A3%85python"><a name="t0"></a><a name="t0"></a>一、安装python</h1> 
+<p>&nbsp;</p> 
+<h2 id="1%E3%80%81%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E5%8C%85"><a name="t1"></a><a name="t1"></a>1、下载依赖包</h2> 
+<p>先检测当前服务器的yum是否可用</p> 
+<p>yum可用的情况下，安装python需要的依赖包</p> 
+<p style="margin-left:0cm;">yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make</p> 
+<p style="margin-left:0cm;">&nbsp;</p> 
+<h2 id="2%E3%80%81%E4%B8%8B%E8%BD%BDpython%E5%8C%85" style="margin-left:0cm;"><a name="t2"></a><a name="t2"></a>2、下载python包</h2> 
+<p style="margin-left:0cm;">wget&nbsp;<a href="https://www.python.org/ftp/python/3.6.3/Python-3.6.2.tar.xz">https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tar.xz</a></p> 
+<p style="margin-left:0cm;">如果已经有包的话，可以传到服务器然后直接解压</p> 
+<p style="margin-left:0cm;">&nbsp;</p> 
+<h2 id="3%E3%80%81%E8%A7%A3%E5%8E%8Bpython%E5%8C%85" style="margin-left:0cm;"><a name="t3"></a><a name="t3"></a>3、解压python包</h2> 
+<p style="margin-left:0cm;">tar -Jxvf Python3.6.2.tar.xz</p> 
+<p style="margin-left:0cm;">&nbsp;</p> 
+<h2 id="4%E3%80%81%E5%88%87%E6%8D%A2%E5%88%B0python%E5%8C%85%E8%B7%AF%E5%BE%84" style="margin-left:0cm;"><a name="t4"></a><a name="t4"></a>4、切换到python包路径</h2> 
+<p style="margin-left:0cm;">cd Python3.6.2</p> 
+<p style="margin-left:0cm;">./configure prefix=/usr/local/python3</p> 
+<p style="margin-left:0cm;">&nbsp;</p> 
+<h2 id="5%E3%80%81%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85" style="margin-left:0cm;"><a name="t5"></a><a name="t5"></a>5、编译安装</h2> 
+<p style="margin-left:0cm;">make &amp;&amp; make install</p> 
+<p style="margin-left:0cm;">&nbsp;</p> 
+<h2 id="6%E3%80%81%E5%88%9B%E5%BB%BA%E8%BD%AF%E9%93%BE%E6%8E%A5" style="margin-left:0cm;"><a name="t6"></a><a name="t6"></a>6、创建软链接</h2> 
+<p style="margin-left:0cm;">ln -s /usr/local/python3/bin/python3 /usr/bin/python3</p> 
+<p style="margin-left:0cm;">给python创建软链接的时候，可以顺便把pip3也创建软链接</p> 
+<p style="margin-left:0cm;">ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3</p> 
+<p style="margin-left:0cm;">&nbsp;</p> 
+<h1 id="%E4%BA%8C%E3%80%81%E5%AE%89%E8%A3%85django" style="margin-left:0cm;"><a name="t7"></a><a name="t7"></a>二、安装django</h1> 
+<p>pip3 install pymysql &amp;&amp; pip3&nbsp;install pillow &amp;&amp; pip3 install django==2.1.5 &amp;&amp; pip3 install django-ckeditor</p> 
+<h1 id="%E4%B8%89%E3%80%81%E5%AE%89%E8%A3%85uwsgi"><a name="t8"></a><a name="t8"></a>三、安装uwsgi</h1> 
+<h2 id="1%E3%80%81%E5%AE%89%E8%A3%85uwsgi"><a name="t9"></a><a name="t9"></a>1、安装uwsgi</h2> 
+<p>pip3 install uwsgi</p> 
+<h2 id="2%E3%80%81%E5%88%9B%E5%BB%BA%E8%BD%AF%E9%93%BE%E6%8E%A5"><a name="t10"></a><a name="t10"></a>2、创建软链接</h2> 
+<p>ln -s /usr/local/python3/bin/uwsgi /usr/bin/uwsgi</p> 
+<h2 id="3%E3%80%81%E6%B5%8B%E8%AF%95uwsgi%E5%92%8Cdjango%E7%9A%84%E5%A5%91%E5%90%88"><a name="t11"></a><a name="t11"></a>3、测试uwsgi和django的契合</h2> 
+<p>uwsgi</p> 
+<p><img alt="" class="has" height="119" src="https://img-blog.csdnimg.cn/20190416231554925.png" width="615"></p> 
+<h2 id="4%E3%80%81%E5%85%B3%E9%97%AD%E9%98%B2%E7%81%AB%E5%A2%99%E5%92%8Cselinux"><a name="t12"></a><a name="t12"></a>4、关闭防火墙和selinux</h2> 
+<p>systemctl stop firewalld</p> 
+<p>setenforce</p> 
+<p>setenforce 0</p> 
+<h2 id="5%E3%80%81%E4%BD%BF%E7%94%A8uwsgi%E7%9A%84%E5%91%BD%E4%BB%A4%E5%90%AF%E5%8A%A8django"><a name="t13"></a><a name="t13"></a>5、使用uwsgi的命令启动django</h2> 
+<p>uwsgi --http&nbsp;192.168.254.130:8000 --file /opt/QShop/wsgi.py --static-map=/static=static</p> 
+<p style="margin-left:0cm;">&nbsp;&nbsp; --http&nbsp; ip端口</p> 
+<p style="margin-left:0cm;">&nbsp;&nbsp; --file&nbsp;&nbsp; uwsgi文件位置&nbsp; /opt/QShop/是django项目的路径</p> 
+<p style="margin-left:0cm;">&nbsp;&nbsp; --static-map&nbsp; 静态文件路由</p> 
+<p>&nbsp;</p> 
+<p>然后就可以去浏览器输入地址，打开项目了</p> 
+<h2 id="6%E3%80%81%E4%BD%BF%E7%94%A8uwsgi%E8%84%9A%E6%9C%AC%E5%90%AF%E5%8A%A8django"><a name="t14"></a><a name="t14"></a>6、使用uwsgi脚本启动django</h2> 
+<p>这个操作需要nginx的配合，所以需要安装nginx，但是准备工作可以先做</p> 
+<p>在/opt下创建script目录，在script目录下创建uwsgi.ini文件，内容为：</p> 
+<pre class="has" name="code"><code class="hljs javascript"><ol class="hljs-ln"><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"> </div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">[uwsgi]</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"> </div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">chdir=<span class="hljs-regexp">/opt/</span>QShop</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-built_in">module</span>=QShop.wsgi:application</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">socket=<span class="hljs-regexp">/opt/</span>script/uwsgi.sock</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">workers=<span class="hljs-number">5</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">pidfile=<span class="hljs-regexp">/opt/</span>script/uwsgi.pid</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">http=<span class="hljs-number">192.168</span><span class="hljs-number">.254</span><span class="hljs-number">.130</span>:<span class="hljs-number">9000</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">static</span>-map=<span class="hljs-regexp">/static=/</span>opt/QShop/<span class="hljs-keyword">static</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="11"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">uid=root</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="12"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">gid=root</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="13"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">master=<span class="hljs-literal">true</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="14"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">vacuum=<span class="hljs-literal">true</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="15"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">enable-threads=<span class="hljs-literal">true</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="16"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">thunder-lock=<span class="hljs-literal">true</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="17"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">harakiri=<span class="hljs-number">30</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="18"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">post-buffering=<span class="hljs-number">4096</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="19"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">daemonize=<span class="hljs-regexp">/opt/</span>script/uwsgi.log</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="20"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">~                                   </div></div></li></ol></code><div class="hljs-button signin" data-title="登录后复制" data-report-click="{&quot;spm&quot;:&quot;1001.2101.3001.4259&quot;}" onclick="hljs.signin(event)"></div></pre> 
+<p>上面代码的分别对应的是：</p> 
+<p style="margin-left:0cm;"><span style="color:#000000;">[uwsgi]&nbsp; &nbsp; &nbsp; 声明uwsgi<br><br> chdir&nbsp; &nbsp;#项目目录<br><br> module&nbsp; #指定项目的application，尤其注意的是这个！！！下面会提到<br><br> socket&nbsp; #指定sock的文件路径<br><br> workers&nbsp; #进程个数<br><br> pidfile&nbsp; #pid文件<br><br> http&nbsp; #指定IP端口<br><br> static-map&nbsp; #指定静态文件<br><br> uid&nbsp; #用户<br><br> gid&nbsp; #组<br><br> master&nbsp; #启用主进程<br><br> vacuum&nbsp; #自动移除unix&nbsp;Socket和pid文件当服务停止的时候<br><br> enable-threads #启用线程<br><br> thunder-lock #序列化接受的内容，如果可能的话<br><br> harakiri #设置自中断时间<br><br> post-buffering #设置缓冲<br><br> daemonize=/opt/script/uwsgi.log&nbsp;#设置日志目录</span></p> 
+<p>&nbsp;</p> 
+<p>&nbsp;</p> 
+<p><img alt="" class="has" height="298" src="https://img-blog.csdnimg.cn/20190416233112120.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDI1MTAwNA==,size_16,color_FFFFFF,t_70" width="322"></p> 
+<p>这个东西是wsgi！！！！这个文件是python创建的，就叫wsgi，而不要自己改成uwsgi!!!</p> 
+<p>&nbsp;</p> 
+<p>&nbsp;</p> 
+<h1 id="%E5%9B%9B%E3%80%81%E5%AE%89%E8%A3%85nginx"><a name="t15"></a><a name="t15"></a>四、安装nginx</h1> 
+<h2 id="1%E3%80%81%E4%B8%8B%E8%BD%BDnginx%E5%8C%85"><a name="t16"></a><a name="t16"></a>1、下载nginx包</h2> 
+<p style="margin-left:0cm;">Wget <strong>http://nginx.org/download/nginx-1.12.2.tar.gz&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></p> 
+<h2 id="2%E3%80%81%E8%A7%A3%E5%8E%8B%E5%8C%85" style="margin-left:0cm;"><a name="t17"></a><a name="t17"></a>2、解压包</h2> 
+<p>tar -zxvf&nbsp;<strong>nginx-1.12.2.tar.gz</strong></p> 
+<h2 id="3%E3%80%81%E5%88%87%E5%85%A5%E8%A7%A3%E5%8E%8B%E7%9B%AE%E5%BD%95"><a name="t18"></a><a name="t18"></a>3、切入解压目录</h2> 
+<p>cd&nbsp;<strong>nginx-1.12.2</strong></p> 
+<h2 id="4%E3%80%81%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85"><a name="t19"></a><a name="t19"></a>4、编译安装</h2> 
+<p>./configure \</p> 
+<p>出现了&gt;，然后再按一下enter</p> 
+<p>make &amp;&amp; make install</p> 
+<h2 id="5%E3%80%81%E5%88%9B%E5%BB%BA%E8%BD%AF%E9%93%BE%E6%8E%A5"><a name="t20"></a><a name="t20"></a>5、创建软链接</h2> 
+<p>ln -s /usr/local/nginx/sbin/nginx /usr/bin/nginx</p> 
+<h2 id="6%E3%80%81%E5%90%AF%E5%8A%A8nginx%E6%B5%8B%E8%AF%95"><a name="t21"></a><a name="t21"></a>6、启动nginx测试</h2> 
+<p>nginx</p> 
+<p>然后进网页，查看是否启动了</p> 
+<h2><a name="t22"></a><a name="t22"></a>&nbsp;</h2> 
+<h2 id="7%E3%80%81%E9%85%8D%E7%BD%AEnginx%E8%AE%BF%E9%97%AEuwsgi%E5%8F%82%E7%85%A7(nginx%2Fconf%2Fnginx.conf)"><a name="t23"></a><a name="t23"></a>7、配置nginx访问uwsgi参照(nginx/conf/nginx.conf)</h2> 
+<pre class="has" name="code"><code class="hljs nginx"><ol class="hljs-ln"><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-section">http</span> {</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-attribute">include</span>       mime.types;</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-attribute">default_type</span>  application/octet-stream;</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"> </div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-attribute">log_format</span>  main  <span class="hljs-string">'<span class="hljs-variable">$remote_addr</span> - <span class="hljs-variable">$remote_user</span> [<span class="hljs-variable">$time_local</span>] "<span class="hljs-variable">$request</span>" '</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">                      <span class="hljs-string">'<span class="hljs-variable">$status</span> <span class="hljs-variable">$body_bytes_sent</span> "<span class="hljs-variable">$http_referer</span>" '</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">                      <span class="hljs-string">'"<span class="hljs-variable">$http_user_agent</span>" "<span class="hljs-variable">$http_x_forwarded_for</span>"'</span>;</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"> </div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-comment">#access_log  logs/access.log  main;</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"> </div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="11"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-attribute">sendfile</span>        <span class="hljs-literal">on</span>;</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="12"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-comment">#tcp_nopush     on;</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="13"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"> </div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="14"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-comment">#keepalive_timeout  0;</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="15"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-attribute">keepalive_timeout</span>  <span class="hljs-number">65</span>;</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="16"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"> </div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="17"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-comment">#gzip  on;</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="18"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"> </div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="19"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-section">server</span> {</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="20"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-attribute">listen</span>       <span class="hljs-number">80</span>;</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="21"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"> </div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="22"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-attribute">server_name</span>  QShop;</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="23"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"> </div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="24"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-attribute">charset</span> utf-<span class="hljs-number">8</span>;</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="25"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"> </div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="26"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-attribute">access_log</span>  logs/host.access.log  main;</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="27"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"> </div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="28"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"> </div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="29"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-attribute">error_log</span> /var/log/nginx/error.log <span class="hljs-literal">error</span>;</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="30"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"> </div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="31"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-attribute">location</span> / {</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="32"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">                <span class="hljs-attribute">include</span> uwsgi_params;</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="33"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">                <span class="hljs-attribute">uwsgi_connect_timeout</span> <span class="hljs-number">30</span>;</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="34"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">                <span class="hljs-attribute">uwsgi_pass</span> unix:/opt/script/uwsgi.sock;</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="35"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        }</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="36"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"> </div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="37"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-attribute">error_page</span>   <span class="hljs-number">500</span> <span class="hljs-number">502</span> <span class="hljs-number">503</span> <span class="hljs-number">504</span>  /50x.html;</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="38"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-attribute">location</span> = /static/ {</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="39"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">                <span class="hljs-attribute">alias</span> /opt/QShop/static;</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="40"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">                <span class="hljs-attribute">index</span> index.html index.htm;</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="41"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        }</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="42"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    }</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="43"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">}</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="44"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"> </div></div></li></ol></code><div class="hljs-button signin" data-title="登录后复制" data-report-click="{&quot;spm&quot;:&quot;1001.2101.3001.4259&quot;}" onclick="hljs.signin(event)"></div></pre> 
+<p style="margin-left:0cm;"><span style="color:#000000;">http {<!-- --></span></p> 
+<p style="margin-left:0cm;"><span style="color:#000000;">&nbsp;&nbsp;&nbsp; include&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mime.types;</span></p> 
+<p style="margin-left:0cm;"><span style="color:#000000;">&nbsp;&nbsp;&nbsp; default_type&nbsp; application/octet-stream;</span></p> 
+<p style="margin-left:0cm;">&nbsp;</p> 
+<p style="margin-left:0cm;"><span style="color:#000000;">&nbsp;&nbsp;&nbsp; <span style="color:#ff0000;">log_format&nbsp; main&nbsp; '$remote_addr - $remote_user [$time_local] "$request" '</span></span></p> 
+<p style="margin-left:0cm;"><span style="color:#000000;"><span style="color:#ff0000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '$status $body_bytes_sent "$http_referer" '</span></span></p> 
+<p style="margin-left:0cm;"><span style="color:#000000;"><span style="color:#ff0000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '"$http_user_agent" "$http_x_forwarded_for"'; </span><span style="color:#ff0000;">日志的格式</span></span></p> 
+<p style="margin-left:0cm;">&nbsp;</p> 
+<p style="margin-left:0cm;"><span style="color:#000000;">&nbsp;&nbsp;&nbsp; #access_log&nbsp; logs/access.log&nbsp; main;</span></p> 
+<p style="margin-left:0cm;">&nbsp;</p> 
+<p style="margin-left:0cm;"><span style="color:#000000;">&nbsp;&nbsp;&nbsp; sendfile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; on;</span></p> 
+<p style="margin-left:0cm;"><span style="color:#000000;">&nbsp;&nbsp;&nbsp; #tcp_nopush&nbsp;&nbsp;&nbsp;&nbsp; on;</span></p> 
+<p style="margin-left:0cm;">&nbsp;</p> 
+<p style="margin-left:0cm;"><span style="color:#000000;">&nbsp;&nbsp;&nbsp; #keepalive_timeout&nbsp; 0;</span></p> 
+<p style="margin-left:0cm;"><span style="color:#000000;">&nbsp;&nbsp;&nbsp; keepalive_timeout&nbsp; 65;</span></p> 
+<p style="margin-left:0cm;">&nbsp;</p> 
+<p style="margin-left:0cm;"><span style="color:#000000;">&nbsp;&nbsp;&nbsp; #gzip&nbsp; on;</span></p> 
+<p style="margin-left:0cm;"><span style="color:#000000;">server {<!-- --></span></p> 
+<p style="margin-left:0cm;"><span style="color:#000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; listen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 80;</span></p> 
+<p style="margin-left:0cm;"><span style="color:#000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#ff0000;">server_name&nbsp; Qshop; </span><span style="color:#ff0000;">服务的名称</span></span></p> 
+<p style="margin-left:0cm;">&nbsp;</p> 
+<p style="margin-left:0cm;"><span style="color:#000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#ff0000;">charset utf-8; </span><span style="color:#ff0000;">编码格式</span></span></p> 
+<p style="margin-left:0cm;">&nbsp;</p> 
+<p style="margin-left:0cm;"><span style="color:#000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#ff0000;">access_log&nbsp; logs/host.access.log&nbsp; main; </span><span style="color:#ff0000;">访问日志</span></span></p> 
+<p style="margin-left:0cm;">&nbsp;</p> 
+<p style="margin-left:0cm;"><span style="color:#000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#ff0000;">&nbsp;gzip_types text/plain application/x-javascript text/css text/javascript application/x-httpd-php application/json text/json image/jpeg image/gif image/png application/octet-stream;&nbsp; </span><span style="color:#ff0000;">访问内容的类型</span></span></p> 
+<p style="margin-left:0cm;">&nbsp;</p> 
+<p style="margin-left:0cm;"><span style="color:#000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#ff0000;">error_log /var/log/nginx/error.log error; </span><span style="color:#ff0000;">错误日志，默认没有，需要手动创建</span></span></p> 
+<p style="margin-left:0cm;">&nbsp;</p> 
+<p style="margin-left:0cm;"><span style="color:#000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; location / {<!-- --></span></p> 
+<p style="margin-left:0cm;"><span style="color:#000000;"><span style="color:#ff0000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; include uwsgi_params; </span><span style="color:#ff0000;">加载</span><span style="color:#ff0000;">uwsgi_params</span></span></p> 
+<p style="margin-left:0cm;"><span style="color:#000000;"><span style="color:#ff0000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uwsgi_connect_timeout 30; </span><span style="color:#ff0000;">连接的超时时间</span> <span style="color:#ff0000;">不要加冒号不要加冒号不要加冒号</span> </span></p> 
+<p style="margin-left:0cm;"><span style="color:#000000;"><span style="color:#ff0000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uwsgi_pass unix:/opt/script/uwsgi.sock; uwsgi.sock</span><span style="color:#ff0000;">通讯的文件地址</span></span></p> 
+<p style="margin-left:0cm;"><span style="color:#000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p> 
+<p style="margin-left:0cm;">&nbsp;</p> 
+<p style="margin-left:0cm;"><span style="color:#000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; location = /static/{<!-- --></span></p> 
+<p style="margin-left:0cm;"><span style="color:#000000;"><span style="color:#ff0000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alias /opt/Qshop/static; </span><span style="color:#ff0000;">静态文件的目录</span></span></p> 
+<p style="margin-left:0cm;"><span style="color:#000000;"><span style="color:#ff0000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; index index.html index.htm;</span></span></p> 
+<p style="margin-left:0cm;"><span style="color:#000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span></p> 
+<p>&nbsp;</p> 
+<h2 id="8%E3%80%81%E5%85%B3%E9%97%ADnginx%E5%92%8Cuwsgi"><a name="t24"></a><a name="t24"></a>8、关闭nginx和uwsgi</h2> 
+<p>pkill -9 uwsgi</p> 
+<p>pkill -9 nginx</p> 
+<h2 id="9%E3%80%81%E5%85%88%E5%90%AF%E5%8A%A8uwsgi%E7%84%B6%E5%90%8E%E5%90%AF%E5%8A%A8nginx"><a name="t25"></a><a name="t25"></a>9、先启动uwsgi然后启动nginx</h2> 
+<p>uwsgi --ini /opt/script/uwsgi.ini</p> 
+<p>nginx</p> 
+<p>如果没有报错的话，应该已经完成了，可以根据设置好的地址，去浏览器访问</p> 
+<p>&nbsp;</p> 
+<p>&nbsp;</p> 
+<p>&nbsp;</p> 
+<p>&nbsp;</p> 
+<p>&nbsp;</p> 
+<p style="margin-left:0cm;">&nbsp;</p>
+                </div><div><div></div></div>
+        </div>
+    </article>
+</div>

@@ -1,0 +1,374 @@
+<div class="blog-content-box">
+    <div class="article-header-box">
+        <div class="article-header">
+            <div class="article-title-box">
+                <h1 class="title-article" id="articleContentId">python实现学生信息管理系统</h1>
+            </div>
+            <div class="article-info-box">
+                <div class="article-bar-top">
+                    <img class="article-type-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/original.png" alt="">
+                    <div class="bar-content">
+                    <a class="follow-nickName " href="https://blog.csdn.net/b1723407539" target="_blank" rel="noopener">鲍博博</a>
+                    <span class="time">2020-12-04 22:48:33</span>
+                    <img class="article-read-img article-heard-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/articleReadEyes.png" alt="">
+                    <span class="read-count">18</span>
+                    <a id="blog_detail_zk_collection" class="un-collection" data-report-click="{&quot;mod&quot;:&quot;popu_823&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4232&quot;,&quot;ab&quot;:&quot;new&quot;}">
+                        <img class="article-collect-img article-heard-img un-collect-status isdefault" style="display:inline-block" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollect.png" alt="">
+                        <img class="article-collect-img article-heard-img collect-status isactive" style="display:none" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollectionActive.png" alt="">
+                        <span class="name">收藏</span>
+                        <span class="get-collection">
+                            1
+                        </span>
+                    </a>
+                    </div>
+                </div>
+                <div class="blog-tags-box">
+                    <div class="tags-box artic-tag-box">
+                            <span class="label">分类专栏：</span>
+                                <a class="tag-link" href="https://blog.csdn.net/b1723407539/category_10280055.html" target="_blank" rel="noopener">数据结构与算法</a>
+                    </div>
+                </div>
+                <div class="up-time"><span>最后发布:2020-12-04 22:48:33</span><span>首次发布:2020-12-04 22:48:33</span></div>
+                <div class="slide-content-box">
+                    <div class="article-copyright">
+                        <div class="creativecommons">
+                            版权声明：本文为博主原创文章，遵循<a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener"> CC 4.0 BY-SA </a>版权协议，转载请附上原文出处链接和本声明。
+                        </div>
+                        <div class="article-source-link">
+                            本文链接：<a href="https://blog.csdn.net/b1723407539/article/details/110656970" target="_blank">https://blog.csdn.net/b1723407539/article/details/110656970</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="operating">
+                    <a class="href-article-edit slide-toggle">版权</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <article class="baidu_pl">
+        <div id="article_content" class="article_content clearfix">
+        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/ck_htmledit_views-b5506197d8.css">
+                <div id="content_views" class="markdown_views prism-atom-one-light">
+                    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                        <path stroke-linecap="round" d="M5,0 0,2.5 5,5z" id="raphael-marker-block" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+                    </svg>
+                    <p><strong>本学生信息管理系统用python实现。</strong><br> 是跟着娟姐学python里面的，视频链接请点击：<a href="https://www.bilibili.com/video/BV1wD4y1o7AS?p=135">代码视频讲解</a></p> 
+<h1><a name="t0"></a><a name="t0"></a><a id="httpsimgblogcsdnimgcn20201204162724662pngxossprocessimagewatermarktype_ZmFuZ3poZW5naGVpdGkshadow_10text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2IxNzIzNDA3NTM5size_16color_FFFFFFt_70pic_center_2"></a>需求分析<img src="https://img-blog.csdnimg.cn/20201204162724662.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2IxNzIzNDA3NTM5,size_16,color_FFFFFF,t_70#pic_center" alt=""></h1> 
+<h1><a name="t1"></a><a name="t1"></a><a id="_3"></a>系统设计</h1> 
+<p><img src="https://img-blog.csdnimg.cn/20201204163127697.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2IxNzIzNDA3NTM5,size_16,color_FFFFFF,t_70" alt=""></p> 
+<h1><a name="t2"></a><a name="t2"></a><a id="python_5"></a>python代码实现</h1> 
+<pre class="prettyprint"><code class="prism language-python has-numbering" onclick="mdcp.signin(event)" style="position: unset;"><span class="token keyword">import</span> os
+
+fileName <span class="token operator">=</span> <span class="token string">'student.txt'</span>
+
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+        menu<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        choice <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'请输入您的选择序号：'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> choice <span class="token keyword">in</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> choice <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"您确定要退出吗？y/n"</span><span class="token punctuation">)</span>
+                answer <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token keyword">if</span> answer <span class="token operator">==</span> <span class="token string">'y'</span> <span class="token operator">or</span> answer <span class="token operator">==</span> <span class="token string">'Y'</span><span class="token punctuation">:</span>
+                    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'谢谢您的使用！！！'</span><span class="token punctuation">)</span>
+                    <span class="token keyword">break</span>
+                <span class="token keyword">else</span><span class="token punctuation">:</span>
+                    <span class="token keyword">continue</span>
+            <span class="token keyword">elif</span> choice <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
+                insert<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">elif</span> choice <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">:</span>
+                search<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">elif</span> choice <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">:</span>
+                delete<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">elif</span> choice <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">:</span>
+                modify<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">elif</span> choice <span class="token operator">==</span> <span class="token number">5</span><span class="token punctuation">:</span>
+                sort<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">elif</span> choice <span class="token operator">==</span> <span class="token number">6</span><span class="token punctuation">:</span>
+                total<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">elif</span> choice <span class="token operator">==</span> <span class="token number">7</span><span class="token punctuation">:</span>
+                show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'输入的序号不在范围内，请重新输入！！！'</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">menu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'==============================学生信息管理系统=============================='</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'---------------------------------功能菜单----------------------------------'</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'\t\t\t\t\t\t1. 录入学生信息'</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'\t\t\t\t\t\t2. 查找学生信息'</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'\t\t\t\t\t\t3. 删除学生信息'</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'\t\t\t\t\t\t4. 修改学生信息'</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'\t\t\t\t\t\t5. 排序'</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'\t\t\t\t\t\t6. 统计学生总人数'</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'\t\t\t\t\t\t7. 显示所有学生信息'</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'\t\t\t\t\t\t0. 退出系统'</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'--------------------------------------------------------------------------'</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">save</span><span class="token punctuation">(</span>lst<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    stu_txt <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>fileName<span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> item <span class="token keyword">in</span> lst<span class="token punctuation">:</span>
+        stu_txt<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'\n'</span><span class="token punctuation">)</span>
+    stu_txt<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">insert</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    student_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+        <span class="token builtin">id</span> <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'请输入id(如1001):'</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token operator">not</span> <span class="token builtin">id</span><span class="token punctuation">:</span>
+            <span class="token keyword">break</span>
+        name <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'请输入姓名:'</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token operator">not</span> name<span class="token punctuation">:</span>
+            <span class="token keyword">break</span>
+        <span class="token keyword">try</span><span class="token punctuation">:</span>
+            english <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'请输入英语成绩：'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            python <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'请输入python成绩：'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            java <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'请输入java成绩：'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">except</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'输入无效，不是整数类型，请重新输入'</span><span class="token punctuation">)</span>
+            <span class="token keyword">continue</span>
+        <span class="token comment"># 将录入的学生信息保存到字典中</span>
+        student <span class="token operator">=</span> <span class="token punctuation">{<!-- --></span><span class="token string">'id'</span><span class="token punctuation">:</span> <span class="token builtin">id</span><span class="token punctuation">,</span> <span class="token string">'name'</span><span class="token punctuation">:</span> name<span class="token punctuation">,</span> <span class="token string">'english'</span><span class="token punctuation">:</span> english<span class="token punctuation">,</span> <span class="token string">'python'</span><span class="token punctuation">:</span> python<span class="token punctuation">,</span> <span class="token string">'java'</span><span class="token punctuation">:</span> java<span class="token punctuation">}</span>
+        <span class="token comment"># 将学生信息添加到列表中</span>
+        student_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span>student<span class="token punctuation">)</span>
+        answer <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'是否继续添加？y/n\n'</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> answer <span class="token operator">==</span> <span class="token string">'y'</span> <span class="token operator">or</span> answer <span class="token operator">==</span> <span class="token string">'Y'</span><span class="token punctuation">:</span>
+            <span class="token keyword">continue</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">break</span>
+    <span class="token comment"># 保存学生信息到文件中</span>
+    save<span class="token punctuation">(</span>student_list<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'学生信息录入完毕!!!'</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">show_student</span><span class="token punctuation">(</span>lst<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 传过来空列表</span>
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>lst<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'没有查找到该生信息！'</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span>
+    <span class="token comment"># 定义标题显示格式</span>
+    format_title <span class="token operator">=</span> <span class="token string">'{:^6}\t{:^8}\t{:^8}\t{:^10}\t{:^10}\t{:^18}\t'</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>format_title<span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token string">'ID'</span><span class="token punctuation">,</span> <span class="token string">'姓名'</span><span class="token punctuation">,</span> <span class="token string">'英语成绩'</span><span class="token punctuation">,</span> <span class="token string">'python成绩'</span><span class="token punctuation">,</span> <span class="token string">'java成绩'</span><span class="token punctuation">,</span> <span class="token string">'总成绩'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment"># 定义内容的显示格式</span>
+    format_data <span class="token operator">=</span> <span class="token string">'{:^6}\t{:^8}\t{:^8}\t{:^8}\t{:^8}\t{:^18}\t'</span>
+    <span class="token keyword">for</span> item <span class="token keyword">in</span> lst<span class="token punctuation">:</span>
+        <span class="token builtin">sum</span> <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>item<span class="token punctuation">[</span><span class="token string">'english'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token builtin">int</span><span class="token punctuation">(</span>item<span class="token punctuation">[</span><span class="token string">'python'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token builtin">int</span><span class="token punctuation">(</span>item<span class="token punctuation">[</span><span class="token string">'java'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>format_data<span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>item<span class="token punctuation">[</span><span class="token string">'id'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> item<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> \
+                                 item<span class="token punctuation">[</span><span class="token string">'english'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> item<span class="token punctuation">[</span><span class="token string">'python'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> item<span class="token punctuation">[</span><span class="token string">'java'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> \
+                                 <span class="token builtin">sum</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">search</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+        stu_query <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token builtin">id</span> <span class="token operator">=</span> <span class="token string">''</span>
+        name <span class="token operator">=</span> <span class="token string">''</span>
+        <span class="token comment"># 判断文件是否存在</span>
+        <span class="token keyword">if</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>fileName<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token comment"># 输入查询标号</span>
+            mode <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'按ID查找请按1，按姓名查找请按2：'</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span> mode <span class="token operator">==</span> <span class="token string">'1'</span><span class="token punctuation">:</span>
+                <span class="token builtin">id</span> <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'请输入要查找的学生id：'</span><span class="token punctuation">)</span>
+            <span class="token keyword">elif</span> mode <span class="token operator">==</span> <span class="token string">'2'</span><span class="token punctuation">:</span>
+                name <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'请输入要查找学生的姓名:'</span><span class="token punctuation">)</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'您的输入有误，请重新输入!'</span><span class="token punctuation">)</span>
+                <span class="token keyword">continue</span>
+            <span class="token comment"># 如果文件存在，并且用户输入了正确的查询标号，则打开文件</span>
+            <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>fileName<span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> rfile<span class="token punctuation">:</span>
+                students <span class="token operator">=</span> rfile<span class="token punctuation">.</span>readlines<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token comment"># 将读取到的信息转换为字典类型</span>
+            <span class="token keyword">for</span> item <span class="token keyword">in</span> students<span class="token punctuation">:</span>
+                d <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token builtin">eval</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token keyword">if</span> <span class="token builtin">id</span> <span class="token operator">!=</span> <span class="token string">''</span><span class="token punctuation">:</span>
+                    <span class="token keyword">if</span> <span class="token builtin">id</span> <span class="token operator">==</span> d<span class="token punctuation">[</span><span class="token string">'id'</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+                        stu_query<span class="token punctuation">.</span>append<span class="token punctuation">(</span>d<span class="token punctuation">)</span>
+                <span class="token keyword">elif</span> name <span class="token operator">!=</span> <span class="token string">''</span><span class="token punctuation">:</span>
+                    <span class="token keyword">if</span> name <span class="token operator">==</span> d<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+                        stu_query<span class="token punctuation">.</span>append<span class="token punctuation">(</span>d<span class="token punctuation">)</span>
+            <span class="token comment"># 显示查询结果</span>
+            show_student<span class="token punctuation">(</span>stu_query<span class="token punctuation">)</span>
+            <span class="token comment"># 是否查询其他学生信息</span>
+            answer <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'还要查询其他学生吗？y/n\n'</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span> answer <span class="token operator">==</span> <span class="token string">'y'</span> <span class="token operator">or</span> answer <span class="token operator">==</span> <span class="token string">'y'</span><span class="token punctuation">:</span>
+                <span class="token keyword">continue</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">break</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'学生信息文件不存在！'</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span>
+
+
+<span class="token keyword">def</span> <span class="token function">delete</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+        student_id <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'请输入要删除学生的id:'</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> student_id <span class="token operator">!=</span> <span class="token string">''</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>fileName<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>fileName<span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+                    student_old <span class="token operator">=</span> <span class="token builtin">file</span><span class="token punctuation">.</span>readlines<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                student_old <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+            flag <span class="token operator">=</span> <span class="token boolean">False</span>  <span class="token comment"># 标记是否删除</span>
+            <span class="token keyword">if</span> student_old<span class="token punctuation">:</span>
+                <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>fileName<span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> wfile<span class="token punctuation">:</span>
+                    d <span class="token operator">=</span> <span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span>
+                    <span class="token keyword">for</span> item <span class="token keyword">in</span> student_old<span class="token punctuation">:</span>
+                        d <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token builtin">eval</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 将字符串转换为字典</span>
+                        <span class="token keyword">if</span> d<span class="token punctuation">[</span><span class="token string">'id'</span><span class="token punctuation">]</span> <span class="token operator">!=</span> student_id<span class="token punctuation">:</span>
+                            wfile<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'\n'</span><span class="token punctuation">)</span>
+                        <span class="token keyword">else</span><span class="token punctuation">:</span>
+                            flag <span class="token operator">=</span> <span class="token boolean">True</span>
+                    <span class="token keyword">if</span> flag<span class="token punctuation">:</span>
+                        <span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token string">'id为{student_id}的学生信息已经删除'</span><span class="token punctuation">)</span>
+                    <span class="token keyword">else</span><span class="token punctuation">:</span>
+                        <span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token string">'学生表中没有找到id为{student_id}的学生'</span><span class="token punctuation">)</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'学生表中无任何学生信息'</span><span class="token punctuation">)</span>
+                <span class="token keyword">break</span>
+            show<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 重新显示所有学生信息</span>
+            answer <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'是否继续删除？y/n\n'</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span> answer <span class="token operator">==</span> <span class="token string">'y'</span> <span class="token operator">or</span> answer <span class="token operator">==</span> <span class="token string">'Y'</span><span class="token punctuation">:</span>
+                <span class="token keyword">continue</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">break</span>
+
+
+<span class="token keyword">def</span> <span class="token function">modify</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+        <span class="token comment"># 展示学生信息</span>
+        show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment"># 如果原文件存在，打开原文件，读出所有信息</span>
+        <span class="token keyword">if</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>fileName<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>fileName<span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> rfile<span class="token punctuation">:</span>
+                student_old <span class="token operator">=</span> rfile<span class="token punctuation">.</span>readlines<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'学生文件信息不存在！'</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span>
+        <span class="token comment"># 创建一个新的文件，读取之前文件中的每一个学生信息</span>
+        student_id <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'请输入要修改的学生id：'</span><span class="token punctuation">)</span>
+        flag <span class="token operator">=</span> <span class="token boolean">False</span>  <span class="token comment"># 标记是否在学生信息表中找到要修改的学生信息</span>
+        <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>fileName<span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> wfile<span class="token punctuation">:</span>
+            <span class="token keyword">for</span> item <span class="token keyword">in</span> student_old<span class="token punctuation">:</span>
+                d <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token builtin">eval</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token comment"># 如果在原文件的某一行找到要修改的学生id，则对其进行修改</span>
+                <span class="token keyword">if</span> d<span class="token punctuation">[</span><span class="token string">'id'</span><span class="token punctuation">]</span> <span class="token operator">==</span> student_id<span class="token punctuation">:</span>
+                    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'找到学生信息，可以修改该生的相关信息'</span><span class="token punctuation">)</span>
+                    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+                        <span class="token keyword">try</span><span class="token punctuation">:</span>
+                            d<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'请输入姓名:'</span><span class="token punctuation">)</span>
+                            d<span class="token punctuation">[</span><span class="token string">'english'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'请输入英语成绩:'</span><span class="token punctuation">)</span>
+                            d<span class="token punctuation">[</span><span class="token string">'python'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'请输入python成绩:'</span><span class="token punctuation">)</span>
+                            d<span class="token punctuation">[</span><span class="token string">'java'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'请输入java成绩:'</span><span class="token punctuation">)</span>
+                            <span class="token keyword">break</span>
+                        <span class="token keyword">except</span><span class="token punctuation">:</span>
+                            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'您的输入有误，请重新输入!!!'</span><span class="token punctuation">)</span>
+                    wfile<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'\n'</span><span class="token punctuation">)</span>
+                    flag <span class="token operator">=</span> <span class="token boolean">True</span>
+                <span class="token keyword">else</span><span class="token punctuation">:</span>
+                    wfile<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'\n'</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> flag<span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'修改成功!!!'</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'没有找到要修改学生的id!!!'</span><span class="token punctuation">)</span>
+        <span class="token comment"># 询问是否要接着修改</span>
+        answer <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'是否修改其他学生信息？y/n\n'</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> answer <span class="token operator">==</span> <span class="token string">'y'</span> <span class="token operator">or</span> answer <span class="token operator">==</span> <span class="token string">'Y'</span><span class="token punctuation">:</span>
+            <span class="token keyword">continue</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">break</span>
+
+
+<span class="token keyword">def</span> <span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment"># 判断文件是否存在，如果存在则打开文件，读取信息</span>
+    <span class="token keyword">if</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>fileName<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>fileName<span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> rfile<span class="token punctuation">:</span>
+            students_list <span class="token operator">=</span> rfile<span class="token punctuation">.</span>readlines<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        students_new <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token comment"># 判断读取到的学生信息是否为空</span>
+        <span class="token keyword">if</span> students_list<span class="token punctuation">:</span>
+            <span class="token comment"># 将所有的item加入到students_new中</span>
+            <span class="token keyword">for</span> item <span class="token keyword">in</span> students_list<span class="token punctuation">:</span>
+                d <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token builtin">eval</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                students_new<span class="token punctuation">.</span>append<span class="token punctuation">(</span>d<span class="token punctuation">)</span>
+            <span class="token comment"># 选择升序or降序</span>
+            asc_or_desc <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'请选择(0为升序，1为降序):'</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span> asc_or_desc <span class="token operator">==</span> <span class="token string">'0'</span><span class="token punctuation">:</span>
+                asc_or_desc_bool <span class="token operator">=</span> <span class="token boolean">False</span>
+            <span class="token keyword">elif</span> asc_or_desc <span class="token operator">==</span> <span class="token string">'1'</span><span class="token punctuation">:</span>
+                asc_or_desc_bool <span class="token operator">=</span> <span class="token boolean">True</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'您的输入有误，请重新输入'</span><span class="token punctuation">)</span>
+                sort<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token comment"># 选择按照什么成绩排序</span>
+            mode <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span>'请选择排序方式（<span class="token number">1</span><span class="token punctuation">.</span>按英语成绩排序   <span class="token number">2</span><span class="token punctuation">.</span>按python成绩排序   \
+                        <span class="token number">3</span><span class="token punctuation">.</span>按java成绩排序   <span class="token number">0</span><span class="token punctuation">.</span>按总成绩排序<span class="token punctuation">)</span><span class="token punctuation">:</span>'<span class="token punctuation">)</span>
+            <span class="token keyword">if</span> mode <span class="token operator">==</span> <span class="token string">'1'</span><span class="token punctuation">:</span>
+                students_new<span class="token punctuation">.</span>sort<span class="token punctuation">(</span>key<span class="token operator">=</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">(</span>x<span class="token punctuation">[</span><span class="token string">'english'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> reverse<span class="token operator">=</span>asc_or_desc_bool<span class="token punctuation">)</span>
+            <span class="token keyword">elif</span> mode <span class="token operator">==</span> <span class="token string">'2'</span><span class="token punctuation">:</span>
+                students_new<span class="token punctuation">.</span>sort<span class="token punctuation">(</span>key<span class="token operator">=</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">(</span>x<span class="token punctuation">[</span><span class="token string">'python'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> reverse<span class="token operator">=</span>asc_or_desc_bool<span class="token punctuation">)</span>
+            <span class="token keyword">elif</span> mode <span class="token operator">==</span> <span class="token string">'3'</span><span class="token punctuation">:</span>
+                students_new<span class="token punctuation">.</span>sort<span class="token punctuation">(</span>key<span class="token operator">=</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">(</span>x<span class="token punctuation">[</span><span class="token string">'java'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> reverse<span class="token operator">=</span>asc_or_desc_bool<span class="token punctuation">)</span>
+            <span class="token keyword">elif</span> mode <span class="token operator">==</span> <span class="token string">'0'</span><span class="token punctuation">:</span>
+                students_new<span class="token punctuation">.</span>sort<span class="token punctuation">(</span>key<span class="token operator">=</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">(</span>x<span class="token punctuation">[</span><span class="token string">'english'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token builtin">int</span><span class="token punctuation">(</span>x<span class="token punctuation">[</span><span class="token string">'python'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token builtin">int</span><span class="token punctuation">(</span>x<span class="token punctuation">[</span><span class="token string">'java'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> \
+                                  reverse<span class="token operator">=</span>asc_or_desc_bool<span class="token punctuation">)</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'您的输入有误，请重新输入！！！'</span><span class="token punctuation">)</span>
+                sort<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token comment"># 将排序后的成绩进行输出</span>
+            show_student<span class="token punctuation">(</span>students_new<span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'学生文件中还没有录入学生信息！'</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'学生文件不存在！'</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span>
+
+
+<span class="token keyword">def</span> <span class="token function">total</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 判断文件是否存在，如果存在则打开文件，读取信息</span>
+    <span class="token keyword">if</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>fileName<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>fileName<span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> rfile<span class="token punctuation">:</span>
+            students <span class="token operator">=</span> rfile<span class="token punctuation">.</span>readlines<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token comment"># 判断读取到的学生信息是否为空</span>
+            <span class="token keyword">if</span> students<span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'一共有{}名学生'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>students<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'学生文件中还没有录入学生信息！'</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'学生文件不存在！'</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span>
+
+
+<span class="token keyword">def</span> <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    student_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token comment"># 判断文件是否存在，如果存在则打开文件，读取信息</span>
+    <span class="token keyword">if</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>fileName<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>fileName<span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> rfile<span class="token punctuation">:</span>
+            students <span class="token operator">=</span> rfile<span class="token punctuation">.</span>readlines<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token comment"># 判断读取到的学生信息是否为空</span>
+            <span class="token keyword">if</span> students<span class="token punctuation">:</span>
+                <span class="token keyword">for</span> item <span class="token keyword">in</span> students<span class="token punctuation">:</span>
+                    student_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token builtin">eval</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token comment"># 展示学生信息</span>
+                show_student<span class="token punctuation">(</span>student_list<span class="token punctuation">)</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'学生文件中还没有录入学生信息！'</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'学生文件不存在！'</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<div class="hljs-button signin" data-title="登录后复制" data-report-click="{&quot;spm&quot;:&quot;1001.2101.3001.4259&quot;}"></div></code><ul class="pre-numbering" style=""><li style="color: rgb(153, 153, 153);">1</li><li style="color: rgb(153, 153, 153);">2</li><li style="color: rgb(153, 153, 153);">3</li><li style="color: rgb(153, 153, 153);">4</li><li style="color: rgb(153, 153, 153);">5</li><li style="color: rgb(153, 153, 153);">6</li><li style="color: rgb(153, 153, 153);">7</li><li style="color: rgb(153, 153, 153);">8</li><li style="color: rgb(153, 153, 153);">9</li><li style="color: rgb(153, 153, 153);">10</li><li style="color: rgb(153, 153, 153);">11</li><li style="color: rgb(153, 153, 153);">12</li><li style="color: rgb(153, 153, 153);">13</li><li style="color: rgb(153, 153, 153);">14</li><li style="color: rgb(153, 153, 153);">15</li><li style="color: rgb(153, 153, 153);">16</li><li style="color: rgb(153, 153, 153);">17</li><li style="color: rgb(153, 153, 153);">18</li><li style="color: rgb(153, 153, 153);">19</li><li style="color: rgb(153, 153, 153);">20</li><li style="color: rgb(153, 153, 153);">21</li><li style="color: rgb(153, 153, 153);">22</li><li style="color: rgb(153, 153, 153);">23</li><li style="color: rgb(153, 153, 153);">24</li><li style="color: rgb(153, 153, 153);">25</li><li style="color: rgb(153, 153, 153);">26</li><li style="color: rgb(153, 153, 153);">27</li><li style="color: rgb(153, 153, 153);">28</li><li style="color: rgb(153, 153, 153);">29</li><li style="color: rgb(153, 153, 153);">30</li><li style="color: rgb(153, 153, 153);">31</li><li style="color: rgb(153, 153, 153);">32</li><li style="color: rgb(153, 153, 153);">33</li><li style="color: rgb(153, 153, 153);">34</li><li style="color: rgb(153, 153, 153);">35</li><li style="color: rgb(153, 153, 153);">36</li><li style="color: rgb(153, 153, 153);">37</li><li style="color: rgb(153, 153, 153);">38</li><li style="color: rgb(153, 153, 153);">39</li><li style="color: rgb(153, 153, 153);">40</li><li style="color: rgb(153, 153, 153);">41</li><li style="color: rgb(153, 153, 153);">42</li><li style="color: rgb(153, 153, 153);">43</li><li style="color: rgb(153, 153, 153);">44</li><li style="color: rgb(153, 153, 153);">45</li><li style="color: rgb(153, 153, 153);">46</li><li style="color: rgb(153, 153, 153);">47</li><li style="color: rgb(153, 153, 153);">48</li><li style="color: rgb(153, 153, 153);">49</li><li style="color: rgb(153, 153, 153);">50</li><li style="color: rgb(153, 153, 153);">51</li><li style="color: rgb(153, 153, 153);">52</li><li style="color: rgb(153, 153, 153);">53</li><li style="color: rgb(153, 153, 153);">54</li><li style="color: rgb(153, 153, 153);">55</li><li style="color: rgb(153, 153, 153);">56</li><li style="color: rgb(153, 153, 153);">57</li><li style="color: rgb(153, 153, 153);">58</li><li style="color: rgb(153, 153, 153);">59</li><li style="color: rgb(153, 153, 153);">60</li><li style="color: rgb(153, 153, 153);">61</li><li style="color: rgb(153, 153, 153);">62</li><li style="color: rgb(153, 153, 153);">63</li><li style="color: rgb(153, 153, 153);">64</li><li style="color: rgb(153, 153, 153);">65</li><li style="color: rgb(153, 153, 153);">66</li><li style="color: rgb(153, 153, 153);">67</li><li style="color: rgb(153, 153, 153);">68</li><li style="color: rgb(153, 153, 153);">69</li><li style="color: rgb(153, 153, 153);">70</li><li style="color: rgb(153, 153, 153);">71</li><li style="color: rgb(153, 153, 153);">72</li><li style="color: rgb(153, 153, 153);">73</li><li style="color: rgb(153, 153, 153);">74</li><li style="color: rgb(153, 153, 153);">75</li><li style="color: rgb(153, 153, 153);">76</li><li style="color: rgb(153, 153, 153);">77</li><li style="color: rgb(153, 153, 153);">78</li><li style="color: rgb(153, 153, 153);">79</li><li style="color: rgb(153, 153, 153);">80</li><li style="color: rgb(153, 153, 153);">81</li><li style="color: rgb(153, 153, 153);">82</li><li style="color: rgb(153, 153, 153);">83</li><li style="color: rgb(153, 153, 153);">84</li><li style="color: rgb(153, 153, 153);">85</li><li style="color: rgb(153, 153, 153);">86</li><li style="color: rgb(153, 153, 153);">87</li><li style="color: rgb(153, 153, 153);">88</li><li style="color: rgb(153, 153, 153);">89</li><li style="color: rgb(153, 153, 153);">90</li><li style="color: rgb(153, 153, 153);">91</li><li style="color: rgb(153, 153, 153);">92</li><li style="color: rgb(153, 153, 153);">93</li><li style="color: rgb(153, 153, 153);">94</li><li style="color: rgb(153, 153, 153);">95</li><li style="color: rgb(153, 153, 153);">96</li><li style="color: rgb(153, 153, 153);">97</li><li style="color: rgb(153, 153, 153);">98</li><li style="color: rgb(153, 153, 153);">99</li><li style="color: rgb(153, 153, 153);">100</li><li style="color: rgb(153, 153, 153);">101</li><li style="color: rgb(153, 153, 153);">102</li><li style="color: rgb(153, 153, 153);">103</li><li style="color: rgb(153, 153, 153);">104</li><li style="color: rgb(153, 153, 153);">105</li><li style="color: rgb(153, 153, 153);">106</li><li style="color: rgb(153, 153, 153);">107</li><li style="color: rgb(153, 153, 153);">108</li><li style="color: rgb(153, 153, 153);">109</li><li style="color: rgb(153, 153, 153);">110</li><li style="color: rgb(153, 153, 153);">111</li><li style="color: rgb(153, 153, 153);">112</li><li style="color: rgb(153, 153, 153);">113</li><li style="color: rgb(153, 153, 153);">114</li><li style="color: rgb(153, 153, 153);">115</li><li style="color: rgb(153, 153, 153);">116</li><li style="color: rgb(153, 153, 153);">117</li><li style="color: rgb(153, 153, 153);">118</li><li style="color: rgb(153, 153, 153);">119</li><li style="color: rgb(153, 153, 153);">120</li><li style="color: rgb(153, 153, 153);">121</li><li style="color: rgb(153, 153, 153);">122</li><li style="color: rgb(153, 153, 153);">123</li><li style="color: rgb(153, 153, 153);">124</li><li style="color: rgb(153, 153, 153);">125</li><li style="color: rgb(153, 153, 153);">126</li><li style="color: rgb(153, 153, 153);">127</li><li style="color: rgb(153, 153, 153);">128</li><li style="color: rgb(153, 153, 153);">129</li><li style="color: rgb(153, 153, 153);">130</li><li style="color: rgb(153, 153, 153);">131</li><li style="color: rgb(153, 153, 153);">132</li><li style="color: rgb(153, 153, 153);">133</li><li style="color: rgb(153, 153, 153);">134</li><li style="color: rgb(153, 153, 153);">135</li><li style="color: rgb(153, 153, 153);">136</li><li style="color: rgb(153, 153, 153);">137</li><li style="color: rgb(153, 153, 153);">138</li><li style="color: rgb(153, 153, 153);">139</li><li style="color: rgb(153, 153, 153);">140</li><li style="color: rgb(153, 153, 153);">141</li><li style="color: rgb(153, 153, 153);">142</li><li style="color: rgb(153, 153, 153);">143</li><li style="color: rgb(153, 153, 153);">144</li><li style="color: rgb(153, 153, 153);">145</li><li style="color: rgb(153, 153, 153);">146</li><li style="color: rgb(153, 153, 153);">147</li><li style="color: rgb(153, 153, 153);">148</li><li style="color: rgb(153, 153, 153);">149</li><li style="color: rgb(153, 153, 153);">150</li><li style="color: rgb(153, 153, 153);">151</li><li style="color: rgb(153, 153, 153);">152</li><li style="color: rgb(153, 153, 153);">153</li><li style="color: rgb(153, 153, 153);">154</li><li style="color: rgb(153, 153, 153);">155</li><li style="color: rgb(153, 153, 153);">156</li><li style="color: rgb(153, 153, 153);">157</li><li style="color: rgb(153, 153, 153);">158</li><li style="color: rgb(153, 153, 153);">159</li><li style="color: rgb(153, 153, 153);">160</li><li style="color: rgb(153, 153, 153);">161</li><li style="color: rgb(153, 153, 153);">162</li><li style="color: rgb(153, 153, 153);">163</li><li style="color: rgb(153, 153, 153);">164</li><li style="color: rgb(153, 153, 153);">165</li><li style="color: rgb(153, 153, 153);">166</li><li style="color: rgb(153, 153, 153);">167</li><li style="color: rgb(153, 153, 153);">168</li><li style="color: rgb(153, 153, 153);">169</li><li style="color: rgb(153, 153, 153);">170</li><li style="color: rgb(153, 153, 153);">171</li><li style="color: rgb(153, 153, 153);">172</li><li style="color: rgb(153, 153, 153);">173</li><li style="color: rgb(153, 153, 153);">174</li><li style="color: rgb(153, 153, 153);">175</li><li style="color: rgb(153, 153, 153);">176</li><li style="color: rgb(153, 153, 153);">177</li><li style="color: rgb(153, 153, 153);">178</li><li style="color: rgb(153, 153, 153);">179</li><li style="color: rgb(153, 153, 153);">180</li><li style="color: rgb(153, 153, 153);">181</li><li style="color: rgb(153, 153, 153);">182</li><li style="color: rgb(153, 153, 153);">183</li><li style="color: rgb(153, 153, 153);">184</li><li style="color: rgb(153, 153, 153);">185</li><li style="color: rgb(153, 153, 153);">186</li><li style="color: rgb(153, 153, 153);">187</li><li style="color: rgb(153, 153, 153);">188</li><li style="color: rgb(153, 153, 153);">189</li><li style="color: rgb(153, 153, 153);">190</li><li style="color: rgb(153, 153, 153);">191</li><li style="color: rgb(153, 153, 153);">192</li><li style="color: rgb(153, 153, 153);">193</li><li style="color: rgb(153, 153, 153);">194</li><li style="color: rgb(153, 153, 153);">195</li><li style="color: rgb(153, 153, 153);">196</li><li style="color: rgb(153, 153, 153);">197</li><li style="color: rgb(153, 153, 153);">198</li><li style="color: rgb(153, 153, 153);">199</li><li style="color: rgb(153, 153, 153);">200</li><li style="color: rgb(153, 153, 153);">201</li><li style="color: rgb(153, 153, 153);">202</li><li style="color: rgb(153, 153, 153);">203</li><li style="color: rgb(153, 153, 153);">204</li><li style="color: rgb(153, 153, 153);">205</li><li style="color: rgb(153, 153, 153);">206</li><li style="color: rgb(153, 153, 153);">207</li><li style="color: rgb(153, 153, 153);">208</li><li style="color: rgb(153, 153, 153);">209</li><li style="color: rgb(153, 153, 153);">210</li><li style="color: rgb(153, 153, 153);">211</li><li style="color: rgb(153, 153, 153);">212</li><li style="color: rgb(153, 153, 153);">213</li><li style="color: rgb(153, 153, 153);">214</li><li style="color: rgb(153, 153, 153);">215</li><li style="color: rgb(153, 153, 153);">216</li><li style="color: rgb(153, 153, 153);">217</li><li style="color: rgb(153, 153, 153);">218</li><li style="color: rgb(153, 153, 153);">219</li><li style="color: rgb(153, 153, 153);">220</li><li style="color: rgb(153, 153, 153);">221</li><li style="color: rgb(153, 153, 153);">222</li><li style="color: rgb(153, 153, 153);">223</li><li style="color: rgb(153, 153, 153);">224</li><li style="color: rgb(153, 153, 153);">225</li><li style="color: rgb(153, 153, 153);">226</li><li style="color: rgb(153, 153, 153);">227</li><li style="color: rgb(153, 153, 153);">228</li><li style="color: rgb(153, 153, 153);">229</li><li style="color: rgb(153, 153, 153);">230</li><li style="color: rgb(153, 153, 153);">231</li><li style="color: rgb(153, 153, 153);">232</li><li style="color: rgb(153, 153, 153);">233</li><li style="color: rgb(153, 153, 153);">234</li><li style="color: rgb(153, 153, 153);">235</li><li style="color: rgb(153, 153, 153);">236</li><li style="color: rgb(153, 153, 153);">237</li><li style="color: rgb(153, 153, 153);">238</li><li style="color: rgb(153, 153, 153);">239</li><li style="color: rgb(153, 153, 153);">240</li><li style="color: rgb(153, 153, 153);">241</li><li style="color: rgb(153, 153, 153);">242</li><li style="color: rgb(153, 153, 153);">243</li><li style="color: rgb(153, 153, 153);">244</li><li style="color: rgb(153, 153, 153);">245</li><li style="color: rgb(153, 153, 153);">246</li><li style="color: rgb(153, 153, 153);">247</li><li style="color: rgb(153, 153, 153);">248</li><li style="color: rgb(153, 153, 153);">249</li><li style="color: rgb(153, 153, 153);">250</li><li style="color: rgb(153, 153, 153);">251</li><li style="color: rgb(153, 153, 153);">252</li><li style="color: rgb(153, 153, 153);">253</li><li style="color: rgb(153, 153, 153);">254</li><li style="color: rgb(153, 153, 153);">255</li><li style="color: rgb(153, 153, 153);">256</li><li style="color: rgb(153, 153, 153);">257</li><li style="color: rgb(153, 153, 153);">258</li><li style="color: rgb(153, 153, 153);">259</li><li style="color: rgb(153, 153, 153);">260</li><li style="color: rgb(153, 153, 153);">261</li><li style="color: rgb(153, 153, 153);">262</li><li style="color: rgb(153, 153, 153);">263</li><li style="color: rgb(153, 153, 153);">264</li><li style="color: rgb(153, 153, 153);">265</li><li style="color: rgb(153, 153, 153);">266</li><li style="color: rgb(153, 153, 153);">267</li><li style="color: rgb(153, 153, 153);">268</li><li style="color: rgb(153, 153, 153);">269</li><li style="color: rgb(153, 153, 153);">270</li><li style="color: rgb(153, 153, 153);">271</li><li style="color: rgb(153, 153, 153);">272</li><li style="color: rgb(153, 153, 153);">273</li><li style="color: rgb(153, 153, 153);">274</li><li style="color: rgb(153, 153, 153);">275</li><li style="color: rgb(153, 153, 153);">276</li><li style="color: rgb(153, 153, 153);">277</li><li style="color: rgb(153, 153, 153);">278</li><li style="color: rgb(153, 153, 153);">279</li><li style="color: rgb(153, 153, 153);">280</li><li style="color: rgb(153, 153, 153);">281</li><li style="color: rgb(153, 153, 153);">282</li><li style="color: rgb(153, 153, 153);">283</li><li style="color: rgb(153, 153, 153);">284</li><li style="color: rgb(153, 153, 153);">285</li><li style="color: rgb(153, 153, 153);">286</li><li style="color: rgb(153, 153, 153);">287</li><li style="color: rgb(153, 153, 153);">288</li><li style="color: rgb(153, 153, 153);">289</li><li style="color: rgb(153, 153, 153);">290</li><li style="color: rgb(153, 153, 153);">291</li><li style="color: rgb(153, 153, 153);">292</li><li style="color: rgb(153, 153, 153);">293</li><li style="color: rgb(153, 153, 153);">294</li><li style="color: rgb(153, 153, 153);">295</li><li style="color: rgb(153, 153, 153);">296</li><li style="color: rgb(153, 153, 153);">297</li><li style="color: rgb(153, 153, 153);">298</li><li style="color: rgb(153, 153, 153);">299</li><li style="color: rgb(153, 153, 153);">300</li><li style="color: rgb(153, 153, 153);">301</li><li style="color: rgb(153, 153, 153);">302</li><li style="color: rgb(153, 153, 153);">303</li><li style="color: rgb(153, 153, 153);">304</li><li style="color: rgb(153, 153, 153);">305</li><li style="color: rgb(153, 153, 153);">306</li><li style="color: rgb(153, 153, 153);">307</li><li style="color: rgb(153, 153, 153);">308</li></ul></pre>
+                </div><div><div></div></div>
+                <link href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/markdown_views-d7a94ec6ab.css" rel="stylesheet">
+                <link href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/style-ba784fbaf8.css" rel="stylesheet">
+        </div>
+    </article>
+</div>

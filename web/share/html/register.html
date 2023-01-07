@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>注册</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <from id="login">
+    <h1>注册页面</h1>
+    服务器地址：<input type="text" class="host"><br/>
+    用户名：<input type="text" class="usernane"><br/>
+    密码：<input type="password" class="password"><br/>
+    确认密码：<input type="password" class="confirm"><br/>
+    <input type="submit" value="注册" class="submit_btn">
+  </from>
+</body>
+<script>
+  const hostObj = document.querySelector("#login .host");
+  const usernaneObj = document.querySelector("#login .usernane");
+  const passwordObj = document.querySelector("#login .password");
+  const confirmObj = document.querySelector("#login .confirm");
+  const submit_btn = document.querySelector("#login .submit_btn");
+
+  let serverHost = localStorage.getItem("host")
+  if (serverHost != null) {
+    hostObj.value = serverHost;
+  }
+
+  submit_btn.addEventListener('click', e => {
+    // 信息完整性
+    if (!hostObj.value & !usernaneObj.value & !passwordObj.value & !confirmObj.value){
+      alert('请将信息填写完整！');
+      return;
+    }
+
+    // 把服务器地址存到 localStorage
+    if (hostObj.value != serverHost){
+      let serverHost = hostObj.value;
+      localStorage.setItem('host', serverHost);
+    }
+    
+    //检测服务器
+    axios({
+        method: 'post',
+        url: serverHost + '/user-register',
+        data: {
+          username: usernaneObj.value,
+          password: passwordObj.value,
+          confirm: confirmObj.value,
+        }
+      })
+      .then(function (response) {
+        //console.log(111)
+        if (response.data.code == 400) {
+          alert('出现错误：'+response.data.msg);
+        } else {
+          alert('注册成功')
+          window.location.href='./login.html';
+        }
+      })
+      .catch(function (error) {
+        alert('请求错误：'+error.message);
+        return;
+      });
+    e.preventDefault()
+  })
+</script>
+</html>
