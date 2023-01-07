@@ -1,0 +1,42 @@
+{
+    "name":"default",
+    "create_version": "BATE0.0.1",
+    "create_version_id": 1,
+    "compatible_version": "BATE0.0.1",
+    "compatible_version_id": 1,
+    "index": {
+        "have": true,
+        "file": "index.html",
+        "title":"{{ title }}",
+        "pageTitle":"{{ pageTitle }}",
+        "littlePageTitle":"{{ littlePageTitle }}",
+        "nowPath":"{{ nowPath }}",
+        "fileList-tr":"{{ fileList-tr }}"
+    },
+    "download": {
+        "have": true,
+        "file": "download.html",
+        "title":"{{ title }}",
+        "pageTitle":"{{ pageTitle }}",
+        "littlePageTitle":"{{ littlePageTitle }}",
+        "nowPath":"{{ nowPath }}",
+        "fileList-tr":"{{ fileHtml }}"
+    },
+	"file_index":{
+        "have": true,
+        "file": "index_file.html",
+        "title":"{{ title }}",
+        "pageTitle":"{{ pageTitle }}",
+        "littlePageTitle":"{{ littlePageTitle }}",
+        "nowPath":"{{ nowPath }}",
+        "fileList-tr":"{{ file_text }}"
+    },
+    "share": {
+        "have": false,
+        "file": "share.html"
+    },
+    "player": {
+        "have": false,
+        "file": "player.html"
+    } 
+}
