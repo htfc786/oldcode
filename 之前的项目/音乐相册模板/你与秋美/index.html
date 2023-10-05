@@ -1,0 +1,1722 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=500, height=750, initial-scale=0.64">
+    <title>tjbus</title>
+
+    <script src="sdk.js"></script>
+	<script>
+		var data = getData();
+        var images_list = data.image
+        var title = data.name
+        var words = data.text
+	</script>
+</head>
+
+<body>
+    <div id="container">
+        <img src="./img/bg0.png" id="bg0">
+        <img src="./img/bg2.jpg" id="bg2">
+        <img src="./img/bg3.jpg" id="bg3">
+        <img src="./img/bg4.jpg" id="bg4">
+        <div class="block">
+            <div class="page_block" id="page1_block">
+                <div class="page" id="page1"></div>
+                <div class="page_border"></div>
+            </div>
+            <div class="page_block" id="page2_block">
+                <div class="page" id="page2"></div>
+                <div class="page_border"></div>
+            </div>
+            <div class="page_block" id="page3_block">
+                <div class="page" id="page3"></div>
+                <div class="page_border"></div>
+            </div>
+        </div>
+        <div class="block" id="scene1Box">
+            <img src="./img/s1maple5.png" id="s1maple5">
+            <img src="./img/s1maplert.png" id="s1maplert">
+            <img src="./img/s1maplerba.png" id="s1maplerba">
+            <img src="./img/s1maplerbb.png" id="s1maplerbb">
+            <img src="./img/s1maplelba.png" id="s1maplelba">
+            <img src="./img/s1maplelbm.png" id="s1maplelbm">
+            <img src="./img/s1maplelbb.png" id="s1maplelbb">
+            <img src="./img/s1mapleltta.png" id="s1mapleltta">
+            <img src="./img/s1mapleltma.png" id="s1mapleltma">
+            <img src="./img/s1mapleltmb.png" id="s1mapleltmb">
+            <img src="./img/s1mapleltb.png" id="s1mapleltb">
+            <img src="./img/s1maple51.png" id="s1maple51">
+            <img src="./img/s1maple3.png" id="s1maple3">
+        </div>
+        <div class="block" id="scene2Box">
+            <img src="./img/s2maple3.png" id="s2maple3">
+            <img src="./img/s2maple7.png" id="s2maple7">
+            <img src="./img/s2maple4.png" id="s2maple4">
+            <img src="./img/s2maple5.png" id="s2maple5">
+            <img src="./img/s2maple6.png" id="s2maple6">
+            <img src="./img/s2maple2.png" id="s2maple2">
+            <img src="./img/s2maple1.png" id="s2maple1">
+        </div>
+        <div class="block" id="scene3Box">
+            <img src="./img/s3maplert.png" id="s3maplert">
+            <img src="./img/s3maplerba.png" id="s3maplerba">
+            <img src="./img/s3maplerbb.png" id="s3maplerbb">
+            <img src="./img/s3maplelta.png" id="s3maplelta">
+            <img src="./img/s3mapleltm.png" id="s3mapleltm">
+            <img src="./img/s3mapleltb.png" id="s3mapleltb">
+            <img src="./img/s3maple6.png" id="s3maple6">
+            <img src="./img/s3maple6.png" id="s3maple61">
+        </div>
+        <div class="block" id="scene4Box">
+            <img src="./img/s4ginkgo7.png" id="s4ginkgo7">
+            <img src="./img/s4ginkgo4.png" id="s4ginkgo4">
+            <img src="./img/s4ginkgo3.png" id="s4ginkgo3">
+            <img src="./img/s4ginkgo1.png" id="s4ginkgo1">
+            <img src="./img/s4ginkgo2.png" id="s4ginkgo2">
+            <img src="./img/s4ginkgo5.png" id="s4ginkgo5">
+            <img src="./img/s4ginkgo3.png" id="s4ginkgo31">
+            <img src="./img/s4ginkgo6.png" id="s4ginkgo6">
+        </div>
+        <div id="btBox">
+            <img src="./img/btquan2.png" id="btquan2">
+            <div id="btquan1Box">
+                <img src="./img/btbg.png" id="btbg">
+                <img src="./img/btmaple.png" id="btmaple">
+                <img src="./img/btquan1.png" id="btquan1">
+            </div>
+            <div id="pagetitle">
+                <div id="titlecontent">tjbus???</div>
+            </div>
+        </div>
+        <div class="wordBox" id="wordBox1">
+            <img src="./img/wenzib.png" class="wenzib" id="wenzib1">
+            <img src="./img/wenzil.png" class="wenzil" id="wenzil1">
+            <img src="./img/wenzir.png" class="wenzir" id="wenzir1">
+            <div id="word1" class="wordspan">你与秋美</div>
+        </div>
+        <div class="wordBox" id="wordBox2">
+            <img src="./img/wenzib.png" class="wenzib" id="wenzib2">
+            <img src="./img/wenzil.png" class="wenzil" id="wenzil2">
+            <img src="./img/wenzir.png" class="wenzir" id="wenzir2">
+            <div id="word2" class="wordspan">你与秋美</div>
+        </div>
+        <div class="wordBox" id="wordBox3">
+            <img src="./img/wenzib.png" class="wenzib" id="wenzib3">
+            <img src="./img/wenzil.png" class="wenzil" id="wenzil3">
+            <img src="./img/wenzir.png" class="wenzir" id="wenzir3">
+            <div id="word3" class="wordspan">你与11秋美</div>
+        </div>
+    </div>
+	<style>
+		* {
+			padding: 0px;
+			margin: 0px;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		body {
+			background-color: white;
+		}
+
+		#container img,
+		#container div {
+			position: absolute;
+		}
+
+		#container {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 500px;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		.block {
+			position: absolute;
+			opacity: 1;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		@-webkit-keyframes show_title {
+			0%,
+			70% {
+				opacity: 1;
+				-webkit-transform: scale(0.3);
+				transform: scale(0.3);
+			}
+			80%,
+			100% {
+				opacity: 1;
+				-webkit-transform: scale(1);
+				transform: scale(1);
+			}
+		}
+
+		.page_block {
+			opacity: 0;
+		}
+
+		.page {
+			width: 99%;
+			height: 99%;
+			background-size: cover;
+			background-position: center;
+			margin: auto;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+
+		.page_border {
+			height: calc(100% + 36px);
+			width: calc(100% + 36px);
+			border: 22px solid rgba(255, 255, 255, 0.6);
+			left: -18px;
+			top: -18px;
+		}
+
+		.wordspan {
+			font-size: 16px;
+			color: #FFF;
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+			width: 100%;
+			vertical-align: middle;
+			line-height: 35px;
+			text-align: center;
+			letter-spacing: 2px;
+			opacity: 0;
+			text-shadow: #a77100 3px 3px 3px;
+		}
+
+		#bg0 {
+			width: 581px;
+			height: 100%;
+			left: -40.5px;
+		}
+
+		@-webkit-keyframes bg0_an {
+			0% {
+				transform: scale(1);
+			}
+			100% {
+				transform: scale(1.101);
+			}
+		}
+
+		#scene1Box {}
+
+		#s1maple5 {
+			width: 134px;
+			height: 149px;
+			left: -134px;
+			bottom: 150px;
+			-webkit-animation: s1maple5_an 3.1s linear infinite;
+		}
+
+		@-webkit-keyframes s1maple5_an {
+			0% {
+				transform: translate(0px, 0px) rotate(0deg);
+			}
+			100% {
+				transform: translate(480px, 420px) rotate(-26deg);
+			}
+		}
+
+		#s1maplert {
+			width: 248px;
+			height: 121px;
+			right: -54px;
+			top: -20px;
+			-webkit-transform-origin: 90% 10%;
+			-webkit-animation: s1maplert_an 3.1s linear infinite;
+		}
+
+		@-webkit-keyframes s1maplert_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			76% {
+				transform: rotate(-2deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#s1maplerba {
+			width: 360px;
+			height: 212px;
+			right: -78px;
+			bottom: -20px;
+			-webkit-transform-origin: 110% 50%;
+			-webkit-animation: s1maplerba_an 3.1s linear infinite;
+		}
+
+		@-webkit-keyframes s1maplerba_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			33.3% {
+				transform: rotate(-2deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#s1maplerbb {
+			width: 320px;
+			height: 224px;
+			right: -90px;
+			bottom: 34px;
+			-webkit-transform-origin: 100% 65%;
+			-webkit-animation: s1maplerbb_an 3.1s linear infinite;
+		}
+
+		@-webkit-keyframes s1maplerbb_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			53.3% {
+				transform: rotate(-5.2deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#s1maplelba {
+			width: 211px;
+			height: 153px;
+			left: 80px;
+			bottom: -54px;
+			-webkit-transform-origin: 0% 100%;
+			-webkit-animation: s1maplelba_an 3.1s linear infinite;
+		}
+
+		@-webkit-keyframes s1maplelba_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			24% {
+				transform: rotate(3deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#s1maplelbm {
+			width: 243px;
+			height: 122px;
+			left: -10px;
+			bottom: -22px;
+			-webkit-transform-origin: 0% 100%;
+			-webkit-animation: s1maplelbm_an 3.1s linear infinite;
+		}
+
+		@-webkit-keyframes s1maplelbm_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			49.3% {
+				transform: rotate(3deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#s1maplelbb {
+			width: 217px;
+			height: 94px;
+			left: -32px;
+			bottom: -12px;
+			-webkit-transform-origin: 0% 0%;
+			-webkit-animation: s1maplelbb_an 3.1s linear infinite;
+		}
+
+		@-webkit-keyframes s1maplelbb_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			50.7% {
+				transform: rotate(-8deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#s1mapleltta {
+			width: 263px;
+			height: 179px;
+			left: -51px;
+			top: -5px;
+			-webkit-transform-origin: 0% 0%;
+		}
+
+		#s1maplelbb {
+			width: 217px;
+			height: 94px;
+			left: -32px;
+			bottom: -12px;
+			-webkit-transform-origin: 0% 0%;
+		}
+
+		#s1mapleltma {
+			width: 374px;
+			height: 194px;
+			left: -32px;
+			top: -12px;
+			-webkit-transform-origin: 0% 20%;
+			-webkit-animation: s1mapleltma_an 3.1s linear infinite;
+		}
+
+		@-webkit-keyframes s1mapleltma_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			34.7% {
+				transform: rotate(2.5deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#s1mapleltmb {
+			width: 217px;
+			height: 94px;
+			left: -32px;
+			top: 5px;
+			-webkit-transform-origin: 0% 100%;
+			-webkit-animation: s1mapleltmb_an 3.1s linear infinite;
+		}
+
+		@-webkit-keyframes s1mapleltmb_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			53.3% {
+				transform: rotate(-4.5deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#s1mapleltb {
+			width: 194px;
+			height: 142px;
+			left: -32px;
+			top: 50px;
+			-webkit-transform-origin: 40% 0%;
+			-webkit-animation: s1mapleltb_an 3.1s linear infinite;
+		}
+
+		@-webkit-keyframes s1mapleltb_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			30.7% {
+				transform: rotate(11.5deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#s1maple51 {
+			width: 68px;
+			height: 78px;
+			left: 250px;
+			top: -80px;
+			-webkit-animation: s1maple51_an 3.1s linear infinite;
+		}
+
+		@-webkit-keyframes s1maple51_an {
+			0% {
+				transform: translate(0px, 0px) rotate(0deg) skewY(0deg) scaleX(1) scaleY(1);
+			}
+			100% {
+				transform: translate(400px, 520px) rotate(60deg) skewY(90deg) scaleX(0.7) scaleY(0.16);
+			}
+		}
+
+		#s1maple3 {
+			width: 83px;
+			height: 43px;
+			left: 0px;
+			top: 0px;
+			-webkit-animation: s1maple3_an 3.1s linear infinite;
+		}
+
+		@-webkit-keyframes s1maple3_an {
+			0% {
+				transform: translate(0px, 0px) rotate(0deg);
+			}
+			100% {
+				transform: translate(734px, 600px) rotate(49.7deg);
+			}
+		}
+
+		@-webkit-keyframes fadeIn {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+
+		@-webkit-keyframes fadeOut {
+			0% {
+				opacity: 1;
+			}
+			100% {
+				opacity: 0;
+			}
+		}
+
+		#btBox {
+			width: 372px;
+			height: 372px;
+			left: 64px;
+			top: 25%;
+			opacity: 0;
+			border-radius: 50%;
+			position: fixed;
+		}
+
+		@-webkit-keyframes btBox_an {
+			0% {
+				opacity: 1;
+				transform: scale(1);
+			}
+			100% {
+				opacity: 0;
+				transform: scale(1.217);
+			}
+		}
+
+		#btbg {
+			width: 372px;
+			height: 372px;
+			left: -24px;
+			top: -24px;
+			-webkit-animation: btbg_an 4.1s linear infinite;
+		}
+
+		@-webkit-keyframes btbg_an {
+			0% {
+				transform: scale(1.059);
+			}
+			50% {
+				transform: scale(0.957);
+			}
+			100% {
+				transform: scale(1.059);
+			}
+		}
+
+		#btquan2 {
+			width: 366px;
+			height: 366px;
+			left: 3px;
+			top: 3px;
+			-webkit-animation: btquan2_an 4.1s linear infinite;
+		}
+
+		@-webkit-keyframes btquan2_an {
+			0% {
+				transform: scale(1);
+			}
+			50% {
+				transform: scale(1.071);
+			}
+			100% {
+				transform: scale(1);
+			}
+		}
+
+		#btquan1Box {
+			position: relative;
+			width: 324px;
+			height: 324px;
+			left: 24px;
+			top: 24px;
+			overflow: hidden;
+			-webkit-backface-visibility: hidden;
+			-webkit-transform: translate3d(0, 0, 0);
+			border-radius: 50%;
+		}
+
+		#btquan1 {
+			width: 324px;
+			height: 324px;
+		}
+
+		#btmaple {
+			width: 211px;
+			height: 191px;
+			right: -67px;
+			top: -6px;
+			-webkit-transform-origin: 95% 60%;
+			-webkit-animation: btmaple_an 2s linear infinite;
+		}
+
+		@-webkit-keyframes btmaple_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			50% {
+				transform: rotate(4deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#pagetitle {
+			display: table;
+			text-align: center;
+			width: 250px;
+			height: 200px;
+			left: 61px;
+			top: 86px;
+			box-sizing: border-box;
+		}
+
+		#titlecontent {
+			vertical-align: middle;
+			display: table-cell;
+			text-align: center;
+			word-break: break-all;
+			position: relative !important;
+			overflow: hidden;
+			font-size: 26px;
+			color: #FFF;
+		}
+
+		#bg2 {
+			width: 889px;
+			height: 100%;
+			left: -194.5px;
+			opacity: 0;
+		}
+
+		@-webkit-keyframes bg2_an {
+			0% {
+				opacity: 0;
+				transform: translate(0px, 0px) scale(0.924);
+			}
+			10.4% {
+				opacity: 1;
+				transform: translate(0px, 0px) scale(1);
+			}
+			89.6% {
+				opacity: 1;
+				transform: translate(100px, 0px) scale(1);
+			}
+			100% {
+				opacity: 0;
+				transform: translate(100px, 0px) scale(1.24);
+			}
+		}
+
+		#bg3 {
+			width: 900px;
+			height: 100%;
+			left: 0px;
+			opacity: 0;
+		}
+
+		@-webkit-keyframes bg3_an {
+			0% {
+				opacity: 0;
+				transform: translate(0px, 0px) scale(1);
+			}
+			10.4% {
+				opacity: 1;
+				transform: translate(-50px, 0px) scale(1);
+			}
+			89.6% {
+				opacity: 1;
+				transform: translate(-280px, 0px) scale(1);
+			}
+			100% {
+				opacity: 0;
+				transform: translate(-330px, 0px) scale(1);
+			}
+		}
+
+		#bg4 {
+			width: 889px;
+			height: 100%;
+			left: -194.5px;
+			opacity: 0;
+		}
+
+		@-webkit-keyframes bg4_an {
+			0% {
+				opacity: 0;
+				transform: translate(0px, 0px) scale(0.924);
+			}
+			10.4% {
+				opacity: 1;
+				transform: translate(0px, 0px) scale(1);
+			}
+			89.6% {
+				opacity: 1;
+				transform: translate(100px, 0px) scale(1);
+			}
+			100% {
+				opacity: 0;
+				transform: translate(100px, 0px) scale(1.24);
+			}
+		}
+
+		#scene2Box {
+			opacity: 0;
+		}
+
+		@-webkit-keyframes scene2Box_an {
+			0% {
+				opacity: 1;
+				transform: scale(1);
+			}
+			100% {
+				opacity: 0;
+				transform: scale(1.278);
+			}
+		}
+
+		#s2maple3 {
+			width: 436px;
+			height: 238px;
+			top: -119px;
+			-webkit-transform-origin: 0% 50%;
+			-webkit-animation: s2maple3_an 3.3s linear infinite;
+		}
+
+		@-webkit-keyframes s2maple3_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			50% {
+				transform: rotate(-2deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#s2maple7 {
+			width: 395px;
+			height: 320px;
+			top: -100px;
+			left: -80px;
+			-webkit-transform-origin: 10% 90%;
+			-webkit-animation: s2maple7_an 3.3s linear infinite;
+		}
+
+		@-webkit-keyframes s2maple7_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			50% {
+				transform: rotate(2.5deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#s2maple4 {
+			width: 226px;
+			height: 398px;
+			top: -75px;
+			left: -60px;
+			-webkit-transform-origin: 50% 50%;
+			-webkit-animation: s2maple4_an 3.3s linear infinite;
+		}
+
+		@-webkit-keyframes s2maple4_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			50% {
+				transform: rotate(3deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#s2maple5 {
+			width: 456px;
+			height: 299px;
+			bottom: -115px;
+			right: -20px;
+			-webkit-transform-origin: 100% 40%;
+			-webkit-animation: s2maple5_an 3.3s linear infinite;
+		}
+
+		@-webkit-keyframes s2maple5_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			50% {
+				transform: rotate(2deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#s2maple6 {
+			width: 282px;
+			height: 326px;
+			bottom: -53px;
+			right: -60px;
+			-webkit-transform-origin: 10% 100%;
+			-webkit-animation: s2maple6_an 3.3s linear infinite;
+		}
+
+		@-webkit-keyframes s2maple6_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			50% {
+				transform: rotate(-3deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#s2maple2 {
+			width: 69px;
+			height: 66px;
+			top: -68px;
+			left: 50px;
+			opacity: 0;
+			-webkit-animation: s2maple2_an 3.3s linear infinite;
+		}
+
+		@-webkit-keyframes s2maple2_an {
+			0% {
+				opacity: 0;
+				transform: translate(0px, 0px) rotate(0deg);
+			}
+			5% {
+				opacity: 1;
+			}
+			60% {
+				opacity: 1;
+			}
+			66.25% {
+				opacity: 0;
+				transform: translate(255px, 980px) rotate(19.7deg);
+			}
+			100% {
+				opacity: 0;
+				transform: translate(255px, 980px) rotate(19.7deg);
+			}
+		}
+
+		#s2maple1 {
+			width: 40px;
+			height: 37px;
+			top: 0px;
+			left: 150px;
+			opacity: 0;
+			-webkit-animation: s2maple1_an 3.3s linear infinite;
+		}
+
+		@-webkit-keyframes s2maple1_an {
+			0% {
+				opacity: 0;
+				transform: translate(0px, 0px) rotate(0deg);
+			}
+			5% {
+				opacity: 1;
+			}
+			95% {
+				opacity: 1;
+			}
+			100% {
+				opacity: 0;
+				transform: translate(375px, 440px) rotate(-11.2deg);
+			}
+		}
+
+		#scene3Box {
+			opacity: 0;
+		}
+
+		@-webkit-keyframes scene3Box_an {
+			0% {
+				opacity: 0;
+				transform: scale(0.917);
+			}
+			100% {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+
+		#s3maplert {
+			width: 371px;
+			height: 344px;
+			top: -98px;
+			right: -172px;
+			-webkit-transform-origin: 100% 0%;
+			-webkit-animation: s3maplert_an 2.9s linear infinite;
+		}
+
+		@-webkit-keyframes s3maplert_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			55.2% {
+				transform: rotate(-7deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#s3maplerba {
+			width: 393px;
+			height: 263px;
+			bottom: -125px;
+			right: -136px;
+			-webkit-transform-origin: 85% 75%;
+			-webkit-animation: s3maplerba_an 2.9s linear infinite;
+		}
+
+		@-webkit-keyframes s3maplerba_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			34.5% {
+				transform: rotate(3.5deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#s3maplerbb {
+			width: 449px;
+			height: 333px;
+			bottom: -215px;
+			right: -52px;
+			-webkit-transform-origin: 100% 50%;
+			-webkit-animation: s3maplerbb_an 2.9s linear infinite;
+		}
+
+		@-webkit-keyframes s3maplerbb_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			69% {
+				transform: rotate(-1deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#s3maplelta {
+			width: 449px;
+			height: 333px;
+			top: -119px;
+			left: -12px;
+			-webkit-transform-origin: 0% 50%;
+			-webkit-animation: s3maplelta_an 2.9s linear infinite;
+		}
+
+		@-webkit-keyframes s3maplelta_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			24.3% {
+				transform: rotate(-3.5deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#s3mapleltm {
+			width: 436px;
+			height: 419px;
+			top: -83px;
+			left: -175px;
+			-webkit-transform-origin: 0% 60%;
+			-webkit-animation: s3mapleltm_an 2.9s linear infinite;
+		}
+
+		@-webkit-keyframes s3mapleltm_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			55.2% {
+				transform: rotate(-5.3deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#s3mapleltb {
+			width: 450px;
+			height: 352px;
+			top: -159px;
+			left: -192px;
+			-webkit-transform-origin: 0% 50%;
+			-webkit-animation: s3mapleltb_an 2.9s linear infinite;
+		}
+
+		@-webkit-keyframes s3mapleltb_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			50% {
+				transform: rotate(2deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#s3maple6 {
+			width: 98px;
+			height: 97px;
+			top: -100px;
+			right: 0px;
+			opacity: 0;
+			-webkit-animation: s3maple6_an 2.9s linear infinite;
+		}
+
+		@-webkit-keyframes s3maple6_an {
+			0% {
+				opacity: 0;
+				transform: translate(0px, 0px) rotate(0deg);
+			}
+			5% {
+				opacity: 1;
+			}
+			95% {
+				opacity: 1;
+			}
+			100% {
+				opacity: 0;
+				transform: translate(-580px, 900px) rotate(360deg);
+			}
+		}
+
+		#s3maple61 {
+			width: 98px;
+			height: 97px;
+			top: 300px;
+			right: -100px;
+			opacity: 0;
+			-webkit-animation: s3maple61_an 2.9s linear infinite;
+		}
+
+		@-webkit-keyframes s3maple61_an {
+			0% {
+				opacity: 0;
+				transform: translate(0px, 0px) rotate(0deg);
+			}
+			5% {
+				opacity: 1;
+			}
+			95% {
+				opacity: 1;
+			}
+			100% {
+				opacity: 0;
+				transform: translate(-280px, 680px) rotate(109.3deg);
+			}
+		}
+
+		#scene4Box {
+			opacity: 0;
+		}
+
+		#s4ginkgo7 {
+			width: 79px;
+			height: 90px;
+			top: -90px;
+			left: -10px;
+			opacity: 0;
+			-webkit-animation: s4ginkgo7_an 2.9s linear infinite;
+		}
+
+		@-webkit-keyframes s4ginkgo7_an {
+			0% {
+				opacity: 0;
+				transform: translate(0px, 0px) rotate(0deg);
+			}
+			5% {
+				opacity: 1;
+			}
+			95% {
+				opacity: 1;
+			}
+			100% {
+				opacity: 0;
+				transform: translate(150px, 1000px) rotate(0deg);
+			}
+		}
+
+		#s4ginkgo4 {
+			width: 302px;
+			height: 232px;
+			top: -103px;
+			left: -72px;
+			-webkit-transform-origin: 0% 0%;
+			-webkit-animation: s4ginkgo4_an 2.9s linear infinite;
+		}
+
+		@-webkit-keyframes s4ginkgo4_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			50% {
+				transform: rotate(-4deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#s4ginkgo3 {
+			width: 250px;
+			height: 215px;
+			top: -120px;
+			left: 82px;
+			-webkit-transform-origin: 0% 0%;
+			-webkit-animation: s4ginkgo3_an 2.9s linear infinite;
+		}
+
+		@-webkit-keyframes s4ginkgo3_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			50% {
+				transform: rotate(2.5deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#s4ginkgo1 {
+			width: 267px;
+			height: 152px;
+			top: -50px;
+			right: -68px;
+			-webkit-transform-origin: 100% 10%;
+			-webkit-animation: s4ginkgo1_an 2.9s linear infinite;
+		}
+
+		@-webkit-keyframes s4ginkgo1_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			50% {
+				transform: rotate(2deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#s4ginkgo2 {
+			width: 152px;
+			height: 140px;
+			bottom: 6px;
+			right: -45px;
+			-webkit-transform-origin: 100% 0%;
+			-webkit-animation: s4ginkgo2_an 2.9s linear infinite;
+		}
+
+		@-webkit-keyframes s4ginkgo2_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			50% {
+				transform: rotate(-3deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#s4ginkgo5 {
+			width: 302px;
+			height: 232px;
+			bottom: -53px;
+			left: -55px;
+			-webkit-transform-origin: 0% 10%;
+			-webkit-animation: s4ginkgo5_an 2.9s linear infinite;
+		}
+
+		@-webkit-keyframes s4ginkgo5_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			50% {
+				transform: rotate(-4deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#s4ginkgo31 {
+			width: 250px;
+			height: 215px;
+			top: 31px;
+			left: -116px;
+			-webkit-transform-origin: 0% 0%;
+			-webkit-animation: s4ginkgo31_an 2.9s linear infinite;
+		}
+
+		@-webkit-keyframes s4ginkgo31_an {
+			0% {
+				transform: rotate(0deg);
+			}
+			50% {
+				transform: rotate(-4deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+
+		#s4ginkgo6 {
+			width: 58px;
+			height: 71px;
+			top: -71px;
+			left: 10px;
+			opacity: 0;
+			-webkit-animation: s4ginkgo6_an 2.9s linear infinite;
+		}
+
+		@-webkit-keyframes s4ginkgo6_an {
+			0% {
+				opacity: 0;
+				transform: translate(0px, 0px) rotate(0deg);
+			}
+			5% {
+				opacity: 1;
+			}
+			60% {
+				opacity: 1;
+			}
+			69% {
+				opacity: 0;
+				transform: translate(60px, 1100px) rotate(-56deg);
+			}
+			100% {
+				opacity: 0;
+				transform: translate(60px, 1100px) rotate(-56deg);
+			}
+		}
+
+		@-webkit-keyframes showimg1 {
+			0% {
+				opacity: 0;
+				transform: translate(0px, 0px) scale(0.824);
+			}
+			10.4% {
+				opacity: 0.8;
+				transform: translate(0px, 0px) scale(0.9);
+			}
+			89.6% {
+				opacity: 0.8;
+				transform: translate(0px, 0px) scale(0.944);
+			}
+			100% {
+				opacity: 0;
+				transform: translate(0px, 0px) scale(1.007);
+			}
+		}
+
+		.wordBox {
+			width: 302px;
+			height: 36px;
+			left: 99px;
+			bottom: 15%;
+			opacity: 0;
+		}
+
+		.wenzib {
+			width: 302px;
+			height: 36px;
+		}
+
+		@-webkit-keyframes wenzib_an {
+			0% {
+				transform: scaleX(0);
+			}
+			100% {
+				transform: scaleX(1);
+			}
+		}
+
+		.wenzil {
+			width: 101px;
+			height: 30px;
+			left: -8px;
+			bottom: -8px;
+		}
+
+		@-webkit-keyframes wenzil_an {
+			0% {
+				opacity: 0;
+				transform: translateX(-50px);
+			}
+			5% {
+				opacity: 0.5;
+			}
+			100% {
+				opacity: 0.5;
+				transform: translateX(0px);
+			}
+		}
+
+		.wenzir {
+			width: 101px;
+			height: 30px;
+			right: -8px;
+			top: -8px;
+			opacity: 0;
+		}
+
+		@-webkit-keyframes wenzir_an {
+			0% {
+				opacity: 0;
+				transform: translateX(50px);
+			}
+			5% {
+				opacity: 0.5;
+			}
+			100% {
+				opacity: 0.5;
+				transform: translateX(0px);
+			}
+		}
+
+		@keyframes move-text {
+			0% {
+				transform: translateX(0)
+			}
+			100% {
+				transform: translateX(-100%)
+			}
+		}
+	</style>
+	<script>
+		var e_desc = title;
+		var slider_images_url = images_list;
+		var slider_images_urlmin = images_list;
+		var module_inits = [];
+		var load_flag = true;
+		var ua = navigator.userAgent.toLowerCase();
+		var image_size_width = [];
+		var image_size_height = [];
+		var image_url_index = 0;
+		var have_num = 0;
+		var error_num = 0;
+		var canshow = true;
+		var reshow = false;
+		var timeout = [];
+		var delaytime = 10000; // 根据title来调整
+		var createNodeArr = []; // 代替原来clearnode里面的xinArr
+		var createNodeObj = {};
+		//每次执行加载后5张图片
+		var bl_keepload = 'first';
+		var step_loadnum = 5;
+		var get_pid = function(url) {
+			var index1 = url.indexOf("?");
+			if (index1 != -1) {
+				url = url.substr(0, index1);
+			}
+			return url.toString().substr(url.lastIndexOf("/") + 1);
+		}
+
+		function load_init_modules() {
+			if (!load_flag) return;
+
+			for (var i = 0; i < module_inits.length; i++) {
+				module_inits[i]();
+			}
+			load_flag = false;
+		}
+
+		function call_me(fun) {
+			module_inits.push(fun);
+		}
+
+		function e() {
+
+			if (ua.match(/MicroMessenger/i) != 'micromessenger') {
+				load_init_modules();
+				return;
+			}
+			const time = 2000;
+			const timer = setTimeout(load_init_modules, time);
+		}
+
+		function nid(name) {
+			if (!createNodeObj[name]) {
+				createNodeObj[name] = true;
+				createNodeArr.push(name);
+			}
+			return document.getElementById(name);
+		}
+
+		function id(name) {
+			return document.getElementById(name);
+		}
+
+		function step_load() {
+			var load_num = 0
+				//初步加载X张
+			if (image_url_index == 0 && bl_keepload == 'first') {
+				console.log('loading continue');
+				if (slider_images_url.length > step_loadnum) {
+					load_num = step_loadnum;
+					bl_keepload = 'next';
+				} else {
+					load_num = slider_images_url.length;
+					bl_keepload = 'end';
+				}
+				for (var i = 0; i < load_num; i++) {
+					var img = new Image();
+					img.index = i;
+					img.src = slider_images_url[i];
+					img.onload = image_onload;
+					img.onerror = image_onerror;
+					Onload_imgs_url[i] = 'loading';
+				}
+			} else if (bl_keepload == 'end') {
+				return;
+			} else {
+				console.log('loading continue');
+				if (slider_images_url.length - image_url_index > step_loadnum * 2) {
+					load_num = step_loadnum;
+				} else {
+					load_num = slider_images_url.length - image_url_index - step_loadnum;
+					bl_keepload = 'end';
+				}
+				for (var i = image_url_index + step_loadnum; i < image_url_index + step_loadnum + load_num; i++) {
+					var img = new Image();
+					img.index = i;
+					img.src = slider_images_url[i];
+					img.onload = image_onload;
+					img.onerror = image_onerror;
+					Onload_imgs_url[i] = 'loading';
+				}
+			}
+
+			// console.log(Onload_imgs_url);
+
+		}
+
+		function load_images() {
+			reshow = false;
+			image_size_width = [];
+			image_size_height = [];
+			Onload_imgs_url = [];
+			image_url_index = 0;
+			have_num = 0;
+			error_num = 0;
+			begin_titletime = new Date();
+			begin_titletime = begin_titletime.getTime();
+			canshow = true;
+			showtitle();
+			bl_keepload = 'first';
+			step_load();
+		}
+
+		function image_onerror(event) {
+			var img = event.target;
+			var index = img.index;
+			if (index < step_loadnum)
+				error_num++;
+			Onload_imgs_url[index] = 'not find';
+
+			if ((have_num + error_num >= step_loadnum || slider_images_url.length == (have_num + error_num)) && canshow == true) {
+				reshow = false;
+				canshow = false;
+				if (have_num == 0)
+					return;
+				var end_titletime = new Date();
+				end_titletime = end_titletime.getTime();
+				var dis_titletime = Math.abs(end_titletime - begin_titletime);
+				if (dis_titletime > delaytime) {
+					liangziyun_kawa();
+				} else {
+					dis_titletime = delaytime - dis_titletime;
+					timeout.push(setTimeout(function() {
+						liangziyun_kawa();
+					}, dis_titletime));
+				}
+			}
+		}
+
+		function image_onload(event) {
+			if (reshow == true)
+				return;
+			var img = event.target;
+			var index = img.index;
+			if (index < step_loadnum) {
+				have_num++;
+			}
+			Onload_imgs_url[index] = img.src;
+			image_size_height[index] = img.height;
+			image_size_width[index] = img.width;
+
+			console.log(Onload_imgs_url[index]);
+
+			if ((have_num + error_num >= step_loadnum || slider_images_url.length == (have_num + error_num)) && canshow == true) {
+				reshow = false;
+				canshow = false;
+				if (have_num == 0)
+					return;
+				var end_titletime = new Date();
+				end_titletime = end_titletime.getTime();
+				var dis_titletime = Math.abs(end_titletime - begin_titletime);
+				if (dis_titletime > delaytime) {
+					liangziyun_kawa();
+				} else {
+					dis_titletime = delaytime - dis_titletime;
+					timeout.push(setTimeout(function() {
+						liangziyun_kawa();
+					}, dis_titletime));
+				}
+
+			}
+		}
+
+		function showtitle() {
+			nid('titlecontent').innerHTML = e_desc;
+			nid('bg0').style.webkitAnimation = 'bg0_an 4.4s linear both';
+			nid('btBox').style.webkitAnimation = 'fadeIn 1.2s linear both';
+			timeout.push(setTimeout(function() {
+				nid('btBox').style.webkitAnimation = 'btBox_an 0.5s linear both';
+				nid('scene1Box').style.webkitAnimation = 'fadeOut 0.5s linear both';
+				show1();
+			}, 3900));
+			timeout.push(setTimeout(function() {
+				nid('bg0').style.webkitAnimation = 'fadeOut 1s linear both';
+			}, 4400));
+		}
+
+		function show1() {
+			var imageObj = setImage("1");
+			var style = imageObj.style;
+			nid('page1').style.backgroundImage = "url(" + imageObj.src + ")";
+			nid('page1_block').setAttribute('style', style.block);
+			nid('page1_block').style.webkitAnimation = 'showimg1 4.8s linear both';
+			if (!imageObj.desc) {
+				imageObj.desc = "你与秋美"
+			}
+			nid('word1').innerHTML = imageObj.desc;
+			nid('wordBox1').style.webkitAnimation = 'fadeIn 0.1s linear both';
+			nid("wenzib1").style.webkitAnimation = 'wenzib_an 1.2s linear both';
+			nid("wenzil1").style.webkitAnimation = 'wenzil_an 1.2s linear both';
+			nid("wenzir1").style.webkitAnimation = 'wenzir_an 1.2s linear both';
+			nid('word1').style.webkitAnimation = 'fadeIn 0.2s 1.2s linear both';
+			nid('bg2').style.webkitAnimation = 'bg2_an 4.8s linear both';
+			nid('scene2Box').style.webkitAnimation = 'fadeIn 0.5s linear both';
+			timeout.push(setTimeout(function() {
+				show2();
+				nid('scene2Box').style.webkitAnimation = 'scene2Box_an 0.5s linear both';
+				nid('wordBox1').style.webkitAnimation = 'fadeOut 0.5s linear both';
+			}, 4300));
+			timeout.push(setTimeout(function() {
+				nid('bg2').style.webkitAnimation = '';
+				nid('page1_block').style.webkitAnimation = '';
+				nid('word1').style.webkitAnimation = '';
+				nid('wordBox1').style.webkitAnimation = '';
+				nid("wenzib1").style.webkitAnimation = '';
+				nid("wenzil1").style.webkitAnimation = '';
+				nid("wenzir1").style.webkitAnimation = '';
+			}, 6000));
+		}
+
+		function show2() {
+			var imageObj = setImage("2");
+			var style = imageObj.style;
+			nid('page2').style.backgroundImage = "url(" + imageObj.src + ")";
+			nid('page2_block').setAttribute('style', style.block);
+			nid('page2_block').style.webkitAnimation = 'showimg1 4.8s linear both';
+			if (!imageObj.desc) {
+				imageObj.desc = "你与秋美"
+			}
+			nid('word2').innerHTML = imageObj.desc;
+			nid('wordBox2').style.webkitAnimation = 'fadeIn 0.1s linear both';
+			nid("wenzib2").style.webkitAnimation = 'wenzib_an 1.2s linear both';
+			nid("wenzil2").style.webkitAnimation = 'wenzil_an 1.2s linear both';
+			nid("wenzir2").style.webkitAnimation = 'wenzir_an 1.2s linear both';
+			nid('word2').style.webkitAnimation = 'fadeIn 0.2s 1.2s linear both';
+			nid('bg3').style.webkitAnimation = 'bg3_an 4.8s linear both';
+			nid('scene3Box').style.webkitAnimation = 'scene3Box_an 0.5s linear both';
+			timeout.push(setTimeout(function() {
+				show3();
+				nid('scene3Box').style.webkitAnimation = 'fadeOut 0.5s linear both';
+				nid('wordBox2').style.webkitAnimation = 'fadeOut 0.5s linear both';
+			}, 4300));
+			timeout.push(setTimeout(function() {
+				nid('bg3').style.webkitAnimation = '';
+				nid('page2_block').style.webkitAnimation = '';
+				nid('word2').style.webkitAnimation = '';
+				nid('wordBox2').style.webkitAnimation = '';
+				nid("wenzib2").style.webkitAnimation = '';
+				nid("wenzil2").style.webkitAnimation = '';
+				nid("wenzir2").style.webkitAnimation = '';
+			}, 6000));
+		}
+
+		function show3() {
+			var imageObj = setImage("3");
+			var style = imageObj.style;
+			nid('page3').style.backgroundImage = "url(" + imageObj.src + ")";
+			nid('page3_block').setAttribute('style', style.block);
+			nid('page3_block').style.webkitAnimation = 'showimg1 4.8s linear both';
+			if (!imageObj.desc) {
+				imageObj.desc = "你与秋美"
+			}
+			nid('word3').innerHTML = imageObj.desc;
+			nid('wordBox3').style.webkitAnimation = 'fadeIn 0.1s linear both';
+			nid("wenzib3").style.webkitAnimation = 'wenzib_an 1.2s linear both';
+			nid("wenzil3").style.webkitAnimation = 'wenzil_an 1.2s linear both';
+			nid("wenzir3").style.webkitAnimation = 'wenzir_an 1.2s linear both';
+			nid('word3').style.webkitAnimation = 'fadeIn 0.2s 1.2s linear both';
+			nid('bg4').style.webkitAnimation = 'bg4_an 4.8s linear both';
+			nid('scene4Box').style.webkitAnimation = 'fadeIn 0.5s linear both';
+			timeout.push(setTimeout(function() {
+				show1();
+				nid('scene4Box').style.webkitAnimation = 'fadeOut 0.5s linear both';
+				nid('wordBox3').style.webkitAnimation = 'fadeOut 0.5s linear both';
+			}, 4300));
+			timeout.push(setTimeout(function() {
+				nid('bg4').style.webkitAnimation = '';
+				nid('page3_block').style.webkitAnimation = '';
+				nid('word3').style.webkitAnimation = '';
+				nid('wordBox3').style.webkitAnimation = '';
+				nid("wenzib3").style.webkitAnimation = '';
+				nid("wenzil3").style.webkitAnimation = '';
+				nid("wenzir3").style.webkitAnimation = '';
+			}, 6000));
+		}
+
+		function getImageStyle(obj, idname) {
+			var style = {};
+			var maxw = id('container').offsetWidth;
+			var maxh = id('container').offsetHeight;
+
+			var per = obj.width / obj.height;
+			var bper = maxw / 500;
+			var bw = 500,
+				bh = maxh / bper;
+			//竖照
+			if (per < (maxw / maxh)) {
+				style.height = bh * 0.75;
+				style.width = style.height * per;
+			} else {
+				style.width = bw * 0.85;
+				style.height = style.width / per;
+			}
+			style.top = (bh - style.height) / 2 - 30;
+			style.left = (bw - style.width) / 2;
+			style.per = per;
+
+			var objStyle = {}
+			objStyle.block = "width:" + style.width + "px;height:" + style.height + "px;left:" + style.left + "px;top:" + style.top + "px;"
+			return objStyle;
+		}
+
+		function setImage(idname) {
+			if (reshow == true)
+				return;
+			while (Onload_imgs_url[image_url_index] == 'not find' || Onload_imgs_url[image_url_index] == 'loading') {
+				if (image_url_index % step_loadnum == 0) {
+					step_load();
+				}
+				image_url_index++;
+				if (image_url_index == Onload_imgs_url.length)
+					image_url_index = 0;
+			}
+
+			if (image_url_index % step_loadnum == 0) {
+				step_load();
+			}
+			var img_bili = image_size_width[image_url_index] / image_size_height[image_url_index];
+
+			var word = id('word' + idname);
+			var str = words[get_pid(Onload_imgs_url[image_url_index])];
+			if (str == undefined || str.length < 1) {
+				str = ''
+			}
+
+			var imageObj = {
+				'width': image_size_width[image_url_index],
+				'height': image_size_height[image_url_index],
+				'src': Onload_imgs_url[image_url_index],
+				'desc': str,
+			}
+
+			imageObj.style = getImageStyle(imageObj, idname);
+
+			image_url_index++;
+			if (image_url_index == Onload_imgs_url.length)
+				image_url_index = 0;
+
+			return imageObj;
+		}
+
+		function reload_scene() {
+			clearnode();
+			reshow = true;
+			setTimeout(load_images, 100);
+		}
+
+		function clearnode() {
+			timeout.forEach(function(t) {
+					clearTimeout(t);
+				})
+				// console.log(createNodeArr)
+			for (var i = 0; i < createNodeArr.length; i++) {
+				var dom = id(createNodeArr[i]);
+				if (dom && dom !== 'undefined') {
+					dom.style.webkitAnimation = '';
+				}
+			}
+		}
+
+		window.addEventListener('load', e, false);
+		call_me(load_images);
+    </script>
+</body>
+</html>

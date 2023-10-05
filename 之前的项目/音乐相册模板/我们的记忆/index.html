@@ -1,0 +1,87 @@
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+    <script src="sdk.js"></script>
+	<script>
+		var data = getData();
+        var images_list = data.image
+        var title = data.name
+        var words = data.text
+	</script>
+                
+    <script src="./womendehuiyi2022.js"></script>
+    <link rel="stylesheet" href="./womendehuiyi2022.css">
+</head>
+<body>
+    <div id="container">
+        <div id="opac_box">
+            <div id="startimg_opac"></div>
+            <div id="congimg_opac"></div>
+            <div id="fyimg_opac"></div>
+            <div id="jiaoimg_opac"></div>
+            <div id="maskimg_opac"></div>
+        </div>
+        <div id="scene2Box" class="sceneBox">
+            <div class="photoBg" id="photoBg2"></div>
+            <div class="page_block" id="page2_block">
+                <div class="page" id="page2">
+                    <div id="word2" class="wordspan"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="scene1Box" class="sceneBox">
+            <div class="photoBg" id="photoBg1"></div>
+            <div class="page_block" id="page1_block">
+                <div class="page" id="page1">
+                    <div id="word1" class="wordspan"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="xie2Box" class="xieBox">
+            <div id="xieimg2" class="xieimg"></div>
+        </div>
+        <div id="xie1Box" class="xieBox">
+            <div id="xieimg1" class="xieimg"></div>
+        </div>
+
+        <div id="mask2Box" class="maskBox">
+            <div id="maskimg2" class="maskimg"></div>
+        </div>
+        <div id="mask1Box" class="maskBox">
+            <div id="maskimg1" class="maskimg"></div>
+        </div>
+
+        <div id="fyimg1" class="fyimg"></div>
+        <div id="fyimg2" class="fyimg"></div>
+
+        <div id="bookbg"></div>
+        <div id="pagetitle">
+            <div id="titlecontent"></div>
+        </div>
+        <div id="fyimg"></div>
+
+        <div id="startimgBox">
+            <div id="startimg"></div>
+        </div>
+        <div id="congimgBox">
+            <div id="congimg"></div>
+        </div>
+
+        <div class="block" id="loading">
+            <div class="loadingBgStatic"></div>
+            <div class="loading-bg">
+                <div class="loading-icon"></div>
+                <div class="loading-text1">相册加载中</div>
+                <div class="loading-text2">请不要关闭相册</div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <script src="sdk.js"></script>
+	<script>
+		var data = getData();
+        var images_list = data.image
+        var title = data.name
+        var words = data.text
+	</script>
+    <link rel="stylesheet" href="./src/taohua.css">
+    <script src="./src/widgets.js"></script>
+    <script src="./src/taohua.js"></script>
+</head>
+<body>
+    <div id="container">
+        <img src="./src/bg.jpg">
+
+        <div id="view_box">
+            <div id="div1_view"></div>
+            <div id="div2_view"></div>
+        </div>
+        <div id="div_box">
+            <div id="div1"><span id="word1" class="showwords" style="font-size: 25px;"></span></div>
+            <div id="div2"><span id="word2" class="showwords" style="font-size: 28px;"></span></div>
+        </div>
+        <img class="taohua2" src="./src/taohua2.png">
+        <img class="taohua1" src="./src/taohua1.png">
+        <div id="pagetitle" style="position: absolute; top: 208px; left: 29px; opacity: 0; animation: 1s ease-in 0s 1 normal both running title_out;">
+            <img src="./src/biaoti.png">
+            <div style="position:absolute;width:280px;height:164px;top:123px;left:74px;overflow:hidden;display:table;">
+                <div id="titlecontent" style="width:280px;height:164px;vertical-align:middle;display:table-cell;text-align:center;font-size:27px;line-height:40px;color:#F57395;">test</div>
+            </div>
+        </div>    
+        <div class="huadiv">
+            <img class="ban1" src="./src/ban1.png">
+            <img class="ban2" src="./src/ban2.png">
+            <img class="ban3" src="./src/ban1.png">
+            <img class="ban4" src="./src/ban1.png">
+            <img class="ban5" src="./src/ban2.png">
+            <img class="ban6" src="./src/ban3.png">
+            <img class="ban7" src="./src/ban1.png">
+            <img class="ban8" src="./src/ban1.png">
+            <img class="ban9" src="./src/ban3.png">
+        </div>
+        <img class="taohua3" src="./src/hua.png">
+    </div>
+</body>
+</html>

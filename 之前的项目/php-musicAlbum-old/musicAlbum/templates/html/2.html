@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+	<style>
+	@-webkit-keyframes zhuan {
+		0%{
+			-webkit-transform:rotate(0deg);
+		}
+		100%{
+			-webkit-transform:rotate(360deg);
+		}
+	}
+	#img > img{
+		max-width: 500px;
+		min-width: 500px;
+	}
+	</style>
+	<script>
+		var albumTitle = "{{ title }}";
+        var imgList=[{{ imgList }}];
+		var words = {{ textArray }};
+		var musicUrl = "{{ musicUrl }}";
+	</script>
+	
+</head>
+<body>
+	<div id="sound_image_div" onclick="switchsound()" style=" position: fixed; right: 10px;">
+		<img id="sound_image" src="{{ staticFile }}music_note_big.png?v=1" style="animation: 3s linear 0s infinite normal none running zhuan;">
+	</div>
+	<audio src="{{ musicUrl }}" id="musicPlay" autoplay="autoplay" loop="true"></audio>
+    <h1>模板1</h1>
+    <img src="{{ staticFile }}1.bmp"></img>
+    <div id="img"></div>
+    <script>
+		var get_pid = function(url) {
+			var index1 = url.indexOf("?");
+			if (index1 != -1) {
+				url = url.substr(0, index1);
+			}
+			return url.toString().substr(url.lastIndexOf("/") + 1);
+		}
+		var word;
+		
+        var imgDiv = document.getElementById("img");
+		imgDiv.innerHTML+="<h1 style='font-size:50px'>"+albumTitle+"</h1></br>"
+		document.title=albumTitle;
+        for (var i=0;i<imgList.length;i++) {
+			word = words[get_pid(imgList[i])];
+			if (!word){
+				word = "";
+			}
+            imgDiv.innerHTML+="<span>image"+(i+1)+" "+word+"</span></br><img src="+imgList[i]+"></img></br>"
+        }
+		
+		function switchsound(){
+			var ai = document.getElementById('sound_image');
+			var musicPlay = document.getElementById("musicPlay")
+			
+			if(musicPlay.paused){
+				ai.style.webkitAnimation = "zhuan 3s linear infinite";
+				musicPlay.play();
+			} else {
+				ai.style.webkitAnimation = "";
+				musicPlay.pause();
+			}
+			console.log("debug2");
+		}
+    </script>
+</body>
+</html>

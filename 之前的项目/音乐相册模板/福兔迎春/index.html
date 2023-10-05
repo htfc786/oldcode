@@ -1,0 +1,2081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="sdk.js"></script>
+	<script>
+		var data = getData();
+        var images_list = data.image
+        var title = data.name
+        var words = data.text
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="opac_box">
+            <div id="bgimg1_opac"></div>
+            <div id="paoimg1_opac"></div>
+            <div id="tabimg_opac"></div>
+            <div id="bgimg2_opac"></div>
+        </div>
+        <div id="bgimg1Box">
+            <div id="bgimg1"></div>
+        </div>
+        <div id="bgimg2Box">
+            <div id="bgimg2"></div>
+        </div>
+        <div id="kuangBox">
+            <div id="kuangBlock">
+                <img src="./img/kuang.png" id="kuang">
+            </div>
+            <div id="pagetitle">
+                <div id="titlecontent">一起来制作相册，记录生活</div>
+            </div>
+        </div>
+        <img src="./img/ftyc.png" id="ftyc">
+        <img src="./img/botk.png" id="botk">
+        <div id="topkBox">
+            <img src="./img/topk.png" id="topk">
+        </div>
+        <div id="paoimg1Box">
+            <div id="paoimg1"></div>
+        </div>
+        <div id="paoimg2Box">
+            <div id="paoimg2"></div>
+        </div>
+        <div class="page_block" id="page1_block">
+            <div class="page" id="page1" style="background-image: url(&quot;undefined&quot;);">
+                <div id="word1" class="wordspan"></div>
+            </div>
+        </div>
+        <div class="page_block" id="page2_block">
+            <div class="page" id="page2" style="background-image: url(&quot;undefined&quot;);">
+                <div id="word2" class="wordspan"></div>
+            </div>
+        </div>
+        <div class="page_block" id="page3_block">
+            <div class="page" id="page3" style="background-image: url(&quot;undefined&quot;);">
+                <div id="word3" class="wordspan"></div>
+            </div>
+        </div>
+        <div id="yunBox">
+            <img src="./img/yun.png" id="yun">
+        </div>
+        <div id="shanBox">
+            <div id="shan"></div>
+        </div>
+        <div id="tuziBox">
+            <img src="./img/tuzi.png" id="tuzi">
+        </div>
+        <div id="tabimgBox">
+            <div id="tabimg"></div>
+        </div>
+        <div id="photo_load" class="po">
+            <div class="photo_load_1"></div>
+            <div class="photo_load_2" id="photoLoadPre">正在加载。。。</div>
+        </div>
+    </div>
+    <style type="text/css">
+        * {
+            padding: 0px;
+            margin: 0px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: white;
+        }
+
+        #container img,
+        #container div {
+            position: absolute;
+        }
+        #container {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 500px;
+            height: 100%;
+            overflow: hidden;
+        }
+        .page_block {
+            opacity: 0;
+        }
+        .page {
+            width: 100%;
+            height:100%;
+            background-size: cover;
+            background-position: center;
+            margin: auto;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            border: 8px solid #fff;
+        }
+
+        .wordspan {
+            font-size: 24px;
+            color: #FFF;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 80%;
+            vertical-align: middle;
+            line-height: 35px;
+            text-align: center;
+            letter-spacing: 2px;
+            bottom: 15%;
+            text-shadow: 0 0 5px #FFE444, 0 0 10px #FFE444, 0 0 10px #FFE444;
+        }
+        @-webkit-keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        #photo_load {
+            margin: auto;
+            width: 170px;
+            height: 120px;
+            border-radius: 6px;
+            background: rgba(0, 0, 0, .75);
+            top: 0;
+            bottom: 50px;
+            left: 0;
+            right: 0;
+        }
+        .photo_load_1 {
+            margin-top: 25px;
+            width: 100%;
+            height: 30px;
+            background: url(https://s2.kagirl.cn/template/pic/public/loading.gif) no-repeat center center;
+            background-size: 30px 30px;
+        }
+        .photo_load_2 {
+            color: #FFF;
+            font-family: Arial;
+            font-size: 18px;
+            text-align: center;
+            opacity: 0.75;
+            width: 100%;
+            top: 70px;
+        }
+        #ftyc{
+            width: 438px;
+            height:433px;
+            left:31px;
+            top: 20%;
+            opacity: 0;
+            /*-webkit-animation: ftyc_an 3.3s linear both;*/
+        }
+        @-webkit-keyframes ftyc_an {
+            0% {
+                opacity: 0;
+                transform: scale(1.828) rotate(-69.7deg);
+            }
+            29.1% {
+                opacity: 1;
+                transform: scale(0.984) rotate(-7.4deg);
+            }
+            72.1% {
+                opacity: 1;
+                transform: scale(0.883) rotate(0deg);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(2.058) rotate(0deg);
+            }
+        }
+        #botk{
+            width: 500px;
+            height:237px;
+            bottom: -10px;
+            opacity: 0;
+            /*-webkit-animation: botk_an 5.3s linear both;*/
+        }
+        @-webkit-keyframes botk_an {
+            0% {
+                opacity: 0;
+                transform: translate(0px,50px);
+            }
+            17.8% {
+                opacity: 1;
+                transform: translate(0px,0px);
+            }
+            34.9% {
+                transform: translate(0px,8px);
+            }
+            51.9% {
+                transform: translate(0px,0px);
+            }
+            68.2% {
+                transform: translate(0px,8px);
+            }
+            85.2% {
+                opacity: 1;
+                transform: translate(0px,0px);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(0px,8px);
+            }
+        }
+        #topkBox{
+            width: 500px;
+            height:177px;
+            top: -5px;
+            opacity: 0;
+            overflow: hidden;
+            border:1px solid rgba(200,200,200,0);
+        }
+        #topk{
+            width: 500px;
+            height:177px;
+            -webkit-animation: topk_an 2s linear infinite;
+            border:1px solid rgba(200,200,200,0);
+        }
+        @-webkit-keyframes topk_an {
+            0% {
+                transform: translate(0px,0px);
+            }
+            50% {
+                transform: translate(0px,-8px);
+            }
+            100% {
+                transform: translate(0px,0px);
+            }
+        }
+        #yunBox{
+            width: 500px;
+            height:385px;
+            bottom: 0px;
+            opacity: 0;
+        }
+        #yun{
+            width: 500px;
+            height:385px;
+            -webkit-animation: yun_an 2s linear infinite;
+        }
+        @-webkit-keyframes yun_an {
+            0% {
+                transform: translate(0px,0px);
+            }
+            50% {
+                transform: translate(0px,8px);
+            }
+            100% {
+                transform: translate(0px,0px);
+            }
+        }
+        #shanBox{
+            /*width: 319px;*/
+            /*height:179px;*/
+            width: 319px;
+            height:179px;
+            bottom: 0px;
+            left: 90.5px;
+            opacity: 0;
+            border:1px solid rgba(200,200,200,0);
+            transform: scale(1.05);
+        }
+        #shan{
+            width: 312px;
+            height:179px;
+            transform-origin: 50% 100%;
+            -webkit-animation: shan_an 2s linear infinite;
+            background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/shan.png");
+            background-size: 312px 179px;
+            background-repeat: no-repeat;
+            border:1px solid rgba(200,200,200,0);
+            padding: -5px;
+        }
+        @-webkit-keyframes shan_an {
+            0% {
+                transform: rotate(3.5deg);
+            }
+            50% {
+                transform: rotate(-1.5deg);
+            }
+            100% {
+                transform: rotate(3.5deg);
+            }
+        }
+        #tuziBox{
+            width: 242px;
+            height:199px;
+            bottom: -2px;
+            left: 129px;
+            opacity: 0;
+            border:1px solid rgba(200,200,200,0);
+        }
+        #tuzi{
+            width: 242px;
+            height:199px;
+            transform-origin: 50% 100%;
+            -webkit-animation: tuzi_an 2s linear infinite;
+            border:1px solid rgba(200,200,200,0);
+        }
+        @-webkit-keyframes tuzi_an {
+            0% {
+                transform: rotate(-2.7deg);
+            }
+            50% {
+                transform: rotate(1.3deg);
+            }
+            100% {
+                transform: rotate(-2.7deg);
+            }
+        }
+
+        #kuangBox{
+            width: 480px;
+            height:480px;
+            left:10px;
+            top: 20%;
+        }
+        #kuangBlock{
+            width: 480px;
+            height:480px;
+            opacity: 0;
+            /*-webkit-animation: kuangBlock_an 3s 2.3s linear both;*/
+        }
+        @-webkit-keyframes kuangBlock_an {
+            0% {
+                opacity: 0;
+                transform: scale(0.13);
+            }
+            30.5% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            90%{
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: scale(1);
+            }
+        }
+
+        #kuang{
+            width: 480px;
+            height:480px;
+            -webkit-animation: kuang_an 2s linear infinite;
+        }
+        @-webkit-keyframes kuang_an {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        #pagetitle {
+            display: table;
+            text-align: center;
+            width: 300px;
+            height: 177px;
+            box-sizing: border-box;
+            left:90px;
+            top: 151.5px;
+            opacity: 0;
+            /*-webkit-animation: pagetitle_an 3s 2.3s linear both;*/
+        }
+        @-webkit-keyframes pagetitle_an {
+            0% {
+                opacity: 0;
+                transform: scale(0.13);
+            }
+            30.5% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            90%{
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: scale(1);
+            }
+        }
+        #titlecontent {
+            vertical-align: middle;
+            display: table-cell;
+            text-align: center;
+            word-break: break-all;
+            position: relative !important;
+            overflow: hidden;
+            font-size: 28px;
+            font-weight: bold;
+            width: 267px;
+            height: 106px;
+            color: #FFE444;
+        }
+        #bgimg1Box{
+            width: 100%;
+            height: 100%;
+        }
+        #bgimg1{
+            width: 100%;
+            height: 100%;
+            background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_001.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        @keyframes bgimg1_an {
+            0% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_001.png");
+            }
+
+            0.83% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_002.png");
+            }
+
+            1.65% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_003.png");
+            }
+
+            2.48% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_004.png");
+            }
+
+            3.31% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_005.png");
+            }
+
+            4.13% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_006.png");
+            }
+
+            4.96% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_007.png");
+            }
+
+            5.79% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_008.png");
+            }
+
+            6.61% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_009.png");
+            }
+
+            7.44% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_010.png");
+            }
+
+            8.26% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_011.png");
+            }
+
+            9.09% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_012.png");
+            }
+
+            9.92% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_013.png");
+            }
+
+            10.74% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_014.png");
+            }
+
+            11.57% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_015.png");
+            }
+
+            12.40% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_016.png");
+            }
+
+            13.22% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_017.png");
+            }
+
+            14.05% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_018.png");
+            }
+
+            14.88% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_019.png");
+            }
+
+            15.70% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_020.png");
+            }
+
+            16.53% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_021.png");
+            }
+
+            17.36% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_022.png");
+            }
+
+            18.18% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_023.png");
+            }
+
+            19.01% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_024.png");
+            }
+
+            19.83% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_025.png");
+            }
+
+            20.66% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_026.png");
+            }
+
+            21.49% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_027.png");
+            }
+
+            22.31% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_028.png");
+            }
+
+            23.14% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_029.png");
+            }
+
+            23.97% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_030.png");
+            }
+
+            24.79% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_031.png");
+            }
+
+            25.62% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_032.png");
+            }
+
+            26.45% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_033.png");
+            }
+
+            27.27% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_034.png");
+            }
+
+            28.10% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_035.png");
+            }
+
+            28.93% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_036.png");
+            }
+
+            29.75% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_037.png");
+            }
+
+            30.58% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_038.png");
+            }
+
+            31.40% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_039.png");
+            }
+
+            32.23% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_040.png");
+            }
+
+            33.06% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_041.png");
+            }
+
+            33.88% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_042.png");
+            }
+
+            34.71% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_043.png");
+            }
+
+            35.54% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_044.png");
+            }
+
+            36.36% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_045.png");
+            }
+
+            37.19% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_046.png");
+            }
+
+            38.02% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_047.png");
+            }
+
+            38.84% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_048.png");
+            }
+
+            39.67% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_049.png");
+            }
+
+            40.50% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_050.png");
+            }
+
+            41.32% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_051.png");
+            }
+
+            42.15% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_052.png");
+            }
+
+            42.98% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_053.png");
+            }
+
+            43.80% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_054.png");
+            }
+
+            44.63% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_055.png");
+            }
+
+            45.45% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_056.png");
+            }
+
+            46.28% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_057.png");
+            }
+
+            47.11% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_058.png");
+            }
+
+            47.93% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_059.png");
+            }
+
+            48.76% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_060.png");
+            }
+
+            49.59% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_061.png");
+            }
+
+            50.41% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_062.png");
+            }
+
+            51.24% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_063.png");
+            }
+
+            52.07% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_064.png");
+            }
+
+            52.89% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_065.png");
+            }
+
+            53.72% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_066.png");
+            }
+
+            54.55% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_067.png");
+            }
+
+            55.37% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_068.png");
+            }
+
+            56.20% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_069.png");
+            }
+
+            57.02% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_070.png");
+            }
+
+            57.85% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_071.png");
+            }
+
+            58.68% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_072.png");
+            }
+
+            59.50% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_073.png");
+            }
+
+            60.33% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_074.png");
+            }
+
+            61.16% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_075.png");
+            }
+
+            61.98% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_076.png");
+            }
+
+            62.81% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_077.png");
+            }
+
+            63.64% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_078.png");
+            }
+
+            64.46% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_079.png");
+            }
+
+            65.29% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_080.png");
+            }
+
+            66.12% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_081.png");
+            }
+
+            66.94% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_082.png");
+            }
+
+            67.77% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_083.png");
+            }
+
+            68.60% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_084.png");
+            }
+
+            69.42% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_085.png");
+            }
+
+            70.25% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_086.png");
+            }
+
+            71.07% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_087.png");
+            }
+
+            71.90% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_088.png");
+            }
+
+            72.73% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_089.png");
+            }
+
+            73.55% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_090.png");
+            }
+
+            74.38% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_091.png");
+            }
+
+            75.21% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_092.png");
+            }
+
+            76.03% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_093.png");
+            }
+
+            76.86% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_094.png");
+            }
+
+            77.69% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_095.png");
+            }
+
+            78.51% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_096.png");
+            }
+
+            79.34% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_097.png");
+            }
+
+            80.17% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_098.png");
+            }
+
+            80.99% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_099.png");
+            }
+
+            81.82% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_100.png");
+            }
+
+            82.64% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_101.png");
+            }
+
+            83.47% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_102.png");
+            }
+
+            84.30% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_103.png");
+            }
+
+            85.12% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_104.png");
+            }
+
+            85.95% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_105.png");
+            }
+
+            86.78% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_106.png");
+            }
+
+            87.60% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_107.png");
+            }
+
+            88.43% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_108.png");
+            }
+
+            89.26% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_109.png");
+            }
+
+            90.08% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_110.png");
+            }
+
+            90.91% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_111.png");
+            }
+
+            91.74% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_112.png");
+            }
+
+            92.56% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_113.png");
+            }
+
+            93.39% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_114.png");
+            }
+
+            94.21% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_115.png");
+            }
+
+            95.04% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_116.png");
+            }
+
+            95.87% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_117.png");
+            }
+
+            96.69% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_118.png");
+            }
+
+            97.52% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_119.png");
+            }
+
+            98.35% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_120.png");
+            }
+
+            99.17%,
+            100% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg1_121.png");
+            }
+        }
+
+        #paoimg1Box{
+            width: 185px;
+            height: 340px;
+            right: -100px;
+            opacity: 0;
+        }
+        #paoimg1{
+            width: 185px;
+            height: 340px;
+            background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_01.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        @keyframes paoimg1_an {
+            0% {
+                width: 185px;
+                height: 340px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_01.png");
+                background-size: 185px 340px;
+            }
+
+            2.13% {
+                width: 183px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_02.png");
+                background-size: 183px 340px;
+            }
+
+            4.26% {
+                width: 184px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_03.png");
+                background-size: 184px 340px;
+            }
+
+            6.38% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_04.png");
+            }
+
+            8.51% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_05.png");
+            }
+
+            10.64% {
+                width: 183px;
+                height: 339px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_06.png");
+                background-size: 183px 339px;
+            }
+
+            12.77% {
+                width: 184px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_07.png");
+                background-size: 184px 339px;
+            }
+
+            14.89% {
+                width: 182px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_08.png");
+                background-size: 182px 339px;
+            }
+
+            17.02% {
+                width: 186px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_09.png");
+                background-size: 186px 339px;
+            }
+
+            19.15% {
+                width: 188px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_10.png");
+                background-size: 188px 339px;
+            }
+
+            21.28% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_11.png");
+            }
+
+            23.40% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_12.png");
+            }
+
+            25.53% {
+                width: 186px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_13.png");
+                background-size: 186px 339px;
+            }
+
+            27.66% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_14.png");
+            }
+
+            29.79% {
+                width: 183px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_15.png");
+                background-size: 183px 339px;
+            }
+
+            31.91% {
+                width: 185px;
+                height: 338px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_16.png");
+                background-size: 185px 338px;
+            }
+
+            34.04% {
+                width: 187px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_17.png");
+                background-size: 187px 338px;
+            }
+
+            36.17% {
+                width: 188px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_18.png");
+                background-size: 188px 338px;
+            }
+
+            38.30% {
+                width: 187px;
+                height: 339px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_19.png");
+                background-size: 187px 339px;
+            }
+
+            40.43% {
+                width: 185px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_20.png");
+                background-size: 185px 339px;
+            }
+
+            42.55% {
+                width: 184px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_21.png");
+                background-size: 184px 339px;
+            }
+
+            44.68% {
+                width: 183px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_22.png");
+                background-size: 183px 339px;
+            }
+
+            46.81% {
+                width: 184px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_23.png");
+                background-size: 184px 339px;
+            }
+
+            48.94% {
+                width: 185px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_24.png");
+                background-size: 185px 339px;
+            }
+
+            51.06% {
+                width: 184px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_25.png");
+                background-size: 184px 339px;
+            }
+
+            53.19% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_26.png");
+            }
+
+            55.32% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_27.png");
+            }
+
+            57.45% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_28.png");
+            }
+
+            59.57% {
+                width: 185px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_29.png");
+                background-size: 185px 339px;
+            }
+
+            61.70% {
+                width: 184px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_30.png");
+                background-size: 184px 339px;
+            }
+
+            63.83% {
+                width: 182px;
+                height: 340px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_31.png");
+                background-size: 182px 340px;
+            }
+
+            65.96% {
+                width: 183px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_32.png");
+                background-size: 183px 340px;
+            }
+
+            68.09% {
+                width: 186px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_33.png");
+                background-size: 186px 340px;
+            }
+
+            70.21% {
+                width: 187px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_34.png");
+                background-size: 187px 340px;
+            }
+
+            72.34% {
+                width: 188px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_35.png");
+                background-size: 188px 340px;
+            }
+
+            74.47% {
+                width: 187px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_36.png");
+                background-size: 187px 340px;
+            }
+
+            76.60% {
+                width: 185px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_37.png");
+                background-size: 185px 340px;
+            }
+
+            78.72% {
+                width: 184px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_38.png");
+                background-size: 184px 340px;
+            }
+
+            80.85% {
+                width: 185px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_39.png");
+                background-size: 185px 340px;
+            }
+
+            82.98% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_40.png");
+            }
+
+            85.11% {
+                width: 187px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_41.png");
+                background-size: 187px 340px;
+            }
+
+            87.23% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_42.png");
+            }
+
+            89.36% {
+                width: 185px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_43.png");
+                background-size: 185px 340px;
+            }
+
+            91.49% {
+                width: 184px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_44.png");
+                background-size: 184px 340px;
+            }
+
+            93.62% {
+                width: 183px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_45.png");
+                background-size: 183px 340px;
+            }
+
+            95.74% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_46.png");
+            }
+
+            97.87%,
+            100% {
+                width: 184px;
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_47.png");
+                background-size: 184px 340px;
+            }
+        }
+
+        #paoimg2Box{
+            width: 185px;
+            height: 340px;
+            left: -100px;
+            opacity: 0;
+            transform: rotateY(180deg);
+        }
+        #paoimg2{
+            width: 185px;
+            height: 340px;
+            background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bp_01.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+
+        #tabimgBox{
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+        #tabimg{
+            width: 100%;
+            height: 100%;
+            background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_01.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        @keyframes tabimg_an {
+            0% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_01.png");
+            }
+
+            3.03% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_02.png");
+            }
+
+            6.06% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_03.png");
+            }
+
+            9.09% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_04.png");
+            }
+
+            12.12% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_05.png");
+            }
+
+            15.15% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_06.png");
+            }
+
+            18.18% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_07.png");
+            }
+
+            21.21% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_08.png");
+            }
+
+            24.24% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_09.png");
+            }
+
+            27.27% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_10.png");
+            }
+
+            30.30% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_11.png");
+            }
+
+            33.33% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_12.png");
+            }
+
+            36.36% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_13.png");
+            }
+
+            39.39% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_14.png");
+            }
+
+            42.42% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_15.png");
+            }
+
+            45.45% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_16.png");
+            }
+
+            48.48% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_17.png");
+            }
+
+            51.52% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_18.png");
+            }
+
+            54.55% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_19.png");
+            }
+
+            57.58% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_20.png");
+            }
+
+            60.61% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_21.png");
+            }
+
+            63.64% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_22.png");
+            }
+
+            66.67% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_23.png");
+            }
+
+            69.70% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_24.png");
+            }
+
+            72.73% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_25.png");
+            }
+
+            75.76% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_26.png");
+            }
+
+            78.79% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_27.png");
+            }
+
+            81.82% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_28.png");
+            }
+
+            84.85% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_29.png");
+            }
+
+            87.88% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_30.png");
+            }
+
+            90.91% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_31.png");
+            }
+
+            93.94% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_32.png");
+            }
+
+            96.97%,
+            100% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/tb_33.png");
+            }
+        }
+
+        #bgimg2Box{
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+        #bgimg2{
+            width: 100%;
+            height: 100%;
+            background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_01.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        @keyframes bgimg2_an {
+            0% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_01.png");
+            }
+
+            1.64% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_02.png");
+            }
+
+            3.28% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_03.png");
+            }
+
+            4.92% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_04.png");
+            }
+
+            6.56% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_05.png");
+            }
+
+            8.20% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_06.png");
+            }
+
+            9.84% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_07.png");
+            }
+
+            11.48% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_08.png");
+            }
+
+            13.11% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_09.png");
+            }
+
+            14.75% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_10.png");
+            }
+
+            16.39% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_11.png");
+            }
+
+            18.03% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_12.png");
+            }
+
+            19.67% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_13.png");
+            }
+
+            21.31% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_14.png");
+            }
+
+            22.95% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_15.png");
+            }
+
+            24.59% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_16.png");
+            }
+
+            26.23% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_17.png");
+            }
+
+            27.87% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_18.png");
+            }
+
+            29.51% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_19.png");
+            }
+
+            31.15% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_20.png");
+            }
+
+            32.79% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_21.png");
+            }
+
+            34.43% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_22.png");
+            }
+
+            36.07% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_23.png");
+            }
+
+            37.70% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_24.png");
+            }
+
+            39.34% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_25.png");
+            }
+
+            40.98% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_26.png");
+            }
+
+            42.62% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_27.png");
+            }
+
+            44.26% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_28.png");
+            }
+
+            45.90% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_29.png");
+            }
+
+            47.54% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_30.png");
+            }
+
+            49.18% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_31.png");
+            }
+
+            50.82% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_32.png");
+            }
+
+            52.46% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_33.png");
+            }
+
+            54.10% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_34.png");
+            }
+
+            55.74% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_35.png");
+            }
+
+            57.38% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_36.png");
+            }
+
+            59.02% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_37.png");
+            }
+
+            60.66% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_38.png");
+            }
+
+            62.30% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_39.png");
+            }
+
+            63.93% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_40.png");
+            }
+
+            65.57% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_41.png");
+            }
+
+            67.21% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_42.png");
+            }
+
+            68.85% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_43.png");
+            }
+
+            70.49% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_44.png");
+            }
+
+            72.13% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_45.png");
+            }
+
+            73.77% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_46.png");
+            }
+
+            75.41% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_47.png");
+            }
+
+            77.05% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_48.png");
+            }
+
+            78.69% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_49.png");
+            }
+
+            80.33% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_50.png");
+            }
+
+            81.97% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_51.png");
+            }
+
+            83.61% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_52.png");
+            }
+
+            85.25% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_53.png");
+            }
+
+            86.89% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_54.png");
+            }
+
+            88.52% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_55.png");
+            }
+
+            90.16% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_56.png");
+            }
+
+            91.80% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_57.png");
+            }
+
+            93.44% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_58.png");
+            }
+
+            95.08% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_59.png");
+            }
+
+            96.72% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_60.png");
+            }
+
+            98.36%,
+            100% {
+                background-image: url("https://s1.kagirl.cn/pic/futuyingchun2023/bg2_61.png");
+            }
+        }
+
+        @-webkit-keyframes showimg {
+            0% {
+                opacity: 0;
+                transform: translate(500px, 0) scale(.737)
+            }
+            16.4% {
+                opacity: 1;
+                transform: translate(0, 0) scale(1.044)
+            }
+            32.2% {
+                opacity: 1;
+                transform: translate(0, 0) scale(1.007)
+            }
+            49.3% {
+                opacity: 1;
+                transform: translate(0, 0) scale(1.044)
+            }
+            67.1% {
+                opacity: 1;
+                transform: translate(0, 0) scale(1.007)
+            }
+            83.6% {
+                opacity: 1;
+                transform: translate(0, 0) scale(1.044)
+            }
+            100% {
+                opacity: 0;
+                transform: translate(-500px, 0) scale(.683)
+            }
+        }
+
+        #opac_box{
+            position: absolute;
+            opacity: 0;
+        }
+        #bgimg1_opac{
+            position: absolute;
+            -webkit-animation: bgimg1_an 2s steps(1) infinite;
+        }
+        #paoimg1_opac{
+            position: absolute;
+            -webkit-animation: paoimg1_an 2s 2s steps(1) infinite;
+        }
+        #tabimg_opac{
+            position: absolute;
+            -webkit-animation: tabimg_an 2s 4s steps(1) infinite;
+        }
+        #bgimg2_opac{
+            position: absolute;
+            -webkit-animation: bgimg2_an 2s 6s steps(1) infinite;
+        }
+
+    </style>
+    <script>
+        var e_desc = title;
+		var slider_images_url = images_list;
+		var slider_images_urlmin = images_list;
+        var image_size_width = [];
+        var image_size_height = [];
+        var image_url_index = 0;
+        var have_num = 0;
+        var error_num = 0;
+        var canshow = true;
+        var reshow = false;
+        var timeout = [];
+        var delaytime = 10000;                // 根据title来调整
+        var createNodeArr = [];               // 代替原来clearnode里面的xinArr
+        var createNodeObj = {};
+        var module_inits = [];
+        var load_flag = true;
+
+        function load_init_modules(){
+            if(!load_flag) return;
+
+            for(var i=0;i<module_inits.length; i++){
+                module_inits[i]();
+            }
+            load_flag = false;
+        }
+
+        function call_me(fun)
+        {
+            module_inits.push(fun);
+        }
+
+        var ua = navigator.userAgent.toLowerCase();
+
+        function e(){
+
+            if(ua.match(/MicroMessenger/i) != 'micromessenger'){
+                load_init_modules();
+                return;
+            }
+            const time = 2000;
+            const timer = setTimeout(load_init_modules,time);
+        }
+        var get_pid = function (url) {
+            var index1 = url.indexOf("?");
+            if (index1 != -1) {
+                url = url.substr(0, index1);
+            }
+            return url.toString().substr(url.lastIndexOf("/") + 1);
+        }
+
+        function nid(name) {
+            if (!createNodeObj[name]) {
+                createNodeObj[name] = true;
+                createNodeArr.push(name);
+            }
+            return document.getElementById(name);
+        }
+        function id(name) {
+            return document.getElementById(name);
+        }
+        //每次执行加载后5张图片
+        var bl_keepload = 'first';
+        var step_loadnum = 5;
+
+        function step_load() {
+            var load_num = 0
+            //初步加载X张
+            if (image_url_index == 0 && bl_keepload == 'first') {
+                console.log('loading continue');
+                if (slider_images_url.length > step_loadnum) {
+                    load_num = step_loadnum;
+                    bl_keepload = 'next';
+                } else {
+                    load_num = slider_images_url.length;
+                    bl_keepload = 'end';
+                }
+                for (var i = 0; i < load_num; i++) {
+                    var img = new Image();
+                    img.index = i;
+                    img.src = slider_images_url[i];
+                    img.onload = image_onload;
+                    img.onerror = image_onerror;
+                    Onload_imgs_url[i] = 'loading';
+                }
+            } else if (bl_keepload == 'end') {
+                return;
+            } else {
+                console.log('loading continue');
+                if (slider_images_url.length - image_url_index > step_loadnum * 2) {
+                    load_num = step_loadnum;
+                } else {
+                    load_num = slider_images_url.length - image_url_index - step_loadnum;
+                    bl_keepload = 'end';
+                }
+                for (var i = image_url_index + step_loadnum; i < image_url_index + step_loadnum + load_num; i++) {
+                    var img = new Image();
+                    img.index = i;
+                    img.src = slider_images_url[i];
+                    img.onload = image_onload;
+                    img.onerror = image_onerror;
+                    Onload_imgs_url[i] = 'loading';
+                }
+            }
+
+            // console.log(Onload_imgs_url);
+
+        }
+
+        function load_images() {
+            reshow = false;
+            image_size_width = [];
+            image_size_height = [];
+            Onload_imgs_url = [];
+            image_url_index = 0;
+            have_num = 0;
+            error_num = 0;
+            begin_titletime = new Date();
+            begin_titletime = begin_titletime.getTime();
+            canshow = true;
+            // photo_start_init('showtitle',0);
+            showtitle();
+            bl_keepload = 'first';
+            step_load();
+        }
+
+        function image_onerror(event) {
+            var img = event.target;
+            var index = img.index;
+            if (index < step_loadnum)
+                error_num++;
+            Onload_imgs_url[index] = 'not find';
+
+            if ((have_num + error_num >= step_loadnum || slider_images_url.length == (have_num + error_num)) && canshow == true) {
+                reshow = false;
+                canshow = false;
+                if (have_num == 0)
+                    return;
+                var end_titletime = new Date();
+                end_titletime = end_titletime.getTime();
+                var dis_titletime = Math.abs(end_titletime - begin_titletime);
+                if (dis_titletime > delaytime) {
+                    liangziyun_kawa();
+                    // photo_start_init('liangziyun_kawa',delaytime);
+                } else {
+                    dis_titletime = delaytime - dis_titletime;
+                    timeout.push(setTimeout(function () {
+                        liangziyun_kawa();
+                        // photo_start_init('liangziyun_kawa',delaytime);
+                    }, dis_titletime));
+                }
+            }
+        }
+
+        function image_onload(event) {
+            if (reshow == true)
+                return;
+            var img = event.target;
+            var index = img.index;
+            if (index < step_loadnum) {
+                have_num++;
+            }
+            Onload_imgs_url[index] = img.src;
+            image_size_height[index] = img.height;
+            image_size_width[index] = img.width;
+
+            console.log(Onload_imgs_url[index]);
+
+            if ((have_num + error_num >= step_loadnum || slider_images_url.length == (have_num + error_num)) && canshow == true) {
+                reshow = false;
+                canshow = false;
+                if (have_num == 0)
+                    return;
+                var end_titletime = new Date();
+                end_titletime = end_titletime.getTime();
+                var dis_titletime = Math.abs(end_titletime - begin_titletime);
+                if (dis_titletime > delaytime) {
+                    liangziyun_kawa();
+                    // photo_start_init('liangziyun_kawa',delaytime);
+                } else {
+                    dis_titletime = delaytime - dis_titletime;
+                    timeout.push(setTimeout(function () {
+                        liangziyun_kawa();
+                        // photo_start_init('liangziyun_kawa',delaytime);
+                    }, dis_titletime));
+                }
+
+            }
+        }
+
+        function getLoad(stime) {
+            var speed=110;
+            var n=0;
+            var timer = null;
+            var timestamp = new Date().getTime();
+            var nowtime = new Date().getTime();
+            var timer = setInterval(function(){
+                if(n<100){
+                    // n += Math.floor(Math.round(Math.random()*(100-10)+10)/10);// 这里采用随机的两位数来模拟
+                    nowtime = new Date().getTime();
+                    n =Math.floor(Math.round(((nowtime - timestamp) / stime)*100));
+                    if(n>100) n=100;
+                    nid('photoLoadPre').innerHTML = "正在加载"+n+"%";
+                }else{
+                    console.log("加载完成1");
+                    clearInterval(timer);
+                }
+            },speed);
+        }
+        function showtitle() {
+            getLoad(5000);
+            timeout.push(setTimeout(function () {
+                nid('titlecontent').innerHTML = e_desc;
+                nid("photo_load").style.webkitAnimation = "fadeOut 0.5s linear both";
+                nid("bgimg1").style.webkitAnimation = "bgimg1_an 5.3s steps(1) infinite";
+                nid("paoimg1Box").style.webkitAnimation = "fadeIn 0.8s linear both";
+                nid("paoimg1").style.webkitAnimation = "paoimg1_an 1.9s steps(1) infinite";
+                nid("paoimg2Box").style.webkitAnimation = "fadeIn 0.8s linear both";
+                nid("paoimg2").style.webkitAnimation = "paoimg1_an 1.9s steps(1) infinite";
+                nid("ftyc").style.webkitAnimation = "ftyc_an 3.3s linear both";
+                nid("kuangBlock").style.webkitAnimation = "kuangBlock_an 3s 2.3s linear both";
+                nid("pagetitle").style.webkitAnimation = "pagetitle_an 3s 2.3s linear both";
+                nid("botk").style.webkitAnimation = "botk_an 5.3s linear both";
+                nid("tabimgBox").style.webkitAnimation = "fadeIn 0.5s 4.7s linear both";
+                nid("tabimg").style.webkitAnimation = "tabimg_an 1.2s 4.7s steps(1) both";
+                timeout.push(setTimeout(function () {
+                    nid("bgimg2Box").style.webkitAnimation = "fadeIn 0.8s linear both";
+                    nid("bgimg2").style.webkitAnimation = "bgimg2_an 2.5s steps(1) infinite";
+                    nid("topkBox").style.webkitAnimation = "fadeIn 1s linear both";
+                    nid("yunBox").style.webkitAnimation = "fadeIn 1s linear both";
+                    nid("shanBox").style.webkitAnimation = "fadeIn 1s linear both";
+                    nid("tuziBox").style.webkitAnimation = "fadeIn 1s linear both";
+                    show1();
+                }, 5300));
+            }, 5000));
+        }
+
+        function liangziyun_kawa() {
+
+        }
+        function show1() {
+            var imageObj = setImage("1");
+            var style = imageObj.style;
+            nid('page1').style.backgroundImage = "url(" + imageObj.src + ")";
+            nid('page1_block').setAttribute('style', style.block);
+            nid('page1_block').style.webkitAnimation = 'showimg 6.3s linear both';
+            nid('word1').innerHTML = imageObj.desc;
+            timeout.push(setTimeout(function () {
+                show2();
+            }, 5300));
+            timeout.push(setTimeout(function () {
+                nid('page1_block').style.webkitAnimation = '';
+                nid('word1').style.webkitAnimation = '';
+            }, 7000));
+        }
+        function show2() {
+            var imageObj = setImage("2");
+            var style = imageObj.style;
+            nid('page2').style.backgroundImage = "url(" + imageObj.src + ")";
+            nid('page2_block').setAttribute('style', style.block);
+            nid('page2_block').style.webkitAnimation = 'showimg 6.3s linear both';
+            nid('word2').innerHTML = imageObj.desc;
+            timeout.push(setTimeout(function () {
+                show3();
+            }, 5300));
+            timeout.push(setTimeout(function () {
+                nid('page2_block').style.webkitAnimation = '';
+                nid('word2').style.webkitAnimation = '';
+            }, 7000));
+        }
+        function show3() {
+            var imageObj = setImage("3");
+            var style = imageObj.style;
+            nid('page3').style.backgroundImage = "url(" + imageObj.src + ")";
+            nid('page3_block').setAttribute('style', style.block);
+            nid('page3_block').style.webkitAnimation = 'showimg 6.3s linear both';
+            nid('word3').innerHTML = imageObj.desc;
+            timeout.push(setTimeout(function () {
+                show1();
+            }, 5300));
+            timeout.push(setTimeout(function () {
+                nid('page3_block').style.webkitAnimation = '';
+                nid('word3').style.webkitAnimation = '';
+            }, 7000));
+        }
+        function getImageStyle(obj, idname) {
+            var style = {};
+            var maxw = id('container').offsetWidth;
+            var maxh = id('container').offsetHeight;
+
+            var per = obj.width / obj.height;
+            var bper = maxw / 500;
+            var bw = 500,
+                bh = maxh / bper;
+            //竖照
+            if (per < (maxw / maxh)) {
+                style.height = bh * 0.85;
+                style.width = style.height * per;
+            } else {
+                style.width = bw * 0.85;
+                style.height = style.width / per;
+            }
+            style.top = (bh - style.height) / 2 - 30;
+            style.left = (bw - style.width) / 2;
+            style.per = per;
+
+            var objStyle = {}
+            objStyle.block = "width:" + style.width + "px;height:" + style.height + "px;left:" + style.left + "px;top:" + style.top + "px;"
+            return objStyle;
+        }
+
+        function setImage(idname) {
+            if (reshow == true)
+                return;
+            while (Onload_imgs_url[image_url_index] == 'not find' || Onload_imgs_url[image_url_index] == 'loading') {
+                if (image_url_index % step_loadnum == 0) {
+                    step_load();
+                }
+
+                image_url_index++;
+                if (image_url_index == Onload_imgs_url.length)
+                    image_url_index = 0;
+
+                // if(end_pic_status == 1 && image_url_index == 0){
+                //     callend(1);
+                // }
+                // image_url_index++;
+                // if (image_url_index >= Onload_imgs_url.length){
+                //     end_pic_status = 1;
+                //     image_url_index = 0;
+                // }
+
+            }
+
+            if (image_url_index % step_loadnum == 0) {
+                step_load();
+            }
+            var img_bili = image_size_width[image_url_index] / image_size_height[image_url_index];
+
+            var word = id('word' + idname);
+            var str = words[get_pid(Onload_imgs_url[image_url_index])];
+            if (str == undefined || str.length < 1) {
+                str = ''
+            }
+
+            var imageObj = {
+                'width': image_size_width[image_url_index],
+                'height': image_size_height[image_url_index],
+                'src': Onload_imgs_url[image_url_index],
+                'desc': str,
+            }
+
+            imageObj.style = getImageStyle(imageObj, idname);
+
+
+            // if(end_pic_status == 1 && image_url_index == 0){
+            //     callend(1);
+            // }
+            // image_url_index++;
+            // if (image_url_index >= Onload_imgs_url.length){
+            //     end_pic_status = 1;
+            //     image_url_index = 0;
+            // }
+
+            image_url_index++;
+            if (image_url_index == Onload_imgs_url.length)
+                image_url_index = 0;
+
+            return imageObj;
+        }
+
+        call_me(load_images);
+
+        function reload_scene() {
+            clearnode();
+            reshow = true;
+            setTimeout(load_images, 100);
+        }
+
+        function clearnode() {
+            timeout.forEach(function (t) {
+                clearTimeout(t);
+            })
+            // console.log(createNodeArr)
+            for (var i = 0; i < createNodeArr.length; i++) {
+                var dom = id(createNodeArr[i]);
+                if(dom && dom!=='undefined'){
+                    dom.style.webkitAnimation = '';
+                }
+            }
+        }
+        window.addEventListener('load', e, false);
+    </script>
+</body>
+</html>
