@@ -1,0 +1,2 @@
+import svgIcon from '/src/components/SvgIcon/index.vue'
+app.component('svg-icon', svgIcon)
