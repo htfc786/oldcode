@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册_音乐相册</title>
+    <style>
+        body {
+            background: #f3f3f3;
+        }
+        #big-border {
+            background: #fff;
+            margin: 0 auto;
+            padding: 10px;
+        }
+		#page-title {
+			text-align: center;
+		}
+        #little-page-title{
+            text-align: right;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="big-border">
+        <h1 id="page-title">注册</h1>
+        <h6 id="little-page-title">by--htfc786</h6>
+        <div id="msg"></div>
+        <hr>
+        <div id="page-title">
+            <form action="register.php" method="post">  
+                用户名：<input type="text" name="username"/> 
+                <br/>  
+                密码：<input type="password" name="password"/>  
+                <br/>  
+                确认密码：<input type="password" name="confirm"/>  
+                <br/>  
+                <input type="Submit" value="注册"/> 
+                <br/>
+                <span>已有账号？<a href="login.php">登录</a></span>
+            </form>
+        </div>
+        <hr>
+    </div>
+</body>
+</html>

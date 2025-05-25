@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        canvas { display: block; background-color: #000; }
+    </style>
+</head>
+<body>
+<button id="playPauseBtn" onclick="play()">播放</button>
+<button id="resetBtn" onclick="reset()">重置</button>
+中心天体质量：<input type="number" id="centerMass" value="1e15" step="1e14">
+卫星质量：<input type="number" id="plantMass" value="100">
+轨道半径：<input type="number" id="orbitRadius" value="200">
+初速度：<input type="number" id="initialVelocity" value="2.5" step="0.1">
+轨道速度：<span id="orbitVelocity"></span>
+<canvas id="space"></canvas>
+<script>
+const G = 6.67430e-11;
+// const G = 6.6;
+doms = {
+    playPauseBtn: document.getElementById('playPauseBtn'),
+    resetBtn: document.getElementById('resetBtn'),
+    centerMass: document.getElementById('centerMass'),
+    plantMass: document.getElementById('plantMass'),
+    orbitRadius: document.getElementById('orbitRadius'),
+    initialVelocity: document.getElementById('initialVelocity'),
+    orbitVelocity: document.getElementById('orbitVelocity'),
+}
+
+const canvas = document.getElementById('space');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+let isPaused = true;
+
+function drawCircle(x, y, radius, color) {
+    ctx.beginPath();
+    ctx.arc(x, y, radius, 0, Math.PI * 2);
+    ctx.fillStyle = color;
+    ctx.fill();
+}
+
+class Star {
+    x;
+    y;
+    radius;
+    color;
+    mass;
+    vx = 0;
+    vy = 0;
+
+    constructor({ x, y, radius, color, mass, vx = 0, vy = 0}) {
+        this.x = x; this.y = y; this.radius = radius; this.color = color; this.mass = mass; this.vx = vx; this.vy = vy;
+    }
+
+    update() {
+        // 根据速度更新位置
+        this.x += this.vx;
+        this.y += this.vy;
+        this.draw()
+    }
+
+    draw() {
+        drawCircle(this.x, this.y, this.radius, this.color);
+    }
+}
+
+// 创建一个中心天体和一个卫星
+const centerStar = new Star({ x: canvas.width / 2, y: canvas.height / 2, radius: 50, color: '#fff', mass: 1e15 });
+const plant = new Star({ x: canvas.width / 2 + 200, y: canvas.height / 2, radius: 10, color: '#ff0', mass: 100, vx: 0, vy: 2.5 });
+//轨道速度
+// v = sqrt(G * M / r)
+const dx = plant.x - centerStar.x;
+const dy = plant.y - centerStar.y;
+const r = Math.sqrt(dx * dx + dy * dy);
+const v = Math.sqrt(G * centerStar.mass / r);
+console.log(v)
+
+function update() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // 根据万有引力定律计算卫星位置
+    // 计算卫星与中心天体的距离
+    const dx = plant.x - centerStar.x;
+    const dy = plant.y - centerStar.y;
+    const r = Math.sqrt(dx * dx + dy * dy);
+    // 计算向心力=>万有引力
+    // F = G * m1 * m2 / r^2
+    const Fw = G * centerStar.mass * plant.mass / Math.pow(r, 2);
+    // 力的正交分解
+    // 算角度 反正切
+    const angle = Math.atan2(dy, dx);
+    // 力的分解
+    const Fx = Fw * Math.cos(angle);
+    const Fy = Fw * Math.sin(angle);
+    // console.log(Fx, Fy, Fw, angle)
+    // 根据牛顿第二定律计算加速度
+    // a = F / m
+    const ax = Fx / plant.mass;
+    const ay = Fy / plant.mass;
+    // 根据加速度更新速度
+    // v = v0 + a * t
+    // 间隔时间
+    const t = 0.016; /// 16/1000
+    plant.vx += -ax * t;
+    plant.vy += -ay * t;
+
+
+    // 绘制天体
+    centerStar.update();
+    plant.update();
+
+    // 左上角绘制卫星信息
+    ctx.fillStyle = '#fff';
+    ctx.font = '16px Arial';
+    ctx.fillText(`x= ${plant.x.toFixed(2)}, y= ${plant.y.toFixed(2)}`, 10, 20);
+    ctx.fillText(`vx= ${plant.vx.toFixed(2)}, vy= ${plant.vy.toFixed(2)}`, 10, 40);
+    ctx.fillText(`F= ${Fw.toFixed(2)}, r= ${r.toFixed(2)}`, 10, 60);
+    
+
+    if (!isPaused) {
+        requestAnimationFrame(update);
+    }
+}
+
+function play() {
+    isPaused = !isPaused;
+    doms.playPauseBtn.innerText = isPaused ? '播放' : '暂停';
+    if (!isPaused) {
+        update();
+    }
+}
+
+function reset() {
+    centerStar.mass = parseFloat(doms.centerMass.value) || 1e15;
+    plant.mass = parseFloat(doms.plantMass.value) || 100;
+    const r = parseFloat(doms.orbitRadius.value) || 200;
+    plant.vy = parseFloat(doms.initialVelocity.value) || 2.5;
+    plant.x = canvas.width / 2 + r;
+    plant.y = canvas.height / 2;
+    plant.vx = 0;
+    // 算轨道速度
+    // v = sqrt(G * M / r)
+    const v = Math.sqrt(G * centerStar.mass / r);
+    doms.orbitVelocity.innerText = v.toFixed(2);
+    update();
+
+}
+
+reset()
+update();
+</script>
+</body>
+</html>

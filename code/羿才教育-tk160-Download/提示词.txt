@@ -1,0 +1,400 @@
+﻿请帮我编写一个程序，批量获取某网站的题目数据。
+该网站包含题目列表，进入后可选择题库，进入后可以针对知识点选择子题库，子题库里还有不同的“试卷”可供选则，“试卷”里有需要的题目。请帮我使用nodejs编写程序，使用fetch发送网络请求，通过api获取全部题目数据并按照“试卷”为单位保存到html文件里，可供打印，和一份json文件，可供处理。以下提供了一些api接口和他们的返回数据，请据此编写程序，不要乱编！
+
+需要获取的内容有：
+1. 题号
+2. 单/多选，如果是多选，请在题目前面标上"(多选)"字样
+3. 材料("stem") + 题目内容("issue")
+4. 选项
+5. 答案（并不展示在题目里，展示在文档最后）
+如果题目为带子题的题目，其父题目被看作材料展示在整体上面（不显示题号），在材料后面写上"据此完成x~y题。"，与材料使用不同字体。在此之后放置题目（在此顺延显示题号）。
+
+经测试可能出现的问题：
+1. 可能出现多题库id相同，但过期时间不同，这样的情况只需获取其中一个，内容是一样的。
+2. 题目类型经测试至少分为3种，接口中"subType": 1为单选题，"subType": 2为多选题，"subType": 6为带子题的题目，其余暂未发现，请留出空位方便以后扩展，如出现其他情况，请在控制台给出警告并停止下载那一部分内容。
+3. 一些题目中由于字可能在某些设备上渲染不出来，故采用图片方式加载，一般会使用"「(url)」"进行包裹，域名前缀一般为"https://img.huikao8.com/"，如遇到，请将图片下载保存到本地文件夹并插入文档。
+4. 如果可以，写html页面可以写自适应的css，应对不同长度的选项（如下方示例），可以1个、2个或4个选项一行，自适应打印，如果实现不了就算了吧。
+5.将下载好的题目内容保存json文件（只要处理成功立刻保存），尽量捕获处理过程中的错误并显示至控制台，下次运行程序时读取文件并重新处理那些处理失败（记录文件里没有）的内容。
+6. 将代码保存到一个文件里，尽量多抽离函数，尽量减少硬编码，可在文件前面定义常量，多写注释，方便以后维护。
+7. 在命令行输出日志，方便用户了解执行情况
+8. 生成的代码文件需要可以直接运行！无需用户拼接等操作。
+
+示例：```
+1.题目一内容题目一内容题目一内容（）
+	A. 题目一选项	B. 题目一选项
+	C. 题目一选项	D. 题目一选项
+2.题目二内容题目二内容题目二内容（）
+	A. 题目二长长长长长长长长长长长长长长长选项
+	B. 题目二长长长长长长长长长长长长长长长选项
+	C. 题目二长长长长长长长长长长长长长长长选项
+	D. 题目二长长长长长长长长长长长长长长长选项
+3.题目三内容题目三内容题目三内容（）
+	A.短选项	B.短选项	C.短选项	D.短选项	
+4.(多选)多选题目多选题目多选题目（）
+	A. 题目选项	B. 题目选项
+	C. 题目选项	D. 题目选项
+	E. 题目选项
+这里是材料这里是材料这里是材料这里是材料这里是材料这里是材料这里是材料这里是材料这里是材料。据此完成5~6题。
+5.材料题目材料题目材料题目材料题目（）
+	A.选项	B.选项	C.选项	D.选项	
+6.材料题目材料题目材料题目材料题目（）
+	A. 题目选项	B. 题目选项
+	C. 题目选项	D. 题目选项
+7.中间可以插入非材料的题目内容（）
+	A.选项	B.选项	C.选项	D.选项	
+这里是材料这里是材料这里是材料这里是材料这里是材料这里是材料这里是材料这里是材料这里是材料。据此完成8~9题。
+8.材料题目材料题目材料题目材料题目（）
+	A.选项	B.选项	C.选项	D.选项	
+9.材料题目材料题目材料题目材料题目（）
+	A. 题目选项	B. 题目选项
+	C. 题目选项	D. 题目选项
+
+```
+
+题目json格式：```json
+{
+  "题库名字": {
+    "子题库名字": {
+      "试卷名字": [ // 如果有可以继续套娃
+        {
+          "subType": 1, // 题目类型
+          "stem": "材料",
+          "issue": "问题",
+          "option": ["A.", "B.", "C.", "D."],
+          "answer": "A",
+          "children": [ // 如果有子题目，可以继续写
+
+          ]
+        }
+      ]
+    }
+  }
+}```
+
+以下为获取数据的接口：
+获取题目接口：
+curl -X GET 'https://www.tk160.com/huikao_mobile/qeuryAppSubjectList?sectionId=c6077e46bf4a4d71a82818bc77c6b743&type=2' -H 'User-Agent: okhttp/3.11.0' -H 'Connection: Keep-Alive' -H 'Accept-Encoding: gzip' -H 'If-Modified-Since: Fri, 16 May 2025 11:20:35 GMT' -H 'interfaceType: app' -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJ1c2VyUGhvbmUiOiIxODIyMjE4OTE1NSIsImV4cCI6MTc3ODkzMDI5OSwidXNlcklkIjoiMTc3ODM0OTY1NjU5ODc3Nzg1NiJ9.IkEHA_wDg3bBQuapZ6YAN92G2raAB3Cb8tlWZePflPUk0v8Q0vK4BYoAXHS7_DrABKFG_fE5EqXpuUS7EA8-2w' --http1.1
+返回数据： ```json
+{
+  "code": 0,
+  "msg": "查询成功",
+  "data": [
+    {
+      "1": [
+        {
+          "id": "869b59a822e64c95bfe5b5b265c87800",
+          "sectionId": "c6077e46bf4a4d71a82818bc77c6b743",
+          "treeIds": "a36b73c48d3d4fa8aa3272e384180c53,c6077e46bf4a4d71a82818bc77c6b743,",
+          "parentId": "0",
+          "lastId": "869b59a822e64c95bfe5b5b265c87800",
+          "subType": 1,
+          "stem": null,
+          "issue": "\"夫百病之始生也，皆生于风雨寒暑，清湿喜怒\"之\"清湿\"是指",
+          "stemTail": null,
+          "sOption": "A.湿邪|B.风湿|C.痰湿|D.寒湿|E.湿热",
+          "answer": "D",
+          "userAnswer": null,
+          "analysis": "<br />",
+          "number": 1,
+          "order": 2700722,
+          "childre": []
+        },
+        {
+          "id": "18c120464f6840028e8f491a4cbd836f",
+          "sectionId": "c6077e46bf4a4d71a82818bc77c6b743",
+          "treeIds": "a36b73c48d3d4fa8aa3272e384180c53,c6077e46bf4a4d71a82818bc77c6b743,",
+          "parentId": "0",
+          "lastId": null,
+          "subType": 1,
+          "stem": null,
+          "issue": "\"邪气淫「yiwen_img/importSubject/64489aee745c469e80e0baa040489422.png」\"中\"淫「yiwen_img/importSubject/64489aee745c469e80e0baa040489422.png」\"的正确解释是",
+          "stemTail": null,
+          "sOption": "A.浸淫扩散|B.满溢|C.充满|D.流淫|E.淫溢",
+          "answer": "A",
+          "userAnswer": null,
+          "analysis": "<br />",
+          "number": 1,
+          "order": 2700723,
+          "childre": []
+        },
+        {
+          "id": "740c818a150949c099a28c661a97a4e8",
+          "sectionId": "c6077e46bf4a4d71a82818bc77c6b743",
+          "treeIds": "a36b73c48d3d4fa8aa3272e384180c53,c6077e46bf4a4d71a82818bc77c6b743,",
+          "parentId": "0",
+          "lastId": null,
+          "subType": 1,
+          "stem": null,
+          "issue": "《灵枢·百病始生》所言的\"虚邪\"是指",
+          "stemTail": null,
+          "sOption": "A.正气虚弱|B.致病性不强的邪气|C.四时不正之气|D.泛指一切致病因素|E.情志失调",
+          "answer": "C",
+          "userAnswer": null,
+          "analysis": "<br />",
+          "number": 1,
+          "order": 2700724,
+          "childre": []
+        },
+        and more ...
+      ]
+    }
+  ]
+}```
+多选题返回：```json
+{
+  "code": 0,
+  "msg": "查询成功",
+  "data": [
+    {
+      "2": [
+        {
+          "id": "92d09fff474b49a6a9a2968fc5246501",
+          "sectionId": "e7b321c5aef240d3a3a523cd13f0e743",
+          "treeIds": "a36b73c48d3d4fa8aa3272e384180c53,e7b321c5aef240d3a3a523cd13f0e743,",
+          "parentId": "0",
+          "lastId": null,
+          "subType": 2,
+          "stem": null,
+          "issue": "\"怒\"可引起下列哪些病证（ ）",
+          "stemTail": null,
+          "sOption": "A.呕血|B.飧泄|C.呃逆|D.头痛|E.胁痛",
+          "answer": "ABCDE",
+          "userAnswer": null,
+          "analysis": "<br />",
+          "number": 1,
+          "order": 2701147,
+          "childre": []
+        },
+        and more ...
+      ]
+    }
+  ]
+}```
+包含子题的题目返回：```json
+{
+  "code": 0,
+  "msg": "查询成功",
+  "data": [
+    {
+      "6": [
+        {
+          "id": "580ddc34ab2245989760aeadf2a56960",
+          "sectionId": "0df39593951d42b2a225fd2ef42d485e",
+          "treeIds": "a36b73c48d3d4fa8aa3272e384180c53,0df39593951d42b2a225fd2ef42d485e,",
+          "parentId": "0",
+          "lastId": null,
+          "subType": 6,
+          "stem": "某男，43岁。近1年工作繁忙，时感疲乏。今年8月在野外作业时突然昏倒，不省人事，3分钟后苏醒。就诊时神疲乏力，口干咽燥，大便干结，舌红苔薄，脉细数无力。试结合《素问·生气通天论》分析。",
+          "issue": null,
+          "stemTail": null,
+          "sOption": null,
+          "answer": null,
+          "userAnswer": null,
+          "analysis": null,
+          "number": 3,
+          "order": 2701330,
+          "childre": [
+            {
+              "id": "183a2fc102c241b38a04b77e6ea108e3",
+              "sectionId": "0df39593951d42b2a225fd2ef42d485e",
+              "treeIds": "a36b73c48d3d4fa8aa3272e384180c53,0df39593951d42b2a225fd2ef42d485e,",
+              "parentId": "580ddc34ab2245989760aeadf2a56960",
+              "lastId": null,
+              "subType": 1,
+              "stem": "某男，43岁。近1年工作繁忙，时感疲乏。今年8月在野外作业时突然昏倒，不省人事，3分钟后苏醒。就诊时神疲乏力，口干咽燥，大便干结，舌红苔薄，脉细数无力。试结合《素问·生气通天论》分析。",
+              "issue": "其病证为",
+              "stemTail": null,
+              "sOption": "A.煎厥|B.热厥|C.大厥|D.薄厥|E.气厥",
+              "answer": "A",
+              "userAnswer": null,
+              "analysis": "<br />",
+              "number": 1,
+              "order": 2701331,
+              "childre": null
+            },
+            {
+              "id": "c2f10ae66ae5445388a5c31cf6acd341",
+              "sectionId": "0df39593951d42b2a225fd2ef42d485e",
+              "treeIds": "a36b73c48d3d4fa8aa3272e384180c53,0df39593951d42b2a225fd2ef42d485e,",
+              "parentId": "580ddc34ab2245989760aeadf2a56960",
+              "lastId": null,
+              "subType": 1,
+              "stem": "某男，43岁。近1年工作繁忙，时感疲乏。今年8月在野外作业时突然昏倒，不省人事，3分钟后苏醒。就诊时神疲乏力，口干咽燥，大便干结，舌红苔薄，脉细数无力。试结合《素问·生气通天论》分析。",
+              "issue": "其治法为",
+              "stemTail": null,
+              "sOption": "A.顺气开郁|B.泻热开郁|C.活血降气|D.清热化痰|E.益气养阴",
+              "answer": "E",
+              "userAnswer": null,
+              "analysis": "<br />",
+              "number": 1,
+              "order": 2701332,
+              "childre": null
+            },
+            {
+              "id": "dd4ddf6cc8b444708390ed691405e043",
+              "sectionId": "0df39593951d42b2a225fd2ef42d485e",
+              "treeIds": "a36b73c48d3d4fa8aa3272e384180c53,0df39593951d42b2a225fd2ef42d485e,",
+              "parentId": "580ddc34ab2245989760aeadf2a56960",
+              "lastId": null,
+              "subType": 1,
+              "stem": "某男，43岁。近1年工作繁忙，时感疲乏。今年8月在野外作业时突然昏倒，不省人事，3分钟后苏醒。就诊时神疲乏力，口干咽燥，大便干结，舌红苔薄，脉细数无力。试结合《素问·生气通天论》分析。",
+              "issue": "治疗应首选",
+              "stemTail": null,
+              "sOption": "A.五磨饮子|B.凉膈散|C.清暑益气汤|D.通瘀煎|E.导痰汤",
+              "answer": "C",
+              "userAnswer": null,
+              "analysis": "",
+              "number": 1,
+              "order": 2701333,
+              "childre": null
+            }
+          ]
+        },
+        and more ...
+      ]
+    }
+  ]
+}```
+
+子题库列表接口：（子题库就是在题库内部的题库）
+curl -X GET 'https://www.tk160.com/huikao_mobile/queryAppSectionList?courseId=f193fde648054f0aa4323a946a992dd4' -H 'User-Agent: okhttp/3.11.0' -H 'Connection: Keep-Alive' -H 'Accept-Encoding: gzip' -H 'If-Modified-Since: Fri, 16 May 2025 11:39:40 GMT' -H 'interfaceType: app' -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJ1c2VyUGhvbmUiOiIxODIyMjE4OTE1NSIsImV4cCI6MTc3ODkzMDI5OSwidXNlcklkIjoiMTc3ODM0OTY1NjU5ODc3Nzg1NiJ9.IkEHA_wDg3bBQuapZ6YAN92G2raAB3Cb8tlWZePflPUk0v8Q0vK4BYoAXHS7_DrABKFG_fE5EqXpuUS7EA8-2w' --http1.1
+返回数据： ```json
+{
+  "code": 0,
+  "msg": "查询成功",
+  "data": [
+    {
+      "id": "a36b73c48d3d4fa8aa3272e384180c53",
+      "parentId": "0",
+      "recordId": null,
+      "sectionName": "内经",
+      "subNumber": 365,
+      "userNumber": 0,
+      "tryBuy": 2,
+      "leven": 0,
+      "order": 1,
+      "accuracy": null,
+      "children": [
+        {
+          "id": "c6077e46bf4a4d71a82818bc77c6b743",
+          "parentId": "a36b73c48d3d4fa8aa3272e384180c53",
+          "recordId": null,
+          "sectionName": "内经习题（1）",
+          "subNumber": 150,
+          "userNumber": null,
+          "tryBuy": 2,
+          "leven": 1,
+          "order": 1,
+          "accuracy": null,
+          "children": null
+        },
+        {
+          "id": "839e462a363c46ca94cad59cc8ed7d0c",
+          "parentId": "a36b73c48d3d4fa8aa3272e384180c53",
+          "recordId": null,
+          "sectionName": "内经习题（2）",
+          "subNumber": 92,
+          "userNumber": null,
+          "tryBuy": 1,
+          "leven": 1,
+          "order": 2,
+          "accuracy": null,
+          "children": null
+        },
+        {
+          "id": "e7b321c5aef240d3a3a523cd13f0e743",
+          "parentId": "a36b73c48d3d4fa8aa3272e384180c53",
+          "recordId": null,
+          "sectionName": "内经习题（3）",
+          "subNumber": 87,
+          "userNumber": null,
+          "tryBuy": 1,
+          "leven": 1,
+          "order": 3,
+          "accuracy": null,
+          "children": null
+        },
+        {
+          "id": "0df39593951d42b2a225fd2ef42d485e",
+          "parentId": "a36b73c48d3d4fa8aa3272e384180c53",
+          "recordId": null,
+          "sectionName": "内经习题（4）",
+          "subNumber": 36,
+          "userNumber": null,
+          "tryBuy": 1,
+          "leven": 1,
+          "order": 4,
+          "accuracy": null,
+          "children": null
+        }
+      ]
+    },
+    and more ...
+  ]
+}```
+
+
+题库信息接口：
+curl -X GET 'https://www.tk160.com/huikao_mobile/queryAppProductCourse?id=f6b9f896d4ec4108982e5d8ba2cf7cda' -H 'User-Agent: okhttp/3.11.0' -H 'Connection: Keep-Alive' -H 'Accept-Encoding: gzip' -H 'If-Modified-Since: Fri, 16 May 2025 11:50:31 GMT' -H 'interfaceType: app' -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJ1c2VyUGhvbmUiOiIxODIyMjE4OTE1NSIsImV4cCI6MTc3ODkzMDI5OSwidXNlcklkIjoiMTc3ODM0OTY1NjU5ODc3Nzg1NiJ9.IkEHA_wDg3bBQuapZ6YAN92G2raAB3Cb8tlWZePflPUk0v8Q0vK4BYoAXHS7_DrABKFG_fE5EqXpuUS7EA8-2w' --http1.1
+返回数据： ```json
+{
+  "code": 0,
+  "msg": "查询成功",
+  "data": [
+    {
+      "id": "f193fde648054f0aa4323a946a992dd4",
+      "examId": "4bc75be50ddc473a831a044a145b5546",
+      "courseName": "【代码：113】全科医学(中医类)"
+    }
+  ]
+}```
+其中data.id参数是由于后续查询子题库信息的id
+
+
+题库列表接口：
+curl -X GET 'https://www.tk160.com/huikao_mobile/queryAppSubjectMenu?pageNum=0&pageSize=20' -H 'User-Agent: okhttp/3.11.0' -H 'Connection: Keep-Alive' -H 'Accept-Encoding: gzip' -H 'If-Modified-Since: Fri, 16 May 2025 11:49:17 GMT' -H 'interfaceType: app' -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJ1c2VyUGhvbmUiOiIxODIyMjE4OTE1NSIsImV4cCI6MTc3ODkzMDI5OSwidXNlcklkIjoiMTc3ODM0OTY1NjU5ODc3Nzg1NiJ9.IkEHA_wDg3bBQuapZ6YAN92G2raAB3Cb8tlWZePflPUk0v8Q0vK4BYoAXHS7_DrABKFG_fE5EqXpuUS7EA8-2w' --http1.1
+返回数据： ```json
+{
+  "code": 0,
+  "msg": "查询成功",
+  "data": {
+    "pageNum": 1,
+    "pageSize": 20,
+    "size": 2,
+    "orderBy": null,
+    "startRow": 1,
+    "endRow": 2,
+    "total": 2,
+    "pages": 1,
+    "list": [
+      {
+        "id": "1798178871791718400",
+        "productId": "f6b9f896d4ec4108982e5d8ba2cf7cda",
+        "title": "2025年【代码：113】全科医学(中医类)（副高）题库",
+        "status": 1,
+        "productStatus": 1,
+        "endTime": "2025-06-05 10:23:46"
+      },
+      {
+        "id": "1920035219830870016",
+        "productId": "f6b9f896d4ec4108982e5d8ba2cf7cda",
+        "title": "2025年【代码：113】全科医学(中医类)（副高）题库",
+        "status": 1,
+        "productStatus": 1,
+        "endTime": "2026-05-07 16:37:23"
+      }
+    ],
+    "firstPage": 1,
+    "prePage": 0,
+    "nextPage": 0,
+    "lastPage": 1,
+    "isFirstPage": true,
+    "isLastPage": true,
+    "hasPreviousPage": false,
+    "hasNextPage": false,
+    "navigatePages": 8,
+    "navigatepageNums": [
+      1
+    ]
+  }
+}```

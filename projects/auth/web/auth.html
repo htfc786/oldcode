@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>外网访问统一登录页面</title>
+  <link type="text/css" rel="stylesheet" href="css/reset.css">
+  <link type="text/css" rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 标题 -->
+    <header>
+      <h1>外网访问统一登录页面</h1>
+    </header>
+    <!-- 主表单区域 -->
+    <main>
+      <form autocomplete="off" id="auth-form">
+        <!-- 用户名 -->
+        <div class="item">
+          <div class="input">
+            <input type="text" name="username" placeholder="">
+            <span>用户名</span>
+          </div>
+          <p>请输入邮箱地址</p>
+        </div>
+        <!-- 密码 -->
+        <div class="item">
+          <div class="input">
+            <input type="password" name="password" placeholder="">
+            <span>密码</span>
+          </div>
+          <p></p>
+        </div>
+        <!-- 登录按钮 -->
+        <div class="item">
+          <button type="submit">登录</button>
+        </div>
+      </form>
+    </main>
+    <!-- 页面底部 -->
+    <footer>
+      <!-- 隐私协议 -->
+      <!-- <div class="privacy">
+        注册即表示您同意并愿意遵守 <a href="#">用户协议</a> 与 <a href="#">隐私政策</a>
+      </div> -->
+
+      <!-- 第三方登录 -->
+      <div class="third-party">
+        <span>第三方登录/注册</span>
+        <div class="btns">
+          <button>
+            <img src="img/wechat.png" alt="微信登录"/>
+          </button>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div class="author">
+    <span>made by <a href="https://github.com/htfc786" target="_blank">htfc786</a></span>
+  </div>
+  <script src="js/auth.js"></script>
+</body>
+</html>

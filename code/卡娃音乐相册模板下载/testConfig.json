@@ -1,0 +1,20 @@
+{
+    "data": {
+        "imageList": [
+            "https://picsum.photos/200",
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/400"
+        ],
+        "name": "testConfig",
+        "wordsList": {
+            "200": "picsum.photos"
+        },
+        "musicList": [
+            "/musicAlbumTemplate-Download-1/src/music/五下音乐课件.mp3"
+        ],
+        "config": {
+            "autoPlay": true,
+            "showBackBtn": false
+        }
+    }
+}

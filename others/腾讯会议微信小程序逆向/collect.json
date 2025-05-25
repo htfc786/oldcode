@@ -1,0 +1,44 @@
+
+ 2025-01-21 16:25:19.747 , ----: [UpgradeManager] UpdateManager is created 2025-01-21 16:25:19.781 , ----: [WeMeetClient] set xmpp ws url: wss://ws.wemeet.tencent.com/websocket/connection
+ 2025-01-21 16:25:19.781 , ----: [WeMeetClient] WemeetClient inited
+ 2025-01-21 16:25:19.784 , ----: [MembersStore] MembersStore inited(should be called right after join succeed)
+ 2025-01-21 16:25:19.850 , ----: [FloatLayoutMembersStore] FloatLayoutMembersStore inited
+ 2025-01-21 16:25:19.872 , ----: [LivePusherRestarter] LivePusherRestarter created.
+ 2025-01-21 16:25:19.872 , ----: [app] App.js is loaded...
+ 2025-01-21 16:25:19.873 , ----: [app] 
+      App onLaunch at Tue Jan 21 2025 16:25:19 GMT+0800 (中国标准时间).
+      version: 4.1.6.0,
+    
+ 2025-01-21 16:25:19.876 , ----: [MembersStore] MembersStore inited(should be called right after join succeed)
+ 2025-01-21 16:25:19.876 , ----: [FloatLayoutMembersStore] FloatLayoutMembersStore inited
+ 2025-01-21 16:25:19.879 , ----: [UserAction] getting from cache:
+      openID=o-JR35O-dz6ks1OpNwSpn22eMZq8,
+      unionId=oHSzws0I-tP-rjzS969WyXNc7zNQ,
+      unionIdEXP=1744780958096,
+      phone=15900383657,
+      xmppToken=eJxUUl1zmzAQ-C96TekIgYVhpg*uY7dObWzHYabJC6NKB1UdQJYE9GP63zMmYmzrTbt3t6s9-UNP68NHxnnT1ja3fxSgBE3RhwGWAmorCwkaJajxHh6DydYTf*nR*FuV9gdVEwKbl9NYz5SSImc2D7RACcIONuKYDxRKEMHuOE5AJznkA*cgDaVs6rMN6hD4raSGnBV2cBJFEb1MMJbZ1lzJvTalrMen9FAB2LyStTx7cCUdaPOuQTAJ8ZSEGGPfkVZW504-CiKMw5iSUUiWKEGbRTZf7e-T583r-onOvuJ7utv*6neFeGah*emv*-V2xvr5vJj8WHcPeDlblav9fpGy7HNW3dFlVk77LzZLX5YHM6Xfu92JL7L022N-uDvOy09XmV2HcpIVyIBeAKUb0XJ7U2SGSxDEIQhWeJj7zAsjGntxgLkXTxjhUMQTXPiXhvdVjQt0-4A3Wt1Mbg3oMVL0-y0AAP--WDaoAQ__,
+      xmppTokenEXP=1744780958096,
+      cgiToken=eJxUkM1y0zAUhd9F22KQJduKPcOipA0NJQ2QtJBsPKp8bUQiWZHkuITh3ZkYe*Jqp**cc--*oPXn1VupnedaQC4LlKEJetNRbkzedKQOPn2j8TIoTsnOhUvz0K6MJgQW28NgdsUuPwc6P8H960V4MdJCzksPFmWIMZZcxCNYJ2vdxUiEJyQaJZ8bJzU4hzIkKtlDLxWgDIWMMoyjNCE939eV1Ln-bc5qCwrA50pqeR6stxRwlMOePbJQ-W8-SYZdZIUytLh9nM6-3gi-LDcPMZkt738eN98PP0Jg9eZOPd0UL3M2216RL1eL6*gj2Vfzat0sVHxSm*2dnO*O*w*zX2tqp*3quYV7fV0*xftThPk7NX28fT863Hicg1QgaXIBxtZFI-wrk*s*lKYRFLwMsAh5ELEkDVKKRZDGnAgo0xiX4SVA7agAF6JutM9Fbc2ryo0DO5wQ-f0XAAD--3D7oiw_,
+      cgiTokenEXP=1744780958096,
+      defaultNickname=,
+      wemeetLoginInfo=null,
+      wemeetLoginInfoEXP=0,
+    
+ 2025-01-21 16:25:19.881 , ----: [AppAction] systemInfo: {"albumAuthorized":true,"benchmarkLevel":-1,"bluetoothEnabled":false,"brand":"microsoft","cameraAuthorized":true,"fontSizeSetting":15,"language":"zh_CN","locationAuthorized":true,"locationEnabled":true,"microphoneAuthorized":true,"model":"microsoft","notificationAuthorized":true,"notificationSoundEnabled":true,"pixelRatio":1,"platform":"windows","power":100,"safeArea":{"bottom":676,"height":676,"left":0,"right":1008,"top":0,"width":1008},"screenHeight":676,"screenWidth":1008,"statusBarHeight":0,"system":"Windows 10 x64","theme":"light","version":"3.8.0","wifiEnabled":true,"windowHeight":676,"windowWidth":1008,"SDKVersion":"3.5.8","enableDebug":false,"devicePixelRatio":1,"host":{"appId":"","env":"WeChat"}}
+ 2025-01-21 16:25:19.887 , ----: [AppAction] Device running our mp is not supported: platform=windows, system=windows, model=microsoft
+ 2025-01-21 16:25:19.888 , ----: [util][isSupportTRTC] current device is neither Android, iOS nor devtools
+ 2025-01-21 16:25:19.888 , ----: [app] 
+      [腾讯会议]
+      App onLaunch at Tue Jan 21 2025 16:25:19 GMT+0800 (中国标准时间)
+      with params:
+        path=pages/index/index,
+        scene=1001,
+        query={}
+      
+ 2025-01-21 16:25:19.903 , ----: [AppStore] may be this is the first time that App launched? prev = null, curr = true
+ 2025-01-21 16:25:19.903 , ----: [AppStore] app show with scene: 1001(open_mp_by_main_port_of_discover).
+      res: {"path":"pages/index/index","query":{},"scene":1001,"referrerInfo":{},"apiCategory":"default"}
+    
+ 2025-01-21 16:25:19.963 , ----: [historyCodes] failed to get key(historyCodes) from local storage at init HistoryCodes becasue getStorage:fail 
+ 2025-01-21 16:25:19.971 , ----: [UserStore] ABTestData: {}
+ 2025-01-21 16:25:21.169 , ----: [UpgradeManager] no new version found

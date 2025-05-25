@@ -1,0 +1,6 @@
+name: register
+desc: ""
+methods:
+  - GET
+  - POST
+tags: []

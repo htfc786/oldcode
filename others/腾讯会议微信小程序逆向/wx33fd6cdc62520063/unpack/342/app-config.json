@@ -1,0 +1,230 @@
+{
+  "subPackages": [
+    {
+      "root": "pages/sub-detail/",
+      "name": "detail"
+    },
+    {
+      "root": "pages/sub-preMeeting/",
+      "name": "preMeeting"
+    },
+    {
+      "root": "pages/sub-inMeeting/",
+      "name": "inMeeting"
+    },
+    {
+      "root": "pages/sub-postMeeting/",
+      "name": "postMeeting"
+    },
+    {
+      "root": "pages/sub-web/",
+      "name": "web"
+    },
+    {
+      "root": "pages/sub-verify/",
+      "name": "verify",
+      "plugins": {
+        "studentVerify": {
+          "version": "latest",
+          "provider": "wxa16657d57059e0f0",
+          "subpackage": "/pages/sub-verify/"
+        }
+      }
+    },
+    {
+      "root": "verify_mpsdk/"
+    },
+    {
+      "root": "pages/sub-dev/",
+      "name": "dev"
+    },
+    {
+      "root": "pages/sub-activity/",
+      "name": "activity"
+    },
+    {
+      "root": "pages/sub-pay/",
+      "name": "pay"
+    }
+  ],
+  "entryPagePath": "pages/index/index.html",
+  "pages": [
+    "pages/index/index",
+    "pages/face-verify/face-verify",
+    "pages/detail/detail",
+    "pages/bigHouseCard/bigHouseCard",
+    "pages/index/privacy/index",
+    "pages/index/privacy/protocol/index",
+    "pages/sub-detail/detail/detail",
+    "pages/sub-detail/detail-register/detail-register",
+    "pages/sub-detail/detail-pick-account/detail-pick-account",
+    "pages/sub-preMeeting/join-meeting/join-meeting",
+    "pages/sub-preMeeting/waiting-room/waiting-room",
+    "pages/sub-preMeeting/history-names/history-names",
+    "pages/sub-inMeeting/in-meeting/in-meeting",
+    "pages/sub-postMeeting/invite/invite",
+    "pages/sub-web/web/web",
+    "pages/sub-web/auth/auth",
+    "pages/sub-web/signUpWeb/signUpWeb",
+    "pages/sub-verify/face-verify/face-verify",
+    "pages/sub-verify/face-verify-result/face-verify-result",
+    "pages/sub-verify/student-verify/student-verify",
+    "pages/sub-verify/student-verify-result/student-verify-result",
+    "verify_mpsdk/index/index",
+    "pages/sub-dev/env-switch/env-switch",
+    "pages/sub-activity/bigHouseCard/bigHouseCard",
+    "pages/sub-activity/rule/rule",
+    "pages/sub-pay/midas/pay/pay"
+  ],
+  "page": {
+    "pages/index/index.html": {
+      "window": {
+        "disableScroll": true
+      }
+    },
+    "pages/face-verify/face-verify.html": {
+      "window": {}
+    },
+    "pages/detail/detail.html": {
+      "window": {}
+    },
+    "pages/bigHouseCard/bigHouseCard.html": {
+      "window": {}
+    },
+    "pages/index/privacy/index.html": {
+      "window": {}
+    },
+    "pages/index/privacy/protocol/index.html": {
+      "window": {}
+    },
+    "pages/sub-detail/detail/detail.html": {
+      "window": {}
+    },
+    "pages/sub-detail/detail-register/detail-register.html": {
+      "window": {}
+    },
+    "pages/sub-detail/detail-pick-account/detail-pick-account.html": {
+      "window": {}
+    },
+    "pages/sub-preMeeting/join-meeting/join-meeting.html": {
+      "window": {
+        "navigationBarTitleText": "腾讯会议",
+        "disableScroll": true
+      }
+    },
+    "pages/sub-preMeeting/waiting-room/waiting-room.html": {
+      "window": {
+        "disableSwipeBack": true,
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "white",
+        "disableScroll": true
+      }
+    },
+    "pages/sub-preMeeting/history-names/history-names.html": {
+      "window": {
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "white",
+        "disableScroll": true,
+        "disableSwipeBack": true
+      }
+    },
+    "pages/sub-inMeeting/in-meeting/in-meeting.html": {
+      "window": {
+        "navigationBarTitleText": "会议中",
+        "navigationStyle": "custom",
+        "pageOrientation": "landscape",
+        "disableScroll": true,
+        "navigationBarBackgroundColor": "#000000",
+        "navigationBarTextStyle": "white",
+        "backgroundColor": "#000000"
+      }
+    },
+    "pages/sub-postMeeting/invite/invite.html": {
+      "window": {}
+    },
+    "pages/sub-web/web/web.html": {
+      "window": {}
+    },
+    "pages/sub-web/auth/auth.html": {
+      "window": {}
+    },
+    "pages/sub-web/signUpWeb/signUpWeb.html": {
+      "window": {}
+    },
+    "pages/sub-verify/face-verify/face-verify.html": {
+      "window": {
+        "backgroundColor": "#FFFFFF",
+        "navigationBarTitleText": "腾讯会议",
+        "disableScroll": true
+      }
+    },
+    "pages/sub-verify/face-verify-result/face-verify-result.html": {
+      "window": {}
+    },
+    "pages/sub-verify/student-verify/student-verify.html": {
+      "window": {
+        "backgroundColor": "#FFFFFF",
+        "navigationBarTitleText": "腾讯会议"
+      }
+    },
+    "pages/sub-verify/student-verify-result/student-verify-result.html": {
+      "window": {}
+    },
+    "verify_mpsdk/index/index.html": {
+      "window": {
+        "disableScroll": true
+      }
+    },
+    "pages/sub-dev/env-switch/env-switch.html": {
+      "window": {
+        "navigationBarTitleText": "选择环境",
+        "disableScroll": true
+      }
+    },
+    "pages/sub-activity/bigHouseCard/bigHouseCard.html": {
+      "window": {}
+    },
+    "pages/sub-activity/rule/rule.html": {
+      "window": {
+        "navigationBarTitleText": "活动规则"
+      }
+    },
+    "pages/sub-pay/midas/pay/pay.html": {
+      "window": {}
+    }
+  },
+  "global": {
+    "window": {
+      "backgroundTextStyle": "light",
+      "navigationBarBackgroundColor": "#FFFFFF",
+      "navigationBarTitleText": "腾讯会议",
+      "navigationBarTextStyle": "black",
+      "backgroundColor": "#FFFFFF"
+    }
+  },
+  "plugins": {
+    "studentVerify": {
+      "version": "latest",
+      "provider": "wxa16657d57059e0f0",
+      "subpackage": "/pages/sub-verify/"
+    }
+  },
+  "resizable": true,
+  "preloadRule": {
+    "pages/index/index": {
+      "packages": ["detail", "preMeeting", "verify", "verify_mpsdk"]
+    },
+    "pages/sub-preMeeting/join-meeting/join-meeting": {
+      "packages": ["inMeeting"]
+    }
+  },
+  "navigateToMiniProgramAppIdList": ["wxbd687630cd02ce1d"],
+  "renderer": {
+    "allUsed": ["webview"],
+    "default": "webview"
+  },
+  "componentFramework": {
+    "allUsed": ["exparser"],
+    "default": "exparser"
+  }
+}

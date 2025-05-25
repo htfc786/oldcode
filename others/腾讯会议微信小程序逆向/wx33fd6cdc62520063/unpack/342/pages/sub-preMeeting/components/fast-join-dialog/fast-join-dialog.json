@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "loading-spin": "../loading-spin/loading-spin"
+  }
+}

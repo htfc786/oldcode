@@ -1,0 +1,8 @@
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAnCAYAAAD+bDODAAAAAXNSR0IArs4c6QAAAf5JREFUWEftl8trE1EUh78znUnwgbb4WhSXLqQiPqJCg49RCrXgg0Yq6Nad/hH5N6JUXRaLFgULoliMVRCrGHHnxgcISulKtJ3HPZJA0tImcaaZdjV3NXfuOb/v8JvD5YxQX68e7CQ//KuxX4MHoVi0Mqf3P1ZlUESeeM8rQxSLZg1YiDP9MEcYvm2Iqx71TxUW9wlSxS5PnBHVZ3VNtayBQL2Kg3MVtB9lN+ApzKL6QWye+vnCGwSNW8cKGMhtFS6J6pY2Yl8USoGz8Sb9g3NRoU1gUVNrcX8RxoyR8VC7X+K6v+vZmelHfSY0Z8FkAzNfwr0y2ylsaWUhIj9QDYEeYOviocz4U5VjScLaWiJdZt+6wTDmSAqL1aJNg1MbO/cQ0m5MxMXUxkRsFMfZ2+pu/K4qd1F9bXVZ31SDrFr2NtQcFGUAcAE7RhWf/J/BgZUwS0b9oPsGrjvfUqw8ucNm4Rqq1wV620P1o29znnzha/MZ5PjFxkzSVmim5GT+7LqgmAJKHmrzSnUFQAWsO/527xZ9I171ZWew5ZVM3dvMhuwm7N45cjl/+XGysP98xBQWo8tbh6Y2pja2n4qb/jJFva5imru+3eiU7x9C5V2jSHEO+yfOvY9ZdKRwqUY5LybGEEZQHfdPDl+OlLmKoBqstj5PZtkztLAKjcgp/wA8tWyIsZO5kgAAAABJRU5ErkJggg=="
+
+
+//////////////////
+// WEBPACK FOOTER
+// ./src/components/report-detail/components/score-level-change/imgs/flag.png
+// module id = tj0U
+// module chunks = 2

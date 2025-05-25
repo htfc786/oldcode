@@ -1,0 +1,28 @@
+{
+  "name": "智学网排名计算器",
+  "version": "0.0.1",
+  "description": "自动计算并显示智学网考试排名",
+  "manifest_version": 3,
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://*.zhixue.com/*",
+    "*://zhixue.com/*"
+  ],
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.zhixue.com/*"],
+      "js": ["js/content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

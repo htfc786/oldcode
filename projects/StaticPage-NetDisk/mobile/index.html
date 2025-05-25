@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link href="../src/moblie-style.css" rel="stylesheet">
+    <script src="../src/mobile-index.js"></script>
+</head>
+<body>
+    <!--主页面-->
+    <div id="app">
+        <!--头-->
+        <div id="app-head">
+            <div id="app-title">
+                <h1 id="title"></h1>
+            </div>
+            <h6 id="little-title"></h6>
+        </div>
+        <!--文件-->
+        <div id="app-body">
+            <div class="route-bar">
+                <div class="folders">
+                    <span class="folder-root">全部文件</span>
+                    <span class="folder-item">
+                        <span class="folder-item-seperator">></span>
+                        <span class="folder-item-name">分享文件</span>
+                    </span>
+                    <span class="folder-item">
+                        <span class="folder-item-seperator">></span>
+                        <span class="folder-item-name folder-item-name-islast">音乐光盘</span>
+                    </span>
+                </div>
+            </div>
+            <div class="file-list">
+                <div class="file">
+                    <div class="file-icon icon-folder"></div> 
+                    <div class="file-info">
+                        <p class="file-name">一上.iso</p>
+                        <p class="file-detailed-info">
+                            <span class="file-time">2014/10/10 21:27:28</span>
+                            <span class="file-size">1.21G</span>
+                        </p> 
+                    </div>
+                </div>
+                <div class="file">
+                    <div class="file-icon" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAMAAAC5zwKfAAAAaVBMVEUAAADKy9TQ09rX3OHNztXT2N3h4eHLzNTX3ODX3ODW2+DLzNLKzNPT1dzMzNbV2t/JytLX3eHU2t/LzNP////NztXR1drT19zW3ODU2d7Q09nO0NfX3eHl5unf4eXr7e/6+vv09fbv8fPuCrtPAAAAE3RSTlMANZhkmJgK7teO7qaANigbwrRZsYs6cQAAAXNJREFUWMPt0YtOwjAUgGEU5X5ROet1dGPv/5CedEda3II9dTGY9FtDSxv+lGxWFEVR/G+L9apWqlY1jn4mm/d9Vm+lEIX6aDDPCK7VHXVGcaXu4hfVgP5dUWn/EFzSJ+3zi6Hk+UbYw8Et6lt0t/g7s6gTsIpSa6mlhwsPFzji+SMvSOIYnW2OjGCS+dTBdXpQyBtCCqFFP8tw9soK4i9RHxDuAgCdkoTCnCClqNqA1zpB+n1mMDjDFyViz5lBDVedCPJv6CCQU9ywgcDlBo0RRiD/fmNtp3KCGDM+2sCQ82eIEyQORrTSmNxgC2Oa7KCAUZfsoJ4uSGCyv2ytscbYBsbU1p9zgpaMvpXGElaQiG7QO9u8YGUrHNZKd445Y3OClY/huM5BOOMEk7xMHHykG56qk4cLHNeZETzFgX4Zr+mME6z8Q2g5wAl+93DBZVJwlx7cJgX36cFjyhW3M4bD20+55W4xY1k83XWYFUVRFH/rE0f5jRd9LlMgAAAAAElFTkSuQmCC&quot;);"></div> 
+                    <div class="file-info">
+                        <p class="file-name">123.iso</p>
+                        <p class="file-detailed-info">
+                            <span class="file-time">2022/1/10 15:02:37</span>
+                            <span class="file-size">1014M</span>
+                        </p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!--JavaScript禁用-->
+    <noscript> 	
+        <style>
+        #noScript{
+			text-align: center; 
+			margin:auto;
+		}
+        #noScriptText{
+            font: bold 25px Arial; 
+            color:#FF0000; 
+            vertical-align: middle
+		}
+        #app #onPrint {
+            display: none;
+        }
+        </style>
+		<div id="noScript">
+			<span id="noScriptText">提示：JavaScript被禁用了，无法加载该网页，请开启后刷新改页面</span>
+		</div> 
+	</noscript>
+    <!--禁止打印-->
+    <div id="onPrint">
+        提示：禁止打印
+    <div>
+</body>
+</html>

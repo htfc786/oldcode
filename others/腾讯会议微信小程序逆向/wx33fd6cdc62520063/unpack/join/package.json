@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "jsdom": "^26.0.0",
+    "strophe.js": "^3.1.0",
+    "ws": "^8.18.0"
+  }
+}

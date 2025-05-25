@@ -1,0 +1,4449 @@
+{
+  "520": {
+    "name": "告白气球",
+    "alias": "520",
+    "icon": "https://s1.kagirl.cn/icon/520.jpg",
+    "menu": "爱情",
+    "baseName": "告白气球",
+    "downloadTime": 1746268122107,
+    "downloadPath": "template/爱情/告白气球"
+  },
+  "5202018": {
+    "name": "一生一世",
+    "alias": "5202018",
+    "icon": "https://s1.kagirl.cn/icon/5202018.jpg",
+    "menu": "爱情",
+    "downloadTime": 1746253734806,
+    "downloadPath": "template/爱情/一生一世"
+  },
+  "5202019": {
+    "name": "甜蜜520",
+    "alias": "5202019",
+    "icon": "https://s1.kagirl.cn/icon/template_1558078090.png",
+    "menu": "爱情",
+    "downloadTime": 1746254509909,
+    "downloadPath": "template/爱情/甜蜜520"
+  },
+  "5202020": {
+    "name": "一生爱你",
+    "alias": "5202020",
+    "icon": "https://s1.kagirl.cn/icon/template_1589364520.png",
+    "menu": "节日",
+    "downloadTime": 1746253715574,
+    "downloadPath": "template/节日/一生爱你"
+  },
+  "5202023": {
+    "name": "浪漫告白",
+    "alias": "5202023",
+    "icon": "https://s1.kagirl.cn/icon/template_1684305763.png",
+    "menu": "热门",
+    "downloadTime": 1746254344257,
+    "downloadPath": "template/热门/浪漫告白"
+  },
+  "5202024": {
+    "name": "爱在520",
+    "alias": "5202024",
+    "icon": "https://s1.kagirl.cn/icon/template_1715911292.png",
+    "menu": "热门",
+    "baseName": "爱在520",
+    "downloadTime": 1746268396555,
+    "downloadPath": "template/热门/爱在520"
+  },
+  "nihaowuyue2024": {
+    "name": "五月你好",
+    "alias": "nihaowuyue2024",
+    "icon": "https://s1.kagirl.cn/icon/template_1714960814.png",
+    "menu": "热门",
+    "downloadTime": 1746253358383,
+    "downloadPath": "template/热门/五月你好"
+  },
+  "wuyi25": {
+    "name": "五一光荣",
+    "alias": "wuyi25",
+    "icon": "https://s1.kagirl.cn/icon/template_1746003638.png",
+    "menu": "热门",
+    "downloadTime": 1746253372074,
+    "downloadPath": "template/热门/五一光荣"
+  },
+  "sheyinhuandengpian2022": {
+    "name": "超清大图",
+    "alias": "sheyinhuandengpian2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1643345152.gif",
+    "menu": "VIP",
+    "downloadTime": 1746253372747,
+    "downloadPath": "template/VIP/超清大图"
+  },
+  "3dlvyou25": {
+    "name": "我的旅途3D",
+    "alias": "3dlvyou25",
+    "icon": "https://s1.kagirl.cn/icon/template_1745207055.png",
+    "menu": "VIP",
+    "downloadTime": 1746253375241,
+    "downloadPath": "template/VIP/我的旅途3D"
+  },
+  "externaltemplate3": {
+    "name": "最好的时光",
+    "alias": "externaltemplate3",
+    "icon": "https://s1.kagirl.cn/icon/template_1683884816.png",
+    "menu": "热门",
+    "downloadTime": 1746253376140,
+    "downloadPath": "template/热门/最好的时光"
+  },
+  "wuyi2019": {
+    "name": "五一劳动",
+    "alias": "wuyi2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1555927778.png",
+    "menu": "节日",
+    "downloadTime": 1746253377703,
+    "downloadPath": "template/节日/五一劳动"
+  },
+  "externaltemplate4": {
+    "name": "春暖花开",
+    "alias": "externaltemplate4",
+    "icon": "https://s1.kagirl.cn/icon/template_1684131579.png",
+    "menu": "热门",
+    "downloadTime": 1746253379649,
+    "downloadPath": "template/热门/春暖花开"
+  },
+  "3dwuyi2023": {
+    "name": "五一快乐3D",
+    "alias": "3dwuyi2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1682578429.png",
+    "menu": "3D",
+    "downloadTime": 1746253396545,
+    "downloadPath": "template/3D/五一快乐3D"
+  },
+  "wuyikuaile": {
+    "name": "恭贺五一3D",
+    "alias": "wuyikuaile",
+    "icon": "https://s1.kagirl.cn/icon/template_1746004187.png",
+    "menu": "VIP",
+    "downloadTime": 1746253408239,
+    "downloadPath": "template/VIP/恭贺五一3D"
+  },
+  "shiguangyinji2023": {
+    "name": "时光印记",
+    "alias": "shiguangyinji2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1686559277.png",
+    "menu": "VIP",
+    "downloadTime": 1746253412397,
+    "downloadPath": "template/VIP/时光印记"
+  },
+  "externaltemplate27": {
+    "name": "幸福快乐",
+    "alias": "externaltemplate27",
+    "icon": "https://s1.kagirl.cn/icon/template_1685442842.png",
+    "menu": "热门",
+    "downloadTime": 1746253413574,
+    "downloadPath": "template/热门/幸福快乐"
+  },
+  "laodongjie2020": {
+    "name": "劳动最光荣",
+    "alias": "laodongjie2020",
+    "icon": "https://s1.kagirl.cn/icon/template_1587866335.png",
+    "menu": "节日",
+    "downloadTime": 1746253415577,
+    "downloadPath": "template/节日/劳动最光荣"
+  },
+  "meihaoshiguang2023": {
+    "name": "美好时光",
+    "alias": "meihaoshiguang2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1693558730.png",
+    "menu": "VIP",
+    "downloadTime": 1746253417004,
+    "downloadPath": "template/VIP/美好时光"
+  },
+  "wuyi2024": {
+    "name": "快乐出游",
+    "alias": "wuyi2024",
+    "icon": "https://s1.kagirl.cn/icon/template_1714123679.png",
+    "menu": "热门",
+    "downloadTime": 1746253421229,
+    "downloadPath": "template/热门/快乐出游"
+  },
+  "chunnuan25": {
+    "name": "春日花语",
+    "alias": "chunnuan25",
+    "icon": "https://s1.kagirl.cn/icon/template_1741072591.png",
+    "menu": "热门",
+    "downloadTime": 1746253444072,
+    "downloadPath": "template/热门/春日花语"
+  },
+  "nihaosiyue2024": {
+    "name": "四月你好",
+    "alias": "nihaosiyue2024",
+    "icon": "https://s1.kagirl.cn/icon/template_1711703561.png",
+    "menu": "热门",
+    "downloadTime": 1746253447829,
+    "downloadPath": "template/热门/四月你好"
+  },
+  "huakai": {
+    "name": "春暖花开",
+    "alias": "huakai",
+    "icon": "https://s1.kagirl.cn/icon/huakai.jpg",
+    "menu": "热门",
+    "downloadTime": 1746253551745,
+    "downloadPath": "template/热门/春暖花开"
+  },
+  "shiguang24": {
+    "name": "我们的回忆",
+    "alias": "shiguang24",
+    "icon": "https://s1.kagirl.cn/icon/template_1717669574.png",
+    "menu": "VIP",
+    "downloadTime": 1746253553887,
+    "downloadPath": "template/VIP/我们的回忆"
+  },
+  "shiguangyinxiang24": {
+    "name": "时光故事",
+    "alias": "shiguangyinxiang24",
+    "icon": "https://s1.kagirl.cn/icon/template_1732863655.png",
+    "menu": "VIP",
+    "downloadTime": 1746253555755,
+    "downloadPath": "template/VIP/时光故事"
+  },
+  "chunnuanhuakai24": {
+    "name": "春光美",
+    "alias": "chunnuanhuakai24",
+    "icon": "https://s1.kagirl.cn/icon/template_1711017279.png",
+    "menu": "热门",
+    "downloadTime": 1746253558396,
+    "downloadPath": "template/热门/春光美"
+  },
+  "material202304": {
+    "name": "我们的时光",
+    "alias": "material202304",
+    "icon": "https://s1.kagirl.cn/icon/template_1678701111.png",
+    "menu": "热门",
+    "downloadTime": 1746253559684,
+    "downloadPath": "template/热门/我们的时光"
+  },
+  "xingfuxiangban2021": {
+    "name": "幸福相伴",
+    "alias": "xingfuxiangban2021",
+    "icon": "https://s1.kagirl.cn/icon/template_1615865211.png",
+    "menu": "爱情",
+    "downloadTime": 1746253560303,
+    "downloadPath": "template/爱情/幸福相伴"
+  },
+  "externaltemplate17": {
+    "name": "樱花珞语",
+    "alias": "externaltemplate17",
+    "icon": "https://s1.kagirl.cn/icon/template_1685414630.png",
+    "menu": "热门",
+    "downloadTime": 1746253561210,
+    "downloadPath": "template/热门/樱花珞语"
+  },
+  "qiangwei": {
+    "name": "蔷薇恋",
+    "alias": "qiangwei",
+    "icon": "https://s1.kagirl.cn/icon/qiangwei.jpg",
+    "menu": "爱情",
+    "downloadTime": 1746253561643,
+    "downloadPath": "template/爱情/蔷薇恋"
+  },
+  "externaltemplate2": {
+    "name": "感恩有你",
+    "alias": "externaltemplate2",
+    "icon": "https://s1.kagirl.cn/icon/template_1683795117.png",
+    "menu": "热门",
+    "downloadTime": 1746253562034,
+    "downloadPath": "template/热门/感恩有你"
+  },
+  "womendehuiyi2022": {
+    "name": "我们的记忆",
+    "alias": "womendehuiyi2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1667298870.png",
+    "menu": "3D",
+    "downloadTime": 1746253565516,
+    "downloadPath": "template/3D/我们的记忆"
+  },
+  "rose": {
+    "name": "钟爱一生",
+    "alias": "rose",
+    "icon": "https://s1.kagirl.cn/icon/rose.jpg",
+    "menu": "爱情",
+    "downloadTime": 1746253566454,
+    "downloadPath": "template/爱情/钟爱一生"
+  },
+  "xuancaiwutai2022": {
+    "name": "炫彩舞台",
+    "alias": "xuancaiwutai2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1670498434.png",
+    "menu": "VIP",
+    "downloadTime": 1746253579462,
+    "downloadPath": "template/VIP/炫彩舞台"
+  },
+  "ganen2018": {
+    "name": "留住时光",
+    "alias": "ganen2018",
+    "icon": "https://s1.kagirl.cn/icon/jiaoshijie2018.png",
+    "menu": "节日",
+    "downloadTime": 1746253589857,
+    "downloadPath": "template/节日/留住时光"
+  },
+  "taohua": {
+    "name": "十里桃花",
+    "alias": "taohua",
+    "icon": "https://s1.kagirl.cn/icon/taohua.jpg",
+    "menu": "爱情",
+    "downloadTime": 1746253593878,
+    "downloadPath": "template/爱情/十里桃花"
+  },
+  "spring2020": {
+    "name": "春光无限",
+    "alias": "spring2020",
+    "icon": "https://s1.kagirl.cn/icon/template_1584090903.png",
+    "menu": "热门",
+    "downloadTime": 1746253597880,
+    "downloadPath": "template/热门/春光无限"
+  },
+  "zhencangxiangce2023": {
+    "name": "珍藏相册",
+    "alias": "zhencangxiangce2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1695102840.png",
+    "menu": "VIP",
+    "downloadTime": 1746253602792,
+    "downloadPath": "template/VIP/珍藏相册"
+  },
+  "chunseruhua2019": {
+    "name": "春色如画",
+    "alias": "chunseruhua2019",
+    "icon": "https://s1.kagirl.cn/icon/chunseruhua.png",
+    "menu": "热门",
+    "downloadTime": 1746253604227,
+    "downloadPath": "template/热门/春色如画"
+  },
+  "meilinvren2021": {
+    "name": "美丽女人",
+    "alias": "meilinvren2021",
+    "icon": "https://s1.kagirl.cn/icon/template_1614909627.png",
+    "menu": "节日",
+    "downloadTime": 1746253607428,
+    "downloadPath": "template/节日/美丽女人"
+  },
+  "baibianxiangce2022": {
+    "name": "百变相册",
+    "alias": "baibianxiangce2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1646304710.gif",
+    "menu": "大图",
+    "downloadTime": 1746253607965,
+    "downloadPath": "template/大图/百变相册"
+  },
+  "wallpaper202310": {
+    "name": "春日时光",
+    "alias": "wallpaper202310",
+    "icon": "https://s1.kagirl.cn/icon/template_1678700519.png",
+    "menu": "热门",
+    "downloadTime": 1746253609041,
+    "downloadPath": "template/热门/春日时光"
+  },
+  "album": {
+    "name": "我们的故事",
+    "alias": "album",
+    "icon": "https://s1.kagirl.cn/icon/album.jpg",
+    "menu": "同学",
+    "downloadTime": 1746253610052,
+    "downloadPath": "template/同学/我们的故事"
+  },
+  "cubeover": {
+    "name": "3D魔方",
+    "alias": "cubeover",
+    "icon": "https://s1.kagirl.cn/icon/01.jpg",
+    "menu": "大图",
+    "downloadTime": 1746253610586,
+    "downloadPath": "template/大图/3D魔方"
+  },
+  "nvrenjie2023": {
+    "name": "浪漫玫瑰",
+    "alias": "nvrenjie2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1686541990.png",
+    "menu": "热门",
+    "downloadTime": 1746253618212,
+    "downloadPath": "template/热门/浪漫玫瑰"
+  },
+  "huaxiangzhufu2024": {
+    "name": "想你了朋友",
+    "alias": "huaxiangzhufu2024",
+    "icon": "https://s1.kagirl.cn/icon/template_1712888532.png",
+    "menu": "VIP",
+    "downloadTime": 1746253625218,
+    "downloadPath": "template/VIP/想你了朋友"
+  },
+  "siyu2019": {
+    "name": "你好四月",
+    "alias": "siyu2019",
+    "icon": "https://s1.kagirl.cn/icon/nihaosiyue.png",
+    "menu": "热门",
+    "downloadTime": 1746253626534,
+    "downloadPath": "template/热门/你好四月"
+  },
+  "jiniance": {
+    "name": "纪念册",
+    "alias": "jiniance",
+    "icon": "https://s1.kagirl.cn/icon/jiniance.jpg",
+    "menu": "同学",
+    "downloadTime": 1746253627364,
+    "downloadPath": "template/同学/纪念册"
+  },
+  "flashscene": {
+    "name": "美好祝福",
+    "alias": "flashscene",
+    "icon": "https://s1.kagirl.cn/icon/flash.png",
+    "menu": "大图",
+    "downloadTime": 1746253628404,
+    "downloadPath": "template/大图/美好祝福"
+  },
+  "zhunijiankang2019": {
+    "name": "夏日安康",
+    "alias": "zhunijiankang2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1563881715.png",
+    "menu": "热门",
+    "downloadTime": 1746253630222,
+    "downloadPath": "template/热门/夏日安康"
+  },
+  "birthday2023": {
+    "name": "生日快乐",
+    "alias": "birthday2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1685094760.png",
+    "menu": "VIP",
+    "downloadTime": 1746253634886,
+    "downloadPath": "template/VIP/生日快乐"
+  },
+  "nvshen2019": {
+    "name": "祝福女人",
+    "alias": "nvshen2019",
+    "icon": "https://s1.kagirl.cn/icon/zhufunvshen.png",
+    "menu": "热门",
+    "downloadTime": 1746253636529,
+    "downloadPath": "template/热门/祝福女人"
+  },
+  "qrj2019": {
+    "name": "一生有你",
+    "alias": "qrj2019",
+    "icon": "https://s1.kagirl.cn/icon/qrj2019.png",
+    "menu": "爱情",
+    "downloadTime": 1746253637234,
+    "downloadPath": "template/爱情/一生有你"
+  },
+  "meihaoshunjian2022": {
+    "name": "美好瞬间",
+    "alias": "meihaoshunjian2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1646818574.png",
+    "menu": "大图",
+    "downloadTime": 1746253637617,
+    "downloadPath": "template/大图/美好瞬间"
+  },
+  "chunyu2021": {
+    "name": "春雨绵绵",
+    "alias": "chunyu2021",
+    "icon": "https://s1.kagirl.cn/icon/template_1617271470.png",
+    "menu": "热门",
+    "downloadTime": 1746253638584,
+    "downloadPath": "template/热门/春雨绵绵"
+  },
+  "yiaixiangban2022": {
+    "name": "以爱相伴",
+    "alias": "yiaixiangban2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1668162024.png",
+    "menu": "热门",
+    "downloadTime": 1746253643726,
+    "downloadPath": "template/热门/以爱相伴"
+  },
+  "qiangwei2022": {
+    "name": "蔷薇恋V+",
+    "alias": "qiangwei2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1656410200.png",
+    "menu": "VIP",
+    "downloadTime": 1746253644736,
+    "downloadPath": "template/VIP/蔷薇恋V+"
+  },
+  "externaltemplate6": {
+    "name": "郁金香满园",
+    "alias": "externaltemplate6",
+    "icon": "https://s1.kagirl.cn/icon/template_1684288608.png",
+    "menu": "热门",
+    "downloadTime": 1746253645261,
+    "downloadPath": "template/热门/郁金香满园"
+  },
+  "sgjh2018": {
+    "name": "时光静好",
+    "alias": "sgjh2018",
+    "icon": "https://s1.kagirl.cn/icon/shiguangjinghao.png",
+    "menu": "热门",
+    "downloadTime": 1746253646332,
+    "downloadPath": "template/热门/时光静好"
+  },
+  "nvshen25": {
+    "name": "闪耀钻石",
+    "alias": "nvshen25",
+    "icon": "https://s1.kagirl.cn/icon/template_1741342544.png",
+    "menu": "热门",
+    "downloadTime": 1746253654790,
+    "downloadPath": "template/热门/闪耀钻石"
+  },
+  "benediction202304": {
+    "name": "春回大地",
+    "alias": "benediction202304",
+    "icon": "https://s1.kagirl.cn/icon/template_1678700060.png",
+    "menu": "热门",
+    "downloadTime": 1746253655763,
+    "downloadPath": "template/热门/春回大地"
+  },
+  "zuimeihaoshiguang2022": {
+    "name": "最好的时光",
+    "alias": "zuimeihaoshiguang2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1671071887.png",
+    "menu": "热门",
+    "downloadTime": 1746253659290,
+    "downloadPath": "template/热门/最好的时光"
+  },
+  "faya": {
+    "name": "春意",
+    "alias": "faya",
+    "icon": "https://s1.kagirl.cn/icon/faya.jpg",
+    "menu": "热门",
+    "downloadTime": 1746253660788,
+    "downloadPath": "template/热门/春意"
+  },
+  "baby": {
+    "name": "宝宝相册",
+    "alias": "baby",
+    "icon": "https://s1.kagirl.cn/icon/baby.jpg",
+    "menu": "儿童",
+    "downloadTime": 1746253663923,
+    "downloadPath": "template/儿童/宝宝相册"
+  },
+  "externaltemplate30": {
+    "name": "花香四溢",
+    "alias": "externaltemplate30",
+    "icon": "https://s1.kagirl.cn/icon/template_1685443539.png",
+    "menu": "热门",
+    "downloadTime": 1746253671725,
+    "downloadPath": "template/热门/花香四溢"
+  },
+  "wuyi2021": {
+    "name": "五一光荣",
+    "alias": "wuyi2021",
+    "icon": "https://s1.kagirl.cn/icon/template_1619315669.png",
+    "menu": "节日",
+    "downloadTime": 1746253673083,
+    "downloadPath": "template/节日/五一光荣"
+  },
+  "lvxing": {
+    "name": "足迹",
+    "alias": "lvxing",
+    "icon": "https://s1.kagirl.cn/icon/lvxing.jpg",
+    "menu": "热门",
+    "downloadTime": 1746253676284,
+    "downloadPath": "template/热门/足迹"
+  },
+  "balloon": {
+    "name": "自由天空",
+    "alias": "balloon",
+    "icon": "https://s1.kagirl.cn/icon/balloon.jpg",
+    "menu": "儿童",
+    "downloadTime": 1746253676693,
+    "downloadPath": "template/儿童/自由天空"
+  },
+  "qingming2019": {
+    "name": "春风时节",
+    "alias": "qingming2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1554722019.png",
+    "menu": "节日",
+    "downloadTime": 1746253677585,
+    "downloadPath": "template/节日/春风时节"
+  },
+  "sanyue24": {
+    "name": "三月你好",
+    "alias": "sanyue24",
+    "icon": "https://s1.kagirl.cn/icon/template_1709115414.png",
+    "menu": "热门",
+    "downloadTime": 1746253679395,
+    "downloadPath": "template/热门/三月你好"
+  },
+  "3dhetang24": {
+    "name": "荷花美3D",
+    "alias": "3dhetang24",
+    "icon": "https://s1.kagirl.cn/icon/template_1720762550.png",
+    "menu": "热门",
+    "downloadTime": 1746253685931,
+    "downloadPath": "template/热门/荷花美3D"
+  },
+  "qingrenjie2021": {
+    "name": "珍爱一世",
+    "alias": "qingrenjie2021",
+    "icon": "https://s1.kagirl.cn/icon/template_1612664665.png",
+    "menu": "爱情",
+    "downloadTime": 1746253688812,
+    "downloadPath": "template/爱情/珍爱一世"
+  },
+  "bzmluohuahai2023": {
+    "name": "落花海",
+    "alias": "bzmluohuahai2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1676943312.png",
+    "menu": "3D",
+    "downloadTime": 1746253691465,
+    "downloadPath": "template/3D/落花海"
+  },
+  "morning": {
+    "name": "阳光宝贝",
+    "alias": "morning",
+    "icon": "https://s1.kagirl.cn/icon/morning.jpg",
+    "menu": "儿童",
+    "downloadTime": 1746253692744,
+    "downloadPath": "template/儿童/阳光宝贝"
+  },
+  "yujian": {
+    "name": "遇见自己",
+    "alias": "yujian",
+    "icon": "https://s1.kagirl.cn/icon/yujian.jpg",
+    "menu": "大图",
+    "downloadTime": 1746253693219,
+    "downloadPath": "template/大图/遇见自己"
+  },
+  "qingming": {
+    "name": "春意盎然",
+    "alias": "qingming",
+    "icon": "https://s1.kagirl.cn/icon/qingming.jpg",
+    "menu": "中国风",
+    "downloadTime": 1746253693763,
+    "downloadPath": "template/中国风/春意盎然"
+  },
+  "bzmtaohuajie2023": {
+    "name": "桃花结",
+    "alias": "bzmtaohuajie2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1676886525.png",
+    "menu": "热门",
+    "downloadTime": 1746253695757,
+    "downloadPath": "template/热门/桃花结"
+  },
+  "ganen": {
+    "name": "感恩有你",
+    "alias": "ganen",
+    "icon": "https://s1.kagirl.cn/icon/ganenjie.jpg",
+    "menu": "节日",
+    "downloadTime": 1746253713241,
+    "downloadPath": "template/节日/感恩有你"
+  },
+  "dahua": {
+    "name": "玫瑰之恋",
+    "alias": "dahua",
+    "icon": "https://s1.kagirl.cn/icon/dahua.jpg",
+    "menu": "爱情",
+    "downloadTime": 1746253713962,
+    "downloadPath": "template/爱情/玫瑰之恋"
+  },
+  "guoqing2017": {
+    "name": "快乐出游",
+    "alias": "guoqing2017",
+    "icon": "https://s1.kagirl.cn/icon/guoqing2017.jpg",
+    "menu": "热门",
+    "downloadTime": 1746253714388,
+    "downloadPath": "template/热门/快乐出游"
+  },
+  "xingfu": {
+    "name": "幸福时光",
+    "alias": "xingfu",
+    "icon": "https://s1.kagirl.cn/icon/xingfu.jpg",
+    "menu": "爱情",
+    "downloadTime": 1746253715043,
+    "downloadPath": "template/爱情/幸福时光"
+  },
+  "tongxue": {
+    "name": "同学录",
+    "alias": "tongxue",
+    "icon": "https://s1.kagirl.cn/icon/tongue.jpg",
+    "menu": "同学",
+    "downloadTime": 1746253716014,
+    "downloadPath": "template/同学/同学录"
+  },
+  "huakaifugui": {
+    "name": "花开富贵",
+    "alias": "huakaifugui",
+    "icon": "https://s1.kagirl.cn/icon/template_1576491068.png",
+    "menu": "中国风",
+    "downloadTime": 1746253716972,
+    "downloadPath": "template/中国风/花开富贵"
+  },
+  "benediction202301": {
+    "name": "春日祝福",
+    "alias": "benediction202301",
+    "icon": "https://s1.kagirl.cn/icon/template_1678679535.png",
+    "menu": "热门",
+    "downloadTime": 1746253717343,
+    "downloadPath": "template/热门/春日祝福"
+  },
+  "bamboo": {
+    "name": "夏日青竹",
+    "alias": "bamboo",
+    "icon": "https://s1.kagirl.cn/icon/qingzhu.jpg",
+    "menu": "热门",
+    "downloadTime": 1746253717690,
+    "downloadPath": "template/热门/夏日青竹"
+  },
+  "womendehuiyi2022vip": {
+    "name": "我们的记忆V+",
+    "alias": "womendehuiyi2022vip",
+    "icon": "https://s1.kagirl.cn/icon/template_1667298921.png",
+    "menu": "VIP",
+    "downloadTime": 1746253728999,
+    "downloadPath": "template/VIP/我们的记忆V+"
+  },
+  "naxienian": {
+    "name": "那些年",
+    "alias": "naxienian",
+    "icon": "https://s1.kagirl.cn/icon/naxienian.jpg",
+    "menu": "同学",
+    "downloadTime": 1746253730158,
+    "downloadPath": "template/同学/那些年"
+  },
+  "woxiangduinishuo2019": {
+    "name": "蝶恋花",
+    "alias": "woxiangduinishuo2019",
+    "icon": "https://s1.kagirl.cn/icon/qingtingmeihao.png",
+    "menu": "热门",
+    "downloadTime": 1746253730764,
+    "downloadPath": "template/热门/蝶恋花"
+  },
+  "qicaitongnian2020": {
+    "name": "七彩童年",
+    "alias": "qicaitongnian2020",
+    "icon": "https://s1.kagirl.cn/icon/template_1590543691.png",
+    "menu": "节日",
+    "downloadTime": 1746253731603,
+    "downloadPath": "template/节日/七彩童年"
+  },
+  "yumao": {
+    "name": "多彩嘉年华",
+    "alias": "yumao",
+    "icon": "https://s1.kagirl.cn/icon/yumao.jpg",
+    "menu": "大图",
+    "downloadTime": 1746253732373,
+    "downloadPath": "template/大图/多彩嘉年华"
+  },
+  "externaltemplate23": {
+    "name": "花之海",
+    "alias": "externaltemplate23",
+    "icon": "https://s1.kagirl.cn/icon/template_1685442494.png",
+    "menu": "热门",
+    "downloadTime": 1746253732991,
+    "downloadPath": "template/热门/花之海"
+  },
+  "qixi2018": {
+    "name": "相伴朝夕",
+    "alias": "qixi2018",
+    "icon": "https://s1.kagirl.cn/icon/qixi2018.jpg",
+    "menu": "爱情",
+    "downloadTime": 1746253733617,
+    "downloadPath": "template/爱情/相伴朝夕"
+  },
+  "ertongjie": {
+    "name": "快乐儿童",
+    "alias": "ertongjie",
+    "icon": "https://s1.kagirl.cn/icon/ertongjie.jpg",
+    "menu": "儿童",
+    "downloadTime": 1746253734148,
+    "downloadPath": "template/儿童/快乐儿童"
+  },
+  "externaltemplate24": {
+    "name": "江南春雨",
+    "alias": "externaltemplate24",
+    "icon": "https://s1.kagirl.cn/icon/template_1685442528.png",
+    "menu": "热门",
+    "downloadTime": 1746253735458,
+    "downloadPath": "template/热门/江南春雨"
+  },
+  "langmandatu24": {
+    "name": "紫色花韵",
+    "alias": "langmandatu24",
+    "icon": "https://s1.kagirl.cn/icon/template_1710310261.png",
+    "menu": "热门",
+    "downloadTime": 1746253747387,
+    "downloadPath": "template/热门/紫色花韵"
+  },
+  "externaltemplate7": {
+    "name": "荷塘月色",
+    "alias": "externaltemplate7",
+    "icon": "https://s1.kagirl.cn/icon/template_1684232702.png",
+    "menu": "热门",
+    "downloadTime": 1746253749130,
+    "downloadPath": "template/热门/荷塘月色"
+  },
+  "qingchun": {
+    "name": "致青春",
+    "alias": "qingchun",
+    "icon": "https://s1.kagirl.cn/icon/qingchun.jpg",
+    "menu": "同学",
+    "downloadTime": 1746253750368,
+    "downloadPath": "template/同学/致青春"
+  },
+  "ganenyouni2020": {
+    "name": "感恩有你",
+    "alias": "ganenyouni2020",
+    "icon": "https://s1.kagirl.cn/icon/template_1606201427.png",
+    "menu": "节日",
+    "downloadTime": 1746253750938,
+    "downloadPath": "template/节日/感恩有你"
+  },
+  "gray": {
+    "name": "水墨丹青",
+    "alias": "gray",
+    "icon": "https://s1.kagirl.cn/icon/gray.jpg",
+    "menu": "中国风",
+    "downloadTime": 1746253751549,
+    "downloadPath": "template/中国风/水墨丹青"
+  },
+  "freeheart": {
+    "name": "心的自由",
+    "alias": "freeheart",
+    "icon": "https://s1.kagirl.cn/icon/template_1556417852.png",
+    "menu": "热门",
+    "downloadTime": 1746253753300,
+    "downloadPath": "template/热门/心的自由"
+  },
+  "langhua": {
+    "name": "浪花朵朵",
+    "alias": "langhua",
+    "icon": "https://s1.kagirl.cn/icon/langhua.jpg",
+    "menu": "儿童",
+    "downloadTime": 1746253757930,
+    "downloadPath": "template/儿童/浪花朵朵"
+  },
+  "july": {
+    "name": "美丽相约",
+    "alias": "july",
+    "icon": "https://s1.kagirl.cn/icon/qiyue.jpg",
+    "menu": "热门",
+    "downloadTime": 1746253759376,
+    "downloadPath": "template/热门/美丽相约"
+  },
+  "muchun2022": {
+    "name": "牧春",
+    "alias": "muchun2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1646796041.png",
+    "menu": "中国风",
+    "downloadTime": 1746253761631,
+    "downloadPath": "template/中国风/牧春"
+  },
+  "muqinjie24": {
+    "name": "感恩母亲节",
+    "alias": "muqinjie24",
+    "icon": "https://s1.kagirl.cn/icon/template_1715335865.png",
+    "menu": "热门",
+    "downloadTime": 1746253762683,
+    "downloadPath": "template/热门/感恩母亲节"
+  },
+  "qingrenjie2020": {
+    "name": "玫瑰情人",
+    "alias": "qingrenjie2020",
+    "icon": "https://s1.kagirl.cn/icon/template_1581429831.png",
+    "menu": "节日",
+    "downloadTime": 1746253763500,
+    "downloadPath": "template/节日/玫瑰情人"
+  },
+  "3dmeimeida2023": {
+    "name": "美美哒3D",
+    "alias": "3dmeimeida2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1681800886.png",
+    "menu": "3D",
+    "downloadTime": 1746253775393,
+    "downloadPath": "template/3D/美美哒3D"
+  },
+  "yuedu": {
+    "name": "旧时回忆",
+    "alias": "yuedu",
+    "icon": "https://s1.kagirl.cn/icon/yuedu.jpg",
+    "menu": "同学",
+    "downloadTime": 1746253776846,
+    "downloadPath": "template/同学/旧时回忆"
+  },
+  "externaltemplate10": {
+    "name": "自在如意",
+    "alias": "externaltemplate10",
+    "icon": "https://s1.kagirl.cn/icon/template_1684137318.png",
+    "menu": "热门",
+    "downloadTime": 1746253778283,
+    "downloadPath": "template/热门/自在如意"
+  },
+  "shatan": {
+    "name": "快乐一夏",
+    "alias": "shatan",
+    "icon": "https://s1.kagirl.cn/icon/shatan.jpg",
+    "menu": "儿童",
+    "downloadTime": 1746253778814,
+    "downloadPath": "template/儿童/快乐一夏"
+  },
+  "xingxing": {
+    "name": "生活剪影",
+    "alias": "xingxing",
+    "icon": "https://s1.kagirl.cn/icon/xingxing.jpg",
+    "menu": "大图",
+    "downloadTime": 1746253779325,
+    "downloadPath": "template/大图/生活剪影"
+  },
+  "shengri": {
+    "name": "生日快乐",
+    "alias": "shengri",
+    "icon": "https://s1.kagirl.cn/icon/shengri.jpg",
+    "menu": "节日",
+    "downloadTime": 1746253779779,
+    "downloadPath": "template/节日/生日快乐"
+  },
+  "nanfeng": {
+    "name": "童真童趣",
+    "alias": "nanfeng",
+    "icon": "https://s1.kagirl.cn/icon/nanfeng.jpg",
+    "menu": "儿童",
+    "downloadTime": 1746253780195,
+    "downloadPath": "template/儿童/童真童趣"
+  },
+  "qingren2018": {
+    "name": "情比金坚",
+    "alias": "qingren2018",
+    "icon": "https://s1.kagirl.cn/icon/qingren2018.jpg",
+    "menu": "爱情",
+    "downloadTime": 1746253780657,
+    "downloadPath": "template/爱情/情比金坚"
+  },
+  "yinghua2024": {
+    "name": "樱花美",
+    "alias": "yinghua2024",
+    "icon": "https://s1.kagirl.cn/icon/template_1711015593.png",
+    "menu": "热门",
+    "downloadTime": 1746253782379,
+    "downloadPath": "template/热门/樱花美"
+  },
+  "zuimeizhufu": {
+    "name": "最美祝福",
+    "alias": "zuimeizhufu",
+    "icon": "https://s1.kagirl.cn/icon/template_1572005986.png",
+    "menu": "节日",
+    "downloadTime": 1746253783573,
+    "downloadPath": "template/节日/最美祝福"
+  },
+  "wallpaper202312": {
+    "name": "花开一朵",
+    "alias": "wallpaper202312",
+    "icon": "https://s1.kagirl.cn/icon/template_1678700662.png",
+    "menu": "热门",
+    "downloadTime": 1746253784510,
+    "downloadPath": "template/热门/花开一朵"
+  },
+  "fuqin": {
+    "name": "时光放映机",
+    "alias": "fuqin",
+    "icon": "https://s1.kagirl.cn/icon/fuqin.jpg",
+    "menu": "热门",
+    "downloadTime": 1746253785131,
+    "downloadPath": "template/热门/时光放映机"
+  },
+  "ganenxiangju2023": {
+    "name": "感恩相聚",
+    "alias": "ganenxiangju2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1685959652.png",
+    "menu": "VIP",
+    "downloadTime": 1746253788402,
+    "downloadPath": "template/VIP/感恩相聚"
+  },
+  "nvren": {
+    "name": "动感光线",
+    "alias": "nvren",
+    "icon": "https://s1.kagirl.cn/icon/nvren1.jpg",
+    "menu": "爱情",
+    "downloadTime": 1746253788811,
+    "downloadPath": "template/爱情/动感光线"
+  },
+  "langmanqingren25": {
+    "name": "爱在天天",
+    "alias": "langmanqingren25",
+    "icon": "https://s1.kagirl.cn/icon/template_1739442892.png",
+    "menu": "热门",
+    "downloadTime": 1746253803017,
+    "downloadPath": "template/热门/爱在天天"
+  },
+  "taohuashenkai2023": {
+    "name": "桃花盛开",
+    "alias": "taohuashenkai2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1680143233.png",
+    "menu": "VIP",
+    "downloadTime": 1746253814656,
+    "downloadPath": "template/VIP/桃花盛开"
+  },
+  "lovetrip": {
+    "name": "爱的旅程",
+    "alias": "lovetrip",
+    "icon": "https://s1.kagirl.cn/icon/lovetrip.jpg",
+    "menu": "爱情",
+    "downloadTime": 1746253815595,
+    "downloadPath": "template/爱情/爱的旅程"
+  },
+  "maxituan": {
+    "name": "儿童乐园",
+    "alias": "maxituan",
+    "icon": "https://s1.kagirl.cn/icon/maxituan.jpg",
+    "menu": "儿童",
+    "downloadTime": 1746253816829,
+    "downloadPath": "template/儿童/儿童乐园"
+  },
+  "fuqishenian2025": {
+    "name": "福气蛇年",
+    "alias": "fuqishenian2025",
+    "icon": "https://s1.kagirl.cn/icon/template_1737354698.png",
+    "menu": "热门",
+    "downloadTime": 1746253817561,
+    "downloadPath": "template/热门/福气蛇年"
+  },
+  "teacher": {
+    "name": "校园回忆",
+    "alias": "teacher",
+    "icon": "https://s1.kagirl.cn/icon/teacher180726.jpg",
+    "menu": "节日",
+    "downloadTime": 1746253818270,
+    "downloadPath": "template/节日/校园回忆"
+  },
+  "xiatiandefeng2022": {
+    "name": "浪花一朵朵",
+    "alias": "xiatiandefeng2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1655862677.png",
+    "menu": "热门",
+    "downloadTime": 1746253830271,
+    "downloadPath": "template/热门/浪花一朵朵"
+  },
+  "qingren17": {
+    "name": "爱的誓言",
+    "alias": "qingren17",
+    "icon": "https://s1.kagirl.cn/icon/qingren17.jpg",
+    "menu": "爱情",
+    "downloadTime": 1746253833419,
+    "downloadPath": "template/爱情/爱的誓言"
+  },
+  "huazhou": {
+    "name": "古韵画轴",
+    "alias": "huazhou",
+    "icon": "https://s1.kagirl.cn/icon/guyun.jpg",
+    "menu": "中国风",
+    "downloadTime": 1746253834188,
+    "downloadPath": "template/中国风/古韵画轴"
+  },
+  "xiaozhen": {
+    "name": "童话小镇",
+    "alias": "xiaozhen",
+    "icon": "https://s1.kagirl.cn/icon/xiaozhen.jpg",
+    "menu": "儿童",
+    "downloadTime": 1746253835196,
+    "downloadPath": "template/儿童/童话小镇"
+  },
+  "nvshenjie": {
+    "name": "女人如花",
+    "alias": "nvshenjie",
+    "icon": "https://s1.kagirl.cn/icon/nvshenjie.jpg",
+    "menu": "热门",
+    "downloadTime": 1746253836168,
+    "downloadPath": "template/热门/女人如花"
+  },
+  "chunyu23": {
+    "name": "春雨",
+    "alias": "chunyu23",
+    "icon": "https://s1.kagirl.cn/icon/template_1699006220.png",
+    "menu": "热门",
+    "downloadTime": 1746253839326,
+    "downloadPath": "template/热门/春雨"
+  },
+  "autumn": {
+    "name": "秋意浓",
+    "alias": "autumn",
+    "icon": "https://s1.kagirl.cn/icon/autumn.jpg",
+    "menu": "中国风",
+    "downloadTime": 1746253839756,
+    "downloadPath": "template/中国风/秋意浓"
+  },
+  "qiufeng": {
+    "name": "秋兮枫离",
+    "alias": "qiufeng",
+    "icon": "https://s1.kagirl.cn/icon/qiufeng.jpg",
+    "menu": "中国风",
+    "downloadTime": 1746253840396,
+    "downloadPath": "template/中国风/秋兮枫离"
+  },
+  "nvrenhua24": {
+    "name": "女神驾到",
+    "alias": "nvrenhua24",
+    "icon": "https://s1.kagirl.cn/icon/template_1709806055.png",
+    "menu": "热门",
+    "downloadTime": 1746253843160,
+    "downloadPath": "template/热门/女神驾到"
+  },
+  "chahuayu2018": {
+    "name": "茶花语",
+    "alias": "chahuayu2018",
+    "icon": "https://s1.kagirl.cn/icon/chahuayu3.png",
+    "menu": "热门",
+    "downloadTime": 1746253843733,
+    "downloadPath": "template/热门/茶花语"
+  },
+  "wuwangwo": {
+    "name": "勿忘我",
+    "alias": "wuwangwo",
+    "icon": "https://s1.kagirl.cn/icon/wuwangwo.jpg",
+    "menu": "同学",
+    "downloadTime": 1746253844365,
+    "downloadPath": "template/同学/勿忘我"
+  },
+  "jiniance2019": {
+    "name": "开学啦",
+    "alias": "jiniance2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1598497768.png",
+    "menu": "同学",
+    "downloadTime": 1746253845146,
+    "downloadPath": "template/同学/开学啦"
+  },
+  "shiguangjiniance2023": {
+    "name": "时光留影",
+    "alias": "shiguangjiniance2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1697169670.png",
+    "menu": "热门",
+    "downloadTime": 1746253848067,
+    "downloadPath": "template/热门/时光留影"
+  },
+  "autumn2020": {
+    "name": "你好秋天",
+    "alias": "autumn2020",
+    "icon": "https://s1.kagirl.cn/icon/template_1596535798.png",
+    "menu": "节日",
+    "downloadTime": 1746253848629,
+    "downloadPath": "template/节日/你好秋天"
+  },
+  "zhanlanguan2023": {
+    "name": "珍爱画像馆",
+    "alias": "zhanlanguan2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1688983104.png",
+    "menu": "VIP",
+    "downloadTime": 1746253860361,
+    "downloadPath": "template/VIP/珍爱画像馆"
+  },
+  "huijia": {
+    "name": "想家了",
+    "alias": "huijia",
+    "icon": "https://s1.kagirl.cn/icon/huijia.jpg",
+    "menu": "大图",
+    "downloadTime": 1746253861403,
+    "downloadPath": "template/大图/想家了"
+  },
+  "hehua2022": {
+    "name": "荷塘月色",
+    "alias": "hehua2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1662023476.png",
+    "menu": "热门",
+    "downloadTime": 1746253874063,
+    "downloadPath": "template/热门/荷塘月色"
+  },
+  "bzmchunrishiguang2023": {
+    "name": "春日时光",
+    "alias": "bzmchunrishiguang2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1676512043.png",
+    "menu": "热门",
+    "downloadTime": 1746253875213,
+    "downloadPath": "template/热门/春日时光"
+  },
+  "funv": {
+    "name": "可爱女人",
+    "alias": "funv",
+    "icon": "https://s1.kagirl.cn/icon/funv1.jpg",
+    "menu": "爱情",
+    "downloadTime": 1746253876025,
+    "downloadPath": "template/爱情/可爱女人"
+  },
+  "baiseqingrenjie2023": {
+    "name": "真爱有你",
+    "alias": "baiseqingrenjie2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1678445347.png",
+    "menu": "热门",
+    "downloadTime": 1746253887604,
+    "downloadPath": "template/热门/真爱有你"
+  },
+  "langman520": {
+    "name": "浪漫520",
+    "alias": "langman520",
+    "icon": "https://s1.kagirl.cn/icon/template_1621405482.png",
+    "menu": "爱情",
+    "downloadTime": 1746253898376,
+    "downloadPath": "template/爱情/浪漫520"
+  },
+  "zhongguofeng": {
+    "name": "映日荷花",
+    "alias": "zhongguofeng",
+    "icon": "https://s1.kagirl.cn/icon/zhongguofeng1.jpg",
+    "menu": "中国风",
+    "downloadTime": 1746253899557,
+    "downloadPath": "template/中国风/映日荷花"
+  },
+  "spring": {
+    "name": "万物春",
+    "alias": "spring",
+    "icon": "https://s1.kagirl.cn/icon/spring.jpg",
+    "menu": "热门",
+    "downloadTime": 1746253900965,
+    "downloadPath": "template/热门/万物春"
+  },
+  "yuanxiao": {
+    "name": "花好月圆",
+    "alias": "yuanxiao",
+    "icon": "https://s1.kagirl.cn/icon/yuanxiao1.jpg",
+    "menu": "节日",
+    "downloadTime": 1746253901810,
+    "downloadPath": "template/节日/花好月圆"
+  },
+  "hualuo": {
+    "name": "梦里花落",
+    "alias": "hualuo",
+    "icon": "https://s1.kagirl.cn/icon/hualuo.jpg",
+    "menu": "热门",
+    "downloadTime": 1746253902307,
+    "downloadPath": "template/热门/梦里花落"
+  },
+  "externaltemplate14": {
+    "name": "古色古香",
+    "alias": "externaltemplate14",
+    "icon": "https://s1.kagirl.cn/icon/template_1684290073.png",
+    "menu": "热门",
+    "downloadTime": 1746253903612,
+    "downloadPath": "template/热门/古色古香"
+  },
+  "externaltemplate19": {
+    "name": "竹之韵",
+    "alias": "externaltemplate19",
+    "icon": "https://s1.kagirl.cn/icon/template_1685416146.png",
+    "menu": "热门",
+    "downloadTime": 1746253904338,
+    "downloadPath": "template/热门/竹之韵"
+  },
+  "3dwuyi24": {
+    "name": "欢庆五一3D",
+    "alias": "3dwuyi24",
+    "icon": "https://s1.kagirl.cn/icon/template_1713860232.png",
+    "menu": "VIP",
+    "downloadTime": 1746253915995,
+    "downloadPath": "template/VIP/欢庆五一3D"
+  },
+  "xuandong": {
+    "name": "炫动星空",
+    "alias": "xuandong",
+    "icon": "https://s1.kagirl.cn/icon/xuandong1.jpg",
+    "menu": "大图",
+    "downloadTime": 1746253916716,
+    "downloadPath": "template/大图/炫动星空"
+  },
+  "jianjunjie22019": {
+    "name": "八一建军",
+    "alias": "jianjunjie22019",
+    "icon": "https://s1.kagirl.cn/icon/template_1564370183.png",
+    "menu": "节日",
+    "downloadTime": 1746253917820,
+    "downloadPath": "template/节日/八一建军"
+  },
+  "liming": {
+    "name": "清晨黎明",
+    "alias": "liming",
+    "icon": "https://s1.kagirl.cn/icon/liming.jpg",
+    "menu": "热门",
+    "downloadTime": 1746253918320,
+    "downloadPath": "template/热门/清晨黎明"
+  },
+  "jinse2023": {
+    "name": "金色年华",
+    "alias": "jinse2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1693818065.png",
+    "menu": "VIP",
+    "downloadTime": 1746253921095,
+    "downloadPath": "template/VIP/金色年华"
+  },
+  "meihua": {
+    "name": "梅花情",
+    "alias": "meihua",
+    "icon": "https://s1.kagirl.cn/icon/meihua.jpg",
+    "menu": "中国风",
+    "downloadTime": 1746253921499,
+    "downloadPath": "template/中国风/梅花情"
+  },
+  "chuxi25": {
+    "name": "蛇年大吉",
+    "alias": "chuxi25",
+    "icon": "https://s1.kagirl.cn/icon/template_1737020028.png",
+    "menu": "热门",
+    "downloadTime": 1746253924915,
+    "downloadPath": "template/热门/蛇年大吉"
+  },
+  "xinshuo": {
+    "name": "心说",
+    "alias": "xinshuo",
+    "icon": "https://s1.kagirl.cn/icon/xinshuo.jpg",
+    "menu": "爱情",
+    "downloadTime": 1746253925549,
+    "downloadPath": "template/爱情/心说"
+  },
+  "lianhua": {
+    "name": "蝶恋花",
+    "alias": "lianhua",
+    "icon": "https://s1.kagirl.cn/icon/lianhua.jpg",
+    "menu": "中国风",
+    "downloadTime": 1746253926378,
+    "downloadPath": "template/中国风/蝶恋花"
+  },
+  "xiatian24": {
+    "name": "你好夏天",
+    "alias": "xiatian24",
+    "icon": "https://s1.kagirl.cn/icon/template_1719304172.png",
+    "menu": "热门",
+    "downloadTime": 1746253928889,
+    "downloadPath": "template/热门/你好夏天"
+  },
+  "laodong": {
+    "name": "劳动最光荣",
+    "alias": "laodong",
+    "icon": "https://s1.kagirl.cn/icon/laodong.jpg",
+    "menu": "节日",
+    "downloadTime": 1746253930156,
+    "downloadPath": "template/节日/劳动最光荣"
+  },
+  "yelu": {
+    "name": "甜蜜梦乡",
+    "alias": "yelu",
+    "icon": "https://s1.kagirl.cn/icon/yelu.jpg",
+    "menu": "儿童",
+    "downloadTime": 1746253930842,
+    "downloadPath": "template/儿童/甜蜜梦乡"
+  },
+  "qian": {
+    "name": "恭喜发财",
+    "alias": "qian",
+    "icon": "https://s1.kagirl.cn/icon/qian.jpg",
+    "menu": "节日",
+    "downloadTime": 1746253931316,
+    "downloadPath": "template/节日/恭喜发财"
+  },
+  "quanping": {
+    "name": "情书",
+    "alias": "quanping",
+    "icon": "https://s1.kagirl.cn/icon/quanping.jpg",
+    "menu": "爱情",
+    "downloadTime": 1746253932256,
+    "downloadPath": "template/爱情/情书"
+  },
+  "zoo": {
+    "name": "动物园",
+    "alias": "zoo",
+    "icon": "https://s1.kagirl.cn/icon/zoo.jpg",
+    "menu": "儿童",
+    "downloadTime": 1746253932920,
+    "downloadPath": "template/儿童/动物园"
+  },
+  "xiangai23": {
+    "name": "相爱誓约",
+    "alias": "xiangai23",
+    "icon": "https://s1.kagirl.cn/icon/template_1702457984.png",
+    "menu": "热门",
+    "downloadTime": 1746253934589,
+    "downloadPath": "template/热门/相爱誓约"
+  },
+  "zaoanshiguang2020": {
+    "name": "早安时光",
+    "alias": "zaoanshiguang2020",
+    "icon": "https://s1.kagirl.cn/icon/template_1594798337.png",
+    "menu": "大图",
+    "downloadTime": 1746253936431,
+    "downloadPath": "template/大图/早安时光"
+  },
+  "qingdingqixi2019": {
+    "name": "情定七夕",
+    "alias": "qingdingqixi2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1564822092.png",
+    "menu": "节日",
+    "downloadTime": 1746253937550,
+    "downloadPath": "template/节日/情定七夕"
+  },
+  "wuyijie": {
+    "name": "环游世界",
+    "alias": "wuyijie",
+    "icon": "https://s1.kagirl.cn/icon/wuyijie.jpg",
+    "menu": "儿童",
+    "downloadTime": 1746253938032,
+    "downloadPath": "template/儿童/环游世界"
+  },
+  "meiguijiaren2022": {
+    "name": "玫瑰佳人",
+    "alias": "meiguijiaren2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1672133368.png",
+    "menu": "VIP",
+    "downloadTime": 1746253954399,
+    "downloadPath": "template/VIP/玫瑰佳人"
+  },
+  "opera": {
+    "name": "吉祥如意",
+    "alias": "opera",
+    "icon": "https://s1.kagirl.cn/icon/opera180726.jpg",
+    "menu": "中国风",
+    "downloadTime": 1746253955231,
+    "downloadPath": "template/中国风/吉祥如意"
+  },
+  "birthday": {
+    "name": "生日祝福",
+    "alias": "birthday",
+    "icon": "https://s1.kagirl.cn/icon/birthday.jpg",
+    "menu": "热门",
+    "downloadTime": 1746253955607,
+    "downloadPath": "template/热门/生日祝福"
+  },
+  "externaltemplate1": {
+    "name": "真心问候",
+    "alias": "externaltemplate1",
+    "icon": "https://s1.kagirl.cn/icon/template_1683794676.png",
+    "menu": "热门",
+    "downloadTime": 1746253956462,
+    "downloadPath": "template/热门/真心问候"
+  },
+  "qiulaile2019": {
+    "name": "臻美秋来",
+    "alias": "qiulaile2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1602213913.png",
+    "menu": "中国风",
+    "downloadTime": 1746253957088,
+    "downloadPath": "template/中国风/臻美秋来"
+  },
+  "hixiatian2019": {
+    "name": "嗨，夏天",
+    "alias": "hixiatian2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1562238137.png",
+    "menu": "热门",
+    "downloadTime": 1746253957989,
+    "downloadPath": "template/热门/嗨，夏天"
+  },
+  "moshang": {
+    "name": "墨上花开",
+    "alias": "moshang",
+    "icon": "https://s1.kagirl.cn/icon/moshang.jpg",
+    "menu": "中国风",
+    "downloadTime": 1746253958753,
+    "downloadPath": "template/中国风/墨上花开"
+  },
+  "kafamily": {
+    "name": "快乐一家",
+    "alias": "kafamily",
+    "icon": "https://s1.kagirl.cn/icon/kafamily.jpg",
+    "menu": "节日",
+    "downloadTime": 1746253959132,
+    "downloadPath": "template/节日/快乐一家"
+  },
+  "ganenyouni2019": {
+    "name": "感谢有你",
+    "alias": "ganenyouni2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1574307901.png",
+    "menu": "节日",
+    "downloadTime": 1746253959627,
+    "downloadPath": "template/节日/感谢有你"
+  },
+  "yanyu": {
+    "name": "烟雨蒙蒙",
+    "alias": "yanyu",
+    "icon": "https://s1.kagirl.cn/icon/yanyu.jpg",
+    "menu": "中国风",
+    "downloadTime": 1746253960096,
+    "downloadPath": "template/中国风/烟雨蒙蒙"
+  },
+  "guoqingjie2022": {
+    "name": "祝福祖国",
+    "alias": "guoqingjie2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1664507391.png",
+    "menu": "热门",
+    "downloadTime": 1746253962196,
+    "downloadPath": "template/热门/祝福祖国"
+  },
+  "guoqing": {
+    "name": "旅行志",
+    "alias": "guoqing",
+    "icon": "https://s1.kagirl.cn/icon/guoqing.jpg",
+    "menu": "儿童",
+    "downloadTime": 1746253962676,
+    "downloadPath": "template/儿童/旅行志"
+  },
+  "chongyang": {
+    "name": "秋色满园",
+    "alias": "chongyang",
+    "icon": "https://s1.kagirl.cn/icon/chongyang.jpg",
+    "menu": "节日",
+    "downloadTime": 1746253963071,
+    "downloadPath": "template/节日/秋色满园"
+  },
+  "qiqiu": {
+    "name": "梦幻气球",
+    "alias": "qiqiu",
+    "icon": "https://s1.kagirl.cn/icon/qiqiu.jpg",
+    "menu": "大图",
+    "downloadTime": 1746253963848,
+    "downloadPath": "template/大图/梦幻气球"
+  },
+  "huanqiulvxing2023": {
+    "name": "环球旅行",
+    "alias": "huanqiulvxing2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1690525601.png",
+    "menu": "VIP",
+    "downloadTime": 1746253975221,
+    "downloadPath": "template/VIP/环球旅行"
+  },
+  "qianlv": {
+    "name": "清风蝶影",
+    "alias": "qianlv",
+    "icon": "https://s1.kagirl.cn/icon/qianlv.jpg",
+    "menu": "热门",
+    "downloadTime": 1746253978351,
+    "downloadPath": "template/热门/清风蝶影"
+  },
+  "xiangyin": {
+    "name": "心心相印",
+    "alias": "xiangyin",
+    "icon": "https://s1.kagirl.cn/icon/xiangyin.jpg",
+    "menu": "爱情",
+    "downloadTime": 1746253978930,
+    "downloadPath": "template/爱情/心心相印"
+  },
+  "qingren": {
+    "name": "浪漫满屋",
+    "alias": "qingren",
+    "icon": "https://s1.kagirl.cn/icon/qingren.jpg",
+    "menu": "爱情",
+    "downloadTime": 1746253979493,
+    "downloadPath": "template/爱情/浪漫满屋"
+  },
+  "zazhi": {
+    "name": "梦幻光影",
+    "alias": "zazhi",
+    "icon": "https://s1.kagirl.cn/icon/zazhi.jpg",
+    "menu": "大图",
+    "downloadTime": 1746253979891,
+    "downloadPath": "template/大图/梦幻光影"
+  },
+  "fulushou": {
+    "name": "福禄寿",
+    "alias": "fulushou",
+    "icon": "https://s1.kagirl.cn/icon/fulushou.jpg",
+    "menu": "节日",
+    "downloadTime": 1746253980513,
+    "downloadPath": "template/节日/福禄寿"
+  },
+  "externaltemplate16": {
+    "name": "烟雨江南",
+    "alias": "externaltemplate16",
+    "icon": "https://s1.kagirl.cn/icon/template_1684290840.png",
+    "menu": "热门",
+    "downloadTime": 1746253981661,
+    "downloadPath": "template/热门/烟雨江南"
+  },
+  "lvtuyouni2023": {
+    "name": "旅途有你",
+    "alias": "lvtuyouni2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1682674918.png",
+    "menu": "VIP",
+    "downloadTime": 1746253993371,
+    "downloadPath": "template/VIP/旅途有你"
+  },
+  "chuntian": {
+    "name": "落花雨",
+    "alias": "chuntian",
+    "icon": "https://s1.kagirl.cn/icon/chuntian.jpg",
+    "menu": "热门",
+    "downloadTime": 1746253995098,
+    "downloadPath": "template/热门/落花雨"
+  },
+  "guyutaohua2019": {
+    "name": "桃红蝶飞",
+    "alias": "guyutaohua2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1555554817.png",
+    "menu": "热门",
+    "downloadTime": 1746253996519,
+    "downloadPath": "template/热门/桃红蝶飞"
+  },
+  "chongyang2017": {
+    "name": "秋思",
+    "alias": "chongyang2017",
+    "icon": "https://s1.kagirl.cn/icon/chongyang2017.jpg",
+    "menu": "中国风",
+    "downloadTime": 1746253997235,
+    "downloadPath": "template/中国风/秋思"
+  },
+  "ainiyishengyishi2022": {
+    "name": "520我爱你",
+    "alias": "ainiyishengyishi2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1652867571.png",
+    "menu": "节日",
+    "downloadTime": 1746254009550,
+    "downloadPath": "template/节日/520我爱你"
+  },
+  "bzmdaichunlai2023": {
+    "name": "待春来",
+    "alias": "bzmdaichunlai2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1676628096.png",
+    "menu": "热门",
+    "downloadTime": 1746254010802,
+    "downloadPath": "template/热门/待春来"
+  },
+  "chuxia2021": {
+    "name": "初夏",
+    "alias": "chuxia2021",
+    "icon": "https://s1.kagirl.cn/icon/template_1620987674.png",
+    "menu": "热门",
+    "downloadTime": 1746254011531,
+    "downloadPath": "template/热门/初夏"
+  },
+  "green": {
+    "name": "绿色心情",
+    "alias": "green",
+    "icon": "https://s1.kagirl.cn/icon/green.jpg",
+    "menu": "热门",
+    "downloadTime": 1746254012121,
+    "downloadPath": "template/热门/绿色心情"
+  },
+  "leyuan": {
+    "name": "水上乐园",
+    "alias": "leyuan",
+    "icon": "https://s1.kagirl.cn/icon/leyuan.jpg",
+    "menu": "儿童",
+    "downloadTime": 1746254012614,
+    "downloadPath": "template/儿童/水上乐园"
+  },
+  "theater": {
+    "name": "梦幻剧场",
+    "alias": "theater",
+    "icon": "https://s1.kagirl.cn/icon/theater.jpg",
+    "menu": "儿童",
+    "downloadTime": 1746254013118,
+    "downloadPath": "template/儿童/梦幻剧场"
+  },
+  "shiguangbulao2024": {
+    "name": "幻影生活",
+    "alias": "shiguangbulao2024",
+    "icon": "https://s1.kagirl.cn/icon/template_1733909411.png",
+    "menu": "热门",
+    "downloadTime": 1746254013959,
+    "downloadPath": "template/热门/幻影生活"
+  },
+  "flowers": {
+    "name": "花的故事",
+    "alias": "flowers",
+    "icon": "https://s1.kagirl.cn/icon/flowers.jpg",
+    "menu": "热门",
+    "downloadTime": 1746254014346,
+    "downloadPath": "template/热门/花的故事"
+  },
+  "qiuji2018": {
+    "name": "浓浓金秋",
+    "alias": "qiuji2018",
+    "icon": "https://s1.kagirl.cn/icon/nongnongjinqiu.png",
+    "menu": "中国风",
+    "downloadTime": 1746254015359,
+    "downloadPath": "template/中国风/浓浓金秋"
+  },
+  "yushuiyuan2019": {
+    "name": "鱼水缘",
+    "alias": "yushuiyuan2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1561453106.png",
+    "menu": "中国风",
+    "downloadTime": 1746254016367,
+    "downloadPath": "template/中国风/鱼水缘"
+  },
+  "qixijie": {
+    "name": "比翼双飞",
+    "alias": "qixijie",
+    "icon": "https://s1.kagirl.cn/icon/qixijie.jpg",
+    "menu": "节日",
+    "downloadTime": 1746254016768,
+    "downloadPath": "template/节日/比翼双飞"
+  },
+  "ganenyouni2023": {
+    "name": "感恩有你",
+    "alias": "ganenyouni2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1700559516.png",
+    "menu": "热门",
+    "downloadTime": 1746254017649,
+    "downloadPath": "template/热门/感恩有你"
+  },
+  "moon": {
+    "name": "海上生明月",
+    "alias": "moon",
+    "icon": "https://s1.kagirl.cn/icon/moon.jpg",
+    "menu": "热门",
+    "downloadTime": 1746254018334,
+    "downloadPath": "template/热门/海上生明月"
+  },
+  "liuyi": {
+    "name": "快乐六一",
+    "alias": "liuyi",
+    "icon": "https://s1.kagirl.cn/icon/liuyi.jpg",
+    "menu": "儿童",
+    "downloadTime": 1746254018841,
+    "downloadPath": "template/儿童/快乐六一"
+  },
+  "3dshengdan24": {
+    "name": "圣诞祝福3D",
+    "alias": "3dshengdan24",
+    "icon": "https://s1.kagirl.cn/icon/template_1735097064.png",
+    "menu": "热门",
+    "downloadTime": 1746254031438,
+    "downloadPath": "template/热门/圣诞祝福3D"
+  },
+  "jingzhongmeiren24": {
+    "name": "镜中美人",
+    "alias": "jingzhongmeiren24",
+    "icon": "https://s1.kagirl.cn/icon/template_1732008033.png",
+    "menu": "VIP",
+    "downloadTime": 1746254033596,
+    "downloadPath": "template/VIP/镜中美人"
+  },
+  "pinganye2022": {
+    "name": "祝你平安",
+    "alias": "pinganye2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1671801779.png",
+    "menu": "热门",
+    "downloadTime": 1746254034378,
+    "downloadPath": "template/热门/祝你平安"
+  },
+  "xiari24": {
+    "name": "夏日相册",
+    "alias": "xiari24",
+    "icon": "https://s1.kagirl.cn/icon/template_1715745255.png",
+    "menu": "热门",
+    "downloadTime": 1746254036809,
+    "downloadPath": "template/热门/夏日相册"
+  },
+  "fuqin2018": {
+    "name": "父爱如山",
+    "alias": "fuqin2018",
+    "icon": "https://s1.kagirl.cn/icon/fuqin2018.jpg",
+    "menu": "节日",
+    "downloadTime": 1746254037204,
+    "downloadPath": "template/节日/父爱如山"
+  },
+  "junhun1": {
+    "name": "铁血铸军魂",
+    "alias": "junhun1",
+    "icon": "https://s1.kagirl.cn/icon/junhun1.jpg",
+    "menu": "节日",
+    "downloadTime": 1746254037695,
+    "downloadPath": "template/节日/铁血铸军魂"
+  },
+  "zhongqiu": {
+    "name": "秋情依依",
+    "alias": "zhongqiu",
+    "icon": "https://s1.kagirl.cn/icon/zhongqiu.jpg",
+    "menu": "中国风",
+    "downloadTime": 1746254038347,
+    "downloadPath": "template/中国风/秋情依依"
+  },
+  "bubble": {
+    "name": "调皮泡泡",
+    "alias": "bubble",
+    "icon": "https://s1.kagirl.cn/icon/03.jpg",
+    "menu": "大图",
+    "downloadTime": 1746254038752,
+    "downloadPath": "template/大图/调皮泡泡"
+  },
+  "tianmiairen2019": {
+    "name": "甜蜜爱人",
+    "alias": "tianmiairen2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1566377717.png",
+    "menu": "热门",
+    "downloadTime": 1746254039746,
+    "downloadPath": "template/热门/甜蜜爱人"
+  },
+  "lonely": {
+    "name": "雨中漫步",
+    "alias": "lonely",
+    "icon": "https://s1.kagirl.cn/icon/lonely.jpg",
+    "menu": "热门",
+    "downloadTime": 1746254040328,
+    "downloadPath": "template/热门/雨中漫步"
+  },
+  "liuyi2019": {
+    "name": "儿时时光",
+    "alias": "liuyi2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1559303700.png",
+    "menu": "节日",
+    "downloadTime": 1746254041196,
+    "downloadPath": "template/节日/儿时时光"
+  },
+  "yingxue2019": {
+    "name": "浪漫初雪",
+    "alias": "yingxue2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1639119576.png",
+    "menu": "热门",
+    "downloadTime": 1746254041902,
+    "downloadPath": "template/热门/浪漫初雪"
+  },
+  "dongwu": {
+    "name": "动物王国",
+    "alias": "dongwu",
+    "icon": "https://s1.kagirl.cn/icon/dongwu.jpg",
+    "menu": "儿童",
+    "downloadTime": 1746254042798,
+    "downloadPath": "template/儿童/动物王国"
+  },
+  "kaimendaji": {
+    "name": "开门大吉",
+    "alias": "kaimendaji",
+    "icon": "https://s1.kagirl.cn/icon/kaimendaji.png",
+    "menu": "节日",
+    "downloadTime": 1746254043608,
+    "downloadPath": "template/节日/开门大吉"
+  },
+  "summer": {
+    "name": "夏天的味道",
+    "alias": "summer",
+    "icon": "https://s1.kagirl.cn/icon/summer.jpg",
+    "menu": "热门",
+    "downloadTime": 1746254044275,
+    "downloadPath": "template/热门/夏天的味道"
+  },
+  "funvjie": {
+    "name": "女人节快乐",
+    "alias": "funvjie",
+    "icon": "https://s1.kagirl.cn/icon/template_1583322198.png",
+    "menu": "节日",
+    "downloadTime": 1746254044870,
+    "downloadPath": "template/节日/女人节快乐"
+  },
+  "laodongzuiguangrong2022": {
+    "name": "劳动最光荣",
+    "alias": "laodongzuiguangrong2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1651050954.png",
+    "menu": "热门",
+    "downloadTime": 1746254045880,
+    "downloadPath": "template/热门/劳动最光荣"
+  },
+  "xiahua2023": {
+    "name": "生如夏花",
+    "alias": "xiahua2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1689321210.png",
+    "menu": "VIP",
+    "downloadTime": 1746254057540,
+    "downloadPath": "template/VIP/生如夏花"
+  },
+  "jiandangjie2020": {
+    "name": "庆贺七一",
+    "alias": "jiandangjie2020",
+    "icon": "https://s1.kagirl.cn/icon/template_1593481746.png",
+    "menu": "节日",
+    "downloadTime": 1746254059227,
+    "downloadPath": "template/节日/庆贺七一"
+  },
+  "xiantiao": {
+    "name": "向日葵",
+    "alias": "xiantiao",
+    "icon": "https://s1.kagirl.cn/icon/xiantiao.jpg",
+    "menu": "热门",
+    "downloadTime": 1746254059607,
+    "downloadPath": "template/热门/向日葵"
+  },
+  "dongganxiangce2023": {
+    "name": "粉色回忆",
+    "alias": "dongganxiangce2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1680759464.png",
+    "menu": "热门",
+    "downloadTime": 1746254060712,
+    "downloadPath": "template/热门/粉色回忆"
+  },
+  "bzmyugechangwan2023": {
+    "name": "渔歌唱晚",
+    "alias": "bzmyugechangwan2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1676943385.png",
+    "menu": "VIP",
+    "downloadTime": 1746254062132,
+    "downloadPath": "template/VIP/渔歌唱晚"
+  },
+  "wanqiu2018": {
+    "name": "晚秋",
+    "alias": "wanqiu2018",
+    "icon": "https://s1.kagirl.cn/icon/wanqiu.jpg",
+    "menu": "中国风",
+    "downloadTime": 1746254062835,
+    "downloadPath": "template/中国风/晚秋"
+  },
+  "lixia2023": {
+    "name": "遇见夏天",
+    "alias": "lixia2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1683540327.png",
+    "menu": "VIP",
+    "downloadTime": 1746254087811,
+    "downloadPath": "template/VIP/遇见夏天"
+  },
+  "bingxue": {
+    "name": "冰雪奇缘",
+    "alias": "bingxue",
+    "icon": "https://s1.kagirl.cn/icon/snow.jpg",
+    "menu": "热门",
+    "downloadTime": 1746254089141,
+    "downloadPath": "template/热门/冰雪奇缘"
+  },
+  "bzmjixiangruyi2023": {
+    "name": "吉祥如意",
+    "alias": "bzmjixiangruyi2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1688625156.png",
+    "menu": "热门",
+    "downloadTime": 1746254090887,
+    "downloadPath": "template/热门/吉祥如意"
+  },
+  "senglingmusic": {
+    "name": "森林音乐会",
+    "alias": "senglingmusic",
+    "icon": "https://s1.kagirl.cn/icon/template_1590657439.png",
+    "menu": "节日",
+    "downloadTime": 1746254091925,
+    "downloadPath": "template/节日/森林音乐会"
+  },
+  "langmanfengche2022": {
+    "name": "浪漫风车",
+    "alias": "langmanfengche2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1673766535.png",
+    "menu": "热门",
+    "downloadTime": 1746254094689,
+    "downloadPath": "template/热门/浪漫风车"
+  },
+  "zhongqiu2017": {
+    "name": "花好月圆",
+    "alias": "zhongqiu2017",
+    "icon": "https://s1.kagirl.cn/icon/zhongqiu2017.jpg",
+    "menu": "节日",
+    "downloadTime": 1746254095551,
+    "downloadPath": "template/节日/花好月圆"
+  },
+  "wallpaper202305": {
+    "name": "春日来信",
+    "alias": "wallpaper202305",
+    "icon": "https://s1.kagirl.cn/icon/template_1678700454.png",
+    "menu": "热门",
+    "downloadTime": 1746254096329,
+    "downloadPath": "template/热门/春日来信"
+  },
+  "meiguidatu24": {
+    "name": "玫瑰心情",
+    "alias": "meiguidatu24",
+    "icon": "https://s1.kagirl.cn/icon/template_1714121610.png",
+    "menu": "VIP",
+    "downloadTime": 1746254110128,
+    "downloadPath": "template/VIP/玫瑰心情"
+  },
+  "chunyu": {
+    "name": "春雨",
+    "alias": "chunyu",
+    "icon": "https://s1.kagirl.cn/icon/chunyu.jpg",
+    "menu": "热门",
+    "downloadTime": 1746254110874,
+    "downloadPath": "template/热门/春雨"
+  },
+  "shiyi": {
+    "name": "欢度国庆",
+    "alias": "shiyi",
+    "icon": "https://s1.kagirl.cn/icon/shiyi.jpg",
+    "menu": "节日",
+    "downloadTime": 1746254111342,
+    "downloadPath": "template/节日/欢度国庆"
+  },
+  "yixia": {
+    "name": "夏之清凉",
+    "alias": "yixia",
+    "icon": "https://s1.kagirl.cn/icon/yixia.jpg",
+    "menu": "热门",
+    "downloadTime": 1746254111724,
+    "downloadPath": "template/热门/夏之清凉"
+  },
+  "junhun": {
+    "name": "铁血铸军魂",
+    "alias": "junhun",
+    "icon": "https://s1.kagirl.cn/icon/junhun.jpg",
+    "menu": "节日",
+    "downloadTime": 1746254112159,
+    "downloadPath": "template/节日/铁血铸军魂"
+  },
+  "donglai2018": {
+    "name": "冬来了",
+    "alias": "donglai2018",
+    "icon": "https://s1.kagirl.cn/icon/donglaile.png",
+    "menu": "热门",
+    "downloadTime": 1746254112656,
+    "downloadPath": "template/热门/冬来了"
+  },
+  "bzmhongdiefeiwu2023": {
+    "name": "红蝶飞舞",
+    "alias": "bzmhongdiefeiwu2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1676943603.png",
+    "menu": "热门",
+    "downloadTime": 1746254113711,
+    "downloadPath": "template/热门/红蝶飞舞"
+  },
+  "zaoshanghao": {
+    "name": "春风送暖",
+    "alias": "zaoshanghao",
+    "icon": "https://s1.kagirl.cn/icon/template_1554950906.png",
+    "menu": "热门",
+    "downloadTime": 1746254115186,
+    "downloadPath": "template/热门/春风送暖"
+  },
+  "duanwu2021": {
+    "name": "端午祝福",
+    "alias": "duanwu2021",
+    "icon": "https://s1.kagirl.cn/icon/template_1623319402.png",
+    "menu": "节日",
+    "downloadTime": 1746254115821,
+    "downloadPath": "template/节日/端午祝福"
+  },
+  "externaltemplate26": {
+    "name": "逍遥江南",
+    "alias": "externaltemplate26",
+    "icon": "https://s1.kagirl.cn/icon/template_1685442743.png",
+    "menu": "热门",
+    "downloadTime": 1746254116588,
+    "downloadPath": "template/热门/逍遥江南"
+  },
+  "xiarifanhua2023": {
+    "name": "夏日芳华",
+    "alias": "xiarifanhua2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1684835532.png",
+    "menu": "热门",
+    "downloadTime": 1746254117769,
+    "downloadPath": "template/热门/夏日芳华"
+  },
+  "guoqing20181": {
+    "name": "盛世华诞",
+    "alias": "guoqing20181",
+    "icon": "https://s1.kagirl.cn/icon/shengshihuadan.png",
+    "menu": "节日",
+    "downloadTime": 1746254118528,
+    "downloadPath": "template/节日/盛世华诞"
+  },
+  "muqinjie": {
+    "name": "妈妈我爱你",
+    "alias": "muqinjie",
+    "icon": "https://s1.kagirl.cn/icon/muqinjie.jpg",
+    "menu": "节日",
+    "downloadTime": 1746254119008,
+    "downloadPath": "template/节日/妈妈我爱你"
+  },
+  "taohuazui2023": {
+    "name": "桃花醉",
+    "alias": "taohuazui2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1677664707.png",
+    "menu": "VIP",
+    "downloadTime": 1746254130147,
+    "downloadPath": "template/VIP/桃花醉"
+  },
+  "xiazhi2020": {
+    "name": "夏至",
+    "alias": "xiazhi2020",
+    "icon": "https://s1.kagirl.cn/icon/template_1592366203.png",
+    "menu": "节日",
+    "downloadTime": 1746254131125,
+    "downloadPath": "template/节日/夏至"
+  },
+  "3dnvshenjie2024": {
+    "name": "最美女神3D",
+    "alias": "3dnvshenjie2024",
+    "icon": "https://s1.kagirl.cn/icon/template_1709809308.png",
+    "menu": "VIP",
+    "downloadTime": 1746254156572,
+    "downloadPath": "template/VIP/最美女神3D"
+  },
+  "chongyang2018": {
+    "name": "秋日烂漫",
+    "alias": "chongyang2018",
+    "icon": "https://s1.kagirl.cn/icon/jiujiuchongyang.png",
+    "menu": "节日",
+    "downloadTime": 1746254157467,
+    "downloadPath": "template/节日/秋日烂漫"
+  },
+  "chunrixinghua2023": {
+    "name": "杏花雨",
+    "alias": "chunrixinghua2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1679393860.png",
+    "menu": "VIP",
+    "downloadTime": 1746254169744,
+    "downloadPath": "template/VIP/杏花雨"
+  },
+  "externaltemplate18": {
+    "name": "夕阳西下",
+    "alias": "externaltemplate18",
+    "icon": "https://s1.kagirl.cn/icon/template_1685415963.png",
+    "menu": "热门",
+    "downloadTime": 1746254170631,
+    "downloadPath": "template/热门/夕阳西下"
+  },
+  "meiguiqingren24": {
+    "name": "玫瑰情人",
+    "alias": "meiguiqingren24",
+    "icon": "https://s1.kagirl.cn/icon/template_1710410276.png",
+    "menu": "VIP",
+    "downloadTime": 1746254171938,
+    "downloadPath": "template/VIP/玫瑰情人"
+  },
+  "material202303": {
+    "name": "感恩有你",
+    "alias": "material202303",
+    "icon": "https://s1.kagirl.cn/icon/template_1678700181.png",
+    "menu": "热门",
+    "downloadTime": 1746254172578,
+    "downloadPath": "template/热门/感恩有你"
+  },
+  "minion": {
+    "name": "萌趣小黄人",
+    "alias": "minion",
+    "icon": "https://s1.kagirl.cn/icon/minion.jpg",
+    "menu": "儿童",
+    "downloadTime": 1746254173547,
+    "downloadPath": "template/儿童/萌趣小黄人"
+  },
+  "ganenmuqin2021": {
+    "name": "感恩母亲节",
+    "alias": "ganenmuqin2021",
+    "icon": "https://s1.kagirl.cn/icon/template_1619678135.png",
+    "menu": "节日",
+    "downloadTime": 1746254174415,
+    "downloadPath": "template/节日/感恩母亲节"
+  },
+  "haidishijie2023": {
+    "name": "童梦之旅",
+    "alias": "haidishijie2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1675650473.png",
+    "menu": "热门",
+    "downloadTime": 1746254176733,
+    "downloadPath": "template/热门/童梦之旅"
+  },
+  "zhongqiu1": {
+    "name": "团圆美满",
+    "alias": "zhongqiu1",
+    "icon": "https://s1.kagirl.cn/icon/zhongqiu1.jpg",
+    "menu": "热门",
+    "downloadTime": 1746254177140,
+    "downloadPath": "template/热门/团圆美满"
+  },
+  "xiaji2018": {
+    "name": "缤纷时光",
+    "alias": "xiaji2018",
+    "icon": "https://s1.kagirl.cn/icon/xiaji2018.jpg",
+    "menu": "热门",
+    "downloadTime": 1746254178009,
+    "downloadPath": "template/热门/缤纷时光"
+  },
+  "bzmxinxinxiangyi2023": {
+    "name": "心心相依",
+    "alias": "bzmxinxinxiangyi2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1676943071.png",
+    "menu": "热门",
+    "downloadTime": 1746254178802,
+    "downloadPath": "template/热门/心心相依"
+  },
+  "liunian": {
+    "name": "勿忘流年",
+    "alias": "liunian",
+    "icon": "https://s1.kagirl.cn/icon/liunian.jpg",
+    "menu": "热门",
+    "downloadTime": 1746254179318,
+    "downloadPath": "template/热门/勿忘流年"
+  },
+  "fushowshuangquan2023": {
+    "name": "福寿双全",
+    "alias": "fushowshuangquan2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1691732199.png",
+    "menu": "热门",
+    "downloadTime": 1746254180247,
+    "downloadPath": "template/热门/福寿双全"
+  },
+  "buwangchuxin2019": {
+    "name": "不忘初心",
+    "alias": "buwangchuxin2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1561705625.png",
+    "menu": "节日",
+    "downloadTime": 1746254181612,
+    "downloadPath": "template/节日/不忘初心"
+  },
+  "maode": {
+    "name": "猫的节奏",
+    "alias": "maode",
+    "icon": "https://s1.kagirl.cn/icon/maode.jpg",
+    "menu": "儿童",
+    "downloadTime": 1746254182116,
+    "downloadPath": "template/儿童/猫的节奏"
+  },
+  "zhongqiu2019": {
+    "name": "情满中秋",
+    "alias": "zhongqiu2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1567479499.png",
+    "menu": "节日",
+    "downloadTime": 1746254183177,
+    "downloadPath": "template/节日/情满中秋"
+  },
+  "circus": {
+    "name": "快乐马戏团",
+    "alias": "circus",
+    "icon": "https://s1.kagirl.cn/icon/circus.jpg",
+    "menu": "儿童",
+    "downloadTime": 1746254184406,
+    "downloadPath": "template/儿童/快乐马戏团"
+  },
+  "jiniance2023": {
+    "name": "青春纪念册",
+    "alias": "jiniance2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1690277805.png",
+    "menu": "热门",
+    "downloadTime": 1746254187184,
+    "downloadPath": "template/热门/青春纪念册"
+  },
+  "huanlesong": {
+    "name": "欢乐颂",
+    "alias": "huanlesong",
+    "icon": "https://s1.kagirl.cn/icon/huanlesong1.jpg",
+    "menu": "热门",
+    "downloadTime": 1746254187976,
+    "downloadPath": "template/热门/欢乐颂"
+  },
+  "qiulaile2023": {
+    "name": "爱在秋天",
+    "alias": "qiulaile2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1695377548.png",
+    "menu": "VIP",
+    "downloadTime": 1746254199509,
+    "downloadPath": "template/VIP/爱在秋天"
+  },
+  "qingdingqixi2020": {
+    "name": "缘来是你",
+    "alias": "qingdingqixi2020",
+    "icon": "https://s1.kagirl.cn/icon/template_1598250098.png",
+    "menu": "节日",
+    "downloadTime": 1746254200978,
+    "downloadPath": "template/节日/缘来是你"
+  },
+  "baokan": {
+    "name": "温暖时光",
+    "alias": "baokan",
+    "icon": "https://s1.kagirl.cn/icon/baokan.jpg",
+    "menu": "热门",
+    "downloadTime": 1746254201690,
+    "downloadPath": "template/热门/温暖时光"
+  },
+  "hetang": {
+    "name": "荷塘",
+    "alias": "hetang",
+    "icon": "https://s1.kagirl.cn/icon/hetang.jpg",
+    "menu": "热门",
+    "downloadTime": 1746254202647,
+    "downloadPath": "template/热门/荷塘"
+  },
+  "bzmxiangyangersheng2023": {
+    "name": "向阳而生",
+    "alias": "bzmxiangyangersheng2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1676886542.png",
+    "menu": "热门",
+    "downloadTime": 1746254203243,
+    "downloadPath": "template/热门/向阳而生"
+  },
+  "guoqing20192": {
+    "name": "辉煌70载",
+    "alias": "guoqing20192",
+    "icon": "https://s1.kagirl.cn/icon/template_1569862186.png",
+    "menu": "节日",
+    "downloadTime": 1746254204525,
+    "downloadPath": "template/节日/辉煌70载"
+  },
+  "qiangwei2023": {
+    "name": "粉色爱恋",
+    "alias": "qiangwei2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1697709468.png",
+    "menu": "热门",
+    "downloadTime": 1746254205753,
+    "downloadPath": "template/热门/粉色爱恋"
+  },
+  "externaltemplate9": {
+    "name": "清凉夏日",
+    "alias": "externaltemplate9",
+    "icon": "https://s1.kagirl.cn/icon/template_1684137366.png",
+    "menu": "热门",
+    "downloadTime": 1746254206376,
+    "downloadPath": "template/热门/清凉夏日"
+  },
+  "gudianmeiren2023": {
+    "name": "花好月圆",
+    "alias": "gudianmeiren2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1691548443.png",
+    "menu": "VIP",
+    "downloadTime": 1746254228879,
+    "downloadPath": "template/VIP/花好月圆"
+  },
+  "yingchunhuakai2020": {
+    "name": "迎春花开",
+    "alias": "yingchunhuakai2020",
+    "icon": "https://s1.kagirl.cn/icon/template_1578385100.png",
+    "menu": "节日",
+    "downloadTime": 1746254229810,
+    "downloadPath": "template/节日/迎春花开"
+  },
+  "zhongqiu20183": {
+    "name": "阖家团圆",
+    "alias": "zhongqiu20183",
+    "icon": "https://s1.kagirl.cn/icon/csyzy.png",
+    "menu": "节日",
+    "downloadTime": 1746254230838,
+    "downloadPath": "template/节日/阖家团圆"
+  },
+  "guoqing2019": {
+    "name": "喜迎国庆",
+    "alias": "guoqing2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1569490855.png",
+    "menu": "节日",
+    "downloadTime": 1746254231969,
+    "downloadPath": "template/节日/喜迎国庆"
+  },
+  "externaltemplate31": {
+    "name": "精彩纷呈",
+    "alias": "externaltemplate31",
+    "icon": "https://s1.kagirl.cn/icon/template_1685443609.png",
+    "menu": "热门",
+    "downloadTime": 1746254234295,
+    "downloadPath": "template/热门/精彩纷呈"
+  },
+  "yanlaichunlv2019": {
+    "name": "燕来春绿",
+    "alias": "yanlaichunlv2019",
+    "icon": "https://s1.kagirl.cn/icon/yanlaichunlv.png",
+    "menu": "热门",
+    "downloadTime": 1746254234848,
+    "downloadPath": "template/热门/燕来春绿"
+  },
+  "ganen2017": {
+    "name": "感恩有你",
+    "alias": "ganen2017",
+    "icon": "https://s1.kagirl.cn/icon/ganen2017.jpg",
+    "menu": "节日",
+    "downloadTime": 1746254235390,
+    "downloadPath": "template/节日/感恩有你"
+  },
+  "zhongqiu2018": {
+    "name": "浓情中秋",
+    "alias": "zhongqiu2018",
+    "icon": "https://s1.kagirl.cn/icon/hhyy2018.png",
+    "menu": "节日",
+    "downloadTime": 1746254235929,
+    "downloadPath": "template/节日/浓情中秋"
+  },
+  "fengche": {
+    "name": "浪漫风车",
+    "alias": "fengche",
+    "icon": "https://s1.kagirl.cn/icon/fengche.jpg",
+    "menu": "热门",
+    "downloadTime": 1746254236669,
+    "downloadPath": "template/热门/浪漫风车"
+  },
+  "3dguoqing23": {
+    "name": "国庆快乐3D",
+    "alias": "3dguoqing23",
+    "icon": "https://s1.kagirl.cn/icon/template_1695890515.png",
+    "menu": "热门",
+    "downloadTime": 1746254251906,
+    "downloadPath": "template/热门/国庆快乐3D"
+  },
+  "haibo": {
+    "name": "阳光沙滩",
+    "alias": "haibo",
+    "icon": "https://s1.kagirl.cn/icon/haibo.jpg",
+    "menu": "热门",
+    "downloadTime": 1746254252934,
+    "downloadPath": "template/热门/阳光沙滩"
+  },
+  "externaltemplate32": {
+    "name": "健康成长",
+    "alias": "externaltemplate32",
+    "icon": "https://s1.kagirl.cn/icon/template_1685415212.png",
+    "menu": "热门",
+    "downloadTime": 1746254253553,
+    "downloadPath": "template/热门/健康成长"
+  },
+  "lixia2024": {
+    "name": "立夏快乐",
+    "alias": "lixia2024",
+    "icon": "https://s1.kagirl.cn/icon/template_1713860866.png",
+    "menu": "热门",
+    "downloadTime": 1746254255084,
+    "downloadPath": "template/热门/立夏快乐"
+  },
+  "muqinjie20201": {
+    "name": "妈妈我爱你",
+    "alias": "muqinjie20201",
+    "icon": "https://s1.kagirl.cn/icon/template_1588928126.png",
+    "menu": "节日",
+    "downloadTime": 1746254255623,
+    "downloadPath": "template/节日/妈妈我爱你"
+  },
+  "xinnian25v2": {
+    "name": "2025新年好",
+    "alias": "xinnian25v2",
+    "icon": "https://s1.kagirl.cn/icon/template_1735542077.png",
+    "menu": "热门",
+    "downloadTime": 1746254256844,
+    "downloadPath": "template/热门/2025新年好"
+  },
+  "externaltemplate28": {
+    "name": "夏日柠檬",
+    "alias": "externaltemplate28",
+    "icon": "https://s1.kagirl.cn/icon/template_1685443209.png",
+    "menu": "热门",
+    "downloadTime": 1746254257424,
+    "downloadPath": "template/热门/夏日柠檬"
+  },
+  "xiari2021": {
+    "name": "夏天的风",
+    "alias": "xiari2021",
+    "icon": "https://s1.kagirl.cn/icon/template_1626074894.png",
+    "menu": "热门",
+    "downloadTime": 1746254258398,
+    "downloadPath": "template/热门/夏天的风"
+  },
+  "3dzhongqiu23": {
+    "name": "中秋团圆3D",
+    "alias": "3dzhongqiu23",
+    "icon": "https://s1.kagirl.cn/icon/template_1695792994.png",
+    "menu": "VIP",
+    "downloadTime": 1746254260896,
+    "downloadPath": "template/VIP/中秋团圆3D"
+  },
+  "externaltemplate8": {
+    "name": "金蝶飞舞",
+    "alias": "externaltemplate8",
+    "icon": "https://s1.kagirl.cn/icon/template_1684132212.png",
+    "menu": "热门",
+    "downloadTime": 1746254261676,
+    "downloadPath": "template/热门/金蝶飞舞"
+  },
+  "shanshui": {
+    "name": "梦幻暮色",
+    "alias": "shanshui",
+    "icon": "https://s1.kagirl.cn/icon/shanshui.jpg",
+    "menu": "热门",
+    "downloadTime": 1746254262296,
+    "downloadPath": "template/热门/梦幻暮色"
+  },
+  "senlin": {
+    "name": "奇幻森林",
+    "alias": "senlin",
+    "icon": "https://s1.kagirl.cn/icon/senlin.jpg",
+    "menu": "热门",
+    "downloadTime": 1746254262877,
+    "downloadPath": "template/热门/奇幻森林"
+  },
+  "qingxin": {
+    "name": "伊然清新",
+    "alias": "qingxin",
+    "icon": "https://s1.kagirl.cn/icon/qingxin.jpg",
+    "menu": "热门",
+    "downloadTime": 1746254264076,
+    "downloadPath": "template/热门/伊然清新"
+  },
+  "qingchun24": {
+    "name": "暑期出游",
+    "alias": "qingchun24",
+    "icon": "https://s1.kagirl.cn/icon/template_1721378913.png",
+    "menu": "热门",
+    "downloadTime": 1746254265195,
+    "downloadPath": "template/热门/暑期出游"
+  },
+  "3dliuyi24": {
+    "name": "宝贝乐园3D",
+    "alias": "3dliuyi24",
+    "icon": "https://s1.kagirl.cn/icon/template_1717136447.png",
+    "menu": "VIP",
+    "downloadTime": 1746254289158,
+    "downloadPath": "template/VIP/宝贝乐园3D"
+  },
+  "pinganshengdan2021": {
+    "name": "平安圣诞",
+    "alias": "pinganshengdan2021",
+    "icon": "https://s1.kagirl.cn/icon/template_1640138696.png",
+    "menu": "节日",
+    "downloadTime": 1746254290857,
+    "downloadPath": "template/节日/平安圣诞"
+  },
+  "muaiwubian2022": {
+    "name": "爱在母亲节",
+    "alias": "muaiwubian2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1651831797.png",
+    "menu": "热门",
+    "downloadTime": 1746254291421,
+    "downloadPath": "template/热门/爱在母亲节"
+  },
+  "yuanfangdexin2023": {
+    "name": "远方的信",
+    "alias": "yuanfangdexin2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1697710842.png",
+    "menu": "热门",
+    "downloadTime": 1746254292210,
+    "downloadPath": "template/热门/远方的信"
+  },
+  "shiyue24": {
+    "name": "十月你好",
+    "alias": "shiyue24",
+    "icon": "https://s1.kagirl.cn/icon/template_1727246388.png",
+    "menu": "热门",
+    "downloadTime": 1746254292667,
+    "downloadPath": "template/热门/十月你好"
+  },
+  "nihaoeryue2025": {
+    "name": "你好二月",
+    "alias": "nihaoeryue2025",
+    "icon": "https://s1.kagirl.cn/icon/template_1737711974.png",
+    "menu": "热门",
+    "downloadTime": 1746254294283,
+    "downloadPath": "template/热门/你好二月"
+  },
+  "wallpaper202311": {
+    "name": "远方的信",
+    "alias": "wallpaper202311",
+    "icon": "https://s1.kagirl.cn/icon/template_1678700571.png",
+    "menu": "热门",
+    "downloadTime": 1746254295205,
+    "downloadPath": "template/热门/远方的信"
+  },
+  "jiuyue24": {
+    "name": "九月你好",
+    "alias": "jiuyue24",
+    "icon": "https://s1.kagirl.cn/icon/template_1724746376.png",
+    "menu": "热门",
+    "downloadTime": 1746254296139,
+    "downloadPath": "template/热门/九月你好"
+  },
+  "niaoyu24": {
+    "name": "窗边记忆",
+    "alias": "niaoyu24",
+    "icon": "https://s1.kagirl.cn/icon/template_1717033791.png",
+    "menu": "VIP",
+    "downloadTime": 1746254298152,
+    "downloadPath": "template/VIP/窗边记忆"
+  },
+  "bzmxiangcaohui2023": {
+    "name": "香草绘",
+    "alias": "bzmxiangcaohui2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1676943487.png",
+    "menu": "热门",
+    "downloadTime": 1746254298885,
+    "downloadPath": "template/热门/香草绘"
+  },
+  "externaltemplate5": {
+    "name": "夜船吹笛",
+    "alias": "externaltemplate5",
+    "icon": "https://s1.kagirl.cn/icon/template_1684232714.png",
+    "menu": "热门",
+    "downloadTime": 1746254312706,
+    "downloadPath": "template/热门/夜船吹笛"
+  },
+  "jinsheyingchun2025": {
+    "name": "金蛇迎春3D",
+    "alias": "jinsheyingchun2025",
+    "icon": "https://s1.kagirl.cn/icon/template_1737711904.png",
+    "menu": "VIP",
+    "downloadTime": 1746254329263,
+    "downloadPath": "template/VIP/金蛇迎春3D"
+  },
+  "zaijianqiutian2022": {
+    "name": "柿子红了",
+    "alias": "zaijianqiutian2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1666176031.png",
+    "menu": "热门",
+    "downloadTime": 1746254330905,
+    "downloadPath": "template/热门/柿子红了"
+  },
+  "externaltemplate29": {
+    "name": "永驻花间",
+    "alias": "externaltemplate29",
+    "icon": "https://s1.kagirl.cn/icon/template_1685415640.png",
+    "menu": "热门",
+    "downloadTime": 1746254332829,
+    "downloadPath": "template/热门/永驻花间"
+  },
+  "ertongjie2023": {
+    "name": "童真有你",
+    "alias": "ertongjie2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1685441169.png",
+    "menu": "热门",
+    "downloadTime": 1746254356354,
+    "downloadPath": "template/热门/童真有你"
+  },
+  "3dyuanxiao25": {
+    "name": "元宵快乐3D",
+    "alias": "3dyuanxiao25",
+    "icon": "https://s1.kagirl.cn/icon/template_1739268211.png",
+    "menu": "VIP",
+    "downloadTime": 1746254369224,
+    "downloadPath": "template/VIP/元宵快乐3D"
+  },
+  "qixi": {
+    "name": "七夕节快乐",
+    "alias": "qixi",
+    "icon": "https://s1.kagirl.cn/icon/xiangyi.jpg",
+    "menu": "爱情",
+    "downloadTime": 1746254370028,
+    "downloadPath": "template/爱情/七夕节快乐"
+  },
+  "yuandingsansheng2022": {
+    "name": "缘定三生",
+    "alias": "yuandingsansheng2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1645150517.png",
+    "menu": "热门",
+    "downloadTime": 1746254371808,
+    "downloadPath": "template/热门/缘定三生"
+  },
+  "zhongqiutuanyuan2024": {
+    "name": "中秋团圆3D",
+    "alias": "zhongqiutuanyuan2024",
+    "icon": "https://s1.kagirl.cn/icon/template_1726305966.png",
+    "menu": "热门",
+    "downloadTime": 1746254406973,
+    "downloadPath": "template/热门/中秋团圆3D"
+  },
+  "yuandan23": {
+    "name": "新年吉祥",
+    "alias": "yuandan23",
+    "icon": "https://s1.kagirl.cn/icon/template_1703748847.png",
+    "menu": "热门",
+    "downloadTime": 1746254418114,
+    "downloadPath": "template/热门/新年吉祥"
+  },
+  "ganenjie2018": {
+    "name": "感恩在心",
+    "alias": "ganenjie2018",
+    "icon": "https://s1.kagirl.cn/icon/ganenzaixin.png",
+    "menu": "节日",
+    "downloadTime": 1746254419137,
+    "downloadPath": "template/节日/感恩在心"
+  },
+  "muqinjie2020": {
+    "name": "感恩母亲节",
+    "alias": "muqinjie2020",
+    "icon": "https://s1.kagirl.cn/icon/template_1588921859.png",
+    "menu": "节日",
+    "downloadTime": 1746254420322,
+    "downloadPath": "template/节日/感恩母亲节"
+  },
+  "3dqingren23": {
+    "name": "情人节快乐3D",
+    "alias": "3dqingren23",
+    "icon": "https://s1.kagirl.cn/icon/template_1692615722.png",
+    "menu": "VIP",
+    "downloadTime": 1746254432163,
+    "downloadPath": "template/VIP/情人节快乐3D"
+  },
+  "liuyue24": {
+    "name": "六月你好",
+    "alias": "liuyue24",
+    "icon": "https://s1.kagirl.cn/icon/template_1717393228.png",
+    "menu": "热门",
+    "downloadTime": 1746254434488,
+    "downloadPath": "template/热门/六月你好"
+  },
+  "aizaiqixi2019": {
+    "name": "爱在七夕",
+    "alias": "aizaiqixi2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1564976400.png",
+    "menu": "节日",
+    "downloadTime": 1746254435319,
+    "downloadPath": "template/节日/爱在七夕"
+  },
+  "zaijianqiutianvip2022": {
+    "name": "秋意",
+    "alias": "zaijianqiutianvip2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1678445266.png",
+    "menu": "VIP",
+    "downloadTime": 1746254437501,
+    "downloadPath": "template/VIP/秋意"
+  },
+  "muqinjie2023": {
+    "name": "母亲节快乐",
+    "alias": "muqinjie2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1683715092.png",
+    "menu": "热门",
+    "downloadTime": 1746254448864,
+    "downloadPath": "template/热门/母亲节快乐"
+  },
+  "longnian2024": {
+    "name": "龙年大吉",
+    "alias": "longnian2024",
+    "icon": "https://s1.kagirl.cn/icon/template_1705556080.png",
+    "menu": "热门",
+    "downloadTime": 1746254461690,
+    "downloadPath": "template/热门/龙年大吉"
+  },
+  "chongyang20182": {
+    "name": "秋菊傲骨",
+    "alias": "chongyang20182",
+    "icon": "https://s1.kagirl.cn/icon/jinjuaogu.png",
+    "menu": "节日",
+    "downloadTime": 1746254462661,
+    "downloadPath": "template/节日/秋菊傲骨"
+  },
+  "duanwujie": {
+    "name": "浓情端午",
+    "alias": "duanwujie",
+    "icon": "https://s1.kagirl.cn/icon/duanwujie.jpg",
+    "menu": "节日",
+    "downloadTime": 1746254463325,
+    "downloadPath": "template/节日/浓情端午"
+  },
+  "father": {
+    "name": "父亲节快乐",
+    "alias": "father",
+    "icon": "https://s1.kagirl.cn/icon/father.jpg",
+    "menu": "节日",
+    "downloadTime": 1746254464214,
+    "downloadPath": "template/节日/父亲节快乐"
+  },
+  "qixikuaile2021": {
+    "name": "七夕快乐",
+    "alias": "qixikuaile2021",
+    "icon": "https://s1.kagirl.cn/icon/template_1628852447.png",
+    "menu": "节日",
+    "downloadTime": 1746254465976,
+    "downloadPath": "template/节日/七夕快乐"
+  },
+  "yindong23": {
+    "name": "爱在冬季3D",
+    "alias": "yindong23",
+    "icon": "https://s1.kagirl.cn/icon/template_1702360223.png",
+    "menu": "VIP",
+    "downloadTime": 1746254468281,
+    "downloadPath": "template/VIP/爱在冬季3D"
+  },
+  "shengdan": {
+    "name": "圣诞快乐",
+    "alias": "shengdan",
+    "icon": "https://s1.kagirl.cn/icon/shengdan.jpg",
+    "menu": "节日",
+    "downloadTime": 1746254468808,
+    "downloadPath": "template/节日/圣诞快乐"
+  },
+  "xuehua": {
+    "name": "冬日问候",
+    "alias": "xuehua",
+    "icon": "https://s1.kagirl.cn/icon/snowxue.jpg",
+    "menu": "热门",
+    "downloadTime": 1746254469584,
+    "downloadPath": "template/热门/冬日问候"
+  },
+  "qixivip2022": {
+    "name": "鹊桥之恋",
+    "alias": "qixivip2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1687849929.png",
+    "menu": "VIP",
+    "downloadTime": 1746254471428,
+    "downloadPath": "template/VIP/鹊桥之恋"
+  },
+  "mq2019": {
+    "name": "妈妈的歌",
+    "alias": "mq2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1557372550.png",
+    "menu": "节日",
+    "downloadTime": 1746254472019,
+    "downloadPath": "template/节日/妈妈的歌"
+  },
+  "nihaoshengxia2023": {
+    "name": "向日葵",
+    "alias": "nihaoshengxia2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1684822461.png",
+    "menu": "热门",
+    "downloadTime": 1746254473914,
+    "downloadPath": "template/热门/向日葵"
+  },
+  "externaltemplate11": {
+    "name": "灿烂星空",
+    "alias": "externaltemplate11",
+    "icon": "https://s1.kagirl.cn/icon/template_1684288777.png",
+    "menu": "热门",
+    "downloadTime": 1746254474573,
+    "downloadPath": "template/热门/灿烂星空"
+  },
+  "3dnvwang2023": {
+    "name": "闪亮钻石3D",
+    "alias": "3dnvwang2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1678248572.png",
+    "menu": "VIP",
+    "downloadTime": 1746254488524,
+    "downloadPath": "template/VIP/闪亮钻石3D"
+  },
+  "muqinjie2018": {
+    "name": "感恩母亲节",
+    "alias": "muqinjie2018",
+    "icon": "https://s1.kagirl.cn/icon/muqinjie2018.jpg",
+    "menu": "热门",
+    "downloadTime": 1746254489598,
+    "downloadPath": "template/热门/感恩母亲节"
+  },
+  "yeranqiuhua2022": {
+    "name": "叶染秋华",
+    "alias": "yeranqiuhua2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1660876746.png",
+    "menu": "热门",
+    "downloadTime": 1746254491386,
+    "downloadPath": "template/热门/叶染秋华"
+  },
+  "jiaoshijie": {
+    "name": "感恩教师节",
+    "alias": "jiaoshijie",
+    "icon": "https://s1.kagirl.cn/icon/jiaoshijie.jpg",
+    "menu": "节日",
+    "downloadTime": 1746254491954,
+    "downloadPath": "template/节日/感恩教师节"
+  },
+  "nihaobayue2024": {
+    "name": "八月你好",
+    "alias": "nihaobayue2024",
+    "icon": "https://s1.kagirl.cn/icon/template_1722331563.png",
+    "menu": "热门",
+    "downloadTime": 1746254492762,
+    "downloadPath": "template/热门/八月你好"
+  },
+  "jianjunjie20201": {
+    "name": "致敬军人",
+    "alias": "jianjunjie20201",
+    "icon": "https://s1.kagirl.cn/icon/template_1627439394.png",
+    "menu": "节日",
+    "downloadTime": 1746254504223,
+    "downloadPath": "template/节日/致敬军人"
+  },
+  "jianjunjie24": {
+    "name": "八一建军节",
+    "alias": "jianjunjie24",
+    "icon": "https://s1.kagirl.cn/icon/template_1722409582.png",
+    "menu": "热门",
+    "downloadTime": 1746254505293,
+    "downloadPath": "template/热门/八一建军节"
+  },
+  "yuandan2021": {
+    "name": "恭贺元旦",
+    "alias": "yuandan2021",
+    "icon": "https://s1.kagirl.cn/icon/template_1609406893.png",
+    "menu": "节日",
+    "downloadTime": 1746254507486,
+    "downloadPath": "template/节日/恭贺元旦"
+  },
+  "yuandan2019": {
+    "name": "金鼠贺岁",
+    "alias": "yuandan2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1577930308.png",
+    "menu": "节日",
+    "downloadTime": 1746254508284,
+    "downloadPath": "template/节日/金鼠贺岁"
+  },
+  "yumeiren23": {
+    "name": "虞美人",
+    "alias": "yumeiren23",
+    "icon": "https://s1.kagirl.cn/icon/template_1700099838.png",
+    "menu": "热门",
+    "downloadTime": 1746254509211,
+    "downloadPath": "template/热门/虞美人"
+  },
+  "guoqing20183": {
+    "name": "鸿运中华",
+    "alias": "guoqing20183",
+    "icon": "https://s1.kagirl.cn/icon/hongyunzhonghua.png",
+    "menu": "节日",
+    "downloadTime": 1746254510388,
+    "downloadPath": "template/节日/鸿运中华"
+  },
+  "jiandangjie2022": {
+    "name": "为党庆生",
+    "alias": "jiandangjie2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1656585436.png",
+    "menu": "热门",
+    "downloadTime": 1746254511428,
+    "downloadPath": "template/热门/为党庆生"
+  },
+  "muqinjie2019": {
+    "name": "感恩母亲",
+    "alias": "muqinjie2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1557556852.png",
+    "menu": "节日",
+    "downloadTime": 1746254511970,
+    "downloadPath": "template/节日/感恩母亲"
+  },
+  "fuqinjie2021": {
+    "name": "感恩父亲节",
+    "alias": "fuqinjie2021",
+    "icon": "https://s1.kagirl.cn/icon/template_1624029411.png",
+    "menu": "热门",
+    "downloadTime": 1746254512765,
+    "downloadPath": "template/热门/感恩父亲节"
+  },
+  "xinfeng": {
+    "name": "远方的信",
+    "alias": "xinfeng",
+    "icon": "https://s1.kagirl.cn/icon/chunxin.jpg",
+    "menu": "热门",
+    "downloadTime": 1746254514594,
+    "downloadPath": "template/热门/远方的信"
+  },
+  "shiyiyue24": {
+    "name": "十一月你好",
+    "alias": "shiyiyue24",
+    "icon": "https://s1.kagirl.cn/icon/template_1730340930.png",
+    "menu": "热门",
+    "downloadTime": 1746254515066,
+    "downloadPath": "template/热门/十一月你好"
+  },
+  "fqj2019": {
+    "name": "浓情父爱",
+    "alias": "fqj2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1560498805.png",
+    "menu": "节日",
+    "downloadTime": 1746254515494,
+    "downloadPath": "template/节日/浓情父爱"
+  },
+  "bainian24": {
+    "name": "拜年啦",
+    "alias": "bainian24",
+    "icon": "https://s1.kagirl.cn/icon/template_1707123184.png",
+    "menu": "热门",
+    "downloadTime": 1746254516123,
+    "downloadPath": "template/热门/拜年啦"
+  },
+  "duanwu2019": {
+    "name": "端午安康",
+    "alias": "duanwu2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1559805946.png",
+    "menu": "节日",
+    "downloadTime": 1746254516663,
+    "downloadPath": "template/节日/端午安康"
+  },
+  "goodnight2021": {
+    "name": "晚安好梦",
+    "alias": "goodnight2021",
+    "icon": "https://s1.kagirl.cn/icon/template_1617170301.png",
+    "menu": "热门",
+    "downloadTime": 1746254518190,
+    "downloadPath": "template/热门/晚安好梦"
+  },
+  "lichun2024": {
+    "name": "立春快乐",
+    "alias": "lichun2024",
+    "icon": "https://s1.kagirl.cn/icon/template_1706867989.png",
+    "menu": "热门",
+    "downloadTime": 1746254519452,
+    "downloadPath": "template/热门/立春快乐"
+  },
+  "qiaojiaren2022": {
+    "name": "三月俏佳人",
+    "alias": "qiaojiaren2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1646481681.png",
+    "menu": "热门",
+    "downloadTime": 1746254520228,
+    "downloadPath": "template/热门/三月俏佳人"
+  },
+  "yujianqiutian2023": {
+    "name": "遇见秋天",
+    "alias": "yujianqiutian2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1691399644.png",
+    "menu": "热门",
+    "downloadTime": 1746254531614,
+    "downloadPath": "template/热门/遇见秋天"
+  },
+  "chuxi23": {
+    "name": "喜迎新春3D",
+    "alias": "chuxi23",
+    "icon": "https://s1.kagirl.cn/icon/template_1706755855.png",
+    "menu": "VIP",
+    "downloadTime": 1746254549915,
+    "downloadPath": "template/VIP/喜迎新春3D"
+  },
+  "duanwu2018": {
+    "name": "粽叶飘香",
+    "alias": "duanwu2018",
+    "icon": "https://s1.kagirl.cn/icon/duanwu2018.jpg",
+    "menu": "节日",
+    "downloadTime": 1746254550830,
+    "downloadPath": "template/节日/粽叶飘香"
+  },
+  "bz3dmogu": {
+    "name": "绿意",
+    "alias": "bz3dmogu",
+    "icon": "https://s1.kagirl.cn/icon/template_1675649457.png",
+    "menu": "3D",
+    "baseName": "绿意",
+    "downloadTime": 1746268101830,
+    "downloadPath": "template/3D/绿意"
+  },
+  "chunguang": {
+    "name": "好春光",
+    "alias": "chunguang",
+    "icon": "https://s1.kagirl.cn/icon/chunguang.jpg",
+    "menu": "热门",
+    "baseName": "好春光",
+    "downloadTime": 1746268115144,
+    "downloadPath": "template/热门/好春光"
+  },
+  "huabian": {
+    "name": "鸟语花香",
+    "alias": "huabian",
+    "icon": "https://s1.kagirl.cn/icon/huabian.jpg",
+    "menu": "中国风",
+    "baseName": "鸟语花香",
+    "downloadTime": 1746268116280,
+    "downloadPath": "template/中国风/鸟语花香"
+  },
+  "xiaolu": {
+    "name": "一鹿有你",
+    "alias": "xiaolu",
+    "icon": "https://s1.kagirl.cn/icon/xiaolu.jpg",
+    "menu": "儿童",
+    "baseName": "一鹿有你",
+    "downloadTime": 1746268117123,
+    "downloadPath": "template/儿童/一鹿有你"
+  },
+  "biyeji": {
+    "name": "毕业季",
+    "alias": "biyeji",
+    "icon": "https://s1.kagirl.cn/icon/biyeji1.jpg",
+    "menu": "同学",
+    "baseName": "毕业季",
+    "downloadTime": 1746268117865,
+    "downloadPath": "template/同学/毕业季"
+  },
+  "brick": {
+    "name": "3D酷翻",
+    "alias": "brick",
+    "icon": "https://s1.kagirl.cn/icon/04.jpg",
+    "menu": "大图",
+    "baseName": "3D酷翻",
+    "downloadTime": 1746268118787,
+    "downloadPath": "template/大图/3D酷翻"
+  },
+  "roll": {
+    "name": "欢乐时光",
+    "alias": "roll",
+    "icon": "https://s1.kagirl.cn/icon/05.jpg",
+    "menu": "大图",
+    "baseName": "欢乐时光",
+    "downloadTime": 1746268119324,
+    "downloadPath": "template/大图/欢乐时光"
+  },
+  "furonghuakai2023": {
+    "name": "花开",
+    "alias": "furonghuakai2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1698658102.png",
+    "menu": "热门",
+    "baseName": "花开",
+    "downloadTime": 1746268120863,
+    "downloadPath": "template/热门/花开"
+  },
+  "qiutian": {
+    "name": "秋冬好时光",
+    "alias": "qiutian",
+    "icon": "https://s1.kagirl.cn/icon/qiutian2.png",
+    "menu": "中国风",
+    "baseName": "秋冬好时光",
+    "downloadTime": 1746268121529,
+    "downloadPath": "template/中国风/秋冬好时光"
+  },
+  "flip": {
+    "name": "深邃星空",
+    "alias": "flip",
+    "icon": "https://s1.kagirl.cn/icon/02.jpg",
+    "menu": "大图",
+    "baseName": "深邃星空",
+    "downloadTime": 1746268122797,
+    "downloadPath": "template/大图/深邃星空"
+  },
+  "paopao": {
+    "name": "五彩泡泡",
+    "alias": "paopao",
+    "icon": "https://s1.kagirl.cn/icon/paopao.jpg",
+    "menu": "大图",
+    "baseName": "五彩泡泡",
+    "downloadTime": 1746268123196,
+    "downloadPath": "template/大图/五彩泡泡"
+  },
+  "love": {
+    "name": "爱情",
+    "alias": "love",
+    "icon": "https://s1.kagirl.cn/icon/love2.jpg",
+    "menu": "爱情",
+    "baseName": "爱情",
+    "downloadTime": 1746268124445,
+    "downloadPath": "template/爱情/爱情"
+  },
+  "tiantianxiangni2023": {
+    "name": "天天想你",
+    "alias": "tiantianxiangni2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1699611513.png",
+    "menu": "VIP",
+    "baseName": "天天想你",
+    "downloadTime": 1746268125715,
+    "downloadPath": "template/VIP/天天想你"
+  },
+  "jinlonghesui2024": {
+    "name": "金龙贺岁3D",
+    "alias": "jinlonghesui2024",
+    "icon": "https://s1.kagirl.cn/icon/template_1707299863.png",
+    "menu": "VIP",
+    "baseName": "金龙贺岁3D",
+    "downloadTime": 1746268141407,
+    "downloadPath": "template/VIP/金龙贺岁3D"
+  },
+  "3dyuandan24": {
+    "name": "元旦快乐3D",
+    "alias": "3dyuandan24",
+    "icon": "https://s1.kagirl.cn/icon/template_1703845795.png",
+    "menu": "热门",
+    "baseName": "元旦快乐3D",
+    "downloadTime": 1746268155107,
+    "downloadPath": "template/热门/元旦快乐3D"
+  },
+  "shengdan2": {
+    "name": "圣诞祝福",
+    "alias": "shengdan2",
+    "icon": "https://s1.kagirl.cn/icon/shengdan2.jpg",
+    "menu": "节日",
+    "baseName": "圣诞祝福",
+    "downloadTime": 1746268156832,
+    "downloadPath": "template/节日/圣诞祝福"
+  },
+  "caiyunhengtong": {
+    "name": "财运哼通",
+    "alias": "caiyunhengtong",
+    "icon": "https://s1.kagirl.cn/icon/zhunian1.png",
+    "menu": "节日",
+    "baseName": "财运\"哼\"通",
+    "downloadTime": 1746268158389,
+    "downloadPath": "template/节日/财运哼通"
+  },
+  "aoxuehanmei24": {
+    "name": "傲雪寒梅",
+    "alias": "aoxuehanmei24",
+    "icon": "https://s1.kagirl.cn/icon/template_1733991183.png",
+    "menu": "热门",
+    "baseName": "傲雪寒梅",
+    "downloadTime": 1746268165307,
+    "downloadPath": "template/热门/傲雪寒梅"
+  },
+  "dongzhi": {
+    "name": "雪晴",
+    "alias": "dongzhi",
+    "icon": "https://s1.kagirl.cn/icon/XUEQING.jpg",
+    "menu": "热门",
+    "baseName": "雪晴",
+    "downloadTime": 1746268166771,
+    "downloadPath": "template/热门/雪晴"
+  },
+  "externaltemplate20": {
+    "name": "宁夏",
+    "alias": "externaltemplate20",
+    "icon": "https://s1.kagirl.cn/icon/template_1685416424.png",
+    "menu": "热门",
+    "baseName": "宁夏",
+    "downloadTime": 1746268167427,
+    "downloadPath": "template/热门/宁夏"
+  },
+  "daxue2018": {
+    "name": "雪落平安",
+    "alias": "daxue2018",
+    "icon": "https://s1.kagirl.cn/icon/yilupingan.png",
+    "menu": "热门",
+    "baseName": "雪落平安",
+    "downloadTime": 1746268168059,
+    "downloadPath": "template/热门/雪落平安"
+  },
+  "laodong2018": {
+    "name": "快乐劳动",
+    "alias": "laodong2018",
+    "icon": "https://s1.kagirl.cn/icon/laodong2018.jpg",
+    "menu": "热门",
+    "baseName": "快乐劳动",
+    "downloadTime": 1746268168785,
+    "downloadPath": "template/热门/快乐劳动"
+  },
+  "tianmigaobai2023": {
+    "name": "甜蜜告白",
+    "alias": "tianmigaobai2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1676255921.png",
+    "menu": "热门",
+    "baseName": "甜蜜告白",
+    "downloadTime": 1746268171713,
+    "downloadPath": "template/热门/甜蜜告白"
+  },
+  "fuqinjie2020": {
+    "name": "爱在父亲节",
+    "alias": "fuqinjie2020",
+    "icon": "https://s1.kagirl.cn/icon/template_1591929796.png",
+    "menu": "节日",
+    "baseName": "爱在父亲节",
+    "downloadTime": 1746268172578,
+    "downloadPath": "template/节日/爱在父亲节"
+  },
+  "chunjie2020": {
+    "name": "牛年大吉",
+    "alias": "chunjie2020",
+    "icon": "https://s1.kagirl.cn/icon/template_1609320174.png",
+    "menu": "节日",
+    "baseName": "牛年大吉",
+    "downloadTime": 1746268173477,
+    "downloadPath": "template/节日/牛年大吉"
+  },
+  "yuandan24v3": {
+    "name": "喜气洋洋",
+    "alias": "yuandan24v3",
+    "icon": "https://s1.kagirl.cn/icon/template_1703833431.png",
+    "menu": "热门",
+    "baseName": "喜气洋洋",
+    "downloadTime": 1746268173982,
+    "downloadPath": "template/热门/喜气洋洋"
+  },
+  "fuqinjie2023": {
+    "name": "父爱如山",
+    "alias": "fuqinjie2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1686913474.png",
+    "menu": "热门",
+    "baseName": "父爱如山",
+    "downloadTime": 1746268175818,
+    "downloadPath": "template/热门/父爱如山"
+  },
+  "bzmganendexin2023": {
+    "name": "感恩的心",
+    "alias": "bzmganendexin2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1676628648.png",
+    "menu": "热门",
+    "baseName": "感恩的心",
+    "downloadTime": 1746268176867,
+    "downloadPath": "template/热门/感恩的心"
+  },
+  "3dqingming25": {
+    "name": "清明时节3D",
+    "alias": "3dqingming25",
+    "icon": "https://s1.kagirl.cn/icon/template_1743499579.png",
+    "menu": "VIP",
+    "baseName": "清明时节3D",
+    "downloadTime": 1746268193603,
+    "downloadPath": "template/VIP/清明时节3D"
+  },
+  "shengdan1": {
+    "name": "欢乐圣诞",
+    "alias": "shengdan1",
+    "icon": "https://s1.kagirl.cn/icon/shengdan1.jpg",
+    "menu": "节日",
+    "baseName": "欢乐圣诞",
+    "downloadTime": 1746268194894,
+    "downloadPath": "template/节日/欢乐圣诞"
+  },
+  "zhongqiu20192": {
+    "name": "月满中秋",
+    "alias": "zhongqiu20192",
+    "icon": "https://s1.kagirl.cn/icon/template_1568115972.png",
+    "menu": "节日",
+    "baseName": "月满中秋",
+    "downloadTime": 1746268195836,
+    "downloadPath": "template/节日/月满中秋"
+  },
+  "externaltemplate15": {
+    "name": "惊蛰祝福",
+    "alias": "externaltemplate15",
+    "icon": "https://s1.kagirl.cn/icon/template_1684290490.png",
+    "menu": "热门",
+    "baseName": "惊蛰祝福",
+    "downloadTime": 1746268196434,
+    "downloadPath": "template/热门/惊蛰祝福"
+  },
+  "tiexuezhujunhun2020": {
+    "name": "铁血筑军魂",
+    "alias": "tiexuezhujunhun2020",
+    "icon": "https://s1.kagirl.cn/icon/template_1596177158.png",
+    "menu": "节日",
+    "baseName": "铁血筑军魂",
+    "downloadTime": 1746268197433,
+    "downloadPath": "template/节日/铁血筑军魂"
+  },
+  "externaltemplate12": {
+    "name": "浩瀚宇宙",
+    "alias": "externaltemplate12",
+    "icon": "https://s1.kagirl.cn/icon/template_1684289128.png",
+    "menu": "热门",
+    "baseName": "浩瀚宇宙",
+    "downloadTime": 1746268198070,
+    "downloadPath": "template/热门/浩瀚宇宙"
+  },
+  "jianjun": {
+    "name": "建军节",
+    "alias": "jianjun",
+    "icon": "https://s1.kagirl.cn/icon/jianjun1.jpg",
+    "menu": "热门",
+    "baseName": "建军节",
+    "downloadTime": 1746268198527,
+    "downloadPath": "template/热门/建军节"
+  },
+  "jiaoshijie2020": {
+    "name": "感恩教师节",
+    "alias": "jiaoshijie2020",
+    "icon": "https://s1.kagirl.cn/icon/template_1599532657.png",
+    "menu": "节日",
+    "baseName": "感恩教师节",
+    "downloadTime": 1746268199911,
+    "downloadPath": "template/节日/感恩教师节"
+  },
+  "qixi2023": {
+    "name": "浪漫七夕",
+    "alias": "qixi2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1692174553.png",
+    "menu": "热门",
+    "baseName": "浪漫七夕",
+    "downloadTime": 1746268202090,
+    "downloadPath": "template/热门/浪漫七夕"
+  },
+  "jiandang2021": {
+    "name": "七一建党节",
+    "alias": "jiandang2021",
+    "icon": "https://s1.kagirl.cn/icon/template_1624952071.png",
+    "menu": "热门",
+    "baseName": "七一建党节",
+    "downloadTime": 1746268205529,
+    "downloadPath": "template/热门/七一建党节"
+  },
+  "meishi": {
+    "name": "美味佳肴",
+    "alias": "meishi",
+    "icon": "https://s1.kagirl.cn/icon/meishi.jpg",
+    "menu": "热门",
+    "baseName": "美味佳肴",
+    "downloadTime": 1746268206487,
+    "downloadPath": "template/热门/美味佳肴"
+  },
+  "chrismas": {
+    "name": "欢乐圣诞",
+    "alias": "chrismas",
+    "icon": "https://s1.kagirl.cn/icon/chrismas.jpg",
+    "menu": "节日",
+    "baseName": "欢乐圣诞",
+    "downloadTime": 1746268207053,
+    "downloadPath": "template/节日/欢乐圣诞"
+  },
+  "chongyang2022": {
+    "name": "金秋重阳",
+    "alias": "chongyang2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1664534938.png",
+    "menu": "热门",
+    "baseName": "金秋重阳",
+    "downloadTime": 1746268207786,
+    "downloadPath": "template/热门/金秋重阳"
+  },
+  "externaltemplate25": {
+    "name": "喜鹊飞过",
+    "alias": "externaltemplate25",
+    "icon": "https://s1.kagirl.cn/icon/template_1685442626.png",
+    "menu": "热门",
+    "baseName": "喜鹊飞过",
+    "downloadTime": 1746268208437,
+    "downloadPath": "template/热门/喜鹊飞过"
+  },
+  "qingnuanchongyang2021": {
+    "name": "情暖重阳",
+    "alias": "qingnuanchongyang2021",
+    "icon": "https://s1.kagirl.cn/icon/template_1634141322.png",
+    "menu": "节日",
+    "baseName": "情暖重阳",
+    "downloadTime": 1746268209166,
+    "downloadPath": "template/节日/情暖重阳"
+  },
+  "lidong2021": {
+    "name": "立冬快乐",
+    "alias": "lidong2021",
+    "icon": "https://s1.kagirl.cn/icon/template_1636178401.png",
+    "menu": "热门",
+    "baseName": "立冬快乐",
+    "downloadTime": 1746268209990,
+    "downloadPath": "template/热门/立冬快乐"
+  },
+  "jiaoshijie2019": {
+    "name": "师恩难忘",
+    "alias": "jiaoshijie2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1567739161.png",
+    "menu": "节日",
+    "baseName": "师恩难忘",
+    "downloadTime": 1746268210533,
+    "downloadPath": "template/节日/师恩难忘"
+  },
+  "bzmzhaocaijinbao2023": {
+    "name": "招财进宝",
+    "alias": "bzmzhaocaijinbao2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1676886575.png",
+    "menu": "热门",
+    "baseName": "招财进宝",
+    "downloadTime": 1746268211432,
+    "downloadPath": "template/热门/招财进宝"
+  },
+  "jianjunjie2021": {
+    "name": "八一建军节",
+    "alias": "jianjunjie2021",
+    "icon": "https://s1.kagirl.cn/icon/template_1627438449.png",
+    "menu": "节日",
+    "baseName": "八一建军节",
+    "downloadTime": 1746268214900,
+    "downloadPath": "template/节日/八一建军节"
+  },
+  "xiaoxueshijie2021": {
+    "name": "小雪时节",
+    "alias": "xiaoxueshijie2021",
+    "icon": "https://s1.kagirl.cn/icon/template_1637305754.png",
+    "menu": "热门",
+    "baseName": "小雪时节",
+    "downloadTime": 1746268215605,
+    "downloadPath": "template/热门/小雪时节"
+  },
+  "huahaoyueyuan2020": {
+    "name": "福满中秋",
+    "alias": "huahaoyueyuan2020",
+    "icon": "https://s1.kagirl.cn/icon/template_1601438130.png",
+    "menu": "节日",
+    "baseName": "福满中秋",
+    "downloadTime": 1746268216496,
+    "downloadPath": "template/节日/福满中秋"
+  },
+  "xiyingguoqing24": {
+    "name": "祖国万岁",
+    "alias": "xiyingguoqing24",
+    "icon": "https://s1.kagirl.cn/icon/template_1727337590.png",
+    "menu": "热门",
+    "baseName": "祖国万岁",
+    "downloadTime": 1746268218527,
+    "downloadPath": "template/热门/祖国万岁"
+  },
+  "yixinxiangdang2024": {
+    "name": "七一建党节",
+    "alias": "yixinxiangdang2024",
+    "icon": "https://s1.kagirl.cn/icon/template_1719468124.png",
+    "menu": "热门",
+    "baseName": "七一建党节",
+    "downloadTime": 1746268225604,
+    "downloadPath": "template/热门/七一建党节"
+  },
+  "jiandangjie2023": {
+    "name": "七一建党节",
+    "alias": "jiandangjie2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1688034855.png",
+    "menu": "热门",
+    "baseName": "七一建党节",
+    "downloadTime": 1746268229092,
+    "downloadPath": "template/热门/七一建党节"
+  },
+  "yuguotongqing2021": {
+    "name": "与国同庆",
+    "alias": "yuguotongqing2021",
+    "icon": "https://s1.kagirl.cn/icon/template_1632902141.png",
+    "menu": "节日",
+    "baseName": "与国同庆",
+    "downloadTime": 1746268230122,
+    "downloadPath": "template/节日/与国同庆"
+  },
+  "lidong2023": {
+    "name": "冬日时光",
+    "alias": "lidong2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1699342297.png",
+    "menu": "热门",
+    "baseName": "冬日时光",
+    "downloadTime": 1746268230681,
+    "downloadPath": "template/热门/冬日时光"
+  },
+  "halloween2019": {
+    "name": "欢乐万圣",
+    "alias": "halloween2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1572407910.png",
+    "menu": "节日",
+    "baseName": "欢乐万圣",
+    "downloadTime": 1746268231424,
+    "downloadPath": "template/节日/欢乐万圣"
+  },
+  "zhaocaijinbao2023": {
+    "name": "财神到",
+    "alias": "zhaocaijinbao2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1673954603.png",
+    "menu": "节日",
+    "baseName": "财神到",
+    "downloadTime": 1746268232248,
+    "downloadPath": "template/节日/财神到"
+  },
+  "yuandan2023": {
+    "name": "新年快乐",
+    "alias": "yuandan2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1672309761.png",
+    "menu": "热门",
+    "baseName": "新年快乐",
+    "downloadTime": 1746268234532,
+    "downloadPath": "template/热门/新年快乐"
+  },
+  "zhongqiu24": {
+    "name": "情满中秋",
+    "alias": "zhongqiu24",
+    "icon": "https://s1.kagirl.cn/icon/template_1726214770.png",
+    "menu": "热门",
+    "baseName": "情满中秋",
+    "downloadTime": 1746268235887,
+    "downloadPath": "template/热门/情满中秋"
+  },
+  "jianjunjie2022": {
+    "name": "八一建军节",
+    "alias": "jianjunjie2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1659234733.png",
+    "menu": "节日",
+    "baseName": "八一建军节",
+    "downloadTime": 1746268237684,
+    "downloadPath": "template/节日/八一建军节"
+  },
+  "ganenjie2022": {
+    "name": "感恩节快乐",
+    "alias": "ganenjie2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1669198566.png",
+    "menu": "节日",
+    "baseName": "感恩节快乐",
+    "downloadTime": 1746268243127,
+    "downloadPath": "template/节日/感恩节快乐"
+  },
+  "xiariqingtian2022": {
+    "name": "清甜夏日",
+    "alias": "xiariqingtian2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1658140003.png",
+    "menu": "热门",
+    "baseName": "清甜夏日",
+    "downloadTime": 1746268244364,
+    "downloadPath": "template/热门/清甜夏日"
+  },
+  "lidong": {
+    "name": "冬日祝福",
+    "alias": "lidong",
+    "icon": "https://s1.kagirl.cn/icon/piaoxue.jpg",
+    "menu": "热门",
+    "baseName": "冬日祝福",
+    "downloadTime": 1746268246023,
+    "downloadPath": "template/热门/冬日祝福"
+  },
+  "jiandang2022": {
+    "name": "七一建党节",
+    "alias": "jiandang2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1656659825.png",
+    "menu": "热门",
+    "baseName": "七一建党节",
+    "downloadTime": 1746268247697,
+    "downloadPath": "template/热门/七一建党节"
+  },
+  "3dduanwu2024": {
+    "name": "庆端午3D",
+    "alias": "3dduanwu2024",
+    "icon": "https://s1.kagirl.cn/icon/template_1717749564.png",
+    "menu": "热门",
+    "baseName": "庆端午3D",
+    "downloadTime": 1746268249917,
+    "downloadPath": "template/热门/庆端午3D"
+  },
+  "heimao": {
+    "name": "黑猫警长",
+    "alias": "heimao",
+    "icon": "https://s1.kagirl.cn/icon/heimao.jpg",
+    "menu": "热门",
+    "baseName": "黑猫警长",
+    "downloadTime": 1746268250504,
+    "downloadPath": "template/热门/黑猫警长"
+  },
+  "qingming25": {
+    "name": "清明思亲",
+    "alias": "qingming25",
+    "icon": "https://s1.kagirl.cn/icon/template_1743582529.png",
+    "menu": "热门",
+    "baseName": "清明思亲",
+    "downloadTime": 1746268252584,
+    "downloadPath": "template/热门/清明思亲"
+  },
+  "xiangyuedongji2022": {
+    "name": "相约冬季",
+    "alias": "xiangyuedongji2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1667181876.png",
+    "menu": "热门",
+    "baseName": "相约冬季",
+    "downloadTime": 1746268253235,
+    "downloadPath": "template/热门/相约冬季"
+  },
+  "yuanxiao2019": {
+    "name": "闹元宵",
+    "alias": "yuanxiao2019",
+    "icon": "https://s1.kagirl.cn/icon/yuanxiao2019.png",
+    "menu": "节日",
+    "baseName": "闹元宵",
+    "downloadTime": 1746268253754,
+    "downloadPath": "template/节日/闹元宵"
+  },
+  "guoqing20182": {
+    "name": "欢度国庆",
+    "alias": "guoqing20182",
+    "icon": "https://s1.kagirl.cn/icon/huanduguoqing20182.png",
+    "menu": "节日",
+    "baseName": "欢度国庆",
+    "downloadTime": 1746268254333,
+    "downloadPath": "template/节日/欢度国庆"
+  },
+  "christmaseve2020": {
+    "name": "圣诞平安夜",
+    "alias": "christmaseve2020",
+    "icon": "https://s1.kagirl.cn/icon/template_1608780330.png",
+    "menu": "节日",
+    "baseName": "圣诞平安夜",
+    "downloadTime": 1746268256017,
+    "downloadPath": "template/节日/圣诞平安夜"
+  },
+  "chongyang23": {
+    "name": "重阳节快乐",
+    "alias": "chongyang23",
+    "icon": "https://s1.kagirl.cn/icon/template_1697791438.png",
+    "menu": "热门",
+    "baseName": "重阳节快乐",
+    "downloadTime": 1746268256614,
+    "downloadPath": "template/热门/重阳节快乐"
+  },
+  "yujiandongtian2022": {
+    "name": "遇见冬天",
+    "alias": "yujiandongtian2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1670205452.png",
+    "menu": "热门",
+    "baseName": "遇见冬天",
+    "downloadTime": 1746268269055,
+    "downloadPath": "template/热门/遇见冬天"
+  },
+  "qiyue24": {
+    "name": "七月你好",
+    "alias": "qiyue24",
+    "icon": "https://s1.kagirl.cn/icon/template_1719560035.png",
+    "menu": "热门",
+    "baseName": "七月你好",
+    "downloadTime": 1746268272287,
+    "downloadPath": "template/热门/七月你好"
+  },
+  "3dguoqing24": {
+    "name": "快乐国庆3D",
+    "alias": "3dguoqing24",
+    "icon": "https://s1.kagirl.cn/icon/template_1727684883.png",
+    "menu": "VIP",
+    "baseName": "快乐国庆3D",
+    "downloadTime": 1746268280003,
+    "downloadPath": "template/VIP/快乐国庆3D"
+  },
+  "huniandaji2022": {
+    "name": "虎年大吉",
+    "alias": "huniandaji2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1642757676.png",
+    "menu": "节日",
+    "baseName": "虎年大吉",
+    "downloadTime": 1746268284867,
+    "downloadPath": "template/节日/虎年大吉"
+  },
+  "nihaoshieryue24": {
+    "name": "十二月你好",
+    "alias": "nihaoshieryue24",
+    "icon": "https://s1.kagirl.cn/icon/template_1733106918.png",
+    "menu": "热门",
+    "baseName": "十二月你好",
+    "downloadTime": 1746268286422,
+    "downloadPath": "template/热门/十二月你好"
+  },
+  "snow": {
+    "name": "雪花",
+    "alias": "snow",
+    "icon": "https://s1.kagirl.cn/icon/xuehua.jpg",
+    "menu": "热门",
+    "baseName": "雪花",
+    "downloadTime": 1746268287780,
+    "downloadPath": "template/热门/雪花"
+  },
+  "guoqing23": {
+    "name": "喜迎国庆",
+    "alias": "guoqing23",
+    "icon": "https://s1.kagirl.cn/icon/template_1695893760.png",
+    "menu": "热门",
+    "baseName": "喜迎国庆",
+    "downloadTime": 1746268289488,
+    "downloadPath": "template/热门/喜迎国庆"
+  },
+  "nvshen24": {
+    "name": "美丽女人节",
+    "alias": "nvshen24",
+    "icon": "https://s1.kagirl.cn/icon/template_1709545443.png",
+    "menu": "热门",
+    "baseName": "美丽女人节",
+    "downloadTime": 1746268291581,
+    "downloadPath": "template/热门/美丽女人节"
+  },
+  "jingjing": {
+    "name": "星光点点",
+    "alias": "jingjing",
+    "icon": "https://s1.kagirl.cn/icon/jingjing.jpg",
+    "menu": "热门",
+    "baseName": "星光点点",
+    "downloadTime": 1746268292700,
+    "downloadPath": "template/热门/星光点点"
+  },
+  "nihaodongtian2019": {
+    "name": "冬至",
+    "alias": "nihaodongtian2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1576463880.png",
+    "menu": "节日",
+    "baseName": "冬至",
+    "downloadTime": 1746268293555,
+    "downloadPath": "template/节日/冬至"
+  },
+  "chunjie20192": {
+    "name": "福气猪年",
+    "alias": "chunjie20192",
+    "icon": "https://s1.kagirl.cn/icon/huanjuchunjie.png",
+    "menu": "节日",
+    "baseName": "福气猪年",
+    "downloadTime": 1746268294699,
+    "downloadPath": "template/节日/福气猪年"
+  },
+  "jianjunjie2023": {
+    "name": "欢庆八一",
+    "alias": "jianjunjie2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1690795808.png",
+    "menu": "热门",
+    "baseName": "欢庆八一",
+    "downloadTime": 1746268300237,
+    "downloadPath": "template/热门/欢庆八一"
+  },
+  "xiaxue2018": {
+    "name": "下雪啦",
+    "alias": "xiaxue2018",
+    "icon": "https://s1.kagirl.cn/icon/xiaxuela.png",
+    "menu": "热门",
+    "baseName": "下雪啦",
+    "downloadTime": 1746268302476,
+    "downloadPath": "template/热门/下雪啦"
+  },
+  "zhongqiu2021": {
+    "name": "月美中秋",
+    "alias": "zhongqiu2021",
+    "icon": "https://s1.kagirl.cn/icon/template_1632029078.png",
+    "menu": "节日",
+    "baseName": "月美中秋",
+    "downloadTime": 1746268304114,
+    "downloadPath": "template/节日/月美中秋"
+  },
+  "guoqing20212": {
+    "name": "国庆祝福",
+    "alias": "guoqing20212",
+    "icon": "https://s1.kagirl.cn/icon/template_1632905579.png",
+    "menu": "热门",
+    "baseName": "国庆祝福",
+    "downloadTime": 1746268317741,
+    "downloadPath": "template/热门/国庆祝福"
+  },
+  "noqingchongyang": {
+    "name": "浓情重阳",
+    "alias": "noqingchongyang",
+    "icon": "https://s1.kagirl.cn/icon/template_1603180962.png",
+    "menu": "节日",
+    "baseName": "浓情重阳",
+    "downloadTime": 1746268320208,
+    "downloadPath": "template/节日/浓情重阳"
+  },
+  "xinnianfuyun25": {
+    "name": "新年福运",
+    "alias": "xinnianfuyun25",
+    "icon": "https://s1.kagirl.cn/icon/template_1737613707.png",
+    "menu": "热门",
+    "baseName": "新年福运",
+    "downloadTime": 1746268321142,
+    "downloadPath": "template/热门/新年福运"
+  },
+  "bzmfuyouwanwu2023": {
+    "name": "福佑万物",
+    "alias": "bzmfuyouwanwu2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1676456316.png",
+    "menu": "热门",
+    "baseName": "福佑万物",
+    "downloadTime": 1746268321854,
+    "downloadPath": "template/热门/福佑万物"
+  },
+  "xiaonian25": {
+    "name": "小年大吉",
+    "alias": "xiaonian25",
+    "icon": "https://s1.kagirl.cn/icon/template_1736849540.png",
+    "menu": "热门",
+    "baseName": "小年大吉",
+    "downloadTime": 1746268326092,
+    "downloadPath": "template/热门/小年大吉"
+  },
+  "duanwu": {
+    "name": "粽子飘香",
+    "alias": "duanwu",
+    "icon": "https://s1.kagirl.cn/icon/duanwu.jpg",
+    "menu": "节日",
+    "baseName": "粽子飘香",
+    "downloadTime": 1746268326622,
+    "downloadPath": "template/节日/粽子飘香"
+  },
+  "qingmingsiqin2022": {
+    "name": "清明思亲",
+    "alias": "qingmingsiqin2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1648721331.png",
+    "menu": "节日",
+    "baseName": "清明思亲",
+    "downloadTime": 1746268327230,
+    "downloadPath": "template/节日/清明思亲"
+  },
+  "yuemanzhongqiu2023": {
+    "name": "月饼飘香",
+    "alias": "yuemanzhongqiu2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1695793834.png",
+    "menu": "热门",
+    "baseName": "月饼飘香",
+    "downloadTime": 1746268328361,
+    "downloadPath": "template/热门/月饼飘香"
+  },
+  "caishendao2024": {
+    "name": "恭迎财神",
+    "alias": "caishendao2024",
+    "icon": "https://s1.kagirl.cn/icon/template_1707207687.png",
+    "menu": "热门",
+    "baseName": "恭迎财神",
+    "downloadTime": 1746268331834,
+    "downloadPath": "template/热门/恭迎财神"
+  },
+  "nihaoeryue2024": {
+    "name": "二月你好",
+    "alias": "nihaoeryue2024",
+    "icon": "https://s1.kagirl.cn/icon/template_1707209325.png",
+    "menu": "热门",
+    "baseName": "二月你好",
+    "downloadTime": 1746268333759,
+    "downloadPath": "template/热门/二月你好"
+  },
+  "nihaoshieryue2023": {
+    "name": "你好十二月",
+    "alias": "nihaoshieryue2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1701311609.png",
+    "menu": "热门",
+    "baseName": "你好十二月",
+    "downloadTime": 1746268335387,
+    "downloadPath": "template/热门/你好十二月"
+  },
+  "xiaoxue": {
+    "name": "雪花飞扬",
+    "alias": "xiaoxue",
+    "icon": "https://s1.kagirl.cn/icon/xiaoxue.jpg",
+    "menu": "热门",
+    "baseName": "雪花飞扬",
+    "downloadTime": 1746268336429,
+    "downloadPath": "template/热门/雪花飞扬"
+  },
+  "yiyue25": {
+    "name": "你好一月",
+    "alias": "yiyue25",
+    "icon": "https://s1.kagirl.cn/icon/template_1736306600.png",
+    "menu": "热门",
+    "baseName": "你好一月",
+    "downloadTime": 1746268337528,
+    "downloadPath": "template/热门/你好一月"
+  },
+  "duanwujie2023": {
+    "name": "贺端午",
+    "alias": "duanwujie2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1687250716.png",
+    "menu": "热门",
+    "baseName": "贺端午",
+    "downloadTime": 1746268342266,
+    "downloadPath": "template/热门/贺端午"
+  },
+  "hexinnian25": {
+    "name": "贺新年",
+    "alias": "hexinnian25",
+    "icon": "https://s1.kagirl.cn/icon/template_1736128176.png",
+    "menu": "热门",
+    "baseName": "贺新年",
+    "downloadTime": 1746268345253,
+    "downloadPath": "template/热门/贺新年"
+  },
+  "3dshengdan23": {
+    "name": "圣诞快乐3D",
+    "alias": "3dshengdan23",
+    "icon": "https://s1.kagirl.cn/icon/template_1703064279.png",
+    "menu": "热门",
+    "baseName": "圣诞快乐3D",
+    "downloadTime": 1746268347682,
+    "downloadPath": "template/热门/圣诞快乐3D"
+  },
+  "niyuqiumei2021": {
+    "name": "你与秋美",
+    "alias": "niyuqiumei2021",
+    "icon": "https://s1.kagirl.cn/icon/template_1630894873.png",
+    "menu": "热门",
+    "baseName": "你与秋美",
+    "downloadTime": 1746268348973,
+    "downloadPath": "template/热门/你与秋美"
+  },
+  "yingxionglaoba2019": {
+    "name": "英雄老爸",
+    "alias": "yingxionglaoba2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1560508601.png",
+    "menu": "节日",
+    "baseName": "英雄老爸",
+    "downloadTime": 1746268350202,
+    "downloadPath": "template/节日/英雄老爸"
+  },
+  "xinnian23": {
+    "name": "贺新年",
+    "alias": "xinnian23",
+    "icon": "https://s1.kagirl.cn/icon/template_1706756447.png",
+    "menu": "热门",
+    "baseName": "贺新年",
+    "downloadTime": 1746268351715,
+    "downloadPath": "template/热门/贺新年"
+  },
+  "pinganye24": {
+    "name": "温暖平安夜",
+    "alias": "pinganye24",
+    "icon": "https://s1.kagirl.cn/icon/template_1734420088.png",
+    "menu": "热门",
+    "baseName": "温暖平安夜",
+    "downloadTime": 1746268359315,
+    "downloadPath": "template/热门/温暖平安夜"
+  },
+  "guoqing2020": {
+    "name": "美满双节",
+    "alias": "guoqing2020",
+    "icon": "https://s1.kagirl.cn/icon/template_1600927133.png",
+    "menu": "节日",
+    "baseName": "美满双节",
+    "downloadTime": 1746268360569,
+    "downloadPath": "template/节日/美满双节"
+  },
+  "dongzhi2023": {
+    "name": "幸福冬至",
+    "alias": "dongzhi2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1703040157.png",
+    "menu": "热门",
+    "baseName": "幸福冬至",
+    "downloadTime": 1746268362976,
+    "downloadPath": "template/热门/幸福冬至"
+  },
+  "fuqinjie24": {
+    "name": "感恩父亲节",
+    "alias": "fuqinjie24",
+    "icon": "https://s1.kagirl.cn/icon/template_1718263441.png",
+    "menu": "热门",
+    "baseName": "感恩父亲节",
+    "downloadTime": 1746268364085,
+    "downloadPath": "template/热门/感恩父亲节"
+  },
+  "yiqinwuhanjiayou": {
+    "name": "中国加油",
+    "alias": "yiqinwuhanjiayou",
+    "icon": "https://s1.kagirl.cn/icon/template_1581426636.png",
+    "menu": "热门",
+    "baseName": "中国加油",
+    "downloadTime": 1746268364849,
+    "downloadPath": "template/热门/中国加油"
+  },
+  "dongtiannihao2021": {
+    "name": "冬意",
+    "alias": "dongtiannihao2021",
+    "icon": "https://s1.kagirl.cn/icon/template_1635914354.png",
+    "menu": "热门",
+    "baseName": "冬意",
+    "downloadTime": 1746268365561,
+    "downloadPath": "template/热门/冬意"
+  },
+  "bzmyimengweima2023": {
+    "name": "以梦为马",
+    "alias": "bzmyimengweima2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1676629013.png",
+    "menu": "热门",
+    "baseName": "以梦为马",
+    "downloadTime": 1746268366218,
+    "downloadPath": "template/热门/以梦为马"
+  },
+  "xinnian25": {
+    "name": "贺新年",
+    "alias": "xinnian25",
+    "icon": "https://s1.kagirl.cn/icon/template_1735278866.png",
+    "menu": "热门",
+    "baseName": "贺新年",
+    "downloadTime": 1746268367054,
+    "downloadPath": "template/热门/贺新年"
+  },
+  "wansheng2018": {
+    "name": "万圣节",
+    "alias": "wansheng2018",
+    "icon": "https://s1.kagirl.cn/icon/wanshengjie2018.png",
+    "menu": "节日",
+    "baseName": "万圣节",
+    "downloadTime": 1746268367815,
+    "downloadPath": "template/节日/万圣节"
+  },
+  "xinnian2024": {
+    "name": "新年好",
+    "alias": "xinnian2024",
+    "icon": "https://s1.kagirl.cn/icon/template_1703578488.png",
+    "menu": "热门",
+    "baseName": "新年好",
+    "downloadTime": 1746268368989,
+    "downloadPath": "template/热门/新年好"
+  },
+  "dongzhi2018": {
+    "name": "冬至祝福",
+    "alias": "dongzhi2018",
+    "icon": "https://s1.kagirl.cn/icon/dongzhi2018.png",
+    "menu": "节日",
+    "baseName": "冬至祝福",
+    "downloadTime": 1746268369516,
+    "downloadPath": "template/节日/冬至祝福"
+  },
+  "qingming2024": {
+    "name": "清明时节",
+    "alias": "qingming2024",
+    "icon": "https://s1.kagirl.cn/icon/template_1712029318.png",
+    "menu": "热门",
+    "baseName": "清明时节",
+    "downloadTime": 1746268371449,
+    "downloadPath": "template/热门/清明时节"
+  },
+  "futuyingchun2023": {
+    "name": "福兔迎春",
+    "alias": "futuyingchun2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1674020117.png",
+    "menu": "热门",
+    "baseName": "福兔迎春",
+    "downloadTime": 1746268376163,
+    "downloadPath": "template/热门/福兔迎春"
+  },
+  "hshengdan": {
+    "name": "浪漫圣诞",
+    "alias": "hshengdan",
+    "icon": "https://s1.kagirl.cn/icon/hengshengdan.png",
+    "menu": "热门",
+    "baseName": "浪漫圣诞",
+    "downloadTime": 1746268377389,
+    "downloadPath": "template/热门/浪漫圣诞"
+  },
+  "duanwu2020": {
+    "name": "粽情端午",
+    "alias": "duanwu2020",
+    "icon": "https://s1.kagirl.cn/icon/template_1592969739.png",
+    "menu": "节日",
+    "baseName": "粽情端午",
+    "downloadTime": 1746268377989,
+    "downloadPath": "template/节日/粽情端午"
+  },
+  "jinniuhesui2021": {
+    "name": "金牛贺岁",
+    "alias": "jinniuhesui2021",
+    "icon": "https://s1.kagirl.cn/icon/template_1611744940.png",
+    "menu": "节日",
+    "baseName": "金牛贺岁",
+    "downloadTime": 1746268378725,
+    "downloadPath": "template/节日/金牛贺岁"
+  },
+  "dongzhi2017": {
+    "name": "冬日恋曲",
+    "alias": "dongzhi2017",
+    "icon": "https://s1.kagirl.cn/icon/template_1603677308.png",
+    "menu": "节日",
+    "baseName": "冬日恋曲",
+    "downloadTime": 1746268379592,
+    "downloadPath": "template/节日/冬日恋曲"
+  },
+  "wennuanyidong24": {
+    "name": "温暖一冬",
+    "alias": "wennuanyidong24",
+    "icon": "https://s1.kagirl.cn/icon/template_1731402835.png",
+    "menu": "热门",
+    "baseName": "温暖一冬",
+    "downloadTime": 1746268381494,
+    "downloadPath": "template/热门/温暖一冬"
+  },
+  "qixi24": {
+    "name": "缘定七夕",
+    "alias": "qixi24",
+    "icon": "https://s1.kagirl.cn/icon/template_1723186234.png",
+    "menu": "热门",
+    "baseName": "缘定七夕",
+    "downloadTime": 1746268393025,
+    "downloadPath": "template/热门/缘定七夕"
+  },
+  "ganenyouni2021": {
+    "name": "2021感恩有你",
+    "alias": "ganenyouni2021",
+    "icon": "https://s1.kagirl.cn/icon/template_1637750592.png",
+    "menu": "节日",
+    "baseName": "2021感恩有你",
+    "downloadTime": 1746268394267,
+    "downloadPath": "template/节日/2021感恩有你"
+  },
+  "yuandan24v2": {
+    "name": "新年旺旺",
+    "alias": "yuandan24v2",
+    "icon": "https://s1.kagirl.cn/icon/template_1703832834.png",
+    "menu": "热门",
+    "baseName": "新年旺旺",
+    "downloadTime": 1746268394770,
+    "downloadPath": "template/热门/新年旺旺"
+  },
+  "shengdan3": {
+    "name": "飘雪的圣诞",
+    "alias": "shengdan3",
+    "icon": "https://s1.kagirl.cn/icon/shengdan3.jpg",
+    "menu": "热门",
+    "baseName": "飘雪的圣诞",
+    "downloadTime": 1746268395430,
+    "downloadPath": "template/热门/飘雪的圣诞"
+  },
+  "dongzhi2022": {
+    "name": "冬至大如年",
+    "alias": "dongzhi2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1671633417.png",
+    "menu": "热门",
+    "baseName": "冬至大如年",
+    "downloadTime": 1746268400874,
+    "downloadPath": "template/热门/冬至大如年"
+  },
+  "xiaonian2024": {
+    "name": "小年到",
+    "alias": "xiaonian2024",
+    "icon": "https://s1.kagirl.cn/icon/template_1706669375.png",
+    "menu": "热门",
+    "baseName": "小年到",
+    "downloadTime": 1746268404991,
+    "downloadPath": "template/热门/小年到"
+  },
+  "bzmyiqingming2023": {
+    "name": "忆清明",
+    "alias": "bzmyiqingming2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1676629077.png",
+    "menu": "热门",
+    "baseName": "忆清明",
+    "downloadTime": 1746268406033,
+    "downloadPath": "template/热门/忆清明"
+  },
+  "wuhanjiayou2": {
+    "name": "武汉加油",
+    "alias": "wuhanjiayou2",
+    "icon": "https://s1.kagirl.cn/icon/template_1581731777.png",
+    "menu": "热门",
+    "baseName": "武汉加油",
+    "downloadTime": 1746268407292,
+    "downloadPath": "template/热门/武汉加油"
+  },
+  "jiaoshijie23": {
+    "name": "师恩难忘",
+    "alias": "jiaoshijie23",
+    "icon": "https://s1.kagirl.cn/icon/template_1694083770.png",
+    "menu": "热门",
+    "baseName": "师恩难忘",
+    "downloadTime": 1746268408219,
+    "downloadPath": "template/热门/师恩难忘"
+  },
+  "guoqing2022": {
+    "name": "庆国庆",
+    "alias": "guoqing2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1664188889.png",
+    "menu": "热门",
+    "baseName": "庆国庆",
+    "downloadTime": 1746268413089,
+    "downloadPath": "template/热门/庆国庆"
+  },
+  "zhongqiu2022": {
+    "name": "月圆中秋",
+    "alias": "zhongqiu2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1662648065.png",
+    "menu": "热门",
+    "baseName": "月圆中秋",
+    "downloadTime": 1746268414886,
+    "downloadPath": "template/热门/月圆中秋"
+  },
+  "yuanxiaojie2021": {
+    "name": "闹元宵",
+    "alias": "yuanxiaojie2021",
+    "icon": "https://s1.kagirl.cn/icon/template_1614132110.png",
+    "menu": "节日",
+    "baseName": "闹元宵",
+    "downloadTime": 1746268416207,
+    "downloadPath": "template/节日/闹元宵"
+  },
+  "pupuqiqu": {
+    "name": "企鹅pupu",
+    "alias": "pupuqiqu",
+    "icon": "https://s1.kagirl.cn/icon/pupu.png",
+    "menu": "热门",
+    "baseName": "企鹅pupu",
+    "downloadTime": 1746268417071,
+    "downloadPath": "template/热门/企鹅pupu"
+  },
+  "gongtongzhanyi2022": {
+    "name": "共同战疫",
+    "alias": "gongtongzhanyi2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1650508572.png",
+    "menu": "热门",
+    "baseName": "共同战疫",
+    "downloadTime": 1746268418331,
+    "downloadPath": "template/热门/共同战疫"
+  },
+  "qingmingshijie2023": {
+    "name": "清明时节",
+    "alias": "qingmingshijie2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1679394350.png",
+    "menu": "热门",
+    "baseName": "清明时节",
+    "downloadTime": 1746268422918,
+    "downloadPath": "template/热门/清明时节"
+  },
+  "yuandan25": {
+    "name": "新年旺旺",
+    "alias": "yuandan25",
+    "icon": "https://s1.kagirl.cn/icon/template_1735196299.png",
+    "menu": "热门",
+    "baseName": "新年旺旺",
+    "downloadTime": 1746268424732,
+    "downloadPath": "template/热门/新年旺旺"
+  },
+  "handongjiangzhi2022": {
+    "name": "寒冬将至",
+    "alias": "handongjiangzhi2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1669026526.png",
+    "menu": "热门",
+    "baseName": "寒冬将至",
+    "downloadTime": 1746268431307,
+    "downloadPath": "template/热门/寒冬将至"
+  },
+  "zhongqiu20182": {
+    "name": "团圆中秋",
+    "alias": "zhongqiu20182",
+    "icon": "https://s1.kagirl.cn/icon/tuanyuanzhongqiu.png",
+    "menu": "节日",
+    "baseName": "团圆中秋",
+    "downloadTime": 1746268432674,
+    "downloadPath": "template/节日/团圆中秋"
+  },
+  "xiaonian2018": {
+    "name": "欢度小年",
+    "alias": "xiaonian2018",
+    "icon": "https://s1.kagirl.cn/icon/xiaonian.png",
+    "menu": "热门",
+    "baseName": "欢度小年",
+    "downloadTime": 1746268433401,
+    "downloadPath": "template/热门/欢度小年"
+  },
+  "shengdankuaile20182": {
+    "name": "欢喜圣诞",
+    "alias": "shengdankuaile20182",
+    "icon": "https://s1.kagirl.cn/icon/shengdankuaile20182.png",
+    "menu": "节日",
+    "baseName": "欢喜圣诞",
+    "downloadTime": 1746268434259,
+    "downloadPath": "template/节日/欢喜圣诞"
+  },
+  "qixi2022": {
+    "name": "浪漫七夕",
+    "alias": "qixi2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1659491655.png",
+    "menu": "热门",
+    "baseName": "浪漫七夕",
+    "downloadTime": 1746268435205,
+    "downloadPath": "template/热门/浪漫七夕"
+  },
+  "zhongqiu2023": {
+    "name": "欢庆中秋",
+    "alias": "zhongqiu2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1695378177.png",
+    "menu": "热门",
+    "baseName": "欢庆中秋",
+    "downloadTime": 1746268436141,
+    "downloadPath": "template/热门/欢庆中秋"
+  },
+  "jinshunaochun": {
+    "name": "金鼠闹春",
+    "alias": "jinshunaochun",
+    "icon": "https://s1.kagirl.cn/icon/template_1579252241.png",
+    "menu": "节日",
+    "baseName": "金鼠闹春",
+    "downloadTime": 1746268437027,
+    "downloadPath": "template/节日/金鼠闹春"
+  },
+  "jiaoshijie2022": {
+    "name": "感恩教师节",
+    "alias": "jiaoshijie2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1662805045.png",
+    "menu": "热门",
+    "baseName": "感恩教师节",
+    "downloadTime": 1746268439969,
+    "downloadPath": "template/热门/感恩教师节"
+  },
+  "lidong2019": {
+    "name": "立冬时节",
+    "alias": "lidong2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1573117263.png",
+    "menu": "节日",
+    "baseName": "立冬时节",
+    "downloadTime": 1746268441179,
+    "downloadPath": "template/节日/立冬时节"
+  },
+  "guoqing24": {
+    "name": "喜迎国庆",
+    "alias": "guoqing24",
+    "icon": "https://s1.kagirl.cn/icon/template_1727599182.png",
+    "menu": "热门",
+    "baseName": "喜迎国庆",
+    "downloadTime": 1746268443078,
+    "downloadPath": "template/热门/喜迎国庆"
+  },
+  "qingming2020": {
+    "name": "清明雨上",
+    "alias": "qingming2020",
+    "icon": "https://s1.kagirl.cn/icon/template_1585726998.png",
+    "menu": "节日",
+    "baseName": "清明雨上",
+    "downloadTime": 1746268443889,
+    "downloadPath": "template/节日/清明雨上"
+  },
+  "shengdan4": {
+    "name": "圣诞送祝福",
+    "alias": "shengdan4",
+    "icon": "https://s1.kagirl.cn/icon/shengdan4.jpg",
+    "menu": "热门",
+    "baseName": "圣诞送祝福",
+    "downloadTime": 1746268444496,
+    "downloadPath": "template/热门/圣诞送祝福"
+  },
+  "yuanxiao2020": {
+    "name": "元宵团圆",
+    "alias": "yuanxiao2020",
+    "icon": "https://s1.kagirl.cn/icon/template_1580871488.png",
+    "menu": "节日",
+    "baseName": "元宵团圆",
+    "downloadTime": 1746268445503,
+    "downloadPath": "template/节日/元宵团圆"
+  },
+  "huanduyuanxiao2022": {
+    "name": "欢度元宵",
+    "alias": "huanduyuanxiao2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1644833376.png",
+    "menu": "热门",
+    "baseName": "欢度元宵",
+    "downloadTime": 1746268447729,
+    "downloadPath": "template/热门/欢度元宵"
+  },
+  "laba2018": {
+    "name": "腊八节",
+    "alias": "laba2018",
+    "icon": "https://s1.kagirl.cn/icon/labajie.png",
+    "menu": "节日",
+    "baseName": "腊八节",
+    "downloadTime": 1746268448296,
+    "downloadPath": "template/节日/腊八节"
+  },
+  "yuandan2022": {
+    "name": "新年快乐",
+    "alias": "yuandan2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1640832795.png",
+    "menu": "节日",
+    "baseName": "新年快乐",
+    "downloadTime": 1746268449102,
+    "downloadPath": "template/节日/新年快乐"
+  },
+  "shengdankuaile2018": {
+    "name": "美丽圣诞",
+    "alias": "shengdankuaile2018",
+    "icon": "https://s1.kagirl.cn/icon/shengdankuaile2018.png",
+    "menu": "节日",
+    "baseName": "美丽圣诞",
+    "downloadTime": 1746268449827,
+    "downloadPath": "template/节日/美丽圣诞"
+  },
+  "lidong2020": {
+    "name": "立冬祝福",
+    "alias": "lidong2020",
+    "icon": "https://s1.kagirl.cn/icon/template_1604567457.png",
+    "menu": "节日",
+    "baseName": "立冬祝福",
+    "downloadTime": 1746268450479,
+    "downloadPath": "template/节日/立冬祝福"
+  },
+  "chrismas2019": {
+    "name": "欢乐圣诞",
+    "alias": "chrismas2019",
+    "icon": "https://s1.kagirl.cn/icon/template_1576753506.png",
+    "menu": "节日",
+    "baseName": "欢乐圣诞",
+    "downloadTime": 1746268451041,
+    "downloadPath": "template/节日/欢乐圣诞"
+  },
+  "dongzhi2020": {
+    "name": "冬至快乐",
+    "alias": "dongzhi2020",
+    "icon": "https://s1.kagirl.cn/icon/template_1608282575.png",
+    "menu": "节日",
+    "baseName": "冬至快乐",
+    "downloadTime": 1746268451606,
+    "downloadPath": "template/节日/冬至快乐"
+  },
+  "xiaonianjixiang2022": {
+    "name": "小年吉祥",
+    "alias": "xiaonianjixiang2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1642757507.png",
+    "menu": "节日",
+    "baseName": "小年吉祥",
+    "downloadTime": 1746268452162,
+    "downloadPath": "template/节日/小年吉祥"
+  },
+  "yuanxiao2023": {
+    "name": "喜迎元宵",
+    "alias": "yuanxiao2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1675422283.png",
+    "menu": "热门",
+    "baseName": "喜迎元宵",
+    "downloadTime": 1746268455882,
+    "downloadPath": "template/热门/喜迎元宵"
+  },
+  "yuanxiao24": {
+    "name": "幸福元宵",
+    "alias": "yuanxiao24",
+    "icon": "https://s1.kagirl.cn/icon/template_1708652222.png",
+    "menu": "热门",
+    "baseName": "幸福元宵",
+    "downloadTime": 1746268456663,
+    "downloadPath": "template/热门/幸福元宵"
+  },
+  "pinganshengdan2023": {
+    "name": "平安圣诞",
+    "alias": "pinganshengdan2023",
+    "icon": "https://s1.kagirl.cn/icon/template_1703214918.png",
+    "menu": "热门",
+    "baseName": "平安圣诞",
+    "downloadTime": 1746268457712,
+    "downloadPath": "template/热门/平安圣诞"
+  },
+  "yuanxiao2018": {
+    "name": "元宵快乐",
+    "alias": "yuanxiao2018",
+    "icon": "https://s1.kagirl.cn/icon/yuanxiao2018.jpg",
+    "menu": "节日",
+    "baseName": "元宵快乐",
+    "downloadTime": 1746268458780,
+    "downloadPath": "template/节日/元宵快乐"
+  },
+  "huanduyuandan25": {
+    "name": "欢度元旦",
+    "alias": "huanduyuandan25",
+    "icon": "https://s1.kagirl.cn/icon/template_1735632365.png",
+    "menu": "热门",
+    "baseName": "欢度元旦",
+    "downloadTime": 1746268461456,
+    "downloadPath": "template/热门/欢度元旦"
+  },
+  "shengdan2022": {
+    "name": "圣诞祝福",
+    "alias": "shengdan2022",
+    "icon": "https://s1.kagirl.cn/icon/template_1671801844.png",
+    "menu": "热门",
+    "baseName": "圣诞祝福",
+    "downloadTime": 1746268463472,
+    "downloadPath": "template/热门/圣诞祝福"
+  }
+}

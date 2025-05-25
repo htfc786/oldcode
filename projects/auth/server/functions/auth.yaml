@@ -1,0 +1,6 @@
+name: auth
+desc: ""
+methods:
+  - GET
+  - POST
+tags: []

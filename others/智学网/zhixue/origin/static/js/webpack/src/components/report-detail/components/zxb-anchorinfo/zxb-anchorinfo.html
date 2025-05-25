@@ -1,0 +1,11 @@
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"acio_anchorWrap"},[_c('div',{staticClass:"acio_titleWrap"},[_c('span',{staticClass:"acio_tag",style:(_vm.acio_tagStyle)},[_vm._v(_vm._s(_vm.anchorInfo.subjectName))]),_vm._v(" "),_c('span',{staticClass:"acio_title"},[_vm._v(_vm._s(_vm.anchorInfo.name))])]),_vm._v(" "),(_vm.anchorInfoShow)?_c('table',{staticClass:"acio_infoTable"},[_c('tr',[_c('th',[_vm._v("3年"+_vm._s(_vm.anchorInfo.examType)+"出现")]),_vm._v(" "),_c('th',[_vm._v("分值占比")]),_vm._v(" "),_c('th',[_vm._v("考点难度")]),_vm._v(" "),_c('th',[_vm._v("考点影响")])]),_vm._v(" "),_c('tr',[_c('td',[_vm._v(_vm._s(_vm.anchorInfo.examCount)+"次")]),_vm._v(" "),_c('td',[_vm._v(_vm._s(_vm.anchorInfo.examRatio)+"%")]),_vm._v(" "),_c('td',[_vm._v(_vm._s(_vm.anchorInfo.difficultLevel.name))]),_vm._v(" "),_c('td',[_vm._v(_vm._s(_vm.anchorInfo.influenceLevel.name))])])]):_vm._e(),_vm._v(" "),_c('table',{directives:[{name:"show",rawName:"v-show",value:(_vm.errorInfoShow),expression:"errorInfoShow"}],class:[_vm.acio_rateTable,_vm.anchorInfoShow? '' : _vm.acio_rateMargin]},[_vm._m(0),_vm._v(" "),_vm._l((_vm.anchorInfo.errTopics),function(item){return _c('tr',[_c('td',[_vm._v("第"+_vm._s(item.disTitleNumber)+"题")]),_vm._v(" "),_c('td',[_vm._v(_vm._s(item.clazzAvgRatio)+"%")])])})],2),_vm._v(" "),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.showImproveInfo),expression:"showImproveInfo"}],staticClass:"acio_improveTipWrap"},[_c('span',[_vm._v("预计提分"),_c('i',[_vm._v(_vm._s(_vm.anchorInfo.improveScore)+"分")])])])])}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('tr',[_c('th',[_vm._v("本次错题")]),_vm._v(" "),_c('th',[_vm._v("班级平均正确率")])])}]
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+export default esExports
+
+
+//////////////////
+// WEBPACK FOOTER
+// ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-672335d9","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./src/components/report-detail/components/zxb-anchorinfo/zxb-anchorinfo.html
+// module id = null
+// module chunks = 

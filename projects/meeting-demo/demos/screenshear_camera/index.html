@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>屏幕共享&摄像头</title>
+</head>
+<body>
+  <div>
+    <button id="cameraButton">摄像头</button>
+    <button id="screenButton">屏幕共享</button>
+  </div>
+  <video id="cameraVideo" autoplay></video>
+  <video id="screenVideo" autoplay></video>
+  <script>
+    //获取标签dom
+    const cameraButton = document.getElementById("cameraButton");
+    const screenButton = document.getElementById("screenButton");
+    const cameraVideo = document.getElementById("cameraVideo");
+    const screenVideo = document.getElementById("screenVideo");
+    let cameraStream = null;
+    let screenStream = null;//屏幕共享视频流
+    //摄像头
+    cameraButton.addEventListener("click", function(){
+      if (!cameraStream) {//未开启摄像头
+        //获取摄像头媒体流
+        navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+          .then((stream)=>{//获取成功
+            cameraStream = stream;//获取视频流
+            cameraVideo.srcObject = cameraStream;//给video播放
+          })
+          .catch((error)=>{//获取失败
+            console.error("ERROR!",error);
+          });
+      } else {//已开启摄像头
+        //停止摄像头媒体流
+        cameraStream.getTracks().forEach((track) => {//停止所有视频流
+          track.stop()
+        });
+        cameraStream = null;//清空视频流
+        cameraVideo.srcObject = null;//停止播放
+
+      }
+    });
+    //屏幕共享
+    screenButton.addEventListener("click", function(){
+      if (!screenStream) {//未开启
+        //获取摄像头媒体流
+        navigator.mediaDevices.getDisplayMedia({ video: true, audio: false })
+          .then((stream)=>{//获取成功
+            screenStream = stream;//获取视频流
+            screenVideo.srcObject = screenStream;//给video播放
+          })
+          .catch((error)=>{//获取失败
+            console.error("ERROR!",error);
+          });
+      } else {//已开启
+        //停止媒体流
+        screenStream.getTracks().forEach((track) => {//停止所有视频流
+          track.stop()
+        });
+        screenStream = null;//清空视频流
+        screenVideo.srcObject = null;//停止播放
+
+      }
+    });
+  </script>
+</body>
+</html>

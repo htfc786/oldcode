@@ -1,0 +1,11 @@
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{directives:[{name:"loading",rawName:"v-loading",value:(_vm.loading),expression:"loading"}],staticClass:"web-report-container",attrs:{"element-loading-text":"加载中","element-loading-spinner":"el-icon-loading"}},[_c('div',{staticClass:"exam-container"},[_c('div',{staticClass:"report-nav"},[_c('span',{on:{"click":function($event){return _vm.toHomeAndScoreAnalysisModule('home')}}},[_vm._v("首页")]),_c('i'),_vm._v(" "),_c('span',[_vm._v("学情报告")])]),_vm._v(" "),_c('div',{staticClass:"other-module-jump"},[_c('div',{staticStyle:{"display":"flex"}},[_c('report-gener-time',{staticStyle:{"margin-right":"20px"},attrs:{"isLinkage":_vm.isLinkage},on:{"date-changed":_vm.handleDateChange}}),_vm._v(" "),_c('exam-list',{staticClass:"exam-list clearfix",attrs:{"beginTime":_vm.beginTime,"endTime":_vm.endTime}})],1),_vm._v(" "),_c('div',[_c('div',{staticClass:"other-module fr",on:{"click":_vm.goOriginalRollDetail}},[_c('img',{attrs:{"src":require("./img/icons-original-roll.png"),"alt":"原卷"}}),_vm._v(" "),_c('span',[_vm._v("原卷")])]),_vm._v(" "),(_vm.isShowAnalysis)?_c('div',{staticClass:"other-module fr",on:{"click":_vm.toAnalysisModule}},[_c('img',{attrs:{"src":require("./img/icons-analysis.png"),"alt":"解析"}}),_vm._v(" "),_c('span',[_vm._v("解析")])]):_vm._e()])])]),_vm._v(" "),_c('div',{staticClass:"container",attrs:{"id":"report"}},[(_vm.reportContentComponent)?_c(_vm.reportContentComponent,{tag:"component"}):_vm._e()],1)])}
+var staticRenderFns = []
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+export default esExports
+
+
+//////////////////
+// WEBPACK FOOTER
+// ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-1a71cd66","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./src/components/report-detail/report-detail.html
+// module id = null
+// module chunks = 

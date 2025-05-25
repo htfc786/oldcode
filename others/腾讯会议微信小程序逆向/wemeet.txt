@@ -1,0 +1,11 @@
+﻿production: {
+                    key: "production",
+                    name: "正式环境",
+                    sdkappid: "200000000",
+                    signurl: "https://yun.tim.qq.com/v4/openim/jsonvideoapp",
+                    micurl: "https://yun.tim.qq.com/v4/openim/rtmpproxydis",
+                    srvurl: "wss://ws.wemeet.tencent.com/websocket/connection",
+                    httpCgi: "https://work.medialab.qq.com/v2",
+                    disabled: !1
+                },
+

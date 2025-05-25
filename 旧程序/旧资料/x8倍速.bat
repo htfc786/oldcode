@@ -1,0 +1,1 @@
+ffmpeg -i 508-x8.mp4 -filter_complex "[0:v]setpts=0.125*PTS[v];[0:a]atempo=2.0,atempo=2.0,atempo=2.0[a]" -map "[v]" -map "[a]" 508-x64.mp4

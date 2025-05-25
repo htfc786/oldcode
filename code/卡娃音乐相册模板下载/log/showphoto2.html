@@ -1,0 +1,231 @@
+
+<!doctype html>
+<title>我用相册记录美好生活，保存回忆</title>
+<meta charset='utf-8'>
+
+<script>
+    var module_inits = [];
+
+    function load_init_modules(){
+        for(var i=0;i<module_inits.length; i++){
+            module_inits[i]();
+        }
+    }
+
+    function call_me(fun) {
+        module_inits.push(fun);
+    }
+
+    window.addEventListener('load', load_init_modules, false);
+var photoend=0
+function photo_start_init(func, delay) {
+    var fun = func + "()";
+    if (1 == photostart)
+        console.log("执行：" + func),
+        eval(fun);
+    else {
+        var isinsert = !1, index;
+        for (index in startFunc) {
+            var item = startFunc[index];
+            if (item.method == func) {
+                isinsert = !0;
+                break
+            }
+        }
+        isinsert || (delay = parseInt(delay),
+        startFunc.push({
+            method: func,
+            delay: delay
+        })),
+        startInter = startInter || setInterval(function() {
+            if (1 == photostart) {
+                clearInterval(startInter);
+                for (var i = 0; i < startFunc.length; i++) {
+                    var items = startFunc[i];
+                    fun = items.method + "()",
+                    0 == items.delay ? (eval(fun),
+                    console.log("执行：" + items.method)) : setTimeout(function() {
+                        eval(fun),
+                        console.log("执行：" + fun)
+                    }, items.delay)
+                }
+            }
+        }, 500)
+    }
+}
+function callend(e) {
+    0 == photoend && 0 < e && (end_delay_times = parseInt(e / 1e3),
+    console.log("end_delay_times:" + end_delay_times)),
+    photoend = 1
+}
+let end_pic_status = 0
+</script>
+<script>
+var slider_images_url = [
+    "https://picsum.photos/200",
+    "https://picsum.photos/200/300",
+    "https://picsum.photos/200/400",
+    // "file:///C:/Users/htfc786/Desktop/tmpx04l7l4h.PNG",
+    // "file:///C:/Users/htfc786/Desktop/021579d3f00cc42f428dfd267d780cc.png",
+    // "file:///C:/Users/htfc786/Desktop/%E6%9B%B9%E5%8D%9A%E6%BD%87/1143b988bde08a70b63e7d943569b23.jpg"
+]
+var e_desc = "";
+var words = {"200":"picsum.photos"};
+var photostart = 1;
+</script>
+
+<!-- code -->
+<link rel="stylesheet" href="https://s1.kagirl.cn/template/htm/static/3dwuyi2023.css?v=1682578092055">
+
+
+    
+    
+    
+    
+    <body>
+    <div id='container'>
+
+        <div id="opac_box">
+            <div id="title_zi_opac"></div>
+            <div id="tiankong_opac"></div>
+            <div id="hongbu_opac"></div>
+            <div id="gezhi_opac"></div>
+            <div id="zhuan_opac"></div>
+            <div id="huaban_opac"></div>
+        </div>
+
+        <div id="tiankong" ></div>
+        <div id="buliding"></div>
+        <div id="hongbu" ></div>
+        <div id="title_block">
+            <div id="bottom_hua" ></div>
+            <div id="title_zi_block">
+                <div id="title_zi"></div>
+            </div>
+            <div id="laodong_zi_block">
+                <img src="https://s1.kagirl.cn/template/3dwuyi2023/laodong_zi.png" id='laodong_zi'>
+            </div>
+            <div id="gezhi_block"></div>
+            <div id="pagetitle">
+                <div id="titlecontent"></div>
+            </div>
+        </div>
+
+
+        <div id='photo_load' class='po'>
+            <div class='photo_load_1'></div>
+            <div class='photo_load_2' id="photoLoadPre">正在加载0%</div>
+        </div>
+
+
+
+        <div id='page1' class='page po opnone'>
+            <div class='perspective page po'>
+                <div id='panorama1' class='page_1 preserve3d po'>
+                    <div id="page11img_box" class='panorama_top1 page po'>
+                        <div id="page11img"></div>
+                    </div>
+                    <div class='page1_div1 panorama_mid1_1 backfaceHidden page div po' id="div1_1">
+                        <div class="page1_kuang"></div>
+                    </div>
+                    <div class='page1_div1 panorama_mid1_2 backfaceHidden page div po' id="div1_2">
+                        <div class="page1_kuang"></div>
+                    </div>
+                    <div class='page1_div1 panorama_mid1_3 backfaceHidden page div po' id="div1_3">
+                        <div class="page1_kuang"></div>
+                    </div>
+                    <div class='page1_div1 panorama_mid1_4 backfaceHidden page div po' id="div1_4">
+                        <div class="page1_kuang"></div>
+                    </div>
+                    <div id="page12img_box" class='panorama_bottom1 page po'>
+                        <div id="page12img"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="page1flower_box" class='po'>
+                <div id="page1flower">
+                    <img src="https://s1.kagirl.cn/template/3dwuyi2023/hua5.png" class="page po"/>
+                </div>
+                <div id="page1zi"></div>
+            </div>
+        </div>
+        <div id="page2">
+            <div class="page2_2 page preserve3d po">
+                <div class="page2_2_1 preserve3d po" id="page2_2_1_box2">
+                    <div class="page2_2_1h" id="page2_2_1_2" >
+                        <div class="div2 page2_rim1 div po" id="page2_rim1_div2" >
+                        </div>
+                        <div class="page2_kuang page2_rim1 page po"></div>
+                        <div class="page2_rim2 page2_rim page po"></div>
+                        <div class="page2_rim3 page2_rim page po"></div>
+                        <div class="page2_rim4 page2_rim page po"></div>
+                        <div class="page2_rim5 page2_rim page po"></div>
+                        <div class="page2_rim6 page2_rim page po"></div>
+                        <div class="div2 page2_rim8 div po" id="page2_rim8_div2">
+                        </div>
+                        <div class="page2_kuang page2_rim7 page po"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="page2_hua" class="page po">
+                <div id="page2_bottom_hua"></div>
+                <div id="page2zi"></div>
+            </div>
+        </div>
+
+
+
+        <div id='page3' class='page po opnone'>
+
+            <div id="page3_hua" class="page po">
+                <div id="page3_bottom_hua6"></div>
+                <div id="page3_bottom_hua7"></div>
+                <div id="page3zi"></div>
+            </div>
+
+            <div id="page3img_box" class='fullScreen po'>
+                <div id="page3img"></div>
+            </div>
+            <div class='page3_1 po'>
+                <div class='preserve3d page po page3_1_1_div' id="page3_1_div">
+                    <div class='page3_1_1 po' id="page3_1_1">
+                        <div class='div7 page div po' id="div7_1"></div>
+                        <div class='page3_kuang page po'></div>
+                    </div>
+
+                    <div class='page3_1_3 po' id="page3_1_3">
+                        <div class='div7 page div po' id="div7_3"></div>
+                        <div class='page3_kuang page po'></div>
+                    </div>
+                    <div class='page3_1_5 po' id="page3_1_5">
+                        <div class='div7 page div po' id="div7_5"></div>
+                        <div class='page3_kuang page po'></div>
+                    </div>
+
+                    <div class='page3_1_7 po' id="page3_1_7">
+                        <div class='div7 page div po' id="div7_7"></div>
+                        <div class='page3_kuang page po'></div>
+                    </div>
+                    <div class='page3_1_9 po' id="page3_1_9">
+                        <div class='div7 page div po' id="div7_9"></div>
+                        <div class='page3_kuang page po'></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="page2_huaban"></div>
+        <div id="word1" class="wordspan"></div>
+        <div id="word2" class="wordspan"></div>
+        <div id="word3" class="wordspan"></div>
+
+        <div id="zhuan"></div>
+    </div>
+    </body>
+    
+
+
+
+<script src="https://s1.kagirl.cn/template/htm/static/3dwuyi2023.js?v=1682578092055"></script>
